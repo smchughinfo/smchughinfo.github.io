@@ -1,0 +1,1551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>KR20070104757A - Home network system and method of processing events thereof 
+      - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/KR20070104757A/en">
+    <meta name="description" content="
+     A home network system and a method for processing events therein are provided to minimize operation loads and power consumption by classifying events according to event generation modes and applying different transmission rules according to the natures of generated events. If a state change occurs in a slave device(S100), the slave device judges whether the present state is an event generation mode or an event generation adjustment mode(S110). If an information event is generated in the event generation adjustment mode, the slave device judges whether it is set to transmit an associated event when an event situation occurs. In case the slave device is set to transmit an associated event, the slave device creates an event file and transmits it to a master device through a bus network(S120). If a warning event is generated in the event generation adjustment mode, the slave device judges whether it is time to generate an associated event. If it is time to generate an associated event, the slave device periodically creates and transmits an event file(S130). If an error event is generated, the slave device immediately creates an event file and transmits it to the master device through the bus network(S140). 
+   
+   ">
+    
+    <meta name="DC.type" content="patent">
+    
+    <meta name="DC.title" content="Home network system and method of processing events thereof 
+     ">
+    
+    <meta name="DC.date" content="2006-04-24" scheme="dateSubmitted">
+    
+    <meta name="DC.description" content="
+     A home network system and a method for processing events therein are provided to minimize operation loads and power consumption by classifying events according to event generation modes and applying different transmission rules according to the natures of generated events. If a state change occurs in a slave device(S100), the slave device judges whether the present state is an event generation mode or an event generation adjustment mode(S110). If an information event is generated in the event generation adjustment mode, the slave device judges whether it is set to transmit an associated event when an event situation occurs. In case the slave device is set to transmit an associated event, the slave device creates an event file and transmits it to a master device through a bus network(S120). If a warning event is generated in the event generation adjustment mode, the slave device judges whether it is time to generate an associated event. If it is time to generate an associated event, the slave device periodically creates and transmits an event file(S130). If an error event is generated, the slave device immediately creates an event file and transmits it to the master device through the bus network(S140). 
+   
+   ">
+    
+    <meta name="citation_patent_application_number" content="KR:1020060036804A">
+    
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/4c/b5/81/0e88e773134b56/KR20070104757A.pdf">
+    
+    <meta name="citation_patent_publication_number" content="KR:20070104757:A">
+    
+    <meta name="DC.date" content="2007-10-29">
+    
+    <meta name="DC.contributor" content="ê¹€íƒœìš±" scheme="inventor">
+    
+    <meta name="DC.contributor" content="ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤" scheme="assignee">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <style>
+      body { transition: none; }
+    </style>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27188110-4', 'auto');
+
+      version = 'patent-search.search_20191028_RC01';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.profilePicture = "";
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.html">
+    
+  </head>
+  <body unresolved>
+    
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.js"></script>
+    
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">KR20070104757A - Home network system and method of processing events thereof 
+      - Google Patents</h1>
+  <span itemprop="title">Home network system and method of processing events thereof 
+     </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/4c/b5/81/0e88e773134b56/KR20070104757A.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">KR20070104757A</dd>
+    <meta itemprop="numberWithoutCodes" content="20070104757">
+    <meta itemprop="kindCode" content="A">
+    <meta itemprop="publicationDescription" content="Official gazette of the unexamined patents">
+    
+    <span>KR20070104757A</span>
+    
+    <span>KR1020060036804A</span>
+    
+    <span>KR20060036804A</span>
+    
+    <span>KR20070104757A</span>
+    
+    <span>KR 20070104757 A</span>
+    
+    <span>KR20070104757 A</span>
+    
+    <span>KR 20070104757A</span>
+    
+    <span>KR 1020060036804 A</span>
+    
+    <span>KR1020060036804 A</span>
+    
+    <span>KR 1020060036804A</span>
+    
+    <span>KR 20060036804 A</span>
+    
+    <span>KR20060036804 A</span>
+    
+    <span>KR 20060036804A</span>
+    
+    <span>KR 20070104757 A</span>
+    
+    <span>KR20070104757 A</span>
+    
+    <span>KR 20070104757A</span>
+    
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">KR</dd>
+    <dd itemprop="countryName">South Korea</dd>
+
+    <dt>Prior art keywords</dt>
+    
+    <dd itemprop="priorArtKeywords" repeat>event</dd>
+    <dd itemprop="priorArtKeywords" repeat>slave device</dd>
+    <dd itemprop="priorArtKeywords" repeat>set</dd>
+    <dd itemprop="priorArtKeywords" repeat>master device</dd>
+    <dd itemprop="priorArtKeywords" repeat>network system</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2006-04-24">2006-04-24</time></dd>
+
+    
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">KR1020060036804A</dd>
+
+  <dt>Other languages</dt>
+  <dd itemprop="otherLanguages" itemscope repeat>
+    <a href="/patent/KR20070104757A/ko">
+      <span itemprop="name">Korean</span> (<span itemprop="code">ko</span>)
+    </a>
+  </dd>
+
+  <dt>Other versions</dt>
+  <dd itemprop="directAssociations" itemscope repeat>
+    
+    <a href="/patent/KR100773827B1/en">
+      <span itemprop="publicationNumber">KR100773827B1</span>
+      (<span itemprop="primaryLanguage">en</span>
+    </a>
+  </dd>
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>ê¹€íƒœìš±</dd>
+  
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2006-04-24">2006-04-24</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2006-04-24">2006-04-24</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2007-10-29">2007-10-29</time></dd>
+
+  
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2006-04-24">2006-04-24</time>
+    <span itemprop="title">Application filed by ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤</span>
+    <span itemprop="type">filed</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤</span>
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2006-04-24">2006-04-24</time>
+    <span itemprop="title">Priority to KR1020060036804A</span>
+    <span itemprop="type">priority</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/KR100773827B1/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-10-29">2007-10-29</time>
+    <span itemprop="title">Publication of KR20070104757A</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/KR20070104757A/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-11-06">2007-11-06</time>
+    <span itemprop="title">Application granted</span>
+    <span itemprop="type">granted</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-11-06">2007-11-06</time>
+    <span itemprop="title">Publication of KR100773827B1</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/KR100773827B1/en</span>
+    
+    
+    
+  </dd>
+  
+
+  <h2>Links</h2>
+
+  <ul>
+    
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=KR&amp;NR=20070104757A&amp;KC=A&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="globalDossierLink">
+          <a href="http://globaldossier.uspto.gov/#/result/publication/KR/20070104757/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+        </li>
+
+      
+
+      
+
+      
+
+      
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="stackexchangeLink">
+          <a href="https://patents.stackexchange.com/questions/tagged/KR20070104757A" itemprop="url"><span itemprop="text">Discuss</span></a>
+        </li>
+  </ul>
+
+  
+
+  <section>
+    <h2>Images</h2>
+    <ul>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/5a/f0/b6/25d642a8035a15/112006028576750-PAT00001.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/c4/ab/81/1affcb52dc706a/112006028576750-PAT00001.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="10">
+            <meta itemprop="label" content="master device">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="611">
+              <meta itemprop="top" content="687">
+              <meta itemprop="right" content="657">
+              <meta itemprop="bottom" content="723">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="100">
+            <meta itemprop="label" content="home network system">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="972">
+              <meta itemprop="top" content="259">
+              <meta itemprop="right" content="1039">
+              <meta itemprop="bottom" content="297">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="20">
+            <meta itemprop="label" content="slave device">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="538">
+              <meta itemprop="top" content="1187">
+              <meta itemprop="right" content="589">
+              <meta itemprop="bottom" content="1222">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="30">
+            <meta itemprop="label" content="user interface">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="794">
+              <meta itemprop="top" content="448">
+              <meta itemprop="right" content="848">
+              <meta itemprop="bottom" content="484">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="40">
+            <meta itemprop="label" content="gateway">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="342">
+              <meta itemprop="top" content="256">
+              <meta itemprop="right" content="395">
+              <meta itemprop="bottom" content="292">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="50">
+            <meta itemprop="label" content="external communication terminal">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="695">
+              <meta itemprop="top" content="38">
+              <meta itemprop="right" content="737">
+              <meta itemprop="bottom" content="93">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="60">
+            <meta itemprop="label" content="bus network">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="842">
+              <meta itemprop="top" content="733">
+              <meta itemprop="right" content="892">
+              <meta itemprop="bottom" content="771">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="70">
+            <meta itemprop="label" content="external communication network">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="328">
+              <meta itemprop="top" content="22">
+              <meta itemprop="right" content="374">
+              <meta itemprop="bottom" content="58">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/8a/97/ec/8aa7f5bfc742c6/112006028576750-PAT00002.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/0d/0d/ca/302142ac828d4e/112006028576750-PAT00002.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="10">
+            <meta itemprop="label" content="master device">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="895">
+              <meta itemprop="top" content="252">
+              <meta itemprop="right" content="931">
+              <meta itemprop="bottom" content="290">
+            </span>
+          </li>
+        </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>Classifications</h2>
+    
+    <ul>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/00</span>&mdash;<span itemprop="Description">Data switching networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/02</span>&mdash;<span itemprop="Description">Details</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/12</span>&mdash;<span itemprop="Description">Arrangements for remote connection or disconnection of substations or of equipment thereof</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/00</span>&mdash;<span itemprop="Description">Data switching networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/02</span>&mdash;<span itemprop="Description">Details</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/16</span>&mdash;<span itemprop="Description">Arrangements for providing special services to substations</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/00</span>&mdash;<span itemprop="Description">Arrangements, apparatus, circuits or systems, not covered by a single one of groups H04L1/00 - H04L27/00</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/02</span>&mdash;<span itemprop="Description">Communication control; Communication processing</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/06</span>&mdash;<span itemprop="Description">Communication control; Communication processing characterised by a protocol</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA108379170" lang="EN" source="national office" load-source="docdb">
+    <div class="abstract">A home network system and a method for processing events therein are provided to minimize operation loads and power consumption by classifying events according to event generation modes and applying different transmission rules according to the natures of generated events. If a state change occurs in a slave device(S100), the slave device judges whether the present state is an event generation mode or an event generation adjustment mode(S110). If an information event is generated in the event generation adjustment mode, the slave device judges whether it is set to transmit an associated event when an event situation occurs. In case the slave device is set to transmit an associated event, the slave device creates an event file and transmits it to a master device through a bus network(S120). If a warning event is generated in the event generation adjustment mode, the slave device judges whether it is time to generate an associated event. If it is time to generate an associated event, the slave device periodically creates and transmits an event file(S130). If an error event is generated, the slave device immediately creates an event file and transmits it to the master device through the bus network(S140).</div>
+  </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    <aside>Translated from <span itemprop="translatedLanguage">Korean</span></aside>
+    <div itemprop="content" html><div mxw-id="PDES36299662" lang="KO" load-source="patent-office" class="description"> <invention-title lang="KO"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë° ì´ë¥¼ ìœ„í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•{Home network system and method of processing events thereof}</span> The home network system and the event processing method therefor {Home network system and method of processing events thereof}</span> </invention-title> <description-of-drawings> <p num="1"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 1ì€ ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì„ ë„ì‹œí•œ êµ¬ì„±ë„ì´ë‹¤.</span> 1 is a block diagram illustrating a home network system according to an embodiment of the invention.</span> </p> <p num="2"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2ëŠ” ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë™ìž‘ì„ ì„¤ëª…í•˜ê¸° ìœ„í•œ ë¸”ë¡ë„ì´ë‹¤.</span> Figure 2 is a block diagram for illustrating an event processing operation of the home network system according to an embodiment of the invention.</span> </p> <p num="3"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">*ë„ë©´ì˜ ì£¼ìš”ë¶€ë¶„ì— ëŒ€í•œ ë¶€í˜¸ì˜ ì„¤ëª…*</span> * Description of the Related Art *</span> </p> <p num="4"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">10...ë§ˆìŠ¤í„° ê¸°ê¸°</span> 10 ... the master device</span> </p> <p num="5"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">20...ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°</span> 20 slave devices ...</span> </p> <p num="6"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">30...ì‚¬ìš©ìž ì¸í„°íŽ˜ì´ìŠ¤</span> 30 ... User Interface</span> </p> <p num="7"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">40....ê²Œì´íŠ¸ì›¨ì´</span> 40 .... gateway</span> </p> <p num="8"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">50...ë‹¨ë§ê¸°</span> 50 ... terminal</span> </p> </description-of-drawings> <background-art> <p num="9"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë³¸ ë°œëª…ì€ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë° ì´ë¥¼ ìœ„í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì— ê´€í•œ ê²ƒìœ¼ ë¡œ, ë”ìš± ìƒì„¸í•˜ê²ŒëŠ” ì´ë²¤íŠ¸ì˜ ì„±ê²©ì— ë”°ë¥¸ ì „ì†¡ë°©ë²•ì„ ë‹¤ë¥´ê²Œ ì„¤ì •í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë° ì´ë¥¼ ìœ„í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì— ê´€í•œ ê²ƒì´ë‹¤.</span> The present invention relates to a home network system and in the event relates to a processing method therefor, and more particularly, to an event processing method for a home network system in different settings, and this transmission method according to the nature of the event.</span> </p> <p num="10"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë°ì´í„° í†µì‹  ê¸°ìˆ ì´ ê³ ë„ë¡œ ë°œì „ë¨ì— ë”°ë¼ ë‹¤ìˆ˜ ê°œì˜ ì‹œìŠ¤í…œì„ ìƒí˜¸ ì ‘ì†ì‹œí‚´ìœ¼ë¡œì¨ ë³´ë‹¤ íš¨ìœ¨ì ì´ê³  íŽ¸ë¦¬í•œ ì‹œìŠ¤í…œì„ êµ¬ì¶•í•˜ê³ ìž í•˜ëŠ” ìš”êµ¬ê°€ ì¦ëŒ€ë˜ê³  ìžˆë‹¤.</span> By interconnecting a plurality of systems according to the data communication technology evolves a highly demand to create a more efficient and convenient system is increasing.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ìš”êµ¬ì— ì˜í•œ ì‹œìŠ¤í…œ ì¤‘ ëŒ€í‘œì ì¸ ê²ƒì´ ë°”ë¡œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì´ë‹¤.</span> Typical of the system according to this need, it is the home network system.</span> </p> <p num="11"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì´ëž€ ê¸°ì¡´ì˜ í™ˆì˜¤í† ë©”ì´ì…˜(Home Automation) ì‹œìŠ¤í…œìœ¼ë¡œë¶€í„° ë°œì „ëœ ê°œë…ìœ¼ë¡œì„œ, ê°€ì • ë‚´ì— ì„¤ì¹˜ë˜ëŠ” í‹°ë¸Œì´, ì˜¤ë””ì˜¤, ë¹„ë””ì˜¤, ì»´í“¨í„°, ëƒ‰ìž¥ê³ , ì„¸íƒê¸°, ì „ê¸°ë°¥í†µ, ì—ì–´ì»¨, ë³´ì¼ëŸ¬ ë“±ê³¼ ê°™ì€ ë””ì§€í„¸ ì •ë³´ ê°€ì „ê¸°ê¸°ë¥¼ ìœ ì„  ë˜ëŠ” ë¬´ì„  ë„¤íŠ¸ì›Œí¬ë¡œ ì—°ê²°í•˜ì—¬ ì‚¬ìš©ìžê°€ ì›í•˜ëŠ” ê°€ì „ê¸°ê¸°ë¥¼ ì–¸ì œ ì–´ë””ì„œë‚˜ ìžìœ ë¡­ê²Œ ì œì–´í•  ìˆ˜ ìžˆë„ë¡ í•˜ëŠ” ì‹œìŠ¤í…œì„ ì˜ë¯¸í•œë‹¤.</span> The home network system is the conventional home automation (Home Automation) as advanced concepts from the system, TV installed in a home, audio, video, computer, refrigerator, washing machine, electric rice cookers, air conditioners, digital information appliances wired or wireless, such as boiler connecting to the network by means of the system that allows the user to freely control the desired appliances anytime and anywhere.</span> </p> <p num="12"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì„ ì´ìš©í•˜ë©´ ì‚¬ìš©ìžëŠ” ê¸°ë³¸ì ìœ¼ë¡œ ê¸°ì¡´ì˜ í™ˆì˜¤í† ë©”ì´ì…˜ ì‹œìŠ¤í…œì—ì„œ ì œê³µë˜ë˜ í˜„ê´€ë¬¸ ê°œí, ì¹¨ìž…ìž ê°ì§€, ê°€ìŠ¤ ê²½ë³´, í™”ìž¬ ê°ì§€ ë“±ê³¼ ê°™ì€ ê¸°ëŠ¥ë“¤ì„ í•œì¸µ ì—…ê·¸ë ˆì´ë“œëœ í˜•íƒœë¡œ ì œê³µë°›ì„ ìˆ˜ ìžˆì„ ë¿ë§Œ ì•„ë‹ˆë¼, ê³ í’ˆì§ˆ ë©€í‹°ë¯¸ë””ì–´ ì„œë¹„ìŠ¤, ì›ê²© êµìœ¡, ì£¼ë¬¸í˜• ë¹„ë””ì˜¤ ì„œë¹„ìŠ¤ ë“±ê³¼ ê°™ì€ ì—”í„°í…Œì¸ë¨¼íŠ¸ ì„œë¹„ìŠ¤(Entertainment Service)ì™€, ê°œì¸, ê°€ì¡±ì˜ ì •ë³´ ê´€ë¦¬, í™ˆì‡¼í•‘, ì „ìžìƒê±°ëž˜, í™ˆ ì‹œíë¦¬í‹° ë“±ê³¼ ê°™ì€ ì¸í¬ë©”ì´ì…˜ ì„œë¹„ìŠ¤(Information Service) ë° ì •ë³´ ê°€ì „ í†µí•© ì œì–´ ê´€ë¦¬, ì›ê²© ì—ë„ˆì§€ ìžì›ê´€ë¦¬ ë“±ê³¼ ê°™ì€ ì»¤ë®¤ë‹ˆì¼€ì´ì…˜ ì„œë¹„ìŠ¤(Communication Service) ë“±ì„ ì œê³µ ë°›ì„ ìˆ˜ ìžˆë‹¤.</span> With this home network users are basically the release of door provided in existing home automation system, switchgear, intruder detection, as well as be provided with gas alarms, fire detection a further upgrade of the form features such as high-quality multimedia services remote education, entertainment services (Entertainment service) and personal information services such as the family of information management, home shopping, e-commerce, home security (information service), and information appliances integrated control management, remote energy management, such as video-on-demand service communications services (communication service), such as may be provided and the like.</span> </p> <p num="13"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í†µìƒ, ì´ëŸ¬í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì„ êµ¬ì„±í•˜ê¸° ìœ„í•´ì„œëŠ” ìœ ì„  ë˜ëŠ” ë¬´ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ì´ ì‚¬ìš©ëœë‹¤.</span> In order to configure the normal, the home network system is a wired or wireless networking technology is used.</span> </p> <p num="14"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìœ ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ë¡œëŠ” ê°€ì • ë‚´ì— ì„¤ì¹˜ëœ ì „ë ¥ì„ ì„ ì´ìš©í•˜ëŠ” ì „ë ¥ì„  í†µì‹ (PLC : Power Line Communication), ê°€ì • ë‚´ì— ì„¤ì¹˜ëœ ì „í™”ì„ ì„ ì´ìš©í•˜ëŠ” í™ˆí”¼ì—”ì—ì´(HomePNA : Home Phone Networking Alliance) ë° AV ê¸°ê¸°ë“¤ì˜ ì‹¤ì‹œê°„ ê³ ì† ë°ì´í„° ì „ì†¡ì— ì‚¬ìš©ë˜ëŠ” ì§ë ¬ë²„ìŠ¤ ë°©ì‹ì¸ IEEE(Institute of Electrical and Electronics Engineers)1394 ë“±ì´ ìžˆë‹¤.</span> In this case, a wired networking technology in the power line communication using a power line installed in a home used for real-time high-speed data transfer of:: (Home Phone Networking Alliance HomePNA) and the AV apparatus homepage using a telephone line installed in a (PLC Power Line Communication), home RNA a (Institute of Electrical and Electronics Engineers) IEEE 1394 serial bus system which can include.</span> </p> <p num="15"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ìœ ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ë“¤ ì¤‘ ì „ë ¥ì„  í†µì‹ ì€ ê°€ì • ë‚´ì— ì„¤ì¹˜ë˜ëŠ” ê°€ì „ê¸°ê¸°ë“¤ì— ì „ë ¥ì„ ê³µê¸‰í•˜ê¸° ìœ„í•œ ì „ë ¥ì„ ì„ ì´ìš©í•˜ì—¬, ë°ì´í„° í†µì‹ ì„ ì œê³µí•˜ëŠ” ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ì„ ì˜ë¯¸í•œë‹¤.</span> The power line communication of these wired networking technology using a power line for supplying electric power to the appliances installed in the home, means a networking technology to provide a data communication.</span> </p> <p num="16"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì „ë ¥ì„  í†µì‹ ì€ ê°€ì „ê¸°ê¸°ë¥¼ í†µì‹  ë„¤íŠ¸ì›Œí¬ìƒì— ì ‘ì†ì‹œí‚¤ê¸° ìœ„í•˜ì—¬ ì½˜ì„¼íŠ¸ì— í”ŒëŸ¬ê·¸ë¥¼ ì‚½ìž…í•˜ëŠ” ê°„ë‹¨í•œ ê³¼ì •ë§Œì´ ìš”êµ¬ë˜ë©°, ê±°ì˜ ëª¨ë“  ê±´ë¬¼ ë‚´ì— ì „ë ¥ì„ ì´ ì´ë¯¸ ì„¤ì¹˜ë˜ì–´ ìžˆë‹¤ëŠ” ì ì„ ê°ì•ˆí•  ë•Œ ë‹¤ë¥¸ ìœ ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ë³´ë‹¤ ë”ìš± ê²½ìŸë ¥ ìžˆëŠ” ê¸°ìˆ ë¡œ ì—¬ê²¨ì§€ê³  ìžˆë‹¤.</span> Power line communication is a more competitive technology than any other wired networking technologies, given that there is only a simple process of inserting the plug into the outlet required for connecting the appliance to the communication network, is almost a power line already installed in all buildings It is seen.</span> </p> <p num="17"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì „ë ¥ì„  í†µì‹ ì— ëŒ€í•œ ì„ í–‰í•œ ê¸°ìˆ ë¡œ í•œêµ­ê³µê°œíŠ¹í—ˆë²ˆí˜¸ &#34;10-2006-0021514&#34;, &#34;í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì—ì„œì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•&#34;ì´ ê°œì‹œë˜ì–´ ìžˆë‹¤.</span> In the prior art Korea Patent Publication No. for power line communications &#34;10-2006-0021514&#34;, &#34;event-handling method in a home network system&#34; is disclosed.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ê³µê°œíŠ¹í—ˆëŠ” ì „ë ¥ì„  í†µì‹ ì—ì„œì˜ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë“¤ì—ì„œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì— ëŒ€í•˜ì—¬ ê°œì‹œí•˜ê³  ìžˆë‹¤.</span> The public patent discloses a method for handling events occurring in the slave device in the power line communication.</span> </p> <p num="18"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ê³µê°œíŠ¹í—ˆì—ì„œ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë“¤ì´ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ëŠ” ì£¼ê¸°ì  ì´ë²¤íŠ¸(periodic event), ìƒíƒœ ì´ë²¤íŠ¸(status event), ì—ëŸ¬ ì´ë²¤íŠ¸(error event)ë¥¼ ê°œì‹œí•˜ê³  ìžˆë‹¤.</span> Events that have occurred in the slave device Open Patent discloses a periodic event (periodic event), the status event (status event), the error event (error event).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì—¬ê¸°ì„œ ì£¼ê¸°ì  ì´ë²¤íŠ¸ëŠ” ì¼ì • ì‹œê°„ë§ˆë‹¤ ìžë™ì ìœ¼ë¡œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ë¥¼ ë§í•˜ê³ , ìƒíƒœ ì´ë²¤íŠ¸ëŠ” ì‹œìŠ¤í…œì˜ ìƒíƒœë¥¼ ê°ì‹œí•˜ë‹¤ê°€ ìŠ¬ë ˆì´ë¸Œ ë””ë°”ì´ìŠ¤ì˜ ìžë°œ ì  ìƒíƒœ ë³€í™”ë¡œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ë¥¼ ë§í•˜ë©°, ì—ëŸ¬ ì´ë²¤íŠ¸ëŠ” ìŠ¬ë ˆì´ë¸Œ ë””ë°”ì´ìŠ¤ì˜ ë™ìž‘ê³¼ ê´€ë ¨ëœ ì—ëŸ¬ ë°œìƒì‹œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ë¥¼ ë§í•œë‹¤.</span> The periodic event is to say an event that occurs automatically at regular intervals, the status event refers to an event while watching the state of the system caused by voluntary state change of the slave device, the error event is generated when an error occurs relating to the operation of the slave device says the event.</span> </p> <p num="19"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì— ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ê²Œ ë˜ë©´ ì´ë²¤íŠ¸ ìƒí™©ì„ ì„¤ëª…í•˜ëŠ” ì¸ìž(argument)ë¥¼ í¬í•¨í•˜ëŠ” ë°ì´í„° íŒ¨í‚·ì„ êµ¬ì„±í•˜ì—¬ ì´ ë°ì´í„° íŒ¨í‚·ì„ ë§ˆìŠ¤íŠ¸ ê¸°ê¸°ë¡œ ì „ì†¡í•˜ê²Œ ë˜ëŠ”ë°, ì´ë•Œ íŒ¨í‚·ì´ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì™€ ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬ì¸ PCL ì„ ë¡œë¥¼ ì—°ê²°í•˜ëŠ” ì „ì†¡ëª¨ëŽ€ê³¼ RS485ì™€ ì „ì†¡ëª¨ë“ˆê³¼ ê°™ì€ ì „ì†¡ìœ ë‹›ì— ë¶€í•˜ê°€ ê±¸ë¦¬ê²Œ ëœë‹¤.</span> And When an event occurs in the slave device to configure the data packet containing the parameter (argument) that describes the event situations there is to transmit the data packet to the mast equipment, wherein the packet is connected to the slave unit and the bus network, the PCL line the load is engaged with the transfer unit, such as a modem and a RS485 transmission and transmission module.</span> </p> <p num="20"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ëŸ°ë° ì´ë•Œ í•˜ë‚˜ì˜ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì—ì„œ ì´ë²¤íŠ¸ ìƒí™©ì„ ì•Œë¦¬ê¸° ìœ„í•œ ë°ì´í„° íŒ¨í‚·ì„ ì „ì†¡ì„ ë¡œë¡œ ì „ì†¡í•˜ê²Œ ë˜ë©´ ì „ì†¡ì„ ë¡œì— ì—°ê²°ëœ ë‹¤ë¥¸ ëª¨ë“  ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì˜ ì „ì†¡ëª¨ëŽ€ê³¼ ëª¨ë“ˆì—ì„œë„ ì´ ë°ì´í„° íŒ¨í‚·ì´ ìžì‹ ìœ¼ë¡œ ì „ì†¡ë˜ëŠ” ë°ì´í„° íŒ¨í‚·ì¸ì§€ë¥¼ êµ¬ë¶„í•˜ê¸° ìœ„í•˜ì—¬ í™œì„±í™”ë¨ì— ë”°ë¼ ì „ì†¡ëª¨ëŽ€ê³¼ ëª¨ë“ˆì— ê³¼ë¶€í•˜ê°€ ë°œìƒí•˜ê³ , ì´ì— ë”°ë¼ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ì „ì²´ì— ê³¼ë¶€í•˜ê°€ ë°œìƒí•˜ê²Œ ë˜ëŠ” ë¬¸ì œì ì´ ìžˆë‹¤.</span> However, this time in the one when in the slave device transmits a data packet to signal the event status in a transmission line transmitting modem for all the other slave devices connected to the transmission line and the module is the data packet in order to identify whether the data packet transmitted to the own as the activation is overloaded to the transmission module and the modem, and thus there is a problem in that it is overloaded to the home network system.</span> </p> </background-art> <disclosure> <tech-problem> <p num="21"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë³¸ ë°œëª…ì€ ì „ìˆ í•œ ë¬¸ì œì ì„ í•´ê²°í•˜ê¸° ìœ„í•œ ê²ƒìœ¼ë¡œ, ë³¸ ë°œëª…ì˜ ëª©ì ì€ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë“¤ì—ì„œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ì˜ ë°œìƒ ì¡°ì ˆ ëª¨ë“œë¥¼ ë¯¸ë¦¬ ì„¤ì •í•˜ê³ , ë°œìƒëœ ì´ë²¤íŠ¸ì— ë”°ë¼ êµ¬ë¶„í•˜ì—¬ ì „ì†¡ê·œì¹™ì„ ë‹¤ë¥´ê²Œ í•¨ìœ¼ë¡œì¨ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì— ë°œìƒí•˜ëŠ” ë¶€í•˜ ë° ì†Œë¹„ì „ë ¥ì„ ì¤„ì´ë„ë¡ í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì„ ì œê³µí•˜ê¸° ìœ„í•œ ê²ƒì´ë‹¤.</span> The present invention occurs in the home network system by varying the transport rule that for solving the above-mentioned problems, and an object of the present invention sets the generated control mode of the events occurring in the slave device in advance, and classified according to the generated event which is to provide event-handling method of a home network system to reduce the load and power consumption.</span> </p> </tech-problem> <tech-solution> <p num="22"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì „ìˆ í•œ ëª©ì ì„ ë‹¬ì„±í•˜ê¸° ìœ„í•œ ë³¸ ë°œëª…ì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì€ í†µì‹ ë§ ;</span> Home network system network in accordance with the present invention for achieving the above object;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° í†µì‹ ë§ê³¼ ì—°ë™í•˜ë©° ì´ë²¤íŠ¸ ì¢…ë¥˜ì— ë”°ë¼ ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œì™€, ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œê°€ ì„¤ì •ë˜ê³ , ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œì´ë©´ ë°œìƒí•œ ì´ë²¤íŠ¸ë¥¼ ì „ì†¡í•˜ê³ , ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œì´ë©´ ì„¤ì • ìƒíƒœì— ë”°ë¼ ì „ì†¡ ê·œì¹™ì„ ì ìš©í•˜ì—¬ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°;</span> Linked to the communications network, and by applying the transmission rule according to the event mode, the event occurrence control mode is set based on the event type, and sends the generated if the event mode event, if the event occurs, control mode setting events a slave device for processing;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° í†µì‹ ë§ê³¼ ì—°ë™í•˜ë©° ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì— ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œì™€, ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œë¥¼ ì„¤ì •í•˜ë©° ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë§ˆìŠ¤í„° ê¸°ê¸°ë¥¼ êµ¬ë¹„í•œë‹¤.</span> Linked to the communications network, and setting the event mode, the event occurrence control mode to the slave device, and includes a master device that processes the event transmitted from the slave device.</span> </p> <p num="23"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì´ë²¤íŠ¸ ì¢…ë¥˜ì˜ ì„¤ì •ì€ ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì— ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ì— ì˜í•˜ì—¬ ìˆ˜í–‰ë˜ë©°, ìƒê¸° ì´ë²¤íŠ¸ ì¢…ë¥˜ëŠ” ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì˜ ë‹¨ìˆœ ìƒíƒœ ë³€í™”ì— ëŒ€í•œ ê²ƒì¸ ì •ë³´ ì´ë²¤íŠ¸ì™€, ì‚¬ìš©ìžì— ì˜í•˜ì—¬ ì²˜ë¦¬ê°€ ìš”êµ¬ë˜ê³  ê¸´ê¸‰í•˜ì§€ ì•Šì€ ìƒíƒœ ë³€í™”ì— ëŒ€í•œ ê²ƒì¸ ì›Œë‹ ì´ë²¤íŠ¸ì™€, ë°œìƒ ì¦‰ì‹œ ê¸´ê¸‰ ì²˜ë¦¬ê°€ ìš”êµ¬ë˜ëŠ” ìƒíƒœ ë³€í™”ì— ëŒ€í•œ ê²ƒì¸ ì—ëŸ¬ ì´ë²¤íŠ¸ë¡œ êµ¬ë¶„ ì„¤ì •ë  ìˆ˜ ìžˆë‹¤.</span> The event type of the set is carried out by the master device to the slave device, the event types to the information event, a change is not required and the emergency handle by a user for a simple change of state of said slave device like a warning event, a generation of an immediate emergency treatment can be divided into one set of error events for the state change is required.</span> </p> <p num="24"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì •ë³´ ì´ë²¤íŠ¸ëŠ” í•´ë‹¹í•˜ëŠ” ìƒíƒœë³€í™”ê°€ ë°œìƒí•˜ì˜€ì„ ë•Œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì„¤ì •ì— ë‹¤ë¼ ì „ì†¡ ë˜ëŠ” ì „ì†¡í•˜ì§€ ì•Šë„ë¡ ì„¤ì •ë  ìˆ˜ ìžˆë‹¤.</span> The event information may be set so as not to transmit or transfer the Dara when the state change occurs which is set to the master device.</span> </p> <p num="25"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì›Œë‹ ì´ë²¤íŠ¸ëŠ” í•´ë‹¹í•˜ëŠ” ìƒíƒœë³€í™”ê°€ ë°œìƒí•˜ì˜€ì„ ë•Œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ìƒê¸° ìƒíƒœë³€í™”ê°€ ì¢…ë£Œí•  ë•Œê¹Œì§€ ì†Œì •ì£¼ê¸°ë§ˆë‹¤ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ë  ìˆ˜ ìžˆë‹¤.</span> The warning event is when the state change occurs that the master device can be configured to transmit every predetermined period until the state change is terminated.</span> </p> <p num="26"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì—ëŸ¬ ì´ë²¤íŠ¸ëŠ” í•´ë‹¹í•˜ëŠ” ìƒíƒœ ë³€í™”ê°€ ë°œìƒí•˜ì˜€ì„ ë•Œ ë°œìƒ ì¦‰ì‹œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ë  ìˆ˜ ìžˆë‹¤.</span> The error event is that when the state changes that occur hayeoteul idea can be immediately set up to transmit to the master device.</span> </p> <p num="27"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì „ìˆ í•œ ëª©ì ì„ ë‹¬ì„±í•˜ê¸° ìœ„í•œ ë³¸ ë°œëª…ì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì€ í†µì‹ ë§ì— ì—°ë™ê°€ëŠ¥í•˜ê²Œ ì—°ê²°ëœ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì— ëŒ€í•˜ì—¬ ì´ë²¤íŠ¸ ë°œìƒ ëª¨ ë“œì™€, ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œë¥¼ ì„¤ì •í•˜ëŠ” ë‹¨ê³„;</span> Event processing method of a home network system according to the present invention for achieving the above object comprises the steps of setting the event mode and an event occurrence control mode with respect to a slave device coupled to the interworking network;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œê°€ ì„¤ì •ë˜ê³ , ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì—ì„œ ì†Œì • ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ë©´, ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ê°€ ì •ë³´ ì´ë²¤íŠ¸ì´ë©´ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ì˜ ì „ì†¡ì—¬ë¶€ë¥¼ íŒë‹¨í•œ í›„ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ëœ ê²½ìš°ì—ë§Œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ëŠ” ë‹¨ê³„;</span> Further comprising: setting the event occurs and control mode, if a predetermined event has occurred in the slave device, the predetermined event is the event information is transmitted to the master device only if it is set to send and then it is determined whether or not to send the predetermined event;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì„±ê°€ ì†Œì • ì´ë²¤íŠ¸ê°€ ì£¼ê¸°ì ìœ¼ë¡œ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ëœ ì›Œë‹ ì´ë²¤íŠ¸ì´ë©´ ì„¤ì •ëœ ìƒê¸° ì£¼ê¸°ë§ˆë‹¤ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ë¥¼ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ëŠ” ë‹¨ê³„;</span> If chant a predetermined event is periodic warning event is configured to transmit an event file for each set cycle the step of transmitting the predetermined events to the master device;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ê°€ ë°œìƒ ì¦‰ì‹œ ì „ì†¡í•˜ë„ë¡ ëœ ì—ëŸ¬ ì´ë²¤íŠ¸ì´ë©´ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ì˜ ë°œìƒ ì¦‰ì‹œ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ë¥¼ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ëŠ” ë‹¨ê³„ë¥¼ êµ¬ë¹„í•œë‹¤.</span> If the error event when the predetermined event occurs so as to immediately transfer includes the step of immediately the occurrence of the predetermined event transmitting the predetermined events to the master device.</span> </p> <p num="28"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´í•˜ì—ì„œëŠ” ë³¸ ë°œëª…ì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œê³¼ ì´ë¥¼ ìœ„í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì— ëŒ€í•œ ì‹¤ì‹œì˜ˆì—ë¥¼ ì„¤ëª…í•˜ê¸°ë¡œ í•œë‹¤.</span> Hereinafter will be explained the embodiment of the event-handling method therefor and a home network system according to the present invention.</span> </p> <p num="29"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 1ì€ ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ êµ¬ì„±ë„ì´ë‹¤.</span> 1 is a block diagram of a home network system according to an embodiment of the invention.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 1ì— ë„ì‹œëœ ë°”ì™€ ê°™ì´ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì€ ë…ë¦½ëœ ê°€ì • ë‚´ì—ì„œì˜ í™ˆ ì–´í”Œë¼ì´ì–¸ìŠ¤(Home appliance)ë“¤ì„ ìœ ì„  í˜¹ì€ ë¬´ì„  ì „ì†¡ ë§¤ì²´ë¡œ ì—°ê²°í•˜ëŠ” ë„¤íŠ¸ì›Œí¬ë¥¼ êµ¬ì„±í•˜ê²Œ ëœë‹¤.</span> The home network system 100, as shown in Figure 1 is configured to connect to the network home appliance (Home appliance), the wire or wireless transmission medium in a separate home.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ ë„¤íŠ¸ì›Œí¬ëŠ” ë¬¼ë¦¬ì ìœ¼ë¡œ ì—°ê²°ë˜ì–´ ìžˆìœ¼ë‚˜ ë…¼ë¦¬ì ìœ¼ë¡œ ë¶„ë¦¬ëœ ë„¤íŠ¸ì›Œí¬ë¥¼ í¬í•¨í•  ìˆ˜ ìžˆë‹¤.</span> The network is physically connected to, but may comprise a network that is separated logically.</span> </p> <p num="30"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì€ ë‚´ë¶€ í†µì‹ ë§ì¸ ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬(bus network; 60)ì™€, ì´ ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬(60)ì˜ ë…¸ë“œ(node; ë¯¸ë¶€í˜¸)ì— ì—°ê²°ë˜ë©° ë„¤íŠ¸ì›Œí¬ ê´€ë¦¬ê¸°ëŠ¥ì„ ìˆ˜í–‰í•˜ëŠ” ë§ˆìŠ¤í„° ê¸°ê¸°(10)ì™€, ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬(60)ì˜ ë‹¤ë¥¸ ë…¸ë“œë“¤ì— ì—°ê²°ë˜ëŠ” ë³µìˆ˜ê°œì˜ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20a, 20b, 20c)ë¥¼ êµ¬ë¹„í•˜ê³ , ì™¸ë¶€ í†µì‹ ë§(70)ê³¼ì˜ ì ‘ì†ë˜ë©° ë§ˆìŠ¤í„° ê¸°ê¸°(10)ì™€ ì—°ê²°ëœ ê²Œì´íŠ¸ì›¨ì´(40)ë¥¼ êµ¬ë¹„í•œë‹¤.</span> The home network system 100 in accordance with an embodiment of the present invention is the internal network of the bus network; node (node; unsigned) of the (bus network 60) and a bus network 60 is coupled to perform network management functions and a master unit 10 which, having a bus network, a plurality of slave devices (20a, 20b, 20c) that are connected to other nodes (60), and is connected with the external communication network 70 and the master device 10 and a associated gateway 40.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ë§ˆìŠ¤í„° ê¸°ê¸°(10)ì—ëŠ” ì‚¬ìš©ìž ì¸í„°íŽ˜ì´ìŠ¤(30)(User interface)ê°€ ì—°ê²°ëœë‹¤.</span> And the master device 10 is a user interface (30) (User interface) is connected.</span> </p> <p num="31"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ ì‚¬ìš©ìž ì¸í„°íŽ˜ì´ìŠ¤(30)ëŠ” ê°€ì • ë‚´ì˜ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ì— ì¼ì²´ë¡œ êµ¬í˜„ë  ìˆ˜ ìžˆê³ , ë˜ëŠ” ì™¸ë¶€ í†µì‹ ë§(70)ê³¼ ì—°ê²°ëœ ì™¸ë¶€ í†µì‹  ë‹¨ë§ê¸°(50)ì— êµ¬í˜„ë  ìˆ˜ ìžˆë‹¤.</span> The user interface 30 may be implemented in the master device 10, the external communication terminal 50 may be implemented integrally with, or connected to the external communication network 70 to the in-home.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì—¬ê¸°ì„œ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ì™€ ì‚¬ìš©ìž ì¸í„°íŽ˜ì´ìŠ¤(30) ê·¸ë¦¬ê³  ê²Œì´íŠ¸ì›¨ì´(40)ëŠ” í†µí•©í•˜ì—¬ í™ˆì„œë²„(Home server)ë¼ê³  í•  ìˆ˜ ìžˆë‹¤.</span> The master device 10 and the user interface 30 and the gateway 40 can be said to integrated home server (Home server).</span> </p> <p num="32"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬(60)ëŠ” ë³„ë„ì˜ íšŒì„ ì„ ì„¤ì¹˜í•˜ê±°ë‚˜ ê° ê°€ì •ì— ì´ë¯¸ ì„¤ì¹˜ë˜ì–´ ìžˆëŠ” ì „ë ¥ì„ ì´ë‚˜ ì „í™”ì„ ê³¼ ê°™ì€ ìœ ì„  ë§¤ì²´ì¼ ìˆ˜ë„ ìžˆê³ , ë˜ëŠ” ë¬´ì„  ê¸°ë°˜ì˜ ì „ì†¡ ë§¤ì²´ì¼ ìˆ˜ë„ ìžˆë‹¤.</span> On the other hand, the bus network 60 may be may be a wire medium such as a power line or telephone line installed a separate line, or already installed in each home, or a transmission medium of a radio-based.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì¦‰ ìœ ì„ ë§¤ì²´ë¡œì„œ ì „ë ¥ì„ (PLC: Power Line Communication)ë§ì„ ì±„íƒí•˜ê³ , ë¶€ë¶„ì ìœ¼ë¡œ ë˜ëŠ” ì „ì²´ì ìœ¼ë¡œë„ ë¬´ì„  í†µì‹ ë§ì¸ ì§€ê·¸ë¹„(ZigBee), ë¸”ë£¨íˆ¬ìŠ¤(bluetooth), RF í†µì‹  ë“±ì„ ì±„íƒí•  ìˆ˜ ìžˆë‹¤.</span> That is the power line as the wired media: it is possible to adopt a network (PLC Power Line Communication), and at least partially adopt the wireless communication network is a ZigBee (ZigBee), Bluetooth (bluetooth), RF communication and the like.</span> </p> <p num="33"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ë§ˆìŠ¤í„° ê¸°ê¸°(10)ëŠ” ê° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì—ì„œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ì— ëŒ€í•œ ì„¤ì •ê³¼ ì²˜ë¦¬ ìž‘ì—…ì„ ìˆ˜í–‰í•œë‹¤.</span> And the master device 10 carries out the setting and processing of the event occurring in each slave device (20).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì¦‰ ê° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì—ì„œ ì–´ë–¤ ì´ë²¤íŠ¸ê°€ ë°œìƒí•  ê²½ìš° í•´ë‹¹ ì´ë²¤íŠ¸ì— ëŒ€í•œ ëŒ€ì‘ì„ ì–´ë–»ê²Œ ìˆ˜í–‰í•  ê²ƒì¸ì§€ë¥¼ ì„¤ì •í•œë‹¤.</span> In other words, if any events occur in each slave device (20) to set how you want to perform a response to the event.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ì„¤ì •ì€ ì‚¬ìš©ìžì— ì˜í•˜ì—¬ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¥¼ í†µí•˜ì—¬ ì´ë£¨ì–´ì§€ê³ , ìˆ˜ì •ê³¼ ìž¬íŽ¸ì§‘ì´ ê°€ëŠ¥í•˜ê²Œ í•  ìˆ˜ ìžˆë‹¤.</span> These settings are achieved through the master device 10 by the user, the modification and re-editing may be enabled.</span> </p> <p num="34"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë˜í•œ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ëŠ” ëª¨ë“  ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ë©´ ì†Œì •ì˜ ì œì–´ëª…ë ¹ì´ ìˆ˜í–‰ë˜ë„ë¡ í•˜ê¸° ìœ„í•´ ì‚¬ìš©ìž ì¸í„°íŽ˜ì´ìŠ¤(30)ë¥¼ í†µí•˜ì—¬ ì‚¬ìš©ìžë¡œë¶€í„° ìž…ë ¥ëœ ì„¤ì •ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” ë¹„íœ˜ë°œì„± ë©”ëª¨ë¦¬ì™€ ê°™ì€ ì €ìž¥ìž¥ì¹˜ë¥¼ êµ¬ë¹„í•œë‹¤.</span> And also master device 10 includes a storage device such as a nonvolatile memory for storing the setting information inputted by the user through the user interface 30 to ensure that all of the events occurs, performing a predetermined control command.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ë§ˆìŠ¤í„° ê¸°ê¸°(10)ëŠ” ì†Œì •ì˜ ì´ë²¤íŠ¸ì˜ ë°œìƒì¡°ê±´ê³¼, ì´ë²¤íŠ¸ê°€ ë°œìƒëœ ë•Œ ìˆ˜í–‰ë˜ì–´ì§ˆ ì œì–´ëª…ë ¹ê³¼, ì´ ì œì–´ ëª…ë ¹ì„ ìˆ˜í–‰í•  ìž¥ì¹˜ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ì‹ë³„ì½”ë“œë¥¼ í¬í•¨í•˜ëŠ” ì´ë²¤íŠ¸ íŒŒì¼ì„ ì²˜ë¦¬í•  ìˆ˜ ìžˆë„ë¡ êµ¬ì„±ëœë‹¤.</span> And the master device 10 is configured to handle the event file including the identification code indicating the device to perform a control command and a control command to be performed occurrence condition of a predetermined event and, when the event occurred.</span> </p> <p num="35"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ì´ë²¤íŠ¸ëž€ í•´ë‹¹ ê¸°ê¸°ì˜ ìƒíƒœ ë³€í™”ì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì—ì„œì˜ ì²˜ë¦¬ ê·œì¹™ì˜ ì¼ì¢…ì´ë‹¤.</span> On the other hand, the event is a type of processing rules in the home network system 100 in accordance with the change of state of the device.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì¦‰ ìµœì´ˆ ë§ˆìŠ¤í„° ê¸°ê¸°(10) ë˜ëŠ” ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ë¥¼ êµ¬ìž…í•œ ì‚¬ìš©ìžì— ì˜í•˜ì—¬ í•´ë‹¹ ê¸°ê¸°ê°€ ì–´ë–¤ ë™ìž‘ ìƒíƒœì—ì„œ ì–´ë–¤ ì´ë²¤íŠ¸ë¥¼ ë°œìƒì‹œí‚¬ ê²ƒì¸ì§€ë¥¼ ì •í•˜ëŠ” ê²ƒì´ë‹¤.</span> That is, determining by the users of the first master device 10 or the slave device 20 is the device whether to generate a certain event in any operating condition.</span> </p> <p num="36"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì˜ˆë¥¼ ë“ ë‹¤ë©´ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20) ì¤‘ì˜ í•˜ë‚˜ì¸ ì„¸íƒê¸°ì˜ ê²½ìš° ì„¸íƒì´ ì¢…ë£Œí•˜ë©´ ë‹¤ë¥¸ ê¸°ê¸°ì¸ í…”ë ˆë¹„ì „ ëª¨ë‹ˆí„°ì— &#34;ì„¸íƒì¢…ë£Œ&#34;ì™€ ê°™ì€ ë©”ì‹œì§€ë¥¼ ë””ìŠ¤í”Œë ˆì´ í•˜ë„ë¡ í•˜ëŠ” ê²ƒê³¼ ê°™ì´ ê¸°ê¸°ì—ì„œ ë°œìƒí•˜ëŠ” ë™ìž‘ ìƒíƒœë¥¼ ë§ˆìŠ¤í„° ê¸°ê¸°(10) ë˜ëŠ” ë‹¤ë¥¸ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì™€ ì„œë¡œ ì—°ê³„ì‹œí‚¤ê±°ë‚˜, ë˜ëŠ” ë™ìž‘ ìƒíƒœë¥¼ ì‚¬ìš©ìž ì¸í„°íŽ˜ì´ìŠ¤(30)ë¥¼ í†µí•˜ì—¬ í‘œì‹œí•˜ë„ë¡ í•˜ëŠ” ê²ƒì´ë‹¤.</span> Example if there are any case of one of the washing machine of the slave device 20, laundry is terminated when the master device 10, the operating condition occurring in the device, such as the other components of a television monitor to display a message such as &#34;laundry end&#34; the or to each other in connection with the other slave device 20, or the operation state to be displayed through the user interface 30.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ì´ë²¤íŠ¸ëŠ” ê¸°ê¸°ì˜ ì œìž‘ì‹œì— ì„¤ì •ë˜ì§€ëŠ” ì•Šê³ , ê¸°ê¸°ë¥¼ êµ¬ìž…í•œ ì‚¬ìš©ìžì— ì˜í•˜ì—¬ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì˜ êµ¬ì¶•ì‹œì— ì„¤ì •ëœë‹¤.</span> This event is set during the construction of the home network system 100 by a user who does not set at the time of manufacture of the device, the device purchased.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ì´ë²¤íŠ¸ëŠ” í•´ë‹¹ ì´ë²¤íŠ¸ì— ëŒ€í•˜ì—¬ í•´ë‹¹ ì´ë²¤íŠ¸ëª…, í•´ë‹¹ ì´ë²¤íŠ¸ ì½”ë“œ, ì´ë²¤íŠ¸ì˜ ì²˜ë¦¬ ë°©ë²• ë“±ìœ¼ë¡œ ê·œì •ë˜ë©°, ì´ëŸ¬í•œ í•­ëª©ë“¤ì´ í•˜ë‚˜ì˜ ì „ì†¡ìš© íŒ¨í‚·ì„ í˜•ì„±ëœ í›„ ì²˜ë¦¬ëœë‹¤.</span> And the event is the event name for that event, is defined as the event code, the processing method of the event, etc., it is processed after these items are formed in a single transport packet for the.</span> </p> <p num="37"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì€ ë°œìƒí•œ ì´ë²¤íŠ¸ë¥¼ ë‘ ê°€ì§€ì˜ ë°œìƒëª¨ë“œë¡œ êµ¬ë¶„í•˜ì—¬ ì²˜ë¦¬í•œë‹¤.</span> On the other hand, the home network system 100 in accordance with an embodiment of the present invention addresses the separation of the events that have occurred in two generation modes.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ êµ¬ë¶„ì€ ì‚¬ìš©ìž ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ì´ìš©í•˜ì—¬ ì‚¬ìš©ìžê°€ êµ¬ë¶„ ì²˜ë¦¬í•˜ë©°, êµ¬ë¶„ëœ ì„¤ì •ì€ ë§ˆìŠ¤í„° ê¸°ê¸°ì— ì˜í•˜ì—¬ ê°ê°ì˜ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì—ì„œ ì„¤ì •ëœë‹¤.</span> This separation, and the user sorting operation using the user interface, the sensitivity setting is set in each slave device by the master device.</span> </p> <p num="38"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë²¤íŠ¸ ì²˜ë¦¬ëª¨ë“œì˜ êµ¬ë¶„ì€ ì´ë²¤íŠ¸ ë°œìƒëª¨ë“œì™€ ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œë¡œ êµ¬ë¶„ ëœë‹¤.</span> Classification of the event processing mode is divided into mode control event occurs and the event generating mode.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œëŠ” ëª¨ë“  ì´ë²¤íŠ¸ì— ëŒ€í•˜ì—¬ ì´ë²¤íŠ¸ íŒŒì¼ì„ ë°œìƒì‹œì¼œ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ ì „ì†¡í•˜ë„ë¡ í•˜ëŠ” ê²ƒì´ë‹¤.</span> Event mode is to generates an event file for all the events to send to the master device (10).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œëŠ” ì‚¬ìš©ìžì— ì˜í•˜ì—¬ ì„ íƒëœ ë°©ë²•ìœ¼ë¡œ ì´ë²¤íŠ¸ì˜ ì „ì†¡ì„ ì†Œì • ê·œì¹™ìœ¼ë¡œ ì¡°ì ˆí•˜ë„ë¡ í•˜ëŠ” ê²ƒì´ë‹¤.</span> And event occurrence control mode is that the method chosen by the user to regulate the transmission of the event to a predetermined rule.</span> </p> <p num="39"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´í›„ ì´ë²¤íŠ¸ ì²˜ë¦¬ëª¨ë“œê°€ êµ¬ë¶„ ì„¤ì •ë˜ë©´ ì´ë²¤íŠ¸ë³„ êµ¬ë¶„ëª¨ë“œê°€ ì„¤ì •ëœë‹¤.</span> If after the event processing mode, sensitivity setting, the event classification mode is set.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë²¤íŠ¸ë³„ êµ¬ë¶„ëª¨ë“œëŠ” ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì˜ ë‹¨ìˆœ ìƒíƒœ ë³€í™”ë¥¼ ì•Œë¦¬ê¸° ìœ„í•œ ì •ë³´ ì´ë²¤íŠ¸(Info event)ì™€, ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì˜ ë‹¨ìˆœ ìƒíƒœ ë³€í™”ë¡œì¨ ì‚¬ìš©ìžì— ì˜í•˜ì—¬ ì§ì ‘ ì²˜ë¦¬ê°€ ìš”êµ¬ë˜ëŠ” ì›Œë‹ ì´ë²¤íŠ¸(Warning event)ì™€, ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì˜ ì‹¤ì‹œê°„ ì²˜ë¦¬ê°€ ìš”êµ¬ë˜ëŠ” ì—ëŸ¬ ìƒí™©ì„ ì•Œë¦¬ê¸° ìœ„í•œ ì—ëŸ¬ ì´ë²¤íŠ¸(Error event)ë¡œ êµ¬ë¶„ë˜ì–´ ì„¤ì •ëœë‹¤.</span> Nine minutes in each mode event and a slave device 20, information events (Info event) for notifying a simple change of state, warning is directly processed by the user request as a simple change of state of the slave device 20, the event (Warning event) and , the real-time processing of the slave device (20) is set is divided into the error event (error event) for notifying the error conditions are required.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ì´ë²¤íŠ¸ë³„ êµ¬ë¶„ëª¨ë“œëŠ” ì´ë²¤íŠ¸ ë°œìƒëª¨ë“œì—ì„œ í•¨ê»˜ ì„¤ì •ë  ìˆ˜ ë„ ìžˆìœ¼ë©°, ì´ë²¤íŠ¸ë³„ êµ¬ë¶„ê³¼ íŒë‹¨ì€ ì‚¬ìš©ìžì— ì˜í•˜ì—¬ ìž„ì˜ë¡œ ì´ë£¨ì–´ì§„ë‹¤.</span> The event classification mode may also be set with in the event mode, the event classification and determination is made by the user as desired.</span> </p> <p num="40"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ ì´ë²¤íŠ¸ë³„ êµ¬ë¶„ëª¨ë“œì—ì„œ ì •ë³´ ì´ë²¤íŠ¸ëŠ” ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì˜ ë‹¨ìˆœ ìƒíƒœ ë³€í™”ë¥¼ ì•Œë¦¬ê¸° ìœ„í•œ ê²ƒìœ¼ë¡œ, ì´ë¯¸ ì–¸ê¸‰í•œ ë°”ì™€ ê°™ì´ ì„¸íƒê¸°ì—ì„œì˜ &#34;ì„¸íƒì¢…ë£Œì™€ ì‹œìž‘&#34;, ì „ìžë ˆì¸ì§€ì˜ ê²½ìš°ì—ì„œëŠ” &#34;ìš”ë¦¬ì¢…ë£Œì™€ ì‹œìž‘&#34;, ë˜ëŠ” ì‚¬ìš©ìžê°€ ì„¤ì •í•œ ì´ë²¤íŠ¸ì˜ ë°œìƒ í†µì§€ ë“±ê³¼ ê°™ì´ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì˜ ë™ìž‘ ì¢…ë£Œ, ì„¤ì •ëœ ì´ë²¤íŠ¸ì˜ ë™ìž‘ ê°œì‹œë¥¼ ì•Œë¦¬ê¸° ìœ„í•œ ë™ìž‘ì‹œìž‘ ë©”ì‹œì§€ ë“±ê³¼ ê°™ì´ ë‹¨ìˆœí•œ ìƒíƒœê°’ì˜ ë³€í™”ë¥¼ ì•Œë ¤ì£¼ëŠ” í†µë³´ ë©”ì‹œì§€ì™€ ê°™ì€ ê²ƒë“¤ì´ ë  ìˆ˜ ìžˆë‹¤.</span> As for notifying a simple change of state in the event classification mode information event is the slave device 20, the &#34;start and laundry end&#34; of the washing machine, as already mentioned, &#34;cooking end and start&#34; in the case of the microwave oven, or may be those such as the slave device 20 operates the end of the such as the user and notifies the occurrence of set events, the notification message indicating a change of just a status value, such as the operation start message for notifying the operation start of the predetermined event.</span> </p> <p num="41"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ì›Œë‹ ì´ë²¤íŠ¸ëŠ” ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì˜ ìƒí™©ì„ ì•Œë¦¬ê¸° ìœ„í•œ ê²ƒìœ¼ë¡œ, ì˜ˆë¥¼ ë“¤ì–´ì„œ &#34;ê³µê¸° ì •í™”ê¸°ì˜ í•„í„° êµí™˜&#34;, &#34;ì „ë“±ì˜ ì „êµ¬ êµí™˜&#34; ë“±ê³¼ ê°™ì´ ì„¤ì •ëœ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì—ì„œ ë°œìƒí•˜ë©° ì‚¬ìš©ìžì˜ ì§ì ‘ ì²˜ë¦¬ê°€ ìš”êµ¬ë˜ëŠ” ìƒíƒœì— ëŒ€í•œ ê²ƒë“¤ì´ ë  ìˆ˜ ìžˆë‹¤.</span> And the warning event is for notifying the state of the slave device 20, for instance occurs in the slave device 20 is set such as &#34;filter replacement of the air cleaner&#34;, &#34;bulb exchange of light&#34;, and a direct processing of the user request about the state of things it can be.</span> </p> <p num="42"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë‹¤ìŒìœ¼ë¡œ ì—ëŸ¬ ì´ë²¤íŠ¸ëŠ” ê¸°ê¸°ì—ì„œ ì‹œê¸‰ížˆ ì²˜ë¦¬í•  í•„ìš”ê°€ ìžˆëŠ” ìƒíƒœê°’ì˜ ë³€í™”ë‚˜ ì—ëŸ¬ ìƒí™©ì„ ì•Œë ¤ì£¼ê¸° ìœ„í•œ ê²ƒìœ¼ë¡œ, ì´ ì—ëŸ¬ ì´ë²¤íŠ¸ë¡œëŠ” ë°©ë²”ì„¼ì„œ, ê°€ìŠ¤ì„¼ì„œ ë“±ì—ì„œ ê°ì§€ëœ ê°ì§€ìƒíƒœì— ëŒ€í•œ ì—ëŸ¬ ë©”ì‹œì§€ ì „ë‹¬ê³¼, ì´ë“¤ ì—ëŸ¬ ì´ë²¤íŠ¸ì— ëŒ€í•œ ì²˜ë¦¬ì— ê´€í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬ë™ìž‘ì¼ ìˆ˜ ìžˆë‹¤.</span> Next, the error event is that for informing the change or error conditions of the status values â€‹â€‹that need to be urgently processed by the device, the error events include error messages pass and these error for the sensed condition detected, etc. Security sensors, the gas sensor It may be an event processing operation of the processing for this event.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ì—ëŸ¬ ì´ë²¤íŠ¸ì˜ ì˜ˆë¡œëŠ” &#34;ë°©ë²”ì„¼ì„œì˜ ìž‘ë™&#34;, &#34;ê°€ìŠ¤ì„¼ì„œì˜ ê°€ìŠ¤ ëˆ„ì„¤ê°ì§€&#34; ë“±ê³¼ ê°™ì€ ê²ƒë“¤ì´ ë  ìˆ˜ ìžˆë‹¤.</span> An example of this error event may be things such as &#34;the operation of the security sensor,&#34; &#34;Gas leak detection of the gas sensor&#34;.</span> </p> <p num="43"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë ‡ê²Œ ì´ë²¤íŠ¸ë³„ êµ¬ë¶„ëª¨ë“œê°€ ì„¤ì •ë˜ë©´ ì´í›„ ì´ë²¤íŠ¸ êµ¬ë¶„ëª¨ë“œë³„ ì „ì†¡ê·œì¹™ì„ ì„¤ì •í•œë‹¤.</span> When this happens the event classification mode is set to set the event after nine minutes in each mode of transport rules.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ ì´ë²¤íŠ¸ êµ¬ë¶„ëª¨ë“œë³„ ì „ì†¡ê·œì¹™ì˜ ì„¤ì •ì— ëŒ€í•˜ì—¬ ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì—ì„œëŠ” ê°ê°ì˜ êµ¬ë¶„ëœ ì´ë²¤íŠ¸ ëª¨ë“œë³„ë¡œ ë‹¤ë¥¸ ì´ë²¤íŠ¸ ì „ì†¡ë°©ì‹ìœ¼ë¡œ ì„¤ì •ëœë‹¤.</span> This event separates each mode embodiment of the invention with respect to the set of transfer rules is set to a different transmission mode for each event of the break event mode.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë²¤íŠ¸ ì „ì†¡ê·œì¹™ì€ ì „ì†¡ ì—¬ë¶€ì— ëŒ€í•œ ê²ƒê³¼, ì „ì†¡ì„ ì£¼ê¸°ì ìœ¼ë¡œ ì§„í–‰í•˜ëŠ” ê²ƒ, ê·¸ë¦¬ê³  ë°œìƒ ì¦‰ì‹œ ì „ì†¡í•˜ëŠ” ê²ƒìœ¼ë¡œ êµ¬ë¶„ë  ìˆ˜ ìžˆìœ¼ë©°, êµ¬ë¶„ëœ ì´ë²¤íŠ¸ ëª¨ë“œë³„ë¡œ ì„¤ì •ëœë‹¤.</span> Send Event rules can be classified by forwarding to that of whether or not transmission, the transmission progress periodically and, immediately, is separated by setting the event mode.</span> </p> <p num="44"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">êµ¬ì²´ì ìœ¼ë¡œ ì •ë³´ ì´ë²¤íŠ¸ëŠ” ì´ë²¤íŠ¸ ë°œìƒì‹œ ì „ì†¡ ë˜ëŠ” ë¯¸ì „ì†¡ ì¤‘ì˜ ì–´ëŠ í•˜ë‚˜ì˜ ì „ì†¡ê·œì¹™ìœ¼ë¡œ ì„¤ì •ë  ìˆ˜ ìžˆê³ , ì›Œë‹ ì´ë²¤íŠ¸ëŠ” ìƒí™©ì˜ ì¢…ë£Œê¹Œì§€ ë˜ëŠ” ë‹¤ë¥¸ ì´ë²¤íŠ¸ì˜ ë°œìƒì‹œ ë˜ëŠ” ì†Œì •ì£¼ê¸°ë¡œ ì´ë²¤íŠ¸ íŒŒì¼ì„ ìƒì„±í•˜ì—¬ ì „ì†¡í•˜ë„ë¡ í•  ìˆ˜ ìžˆê³ , ì—ëŸ¬ ì´ë²¤íŠ¸ëŠ” ë°œìƒ ì¦‰ì‹œ ì „ì†¡í•˜ë„ë¡ ì „ì†¡ê·œì¹™ì´ ì„¤ì •ë  ìˆ˜ ìžˆë‹¤.</span> Specifically, information events may be set to any one of the transmission rules of the transmission or non-transmission when an event occurs, the warning event may be transmitted to generate a shutdown occurs or an event file in a predetermined cycle to the or another event of a situation, the error events can be set up to send a transport rule immediately.</span> </p> <p num="45"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´í•˜ì—ì„œëŠ” ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ ì „ìˆ í•œ ë°”ì™€ ê°™ì´ êµ¬ì„±ëœ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì—ì„œì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì— ëŒ€í•˜ì—¬ ì„¤ëª…í•œë‹¤.</span> In the following, a description will be given to an event processing method for a home network system 100 constructed as described above according to an embodiment of the invention.</span> </p> <p num="46"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë¨¼ì € ì´ë²¤íŠ¸ ë°œìƒëª¨ë“œëŠ” ì´ë²¤íŠ¸ì˜ ë°œìƒì‹œ ì´ë²¤íŠ¸ íŒŒì¼ì€ í›„ìˆ í•˜ëŠ” ê³¼ì •ì„ ê±°ì¹˜ì§€ ì•Šê³ , ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ ì¦‰ì‹œ ì „ì†¡í•œë‹¤.</span> First event mode is immediately transferred to the master device 10 without going through the process described below is a case of an event file of the event.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë°˜ë©´ì— ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆëª¨ë“œê°€ ì„¤ì •ë˜ë©´ í›„ìˆ í•˜ëŠ” ê³¼ì •ì´ ì§„í–‰ëœë‹¤.</span> While the process to be described later when the event occurs, the adjustment mode is set, and proceeds on.</span> </p> <p num="47"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2ëŠ” ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì„ ì„¤ëª…í•˜ê¸° ìœ„í•œ ìˆœì„œë„ì´ë‹¤.</span> Figure 2 is a flowchart illustrating an event processing method of a home network system according to an embodiment of the present invention.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2ì— ë„ì‹œëœ ë°”ì™€ ê°™ì´ ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì€ í•´ë‹¹ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì—ì„œ ì†Œì •ì˜ ìƒíƒœ ë³€í™”ê°€ ë°œìƒí•˜ë©´(S100), ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ëŠ” í˜„ìž¬ ìƒíƒœê°€ ì´ë²¤íŠ¸ ë°œìƒëª¨ë“œì¸ì§€ ë˜ëŠ” ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆëª¨ë“œì¸ì§€ë¥¼ íŒë‹¨í•œë‹¤(S110).</span> An event processing method according to an embodiment of the present invention as shown in Fig. 2 when the predetermined change of state occurs in the slave device 20 (S100), the slave device 20 that the current status is event mode or it is determined whether the event control mode (S110).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆëª¨ë“œì´ë©´ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ë“¤ì€ ì„¤ì •ëœ ë°©ë²•ì— ë”°ë¼ í•´ë‹¹ ìƒíƒœë¥¼ ì´ë²¤íŠ¸ ë³„ë¡œ êµ¬ë¶„í•œë‹¤.</span> And if the event occurs, the slave mode control device 20 may distinguish the state according to the method set for each event.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒíƒœì˜ êµ¬ë¶„ì€ ì „ìˆ í•œ ë°”ì™€ ê°™ì´ ì •ë³´ ì´ë²¤íŠ¸, ì›Œë‹ ì´ë²¤íŠ¸ ê·¸ë¦¬ê³  ì—ëŸ¬ ì´ë²¤íŠ¸ë¡œ ê°ê° êµ¬ë¶„ëœë‹¤.</span> State of the division is divided in each event information, event warning and error event as described above.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ì´ êµ¬ë¶„ëœ ì´ë²¤íŠ¸ ë³„ë¡œ ë‹¤ë¥¸ ì „ì†¡ê³¼ì •ì„ ê±°ì¹œë‹¤.</span> And subjected to another transfer process is separated by the event.</span> </p> <p num="48"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì •ë³´ ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ëŠ” ê²½ìš° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì—ì„œ í•´ë‹¹ ì´ë²¤íŠ¸ ìƒí™©ì´ ë°œìƒí•˜ì˜€ì„ ë•Œ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ëŠ” í•´ë‹¹ ì´ë²¤íŠ¸ë¥¼ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ ì „ì†¡í•  ê²ƒì¸ì§€ ì—¬ë¶€ê°€ ì„¤ì •ë˜ì—ˆëŠ”ê°€ë¥¼ íŒë‹¨í•œë‹¤.</span> The slave device 20 when the information if the event occurs, the event hayeoteul situation occurs in the slave device 20 whether to send the event to the master device 10 determines whether or not been set.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì—ì„œ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ë˜ì—ˆë‹¤ê³  íŒë‹¨ë˜ë©´ ì´ë²¤íŠ¸ íŒŒì¼ì„ ìƒì„±í•œ í›„ ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬(60)ë¥¼ í†µí•˜ì—¬ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì „ì†¡í•˜ê³ (S120), ë§ˆìŠ¤í„° ê¸°ê¸°(10)ëŠ” ì „ì†¡ëœ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì„¤ì •ëœ ì²˜ë¦¬ë°©ë²•ìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤.</span> And when it is determined that the setting to transmit in the slave device 20, after generating the event files transmitted event files in the master device 10 via the bus network 60, and (S120), the master unit 10 is transmitted event It is treated with the treatment method set file.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë°˜ë©´ì— ì´ ì •ë³´ ì´ë²¤íŠ¸ë¥¼ ì „ì†¡í•˜ì§€ ì•Šë„ë¡ ì„¤ì •ë˜ì—ˆë‹¤ê³  íŒë‹¨ë˜ë©´ ì´ë²¤íŠ¸ íŒŒì¼ì„ ìƒì„±í•˜ì§€ ì•Šê³ , ì •ë³´ ì´ë²¤íŠ¸ì˜ ë°œìƒ ìƒí™©ì„ ê°±ì‹ í•œë‹¤.</span> On the other hand, if the judgment was set not to transmit this information to the event without creating an event file, which updates the occurrence of the event information.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ì— ë”°ë¼ ì´ë²¤íŠ¸ ë°œìƒ ìƒí™©ì€ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ í†µë³´ë˜ì§€ ì•ŠëŠ”ë‹¤.</span> This event is not notified in accordance with the situation as a master device (10).</span> </p> <p num="49"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì •ë³´ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì— ëŒ€í•œ ì ìš©ì˜ˆë¥¼ ì„¤ëª…í•˜ë©´.</span> Turning to the application of the event information processing method for example.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì„¤ì •ëœ ì´ë²¤íŠ¸ì˜ ë‚´ìš©ì´ &#34;ì„¸íƒì¢…ë£Œì™€ ì‹œìž‘&#34;, ì „ìžë ˆì¸ì§€ì˜ ê²½ìš°ì—ì„œëŠ” &#34;ìš”ë¦¬ì¢…ë£Œì™€ ì‹œìž‘&#34; ë“±ì´ë¼ê³  í•œë‹¤ë©´, ì´ëŸ¬í•œ ì´ë²¤íŠ¸ì— í•´ë‹¹í•˜ëŠ” ë™ìž‘ì´ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì¸ ì„¸íƒê¸°ì™€ ì „ìžë ˆì¸ì§€ì˜ ë‹¨ìˆœ ë™ìž‘ ìƒíƒœë³€í™”ì— ëŒ€í•œ ê²ƒì´ ë  ê²ƒì´ê³ , ì´ ê²½ìš° ì„¤ì •ëœ ë°©ë²•ì— ë”°ë¼ ì´ë²¤íŠ¸ë¥¼ ì „ì†¡í•˜ê±°ë‚˜ ì „ì†¡í•˜ì§€ ì•Šì„ ìˆ˜ ìžˆë„ë¡ í•œë‹¤.</span> The contents of the set events &#34;Laundry shutdown and startup,&#34; In the case of the microwave oven if it, such as &#34;cooking shutdown and startup,&#34; these two operations corresponding to the event Simple operation state change of the washing machine and microwave slave device (20) for it will be, in this case to not send an event, transmitted according to the established method.</span> </p> <p num="50"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì›Œë‹ ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ëŠ” ê²½ìš° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì—ì„œ ì´ë²¤íŠ¸ ìƒí™©ì´ ë°œìƒí•˜ì˜€ì„ ë•Œ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ëŠ” í•´ë‹¹ ì´ë²¤íŠ¸ì— ëŒ€í•œ ë°œìƒ ì£¼ê¸°ì¸ê°€ë¥¼ íŒë‹¨í•œë‹¤.</span> The slave device 20 when when a warning event has occurred event situation from the slave device (20) is generated is determined whether generation period for the event.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ í•´ë‹¹ ì´ë²¤íŠ¸ì— ëŒ€í•œ ë°œìƒ ì£¼ê¸°ì¸ê°€ë¥¼ íŒë‹¨í•˜ê³ , ë°œìƒ ì£¼ê¸°ë§ˆë‹¤ ì´ë²¤íŠ¸ íŒŒì¼ì„ ìƒì„±í•œ í›„ ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬(60)ë¥¼ í†µí•˜ì—¬ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì „ì†¡í•˜ê³ (S130), ë§ˆìŠ¤í„° ê¸°ê¸°(10)ëŠ” ì „ì†¡ëœ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì„¤ì •ëœ ì²˜ë¦¬ë°©ë²•ìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤(S460).</span> At this time, the generation period is applied to the event determination, and generates transmit an event file with the master device 10 via the bus network 60 and then generate an event file for each cycle, and (S130), the master unit 10 is transmitted It processes the event file with the set method (S460).</span> </p> <p num="51"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì›Œë‹ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì— ëŒ€í•œ ì ìš©ì˜ˆë¥¼ ì„¤ëª…í•˜ë©´.</span> Turning to the application of the warning event processing method for example.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì„¤ì •ëœ ì´ë²¤íŠ¸ì˜ ë‚´ìš©ì´ &#34;ê³µê¸° ì •í™”ê¸°ì˜ í•„í„° ì •í™”&#34;, &#34;ì „ë“±ì˜ ì „êµ¬ êµì²´&#34; ë¼ê³  í•œë‹¤ë©´, ì„¤ì •ëœ ë°©ë²•ì— ë”°ë¼ ì£¼ê¸°ì ìœ¼ë¡œ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ì˜ ë™ìž‘ ìƒí™©ì„ ì´ë²¤íŠ¸ íŒŒì¼ë¡œ ë§ˆìŠ¤í„° ê¸°ê¸°ì— ì „ì†¡í•œë‹¤.</span> If the content of the event are set as &#34;purifying filter of the air purifier&#34;, &#34;replace the light bulb&#34;, and periodically transmits the operating status of the slave device 20 as an event file, the master device according to the setting method.</span> </p> <p num="52"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ë¦¬ê³  ì—ëŸ¬ ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ëŠ” ê²½ìš°, ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°(20)ëŠ” ë³„ë„ì˜ íŒë‹¨ì„ ê±°ì¹˜ì§€ ì•Šê³ , ë°œìƒ ì¦‰ì‹œ ì´ë²¤íŠ¸ íŒŒì¼ì„ ìƒì„±í•œ í›„ ë²„ìŠ¤ ë„¤íŠ¸ì›Œí¬(60)ë¥¼ í†µí•˜ì—¬ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì „ì†¡í•˜ê³ (S140), ë§ˆìŠ¤í„° ê¸°ê¸°(10)ëŠ” ì „ì†¡ëœ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì„¤ì •ëœ ì²˜ë¦¬ë°©ë²•ìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤(S460).</span> And the error if the event occurs, the slave device 20 transmits an event file with the master device 10 via the bus network 60 and then without going through a separate determination, generating a generation immediately event file (S140) the master device 10 then processes the transmitted event files in the set method (S460).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ì—ëŸ¬ ì´ë²¤íŠ¸ì˜ ê²½ìš°ëŠ” ë°©ë²”ì„¼ì„œ, ê°€ìŠ¤ì„¼ì„œ, í™”ìž¬ì„¼ì„œ ë“±ì˜ ë™ìž‘ìœ¼ë¡œ ë°œìƒí•˜ëŠ” ì²˜ë¦¬ì˜ ê¸´ê¸‰ì„±ì´ ìš”êµ¬ë˜ëŠ” ì´ë²¤íŠ¸ê°€ í•´ë‹¹ë˜ë©´ ì´ ê²½ìš°ëŠ” ì¦‰ì‹œ ë§ˆìŠ¤í„° ê¸°ê¸°(10)ë¡œ ì´ë²¤íŠ¸ ë°œìƒì„ í†µë³´í•˜ë„ë¡ í•˜ì—¬ ì´ë²¤íŠ¸ ì²˜ë¦¬ê°€ ì´ë£¨ì–´ì§€ë„ë¡ í•œë‹¤.</span> If such an error, if the event is a Security sensors, gas sensors, motion events that require urgency of the action to occur, such as a fire sensor that in this case, immediately to notify the event to the master device 10, the event processing It is to occur.</span> </p> <p num="53"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì „ìˆ í•œ ë°”ì™€ ê°™ì€ ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë° ì´ë¥¼ ìœ„í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì€ ì „ë ¥ì„ (PLC) ë˜ëŠ” RS485 ê¸°ë°˜ì˜ í†µì‹ ì„ ëŒ€ìƒìœ¼ë¡œ í•  ìˆ˜ ìžˆê³ , ë˜ëŠ” ì§€ê·¸ë¹„(ZigBee), ë¸”ë£¨íˆ¬ìŠ¤(bluetooth), RF í†µì‹  ë“±ì—ì„œì˜ ì œì–´ ë° ëª¨ë‹ˆí„° ë§ì„ ìœ„í•˜ì—¬ ì €ì „ë ¥ ë¬´ì„  ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë“¤ì—ì„œë„ ì±„íƒë  ìˆ˜ ìžˆë‹¤.</span> The home network system and the event processing method therefor can be targeted to a power line (PLC) or of the RS485-based communications, or ZigBee (ZigBee), Bluetooth (bluetooth), RF communication, according to an embodiment of the present invention as described above, It may be employed in the low power radio slave devices for controlling and monitoring etc. of.</span> </p> <p num="54"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”ìš±ì´ ê·¼ê±°ë¦¬ ë¬´ì„  í†µì‹ ì˜ ê²½ìš° ê·¸ íŠ¹ì„±ìƒ ì´ë²¤íŠ¸ ë°œìƒì‹œ ì´ë²¤íŠ¸ íŒŒì¼ì´ ë™ë³´(broadcast)í•˜ê²Œ ëœë‹¤.</span> Moreover, if the short-range wireless communication by their nature event occurs, the event file is multicast (broadcast).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ ì´ ê²½ìš° ê° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë“¤ì€ ë§¤ë²ˆ ì´ë²¤íŠ¸ ë°œìƒì‹œë§ˆë‹¤ ì´ë²¤íŠ¸ íŒŒì¼ì„ êµ¬ì„±í•˜ëŠ” ì „ì†¡ íŒ¨í‚·ì„ íŒŒì‹±(parsing)í•˜ì—¬ ì²˜ë¦¬í•˜ì—¬ì•¼ í•˜ì§€ë§Œ ë³¸ ë°œëª…ì˜ ì‹¤ì‹œì˜ˆë¥¼ ì ìš©í•  ê²½ìš° ì´ë²¤íŠ¸ë¥¼ êµ¬ë¶„í•˜ì—¬ ì²˜ë¦¬í•¨ìœ¼ë¡œì¨ ë³´ë‹¤ ì ì€ ì „ë ¥ ì†Œëª¨ëŸ‰ì˜ íš¨ê³¼ì ì¸ ì´ë²¤íŠ¸ ì²˜ë¦¬ê°€ ì´ë£¨ì–´ì§ˆ ìˆ˜ ìžˆë‹¤.</span> Therefore, in this case, each slave device may be processed by parsing (parsing) the transmitted packet in the event file Every time an event occurs, yet effective event handling in less power consumption by processing the separation of the case of applying the embodiment of the present invention offers that can be done.</span> </p> </tech-solution> <advantageous-effects> <p num="55"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ìƒê³¼ ê°™ì€ ë³¸ ë°œëª…ì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë° ì´ë¥¼ ì´ìš©í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•ì€ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë“¤ì—ì„œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œë¥¼ ë¯¸ë¦¬ ì„¤ì •í•˜ê³ , ë°œìƒëœ ì´ë²¤íŠ¸ë¥¼ ì´ë²¤íŠ¸ ë°œìƒëª¨ë“œì— ë”°ë¼ êµ¬ë¶„í•œ í›„ ë°œìƒëœ ì´ë²¤íŠ¸ì˜ ì„±ê²©ì— ë”°ë¼ ì „ì†¡ì°¨ë‹¨, ì „ì†¡ì§€ì—° ê·¸ë¦¬ê³  ì¦‰ì‹œ ì „ì†¡ê³¼ ê°™ì€ ì „ì†¡ê·œì¹™ì„ ì ìš©í•¨ìœ¼ë¡œì¨ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ì „ì†¡ëª¨ë“ˆê³¼ ëª¨ëŽ€ë“±ì—ì„œì˜ ë™ìž‘ ë¶€í•˜ ë° ì†Œë¹„ì „ë ¥ì„ ìµœì†Œí™”í•˜ë„ë¡ í•˜ëŠ” íš¨ê³¼ê°€ ìžˆë‹¤.</span> The home network system and an event processing method using the same according to the present invention as described above sets the event mode generated in the slave device in advance, and according to the nature of the then divided by the generated event to the event mode, occurrence of an event by applying the transfer rules, such as transmission block, the transmission delay and the transmission instant has the effect of minimizing the operating load and power consumption of the transmission module, etc. of the home network system and a modem.</span> </p> </advantageous-effects> </disclosure> </div></div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">6</span>)</h2>
+    <aside>Translated from <span itemprop="translatedLanguage">Korean</span></aside>
+    <div itemprop="content" html><ol mxw-id="PCLM29840093" lang="KO" load-source="patent-office" class="claims"> <li class="claim"> <div num="1" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í†µì‹ ë§;</span> communications network;</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° í†µì‹ ë§ê³¼ ì—°ë™í•˜ë©° ì´ë²¤íŠ¸ ì¢…ë¥˜ì— ë”°ë¼ ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œì™€, ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œê°€ ì„¤ì •ë˜ê³ , ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œì´ë©´ ë°œìƒí•œ ì´ë²¤íŠ¸ë¥¼ ì „ì†¡í•˜ê³ , ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œì´ë©´ ì„¤ì • ìƒíƒœì— ë”°ë¼ ì „ì†¡ ê·œì¹™ì„ ì ìš©í•˜ì—¬ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°;</span> Linked to the communications network, and by applying the transmission rule according to the event mode, the event occurrence control mode is set based on the event type, and sends the generated if the event mode event, if the event occurs, control mode setting events a slave device for processing;</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° í†µì‹ ë§ê³¼ ì—°ë™í•˜ë©° ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì— ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œì™€, ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œë¥¼ ì„¤ì •í•˜ë©° ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë§ˆìŠ¤í„° ê¸°ê¸°ë¥¼ êµ¬ë¹„í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The home network system, characterized in that cooperating with said communication network and sets the event mode, the event occurrence control mode to the slave device comprises a master device to process an event that is sent from the slave device.</span> </div> </div> </li> <li class="claim-dependent"> <div num="2" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 1í•­ì— ìžˆì–´ì„œ, ìƒê¸° ì´ë²¤íŠ¸ ì¢…ë¥˜ì˜ ì„¤ì •ì€ ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì— ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ì— ì˜í•˜ì—¬ ìˆ˜í–‰ë˜ë©°, ìƒê¸° ì´ë²¤íŠ¸ ì¢…ë¥˜ëŠ” ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì˜ ë‹¨ìˆœ ìƒíƒœ ë³€í™”ì— ëŒ€í•œ ê²ƒì¸ ì •ë³´ ì´ë²¤íŠ¸ì™€, ì‚¬ìš©ìžì— ì˜í•˜ì—¬ ì²˜ë¦¬ê°€ ìš”êµ¬ë˜ê³  ê¸´ê¸‰í•˜ì§€ ì•Šì€ ìƒíƒœ ë³€í™”ì— ëŒ€í•œ ê²ƒì¸ ì›Œë‹ ì´ë²¤íŠ¸ì™€, ë°œìƒ ì¦‰ì‹œ ê¸´ê¸‰ ì²˜ë¦¬ê°€ ìš”êµ¬ë˜ëŠ” ìƒíƒœ ë³€í™”ì— ëŒ€í•œ ê²ƒì¸ ì—ëŸ¬ ì´ë²¤íŠ¸ë¡œ êµ¬ë¶„ ì„¤ì •ë˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The method of claim 1, wherein the event type of the set is carried out by the master device to the slave device, wherein the event type is an information event, a processing by the user demand for a simple change of state of said slave device the home network system, characterized in that distinct set of error events for a warning of the event, and a state change occurs immediately, that requires emergency treatment for a non-emergency conditions change.</span> </div> </div> </li> <li class="claim-dependent"> <div num="3" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 2í•­ì— ìžˆì–´ì„œ, ìƒê¸° ì •ë³´ ì´ë²¤íŠ¸ëŠ” í•´ë‹¹í•˜ëŠ” ìƒíƒœë³€í™”ê°€ ë°œìƒí•˜ì˜€ì„ ë•Œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì„¤ì •ì— ë‹¤ë¼ ì „ì†¡ ë˜ëŠ” ì „ì†¡í•˜ì§€ ì•Šë„ë¡ ì„¤ì •ëœ ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The method of claim 2, wherein the event information is the home network system, characterized in that set to not transfer or transfer to the Dara set as the master device when a state change occurs to.</span> </div> </div> </li> <li class="claim-dependent"> <div num="4" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 2í•­ì— ìžˆì–´ì„œ, ìƒê¸° ì›Œë‹ ì´ë²¤íŠ¸ëŠ” í•´ë‹¹í•˜ëŠ” ìƒíƒœë³€í™”ê°€ ë°œìƒí•˜ì˜€ì„ ë•Œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ìƒê¸° ìƒíƒœë³€í™”ê°€ ì¢…ë£Œí•  ë•Œê¹Œì§€ ì†Œì •ì£¼ê¸°ë§ˆë‹¤ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ëœ ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The method of claim 2, wherein the warning event is a home network system, characterized in that when set to transmit the status change to occur until the change of state is terminated by the master device at every predetermined period.</span> </div> </div> </li> <li class="claim-dependent"> <div num="5" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 2í•­ì— ìžˆì–´ì„œ, ìƒê¸° ì—ëŸ¬ ì´ë²¤íŠ¸ëŠ” í•´ë‹¹í•˜ëŠ” ìƒíƒœ ë³€í™”ê°€ ë°œìƒí•˜ì˜€ì„ ë•Œ ë°œìƒ ì¦‰ì‹œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ëœ ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The method of claim 2, wherein the error event when the state changes that occur immediately hayeoteul idea home network system, characterized in that set to be transmitted to the master device.</span> </div> </div> </li> <li class="claim"> <div num="6" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í†µì‹ ë§ì— ì—°ë™ê°€ëŠ¥í•˜ê²Œ ì—°ê²°ëœ ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì— ëŒ€í•˜ì—¬ ì´ë²¤íŠ¸ ë°œìƒ ëª¨ë“œì™€, ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œë¥¼ ì„¤ì •í•˜ëŠ” ë‹¨ê³„;</span> Setting a mode and the event occurrence, the event occurrence control mode with respect to a slave device coupled to the interworking network;</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì´ë²¤íŠ¸ ë°œìƒ ì¡°ì ˆ ëª¨ë“œê°€ ì„¤ì •ë˜ê³ , ìƒê¸° ìŠ¬ë ˆì´ë¸Œ ê¸°ê¸°ì—ì„œ ì†Œì • ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ë©´, ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ê°€ ì •ë³´ ì´ë²¤íŠ¸ì´ë©´ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ì˜ ì „ì†¡ì—¬ë¶€ë¥¼ íŒë‹¨í•œ í›„ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ëœ ê²½ìš°ì—ë§Œ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ëŠ” ë‹¨ê³„;</span> Further comprising: setting the event occurs and control mode, if a predetermined event has occurred in the slave device, the predetermined event is the event information is transmitted to the master device only if it is set to send and then it is determined whether or not to send the predetermined event;</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì„±ê°€ ì†Œì • ì´ë²¤íŠ¸ê°€ ì£¼ê¸°ì ìœ¼ë¡œ ì´ë²¤íŠ¸ íŒŒì¼ì„ ì „ì†¡í•˜ë„ë¡ ì„¤ì •ëœ ì›Œë‹ ì´ë²¤íŠ¸ì´ë©´ ì„¤ì •ëœ ìƒê¸° ì£¼ê¸°ë§ˆë‹¤ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ë¥¼ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ëŠ” ë‹¨ê³„;</span> If chant a predetermined event is periodic warning event is configured to transmit an event file for each set cycle the step of transmitting the predetermined events to the master device;</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ê°€ ë°œìƒ ì¦‰ì‹œ ì „ì†¡í•˜ë„ë¡ ëœ ì—ëŸ¬ ì´ë²¤íŠ¸ì´ë©´ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ì˜ ë°œìƒ ì¦‰ì‹œ ìƒê¸° ì†Œì • ì´ë²¤íŠ¸ë¥¼ ìƒê¸° ë§ˆìŠ¤í„° ê¸°ê¸°ë¡œ ì „ì†¡í•˜ëŠ” ë‹¨ê³„ë¥¼ êµ¬ë¹„í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²•.</span> If the error event when the predetermined event occurs so as to immediately send an event processing method of a home network system comprising the step of transmitting occurs immediately the predetermined event of the specific event by the master device.</span> </div> <div class="claim-text"> </div> </div> </li> </ol></div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+        <span itemprop="applicationNumber">KR1020060036804A</span>
+        <span itemprop="priorityDate">2006-04-24</span>
+        <span itemprop="filingDate">2006-04-24</span>
+        <span itemprop="title">Home network system and method of processing events thereof 
+       </span>
+        
+        
+        <a href="/patent/KR100773827B1/en">
+            <span itemprop="representativePublication">KR100773827B1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+        </a>
+    </section>
+
+    <h2>Priority Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">KR1020060036804A</span>
+                   
+                   <a href="/patent/KR100773827B1/en">
+                        <span itemprop="representativePublication">KR100773827B1</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2006-04-24</td>
+                <td itemprop="filingDate">2006-04-24</td>
+                <td itemprop="title">Home network system and method of processing events thereof 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    <h2>Applications Claiming Priority (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="appsClaimingPriority" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">KR1020060036804A</span>
+                   <a href="/patent/KR100773827B1/en">
+                        <span itemprop="representativePublication">KR100773827B1</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2006-04-24</td>
+                <td itemprop="filingDate">2006-04-24</td>
+                <td itemprop="title">Home network system and method of processing events thereof 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    
+
+    
+
+    <h2>Publications (2)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Publication Number</th>
+                    <th>Publication Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">KR20070104757A</span>
+                   
+                   <span itemprop="thisPatent">true</span>
+                   <a href="/patent/KR20070104757A/en">KR20070104757A
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2007-10-29</td>
+              </tr><tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">KR100773827B1</span>
+                   
+                   <a href="/patent/KR100773827B1/en">KR100773827B1
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2007-11-06</td>
+              </tr>
+           </tbody>
+        </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=38818507</h2>
+
+    <h2>Family Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Title</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="applications" itemscope repeat>
+                <td>
+                    <span itemprop="applicationNumber">KR1020060036804A</span>
+                    
+                    
+                    <a href="/patent/KR100773827B1/en">
+                        <span itemprop="representativePublication">KR100773827B1</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                </td>
+                <td itemprop="priorityDate">2006-04-24</td>
+                <td itemprop="filingDate">2006-04-24</td>
+                <td itemprop="title">Home network system and method of processing events thereof 
+       </td>
+              </tr>
+           </tbody>
+        </table>
+
+    
+
+    
+
+    <h2>Country Status (1)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">KR</span>
+                (<span itemprop="num">1</span>)
+              <meta itemprop="thisCountry" content="true">
+            </td>
+            <td>
+              <a href="/patent/KR100773827B1/en">
+                <span itemprop="representativePublication">KR100773827B1</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    <h2>Cited By (1)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR100986987B1/en">
+              <span itemprop="publicationNumber">KR100986987B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-09-30</td>
+          <td itemprop="publicationDate">2010-10-11</td>
+          <td><span itemprop="assigneeOriginal">ì „ìžë¶€í’ˆì—°êµ¬ì›</span></td>
+          <td itemprop="title">Homenetwork System, Apparatus and Method for Saving Power of Gateway 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    <h2>Family Cites Families (6)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR19990054741A/en">
+              <span itemprop="publicationNumber">KR19990054741A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1997-12-26</td>
+          <td itemprop="publicationDate">1999-07-15</td>
+          <td><span itemprop="assigneeOriginal">ìœ¤ì¢…ìš©</span></td>
+          <td itemprop="title">  The alarm information processing system occurs in the network element in a communications network management  </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20030067976A/en">
+              <span itemprop="publicationNumber">KR20030067976A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-02-09</td>
+          <td itemprop="publicationDate">2003-08-19</td>
+          <td><span itemprop="assigneeOriginal">ì—˜ì§€ì „ìž ì£¼ì‹íšŒì‚¬</span></td>
+          <td itemprop="title">Method for operating communication system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20040052016A/en">
+              <span itemprop="publicationNumber">KR20040052016A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-12-13</td>
+          <td itemprop="publicationDate">2004-06-19</td>
+          <td><span itemprop="assigneeOriginal">í•œêµ­ì „ìží†µì‹ ì—°êµ¬ì›</span></td>
+          <td itemprop="title">Method for GUI-based monitoring events in event monitoring system and apparatus thereof 
+     </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20030036286A/en">
+              <span itemprop="publicationNumber">KR20030036286A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-02-17</td>
+          <td itemprop="publicationDate">2003-05-09</td>
+          <td><span itemprop="assigneeOriginal">ì„±ë³´ì „ê¸°ê³µì—… ì£¼ì‹íšŒì‚¬</span></td>
+          <td itemprop="title">The remote electric power monitoring and controlling system and its process 
+     </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20050014629A/en">
+              <span itemprop="publicationNumber">KR20050014629A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-05-30</td>
+          <td itemprop="publicationDate">2005-02-07</td>
+          <td><span itemprop="assigneeOriginal">ì—˜ì§€ì „ìž ì£¼ì‹íšŒì‚¬</span></td>
+          <td itemprop="title">Home network system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20060021514A/en">
+              <span itemprop="publicationNumber">KR20060021514A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-09-03</td>
+          <td itemprop="publicationDate">2006-03-08</td>
+          <td><span itemprop="assigneeOriginal">ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤</span></td>
+          <td itemprop="title">Method for processing device event in home network system 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+    <ul>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2006</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2006-04-24</span>
+            <span itemprop="countryCode">KR</span>
+            <span itemprop="applicationNumber">KR1020060036804A</span>
+            <a href="/patent/KR100773827B1/en"><span itemprop="documentId">patent/KR100773827B1/en</span></a>
+            <span itemprop="legalStatusCat">not_active</span>
+            <span itemprop="legalStatus">IP Right Cessation</span>
+            
+            <span itemprop="thisApp" content="true" bool></span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+    
+
+    </section>
+
+  
+
+  
+
+  <h2>Cited By (1)</h2>
+  <table>
+    <caption>* Cited by examiner, â€  Cited by third party</caption>
+    <thead>
+      <tr>
+        <th>Publication number</th>
+        <th>Priority date</th>
+        <th>Publication date</th>
+        <th>Assignee</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/KR100986987B1/en">
+            <span itemprop="publicationNumber">KR100986987B1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2008-09-30</td>
+        <td itemprop="publicationDate">2010-10-11</td>
+        <td><span itemprop="assigneeOriginal">ì „ìžë¶€í’ˆì—°êµ¬ì›</span></td>
+        <td itemprop="title">Homenetwork System, Apparatus and Method for Saving Power of Gateway 
+       </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section>
+    <h2>Also Published As</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Publication date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR100773827B1/en">
+              <span itemprop="publicationNumber">KR100773827B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2007-11-06</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7039391B2/en">
+                <span itemprop="publicationNumber">US7039391B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-05-02">2006-05-02</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for communicating with a wireless device 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/RU2564627C2/en">
+                <span itemprop="publicationNumber">RU2564627C2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-10-10">2015-10-10</time>
+            
+            
+          </td>
+          <td itemprop="title">System for controlling wireless communication between devices 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN1799224B/en">
+                <span itemprop="publicationNumber">CN1799224B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-12-29">2010-12-29</time>
+            
+            
+          </td>
+          <td itemprop="title">Home network system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN101682179B/en">
+                <span itemprop="publicationNumber">CN101682179B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-09-16">2015-09-16</time>
+            
+            
+          </td>
+          <td itemprop="title">  Smart National Electrical Manufacturers Association and the associated network jack  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN1799012B/en">
+                <span itemprop="publicationNumber">CN1799012B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-04-14">2010-04-14</time>
+            
+            
+          </td>
+          <td itemprop="title">Abnormality processing system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7363031B1/en">
+                <span itemprop="publicationNumber">US7363031B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-04-22">2008-04-22</time>
+            
+            
+          </td>
+          <td itemprop="title">System for monitoring and controlling a set of household appliances 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8176112B2/en">
+                <span itemprop="publicationNumber">US8176112B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-05-08">2012-05-08</time>
+            
+            
+          </td>
+          <td itemprop="title">Systems, methods, and products for multimedia applications gateways 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7231281B2/en">
+                <span itemprop="publicationNumber">US7231281B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-06-12">2007-06-12</time>
+            
+            
+          </td>
+          <td itemprop="title">Dynamic control system for power sub-network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20050076150A1/en">
+                <span itemprop="publicationNumber">US20050076150A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-04-07">2005-04-07</time>
+            
+            
+          </td>
+          <td itemprop="title">Home network system and method for operating the same 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN103023681B/en">
+                <span itemprop="publicationNumber">CN103023681B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-03-02">2016-03-02</time>
+            
+            
+          </td>
+          <td itemprop="title">  Intelligent home control devices, update method  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR20190062632A/en">
+                <span itemprop="publicationNumber">KR20190062632A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-06-05">2019-06-05</time>
+            
+            
+          </td>
+          <td itemprop="title">Efficient communication for devices of a home network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1514381B1/en">
+                <span itemprop="publicationNumber">EP1514381B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-03-08">2006-03-08</time>
+            
+            
+          </td>
+          <td itemprop="title">Determining and configuring a communication path in a network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR100541942B1/en">
+                <span itemprop="publicationNumber">KR100541942B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-01-10">2006-01-10</time>
+            
+            
+          </td>
+          <td itemprop="title">Apparatus for managing home-devices remotely in home-network and method thereof 
+     </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR100559025B1/en">
+                <span itemprop="publicationNumber">KR100559025B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-03-10">2006-03-10</time>
+            
+            
+          </td>
+          <td itemprop="title">Home network management system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/DE69925274T2/en">
+                <span itemprop="publicationNumber">DE69925274T2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-02-23">2006-02-23</time>
+            
+            
+          </td>
+          <td itemprop="title">Connection procedure for internal services 
+     </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1390817B1/en">
+                <span itemprop="publicationNumber">EP1390817B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-10-31">2007-10-31</time>
+            
+            
+          </td>
+          <td itemprop="title">Network control system for home appliances 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7142128B2/en">
+                <span itemprop="publicationNumber">US7142128B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-11-28">2006-11-28</time>
+            
+            
+          </td>
+          <td itemprop="title">Portable information device, access device for portable information device, home network system, and home network access method 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7231280B2/en">
+                <span itemprop="publicationNumber">US7231280B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-06-12">2007-06-12</time>
+            
+            
+          </td>
+          <td itemprop="title">Dynamic control system for power sub-network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1598714B1/en">
+                <span itemprop="publicationNumber">EP1598714B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-09-28">2016-09-28</time>
+            
+            
+          </td>
+          <td itemprop="title">Apparatus and method for remotely controlling household appliances 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP2405611A2/en">
+                <span itemprop="publicationNumber">EP2405611A2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-01-11">2012-01-11</time>
+            
+            
+          </td>
+          <td itemprop="title">Device communication, monitoring and control architecture and method 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR100505221B1/en">
+                <span itemprop="publicationNumber">KR100505221B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-08-03">2005-08-03</time>
+            
+            
+          </td>
+          <td itemprop="title">Remote Control System of Home Appliance Network and Its Operating Method for the same 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR100596755B1/en">
+                <span itemprop="publicationNumber">KR100596755B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-07-04">2006-07-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Home network system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8365215B2/en">
+                <span itemprop="publicationNumber">US8365215B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-01-29">2013-01-29</time>
+            
+            
+          </td>
+          <td itemprop="title">Methods, systems and computer program products for providing ad insertion via a multimedia applications gateway 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/JP3451440B2/en">
+                <span itemprop="publicationNumber">JP3451440B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2003-09-29">2003-09-29</time>
+            
+            
+          </td>
+          <td itemprop="title">  Polling communication system and polling control method  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR101407364B1/en">
+                <span itemprop="publicationNumber">KR101407364B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2014-06-17">2014-06-17</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for filtering home-network content 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2006-04-24">2006-04-24</time></td>
+          <td itemprop="code">A201</td>
+          <td itemprop="title">Request for examination</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2007-04-06">2007-04-06</time></td>
+          <td itemprop="code">E902</td>
+          <td itemprop="title">Notification of reason for refusal</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2007-07-31">2007-07-31</time></td>
+          <td itemprop="code">E701</td>
+          <td itemprop="title">Decision to grant or registration of patent right</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2007-10-31">2007-10-31</time></td>
+          <td itemprop="code">GRNT</td>
+          <td itemprop="title">Written decision to grant</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2008-04-15">2008-04-15</time></td>
+          <td itemprop="code">G170</td>
+          <td itemprop="title">Publication of correction</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2011-09-30">2011-09-30</time></td>
+          <td itemprop="code">FPAY</td>
+          <td itemprop="title">Annual fee payment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Payment date</strong>:
+              <span itemprop="value">20111004</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Year of fee payment</strong>:
+              <span itemprop="value">5</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2012-11-01">2012-11-01</time></td>
+          <td itemprop="code">LAPS</td>
+          <td itemprop="title">Lapse due to unpaid annual fee</td>
+          <td>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
+
+    </search-app>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script async="" defer="" src="//www.google.com/insights/consumersurveys/async_survey?site=cxkjf7ipxgbnnjy6k35ezcvbbe"></script>
+  </body>
+</html>

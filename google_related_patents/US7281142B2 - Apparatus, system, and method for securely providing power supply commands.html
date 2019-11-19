@@ -1,0 +1,2293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>US7281142B2 - Apparatus, system, and method for securely providing power supply commands 
+        - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/US7281142B2/en">
+    <meta name="description" content="
+     An apparatus, system, and method are disclosed for securely providing power supply commands. A security feature is added to the remote management of power-on and power-off sequences. The feature allows for multiple controller nodes to receive a command to initiate a power sequence. Each controller node possesses a unique identifier. The nodes compare the received command with received commands of other nodes to confirm that each node received identical power commands. The security feature prevents inadvertent power commands from being received and executed by a single controller node. The unique identifier of each node must be provided before execution of the power command occurs. 
+   
+   ">
+    
+    <meta name="DC.type" content="patent">
+    
+    <meta name="DC.title" content="Apparatus, system, and method for securely providing power supply commands 
+       ">
+    
+    <meta name="DC.date" content="2004-09-07" scheme="dateSubmitted">
+    
+    <meta name="DC.description" content="
+     An apparatus, system, and method are disclosed for securely providing power supply commands. A security feature is added to the remote management of power-on and power-off sequences. The feature allows for multiple controller nodes to receive a command to initiate a power sequence. Each controller node possesses a unique identifier. The nodes compare the received command with received commands of other nodes to confirm that each node received identical power commands. The security feature prevents inadvertent power commands from being received and executed by a single controller node. The unique identifier of each node must be provided before execution of the power command occurs. 
+   
+   ">
+    
+    <meta name="citation_patent_application_number" content="US:10/935,587">
+    
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/83/f0/e4/f9941f876c6719/US7281142B2.pdf">
+    
+    <meta name="citation_patent_number" content="US:7281142">
+    
+    <meta name="DC.date" content="2007-10-09" scheme="issue">
+    
+    <meta name="DC.contributor" content="Carl Evan Jones" scheme="inventor">
+    
+    <meta name="DC.contributor" content="Robert Akira Kubo" scheme="inventor">
+    
+    <meta name="DC.contributor" content="Gregg Steven Lucas" scheme="inventor">
+    
+    <meta name="DC.contributor" content="Andrew Dale Walls" scheme="inventor">
+    
+    <meta name="DC.contributor" content="International Business Machines Corp" scheme="assignee">
+    
+    <meta name="DC.relation" content="US:4322611" scheme="references">
+    
+    <meta name="DC.relation" content="US:20060259201:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:6317839" scheme="references">
+    
+    <meta name="DC.relation" content="US:6657534" scheme="references">
+    
+    <meta name="DC.relation" content="US:20040184203:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050289426:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20040268111:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050152379:A1" scheme="references">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <style>
+      body { transition: none; }
+    </style>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27188110-4', 'auto');
+
+      version = 'patent-search.search_20191028_RC01';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.profilePicture = "";
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.html">
+    
+  </head>
+  <body unresolved>
+    
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.js"></script>
+    
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">US7281142B2 - Apparatus, system, and method for securely providing power supply commands 
+        - Google Patents</h1>
+  <span itemprop="title">Apparatus, system, and method for securely providing power supply commands 
+       </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/83/f0/e4/f9941f876c6719/US7281142B2.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">US7281142B2</dd>
+    <meta itemprop="numberWithoutCodes" content="7281142">
+    <meta itemprop="kindCode" content="B2">
+    <meta itemprop="publicationDescription" content="Patent ( having previously published pre-grant publication)">
+    
+    <span>US7281142B2</span>
+    
+    <span>US10/935,587</span>
+    
+    <span>US93558704A</span>
+    
+    <span>US7281142B2</span>
+    
+    <span>US 7281142 B2</span>
+    
+    <span>US7281142 B2</span>
+    
+    <span>US 7281142B2</span>
+    
+    <span>  </span>
+    
+    <span> </span>
+    
+    <span> </span>
+    
+    <span>US 93558704 A</span>
+    
+    <span>US93558704 A</span>
+    
+    <span>US 93558704A</span>
+    
+    <span>US 7281142 B2</span>
+    
+    <span>US7281142 B2</span>
+    
+    <span>US 7281142B2</span>
+    
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">US</dd>
+    <dd itemprop="countryName">United States</dd>
+
+    <dt>Prior art keywords</dt>
+    
+    <dd itemprop="priorArtKeywords" repeat>power</dd>
+    <dd itemprop="priorArtKeywords" repeat>system</dd>
+    <dd itemprop="priorArtKeywords" repeat>command</dd>
+    <dd itemprop="priorArtKeywords" repeat>commands</dd>
+    <dd itemprop="priorArtKeywords" repeat>configured</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2004-09-07">2004-09-07</time></dd>
+
+    <dt>Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)</dt>
+    <dd itemprop="legalStatusIfi" itemscope>
+      <span itemprop="status">Expired - Fee Related</span>, expires <time itemprop="expiration" datetime="2025-12-09">2025-12-09</time>
+    </dd>
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">US10/935,587</dd>
+
+  
+
+  <dt>Other versions</dt>
+  <dd itemprop="directAssociations" itemscope repeat>
+    
+    <a href="/patent/US20060053312A1/en">
+      <span itemprop="publicationNumber">US20060053312A1</span>
+      (<span itemprop="primaryLanguage">en</span>
+    </a>
+  </dd>
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>Carl Evan Jones</dd>
+  <dd itemprop="inventor" repeat>Robert Akira Kubo</dd>
+  <dd itemprop="inventor" repeat>Gregg Steven Lucas</dd>
+  <dd itemprop="inventor" repeat>Andrew Dale Walls</dd>
+  <dt>Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)</dt>
+  <dd itemprop="assigneeCurrent" repeat>
+    International Business Machines Corp
+  </dd>
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>International Business Machines Corp</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2004-09-07">2004-09-07</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2004-09-07">2004-09-07</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2007-10-09">2007-10-09</time></dd>
+
+  
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2004-09-07">2004-09-07</time>
+    <span itemprop="title">Application filed by International Business Machines Corp</span>
+    <span itemprop="type">filed</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">International Business Machines Corp</span>
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2004-09-07">2004-09-07</time>
+    <span itemprop="title">Priority to US10/935,587</span>
+    <span itemprop="type">priority</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US7281142B2/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2005-02-18">2005-02-18</time>
+    <span itemprop="title">Assigned to INTERNATIONAL BUSINESS MACHINES CORPORATION</span>
+    <span itemprop="type">reassignment</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">INTERNATIONAL BUSINESS MACHINES CORPORATION</span>
+    
+    
+    <span itemprop="description" repeat>ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS).</span>
+    
+    <span itemprop="description" repeat>Assignors: WALLS, ANDREW DALE, JONES, CARL EVAN, KUBO, ROBERT AKIRA, LUCAS, GREGG STEVEN</span>
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2006-03-09">2006-03-09</time>
+    <span itemprop="title">Publication of US20060053312A1</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US20060053312A1/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-10-09">2007-10-09</time>
+    <span itemprop="title">Application granted</span>
+    <span itemprop="type">granted</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-10-09">2007-10-09</time>
+    <span itemprop="title">Publication of US7281142B2</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US7281142B2/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-11-17">2019-11-17</time>
+    <span itemprop="title">Application status is Expired - Fee Related</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2025-12-09">2025-12-09</time>
+    <span itemprop="title">Adjusted expiration</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+
+  <h2>Links</h2>
+
+  <ul>
+    
+          <li itemprop="links" itemscope repeat>
+            <meta itemprop="id" content="usptoLink">
+            <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&d=PALL&s1=7281142.PN." itemprop="url" target="_blank"><span itemprop="text">USPTO</span></a>
+          </li>
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="usptoAssignmentLink">
+          <a href="https://assignment.uspto.gov/patent/index.html#/patent/search/resultFilter?searchInput=7281142" itemprop="url" target="_blank"><span itemprop="text">USPTO Assignment</span></a>
+        </li>
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=US&amp;NR=7281142B2&amp;KC=B2&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    
+      <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="globalDossierLink">
+          <a href="http://globaldossier.uspto.gov/#/result/patent/US/7281142/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="stackexchangeLink">
+          <a href="https://patents.stackexchange.com/questions/tagged/US7281142" itemprop="url"><span itemprop="text">Discuss</span></a>
+        </li>
+      
+  </ul>
+
+  
+  <ul itemprop="concept" itemscope>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">239000002609</span>
+      <span itemprop="name">media</span>
+      <span itemprop="domain">Substances</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">8</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000003860</span>
+      <span itemprop="name">storage</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">4</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000000875</span>
+      <span itemprop="name">corresponding</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">10</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000003213</span>
+      <span itemprop="name">activating</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">5</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000005516</span>
+      <span itemprop="name">engineering processes</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">5</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001965</span>
+      <span itemprop="name">increased</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">3</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000000034</span>
+      <span itemprop="name">methods</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">3</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000000670</span>
+      <span itemprop="name">limiting</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">239000000463</span>
+      <span itemprop="name">materials</span>
+      <span itemprop="domain">Substances</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000015654</span>
+      <span itemprop="name">memory</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004044</span>
+      <span itemprop="name">response</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001154</span>
+      <span itemprop="name">acute</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004891</span>
+      <span itemprop="name">communication</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000000694</span>
+      <span itemprop="name">effects</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000003405</span>
+      <span itemprop="name">preventing</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">239000004065</span>
+      <span itemprop="name">semiconductor</span>
+      <span itemprop="domain">Substances</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001360</span>
+      <span itemprop="name">synchronised</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+  </ul>
+  
+
+  <section>
+    <h2>Images</h2>
+    <ul>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/thumbnails/US7281142B2/US07281142-20071009-D00000.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/US7281142B2/US07281142-20071009-D00000.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/thumbnails/US7281142B2/US07281142-20071009-D00001.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/US7281142B2/US07281142-20071009-D00001.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/thumbnails/US7281142B2/US07281142-20071009-D00002.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/US7281142B2/US07281142-20071009-D00002.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/thumbnails/US7281142B2/US07281142-20071009-D00003.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/US7281142B2/US07281142-20071009-D00003.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/thumbnails/US7281142B2/US07281142-20071009-D00004.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/US7281142B2/US07281142-20071009-D00004.png">
+        <ul>
+          
+        </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>Classifications</h2>
+    
+    <ul>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/00</span>&mdash;<span itemprop="Description">Security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/70</span>&mdash;<span itemprop="Description">Protecting specific internal or peripheral components, in which the protection of a component leads to protection of the entire computer</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/81</span>&mdash;<span itemprop="Description">Protecting specific internal or peripheral components, in which the protection of a component leads to protection of the entire computer by operating on the power supply, e.g. enabling or disabling power-on, sleep or resume operations</span>
+            <meta itemprop="Leaf" content="true">
+            
+            <meta itemprop="FirstCode" content="true">
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F1/00</span>&mdash;<span itemprop="Description">Details not covered by groups G06F3/00 â€“ G06F13/00 and G06F21/00</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F1/26</span>&mdash;<span itemprop="Description">Power supply means, e.g. regulation thereof</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F1/32</span>&mdash;<span itemprop="Description">Means for saving power</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F1/3203</span>&mdash;<span itemprop="Description">Power management, i.e. event-based initiation of power-saving mode</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA51212945" lang="EN" load-source="patent-office">
+    <div num="p-0001" class="abstract">An apparatus, system, and method are disclosed for securely providing power supply commands. A security feature is added to the remote management of power-on and power-off sequences. The feature allows for multiple controller nodes to receive a command to initiate a power sequence. Each controller node possesses a unique identifier. The nodes compare the received command with received commands of other nodes to confirm that each node received identical power commands. The security feature prevents inadvertent power commands from being received and executed by a single controller node. The unique identifier of each node must be provided before execution of the power command occurs.</div>
+  </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    
+    <div itemprop="content" html><div mxw-id="PDES16303984" lang="EN" load-source="patent-office" class="description">
+
+  <heading>BACKGROUND OF THE INVENTION</heading>
+  <p num="p-0002">1. Field of the Invention</p>
+  <p num="p-0003">This invention relates to providing commands to a system of devices and more particularly relates to techniques for securely issuing commands across a network to client computer systems to initiate power-on or power-off sequences or execute other system and power management functions.</p>
+  <p num="p-0004">2. Description of the Related Art</p>
+  <p num="p-0005">Personal computer systems are well known in the art. They are widely used for providing computer power to many segments of today&#39;s modern society. A personal computer may take many forms, including a desktop unit, a standing unit, or a portable microcomputer unit. Typical personal computers are provided with a central processing unit and associated volatile and non-volatile memory, including random access memory and basic input/output system read only memory, a system monitor, a keyboard, one or more flexible diskette drives, a CD-ROM drive, a fixed disk storage drive (also known as a â€œhard driveâ€), a pointing device such as a mouse, and an optional network interface adapter. One of the distinguishing characteristics of these systems is the use of a motherboard or system planar to electrically connect these components together.</p>
+  <p num="p-0006">With personal computers being increasingly connected into networks to allow efficient transfers of data among computers, operations such as maintenance, updating of applications, and data collections are constant and required. Computer networks are also becoming more and more essential to their users. Consequently, it is desirable to minimize loss of productivity by increasing the availability of network resources.</p>
+  <p num="p-0007">Remote management of client computer systems is currently conducted on both large and medium networks. Management of computer networks is accomplished in many systems by a central network management station which has access to client computer systems in the network for management functions. However, in complex network environments, many of the client systems are turned off at night or at other times when they are not in use, either manually or automatically, by power management circuits. This prevents the network management station from gaining access to the client system, limiting the ability to effectively manage the network. Thus, technology has evolved which allows a remote network management station to wake-up a client system in the network to allow it to conduct network management processes or otherwise communicate with the client system. Such technology is referred to generally as Wake On LAN.</p>
+  <p num="p-0008">The Wake On LAN feature of network adapter cards in personal computers allows network administrators to remotely boot off-line client systems. One popular technology for implementing the Wake On LAN feature is referred to as the â€œMagic Packetâ€ technology, developed by Advanced Micro Devices, Inc. One concern that the Wake On LAN feature creates is the potential for intruders acting remotely to power-up unattended systems, and attempt to penetrate them. This danger is more acute than that for on-line systems, from one point of view, because their powered down state can be used as evidence that they are not being monitored for intrusion. Thus, Wake On LAN protocols present an avenue for hackers to gain access through a network to sleeping devices.</p>
+  <p num="p-0009">The â€œMagic Packetâ€ technology developed by AMD involves transmission of a special packet which is identified by 16 duplications of the media access control (MAC) address of the client system to be woken up without breaks or interruptions, inside a single packet. The network interface card is adapted to recognize this special packet, and signal the host system that it has received a Wake On LAN command.</p>
+  <p num="p-0010">One approach to providing security for the Wake On LAN feature involves transmitting a separate packet carrying a password. Before the network interface card issues a command to the host system, it must receive both the special Wake On LAN packet and the special password packet. This approach has a number of drawbacks, including the fact that packets can by snooped by other stations in the network, allowing the password to be learned by other parties. Also, the Wake On LAN packet sequence can be easily replayed by parties attempting to enter the system. In addition, the requirement of two packets requires complicated circuitry in the network interface card, increasing costs. Thus the password packet approach provides limited security at increased costs.</p>
+  <p num="p-0011">From the foregoing discussion, it should be apparent that a need exists for an apparatus, system, and method that render current Wake On LAN systems more secure. Beneficially, such an apparatus, system, and method would provide a secure means of confirming power control commands before the execution of said commands are carried out.</p>
+  <heading>SUMMARY OF THE INVENTION</heading>
+  <p num="p-0012">The present invention has been developed in response to the present state of the art, and in particular, in response to the problems and needs in the art that have not yet been fully solved by currently available computer networks. Accordingly, the present invention has been developed to provide an apparatus, system, and method for securely issuing commands across a network that overcome many or all of the above-discussed shortcomings in the art.</p>
+  <p num="p-0013">The apparatus to securely provide power supply commands is provided with a logic unit containing a plurality of modules configured to functionally execute the necessary steps of securely providing commands across a network. These modules in the described embodiments include a command module configured to provide the power supply commands, a plurality of independent controller nodes configured to receive the power supply commands, and a receiver module configured to confirm that each controller node received identical power supply commands.</p>
+  <p num="p-0014">The apparatus, in one embodiment, is configured to provide the power control commands from a remote location. Each independent controller node comprising the plurality of nodes comprises a network interface connection, such as a network interface card. The network interface connection is configured to receive the power supply commands wirelessly. A unique identifier is assigned to each network interface connection. In one embodiment, the unique identifier is the media access control (MAC) address.</p>
+  <p num="p-0015">The apparatus is further configured, in one embodiment, to provide commands to initiate power-off sequences to a processing module. The processing module may be further configured to manage power control commands to power down the system of devices. The processing module is also configured to confirm that each independent node received identical power control commands to power down the system. The processing module may also be configured to provide commands to power-off the power supply of the system to the receiver module.</p>
+  <p num="p-0016">A system of the present invention is also presented to provide commands to a system of devices. The system may be embodied to securely provide power control commands to a system of devices. In particular, the system, in one embodiment, includes a user interface configured to provide the power control commands, a plurality of independent controller nodes configured to receive the power control commands, and a control processor configured to confirm that each controller node received identical power control commands.</p>
+  <p num="p-0017">The system may further include a network interface connection for each independent controller node. Each network connection is identified by a unique identifier. In one embodiment, the user interface provides the unique identifier of each network interface connection of each controller node. The control processor is configured to confirm that each controller node has received identical power control commands.</p>
+  <p num="p-0018">The system may further include a processing complex configured to provide commands to power-off the power supply to the control processor. The processing complex may also be configured to execute a primary shut down sequence such as quiescing data transfers, shutdown of functional code, and shutdown application code, and the operating environment.</p>
+  <p num="p-0019">Reference throughout this specification to features, advantages, or similar language does not imply that all of the features and advantages that may be realized with the present invention should be or are in any single embodiment of the invention. Rather, language referring to the features and advantages is understood to mean that a specific feature, advantage, or characteristic described in connection with an embodiment is included in at least one embodiment of the present invention. Thus, discussion of the features and advantages, and similar language, throughout this specification may, but do not necessarily, refer to the same embodiment.</p>
+  <p num="p-0020">Furthermore, the described features, advantages, and characteristics of the invention may be combined in any suitable manner in one or more embodiments. One skilled in the relevant art will recognize that the invention can be practiced without one or more of the specific features or advantages of a particular embodiment. In other instances, additional features and advantages may be recognized in certain embodiments that may not be present in all embodiments of the invention.</p>
+  <p num="p-0021">These features and advantages of the present invention will become more fully apparent from the following description and appended claims, or may be learned by the practice of the invention as set forth hereinafter.</p>
+
+
+  <description-of-drawings>
+    <heading>BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+    <p num="p-0022">In order that the advantages of the invention will be readily understood, a more particular description of the invention briefly described above will be rendered by reference to specific embodiments that are illustrated in the appended drawings. Understanding that these drawings depict only typical embodiments of the invention and are not therefore to be considered to be limiting of its scope, the invention will be described and explained with additional specificity and detail through the use of the accompanying drawings, in which:</p>
+    <p num="p-0023"> <figref idrefs="DRAWINGS">FIG. 1</figref> is a schematic block diagram illustrating one embodiment of a power supply apparatus of the prior art;</p>
+    <p num="p-0024"> <figref idrefs="DRAWINGS">FIG. 2</figref> is a schematic block diagram illustrating one embodiment of a power command security apparatus in accordance with the present invention;</p>
+    <p num="p-0025"> <figref idrefs="DRAWINGS">FIG. 3</figref> is a schematic flow chart diagram illustrating one embodiment of a power activation method in accordance with the present invention; and</p>
+    <p num="p-0026"> <figref idrefs="DRAWINGS">FIG. 4</figref> is a schematic flow chart diagram illustrating one embodiment of a power deactivation method in accordance with the present invention.</p>
+  </description-of-drawings>
+
+
+  <heading>DETAILED DESCRIPTION OF THE INVENTION</heading>
+  <p num="p-0027">Many of the functional units described in this specification have been labeled as modules, in order to more particularly emphasize their implementation independence. For example, a module may be implemented as a hardware circuit comprising custom VLSI circuits or gate arrays, off-the-shelf semiconductors such as logic chips, transistors, or other discrete components. A module may also be implemented in programmable hardware devices such as field programmable gate arrays, programmable array logic, programmable logic devices or the like.</p>
+  <p num="p-0028">Modules may also be implemented in software for execution by various types of processors. An identified module of executable code may, for instance, comprise one or more physical or logical blocks of computer instructions which may, for instance, be organized as an object, procedure, or function. Nevertheless, the executables of an identified module need not be physically located together, but may comprise disparate instructions stored in different locations which, when joined logically together, comprise the module and achieve the stated purpose for the module.</p>
+  <p num="p-0029">Indeed, a module of executable code may be a single instruction, or many instructions, and may even be distributed over several different code segments, among different programs, and across several memory devices. Similarly, operational data may be identified and illustrated herein within modules, and may be embodied in any suitable form and organized within any suitable type of data structure. The operational data may be collected as a single data set, or may be distributed over different locations including over different storage devices, and may exist, at least partially, merely as electronic signals on a system or network.</p>
+  <p num="p-0030">Reference throughout this specification to â€œone embodiment,â€ â€œan embodiment,â€ or similar language means that a particular feature, structure, or characteristic described in connection with the embodiment is included in at least one embodiment of the present invention. Thus, appearances of the phrases â€œin one embodiment,â€ â€œin an embodiment,â€ and similar language throughout this specification may, but do not necessarily, all refer to the same embodiment.</p>
+  <p num="p-0031">Furthermore, the described features, structures, or characteristics of the invention may be combined in any suitable manner in one or more embodiments. In the following description, numerous specific details are provided, such as examples of programming, software modules, user selections, network transactions, database queries, database structures, hardware modules, hardware circuits, hardware chips, etc., to provide a thorough understanding of embodiments of the invention. One skilled in the relevant art will recognize, however, that the invention can be practiced without one or more of the specific details, or with other methods, components, materials, and so forth. In other instances, well-known structures, materials, or operations are not shown or described in detail to avoid obscuring aspects of the invention.</p>
+  <p num="p-0032"> <figref idrefs="DRAWINGS">FIG. 1</figref> depicts a power command apparatus <b>100</b> of the prior art. The apparatus <b>100</b> facilitates a command module <b>102</b> to provide commands to a controller node <b>104</b> within a system of networked computerized devices. The commands may include commands to initiate power-on and power-off sequences of the power supply to the system of devices. The command module <b>102</b> may include a user interface such as a computer terminal, laptop, and the like. The system of devices may include one or more computer terminals, servers, and the like.</p>
+  <p num="p-0033">The command module <b>102</b> may provide the command to the controller node <b>104</b> by way of a network interface connection <b>108</b>. The connection <b>108</b> may receive the commands from the command module <b>102</b> by way of an Ethernet connection, wireless connection, or the like. The command module <b>102</b> may specify which controller node <b>104</b> the command is to be sent to by providing an address corresponding to the network interface connection <b>108</b>. The address may include the media access control (MAC) address.</p>
+  <p num="p-0034">The network interface connection <b>108</b> may transmit the command to a processor <b>106</b> within the controller node <b>104</b>. In one embodiment, the processor <b>106</b> includes a management and control processor that receives and executes the command. For example, the network interface connection <b>108</b> transmits the command to initiate a power-on or power-off sequence. The processor <b>106</b> receives the command and activates the sequence to provide the power supply to the system of devices, or activates the sequence to shut down the power supply to the system of devices.</p>
+  <p num="p-0035">In one embodiment, more than one command module may be used to provide a command to initiate a power supply sequence by entering the correct MAC address of the network connection <b>108</b>. In this arrangement, a command module may inadvertently provide an incorrect MAC address and subsequently provide a command to a different controller node that may be located within a different system of devices. Absent the present invention, the command would be executed and the incorrect system of devices would have the power supply activated or deactivated.</p>
+  <p num="p-0036"> <figref idrefs="DRAWINGS">FIG. 2</figref> depicts a power command security apparatus <b>200</b>. The apparatus <b>200</b> facilitates a command module <b>202</b> to provide power commands to a plurality of independent nodes <b>214</b> of a system of networked computerized devices in order to initiate power sequences within the system. The apparatus <b>200</b> further facilitates preventing a source other than the command module <b>202</b> from activating a power command. Other synchronized operations may be conducted in a similar manner. Each independent node comprising the plurality of nodes <b>214</b> must receive identical power commands before the command is executed. The command module <b>202</b> must identify each controller node within the plurality of nodes <b>214</b> and send the identical power command to each identified node. The power commands may be commands to activate the power-on or power-off sequence within the system. The power-on sequence may include a sequence to provide power to a system of devices while the power-off sequence may include a sequence to deactivate the power supply to a system of devices. The system of devices may include a computer terminal, a server, or the like.</p>
+  <p num="p-0037">The command module <b>202</b> may include a user interface such as a computer terminal, laptop, or the like, and may be located in a remote location from the system of devices and provide the power command wirelessly. In one embodiment, the command module <b>202</b> sends the power command to the plurality of nodes <b>214</b>. A network interface connection <b>212</b> may initially receive the power command provided by the command module <b>202</b>. Each single node, including node A <b>204</b> and node B <b>210</b>, comprising the plurality of nodes <b>214</b>, may include a network interface connection <b>212</b> with a unique identifier. The command module <b>202</b> may specify the single nodes within the plurality of nodes <b>214</b> and send the power commands to the specified nodes by providing the unique identifier of network connection <b>212</b> associated with each node. For example, the command module <b>202</b> may provide a power command to a system of devices comprising node A <b>204</b> and node B <b>210</b>. The command module <b>202</b> is required to provide the unique identifier for the network connection <b>212</b> of node A <b>204</b> and node B <b>210</b> respectively. In one embodiment, the unique identifier is the media access control (MAC) address. The unique identifier of the network connection <b>212</b> of each single node facilitates the command module <b>202</b> to identify each node within the plurality of nodes <b>214</b>.</p>
+  <p num="p-0038">The network interface connection <b>212</b> of each node may then transmit the power command to a processing module <b>206</b> or a receiver module <b>208</b> located within each controller node <b>204</b> and <b>210</b>. The processing module <b>206</b> may include a processing complex that receives and manages commands to initiate the power-off sequences. The receiver module <b>208</b> may include a management control processor that receives and manages commands to initiate the power-on sequences. In one embodiment, the receiver module <b>206</b> confirms that each single node within the plurality of nodes <b>214</b> has received the identical power command before the command is executed.</p>
+  <p num="p-0039">The processing module <b>206</b> of a single node may communicate with the processing module <b>206</b> of additional nodes within the plurality of nodes <b>214</b>. This communication facilitates confirming whether each additional node within the plurality of nodes <b>214</b> has received the identical power command. For example, the processing module <b>206</b> of node A <b>204</b> may receive a command to initiate a power-off sequence from the network connection <b>212</b>. The processing module <b>206</b> of node A <b>204</b> communicates with the processing module <b>206</b> of node B <b>210</b> to confirm if the processing module of node B <b>210</b> received an identical power command from the network connection <b>212</b>. If the processing modules <b>206</b> of node A <b>204</b> and node B <b>210</b> received identical commands, a power-off sequence may be activated. The processing module <b>206</b> may initiate a power-off sequence that includes quiescing the interfaces, destaging the data, and placing the data on non-volatile mediums. The power-off sequence may also include shutting down functional code, micro code, and application code.</p>
+  <p num="p-0040">The processing module <b>206</b> may further communicate the command to power-off the power supply to the receiver module <b>208</b>. Communicating the power command to shut down the power supply to the receiver module <b>208</b> allows the receiver module <b>208</b> to confirm whether the receiver modules <b>208</b> of additional nodes have received the identical command. For example, the processing module <b>206</b> of node A <b>204</b> may communicate a received power-off sequence to the receiver module <b>208</b> of node A <b>204</b>. Similarly, the processing module <b>206</b> of node B <b>210</b> may communicate a received power-off sequence to the receiver module <b>208</b> of node B <b>210</b>. The receiver modules <b>208</b> of node A <b>204</b> and node B <b>210</b> communicate to confirm whether each receiver module <b>208</b> has received identical commands to power-off the power supply.</p>
+  <p num="p-0041">The receiver module <b>208</b> of a single node may further receive a power command to initiate a power-on sequence from the network connection <b>212</b>. The receiver module <b>208</b> may communicate with the receiver modules <b>208</b> of additional controller nodes within the plurality of nodes <b>214</b> to confirm whether each receiver module <b>208</b> has received the identical power command. For example the command module <b>202</b> may provide a command to initiate a power-on sequence to a system of devices comprising node A <b>204</b> and node B <b>210</b>. The command module <b>202</b> provides the MAC address of each network connection <b>212</b> corresponding to node A <b>204</b> and node B <b>210</b>. The network connection <b>212</b> of each node transmits the command to the receiver modules <b>208</b> of node A <b>204</b> and node B <b>210</b>. The receiver modules <b>208</b> of each node communicate with each other to confirm that each node has received an identical command to activate a power-on sequence. If each independent node within the system of devices has not received identical commands to activate a power-on sequence, the sequence will not be executed.</p>
+  <p num="p-0042">The schematic flow chart diagrams that follow are generally set forth as logical flow chart diagrams. As such, the depicted order and labeled steps are indicative of one embodiment of the presented method. Other steps and methods may be conceived that are equivalent in function, logic, or effect to one or more steps, or portions thereof, of the illustrated method. Additionally, the format and symbology employed are provided to explain the logical steps of the method and are understood not to limit the scope of the method. Although various arrow types and line types may be employed in the flow chart diagrams, they are understood not to limit the scope of the corresponding method. Indeed, some arrows or other connectors may be used to indicate only the logical flow of the method. For instance, an arrow may indicate a waiting or monitoring period of unspecified duration between enumerated steps of the depicted method. Additionally, the order in which a particular method occurs may or may not strictly adhere to the order of the corresponding steps shown.</p>
+  <p num="p-0043"> <figref idrefs="DRAWINGS">FIG. 3</figref> depicts a power activation method <b>300</b>. The method <b>300</b> provides a secure manner of activating a power-on sequence within a system of devices. The method <b>300</b> starts <b>302</b> and a command is provided <b>304</b>. The command module <b>202</b> may provide the command. In one embodiment, the command initiates a power-on sequence. The method <b>300</b> continues and an address is provided <b>306</b>. In one embodiment, the command module <b>202</b> provides the address of the network connection <b>212</b> of a specific controller node within the system of devices. The address may be a unique identifier such as the MAC address. For example, the command module <b>202</b> may provide a command <b>304</b> and the MAC address <b>306</b> of a specific node. The command is then received <b>308</b> by the network connection <b>212</b> of a particular controller node specified by the MAC address. In one embodiment, multiple MAC addresses are provided <b>306</b> and the command is received <b>308</b> by each network connection <b>212</b> with the corresponding MAC address.</p>
+  <p num="p-0044">The method <b>300</b> continues and the command is transmitted <b>310</b> to the receiver module <b>208</b>. The receiver module <b>208</b> then communicates <b>312</b> with additional receiver modules <b>208</b> within each controller node. The receiver module <b>208</b> then communicates with the additional receiver modules <b>208</b> in order to confirm <b>314</b> whether each additional receiver module <b>208</b> has received the identical command. Additional receiver modules <b>208</b> receive the command if the command module <b>202</b> provides the MAC address of the network connection <b>212</b> transmitting the command.</p>
+  <p num="p-0045">When it is determined that the additional receiver modules <b>208</b> have received the identical power command <b>314</b> from the corresponding network connection <b>212</b>, the method <b>300</b> continues and the receiver modules <b>208</b> distribute the command <b>316</b> to the system of devices. The receiver module <b>208</b> executes <b>318</b> the command and the power-on sequence is activated. However, if the additional receiver modules <b>208</b> have not received an identical command at the command confirmation step <b>314</b>, the method ends <b>320</b> and the command is not distributed or executed.</p>
+  <p num="p-0046">Thus, for example, if a command to activate a power-on sequence is provided to the network connection <b>212</b> of node A <b>204</b>, the command module <b>202</b> must also provide the MAC address of the network connection <b>212</b>. In order for the power-on sequence to be executed, each controller node within the system of devices must receive the identical command. The command module <b>202</b> must also provide the command and MAC address of the network connection <b>212</b> of node B <b>210</b>. If each controller node receives the identical command, the power-on sequence is activated and power is supplied to the system of devices.</p>
+  <p num="p-0047"> <figref idrefs="DRAWINGS">FIG. 4</figref> depicts a power deactivation method <b>400</b>. The method <b>400</b> provides a secure manner of activating a power-off sequence within a system of devices. The method <b>400</b> starts <b>402</b> and a command is provided <b>404</b>. The command may be provided by the command module <b>202</b>. The method <b>400</b> continues and an address is provided <b>406</b>. In one embodiment, the command module <b>202</b> provides the address of the network connection <b>212</b> of a specific controller node within the system of devices. The address may be a unique identifier such as the MAC address. For example, the command module <b>202</b> may provide a command and the MAC address of a specific controller node. The command is received <b>408</b> by the network connection <b>212</b> of the particular controller node specified by the MAC address. In one embodiment, multiple addresses are provided <b>406</b> and the command is received <b>408</b> by each network connection <b>212</b> with the corresponding MAC address.</p>
+  <p num="p-0048">The method <b>400</b> continues and the command is transmitted <b>410</b> to the processing module <b>206</b>. The processing module <b>206</b> communicates <b>412</b> with additional processing modules <b>206</b> within each controller node. The processing module <b>206</b> communicates the command with the additional processing modules <b>206</b> in order to confirm <b>414</b> whether each additional processing module <b>206</b> has received an identical command. Additional processing modules <b>206</b> receive the command if the command module <b>202</b> provides the MAC address of the network connection <b>212</b> transmitting the command.</p>
+  <p num="p-0049">If each additional processing module <b>206</b> has received the identical command from the corresponding network connection <b>212</b>, the method <b>400</b> continues and the processing modules <b>206</b> execute <b>416</b> the command. In one embodiment, the processing modules <b>206</b> execute a primary shut down of the system of devices. The primary shut down may include quiescing the interfaces, destaging the data, and placing the data onto non-volatile mediums. The primary shut down may also include the shut down of the functional code, micro code, and application code of the system of devices. However, if each additional processing module <b>206</b> did not receive an identical command at the command confirmation step <b>414</b>, the method ends <b>426</b> and the command is not executed. For example, the command module <b>202</b> may provide a command <b>404</b> and a MAC address <b>406</b> corresponding to the network connection for node A <b>204</b>, but fail to provide the correct MAC address for the network connection <b>212</b> corresponding to node B <b>210</b>. The processing module <b>206</b> of node A <b>204</b> is then unable to confirm that the processing module <b>206</b> of node B <b>210</b> received an identical command to initiate a power-off sequence and the method <b>400</b> ends <b>426</b>.</p>
+  <p num="p-0050">After the execution <b>416</b> of a primary shut down, the processing module <b>206</b> transmits <b>418</b> the command. In one embodiment, the command is transmitted to the receiver module <b>208</b>. The receiver module <b>208</b> communicates the command <b>420</b> with each additional receiver module <b>208</b> within each controller node. If each receiver module <b>208</b> confirms the receipt of an identical command, the command is executed <b>424</b>. In one embodiment, the executed command is the shut down of the power supply to the system of devices. However, if the second command confirmation step <b>422</b> concludes that each receiver module <b>208</b> did not receive identical commands, the method <b>400</b> ends <b>426</b> and the power supply to the system of devices is not shut down.</p>
+  <p num="p-0051">The present invention may be embodied in other specific forms without departing from its spirit or essential characteristics. The described embodiments are to be considered in all respects only as illustrative and not restrictive. The scope of the invention is, therefore, indicated by the appended claims rather than by the foregoing description. All changes which come within the meaning and range of equivalency of the claims are to be embraced within their scope.</p>
+
+</div>
+  </div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">20</span>)</h2>
+    
+    <div itemprop="content" html><div mxw-id="PCLM9281440" lang="EN" load-source="patent-office" class="claims">
+  <div class="claim"> <div id="CLM-00001" num="00001" class="claim">
+    <div class="claim-text">1. An apparatus to securely provide power commands to a system, the apparatus comprising:
+<div class="claim-text">a command module configured to provide power commands to the system, wherein the power commands consist of a power up command and a power down command;</div>
+<div class="claim-text">a plurality of independent nodes configured to receive power commands, wherein each independent node comprises a network connection; and</div>
+<div class="claim-text">a receiver module configured to confirm that each node in the plurality of nodes has received identical power commands and execute the power commands if each power command is identical.</div>
+</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00002" num="00002" class="claim">
+    <div class="claim-text">2. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the command module further comprises providing power commands remotely.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00003" num="00003" class="claim">
+    <div class="claim-text">3. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein each network connection further comprises a unique identifier.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00004" num="00004" class="claim">
+    <div class="claim-text">4. The apparatus of <claim-ref idref="CLM-00003">claim 3</claim-ref>, wherein the command module is configured to provide the unique identifier for each network connection.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00005" num="00005" class="claim">
+    <div class="claim-text">5. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising a processing module configured to manage power commands to power down the system.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00006" num="00006" class="claim">
+    <div class="claim-text">6. The apparatus of <claim-ref idref="CLM-00005">claim 5</claim-ref>, wherein the processing module is further configured to confirm that each node has received identical power commands to power down the system.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00007" num="00007" class="claim">
+    <div class="claim-text">7. The apparatus of <claim-ref idref="CLM-00005">claim 5</claim-ref>, wherein the processing module is further configured to provide commands to the receiver module to power-off a power supply of the system.</div>
+  </div>
+  </div> <div class="claim"> <div id="CLM-00008" num="00008" class="claim">
+    <div class="claim-text">8. A system to securely provide power commands to a system of devices, the system comprising:
+<div class="claim-text">a user interface configured to provide the power commands, wherein the power commands consist of a power up command and a power down command;</div>
+<div class="claim-text">a plurality of independent controller nodes configured to receive power commands, wherein each independent controller node comprises a network connection; and</div>
+<div class="claim-text">a control processor configured to confirm that each controller node has received identical power commands and execute the power commands if each power command is identical.</div>
+</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00009" num="00009" class="claim">
+    <div class="claim-text">9. The system of <claim-ref idref="CLM-00008">claim 8</claim-ref>, wherein the user interface provides the power commands to the system of devices from a remote location.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00010" num="00010" class="claim">
+    <div class="claim-text">10. The system of <claim-ref idref="CLM-00008">claim 8</claim-ref>, wherein each network interface connection comprises a unique identifier.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00011" num="00011" class="claim">
+    <div class="claim-text">11. The system of <claim-ref idref="CLM-00008">claim 8</claim-ref>, wherein the user interface is configured to provide the unique identifier of each network interface connection of each controller node.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00012" num="00012" class="claim">
+    <div class="claim-text">12. The system of <claim-ref idref="CLM-00008">claim 8</claim-ref>, wherein the control processor is configured to confirm that each controller node has received identical power commands.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00013" num="00013" class="claim">
+    <div class="claim-text">13. The system of <claim-ref idref="CLM-00008">claim 8</claim-ref>, wherein each controller node comprises a control processor.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00014" num="00014" class="claim">
+    <div class="claim-text">14. The system of <claim-ref idref="CLM-00008">claim 8</claim-ref>, further comprising a processing complex configured to provide commands to power-off the power supply to the control processor.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00015" num="00015" class="claim">
+    <div class="claim-text">15. The system of <claim-ref idref="CLM-00008">claim 8</claim-ref>, wherein each controller node comprises a processing complex.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00016" num="00016" class="claim">
+    <div class="claim-text">16. The system of <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the unique identifier comprises a media access control address.</div>
+  </div>
+  </div> <div class="claim"> <div id="CLM-00017" num="00017" class="claim">
+    <div class="claim-text">17. A computer readable storage medium comprising computer readable program code for receiving power commands for a system of devices, the program code configured to:
+<div class="claim-text">compare power commands received at each of a plurality of controller nodes from a user interface, wherein the power commands consist of a power up command and a power down command and each controller node comprises a network connection;</div>
+<div class="claim-text">confirm that the power commands received by each controller node are identical; and</div>
+<div class="claim-text">execute the power commands if each power command is identical.</div>
+</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00018" num="00018" class="claim">
+    <div class="claim-text">18. The apparatus of <claim-ref idref="CLM-00005">claim 5</claim-ref>, wherein the processing module is further configured to quiesce interfaces, destage data, and place data onto non-volatile mediums.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00019" num="00019" class="claim">
+    <div class="claim-text">19. The system of <claim-ref idref="CLM-00014">claim 14</claim-ref>, wherein the processing complex is further configured to quiesce interfaces, destage data, and place data onto non-volatile mediums.</div>
+  </div>
+  </div> <div class="claim-dependent"> <div id="CLM-00020" num="00020" class="claim">
+    <div class="claim-text">20. The computer readable storage medium of <claim-ref idref="CLM-00017">claim 17</claim-ref>, wherein the program code is further configured to quiesce interfaces, destage data, and place data onto non-volatile mediums.</div>
+  </div>
+</div> </div>
+  </div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+        <span itemprop="applicationNumber">US10/935,587</span>
+        <span itemprop="priorityDate">2004-09-07</span>
+        <span itemprop="filingDate">2004-09-07</span>
+        <span itemprop="title">Apparatus, system, and method for securely providing power supply commands 
+       </span>
+        <span itemprop="ifiStatus">Expired - Fee Related</span>
+        
+        <a href="/patent/US7281142B2/en">
+            <span itemprop="representativePublication">US7281142B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+        </a>
+    </section>
+
+    <h2>Priority Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">US10/935,587</span>
+                   
+                   <a href="/patent/US7281142B2/en">
+                        <span itemprop="representativePublication">US7281142B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2004-09-07</td>
+                <td itemprop="filingDate">2004-09-07</td>
+                <td itemprop="title">Apparatus, system, and method for securely providing power supply commands 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    <h2>Applications Claiming Priority (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="appsClaimingPriority" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">US10/935,587</span>
+                   <a href="/patent/US7281142B2/en">
+                        <span itemprop="representativePublication">US7281142B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2004-09-07</td>
+                <td itemprop="filingDate">2004-09-07</td>
+                <td itemprop="title">Apparatus, system, and method for securely providing power supply commands 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    
+
+    
+
+    <h2>Publications (2)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Publication Number</th>
+                    <th>Publication Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">US20060053312A1</span>
+                   
+                   <a href="/patent/US20060053312A1/en">US20060053312A1
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2006-03-09</td>
+              </tr><tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">US7281142B2</span>
+                   
+                   <span itemprop="thisPatent">true</span>
+                   <a href="/patent/US7281142B2/en">US7281142B2
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2007-10-09</td>
+              </tr>
+           </tbody>
+        </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=35997533</h2>
+
+    <h2>Family Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Title</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="applications" itemscope repeat>
+                <td>
+                    <span itemprop="applicationNumber">US10/935,587</span>
+                    <span itemprop="ifiStatus">Expired - Fee Related</span>
+                    
+                    <a href="/patent/US7281142B2/en">
+                        <span itemprop="representativePublication">US7281142B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                </td>
+                <td itemprop="priorityDate">2004-09-07</td>
+                <td itemprop="filingDate">2004-09-07</td>
+                <td itemprop="title">Apparatus, system, and method for securely providing power supply commands 
+       </td>
+              </tr>
+           </tbody>
+        </table>
+
+    
+
+    
+
+    <h2>Country Status (1)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">US</span>
+                (<span itemprop="num">1</span>)
+              <meta itemprop="thisCountry" content="true">
+            </td>
+            <td>
+              <a href="/patent/US7281142B2/en">
+                <span itemprop="representativePublication">US7281142B2</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    <h2>Cited By (1)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20110090830A1/en">
+              <span itemprop="publicationNumber">US20110090830A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-10-19</td>
+          <td itemprop="publicationDate">2011-04-21</td>
+          <td><span itemprop="assigneeOriginal">Canon Kabushiki Kaisha</span></td>
+          <td itemprop="title">Information processing apparatus including plurality of communication interfaces and control method for information processing apparatus 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Families Citing this family (11)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7363525B2/en">
+              <span itemprop="publicationNumber">US7363525B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-10-07</td>
+          <td itemprop="publicationDate">2008-04-22</td>
+          <td><span itemprop="assigneeOriginal">Cisco Technology, Inc.</span></td>
+          <td itemprop="title">Bidirectional inline power port 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8275256B2/en">
+              <span itemprop="publicationNumber">US8275256B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-08-14</td>
+          <td itemprop="publicationDate">2012-09-25</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Power up of device via optical serial interface 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9473388B2/en">
+              <span itemprop="publicationNumber">US9473388B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2013-08-07</td>
+          <td itemprop="publicationDate">2016-10-18</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems</span></td>
+          <td itemprop="title">Supporting multicast in NOC interconnect 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9699079B2/en">
+              <span itemprop="publicationNumber">US9699079B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2013-12-30</td>
+          <td itemprop="publicationDate">2017-07-04</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems</span></td>
+          <td itemprop="title">Streaming bridge design with host interfaces and network on chip (NoC) layers 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9742630B2/en">
+              <span itemprop="publicationNumber">US9742630B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2014-09-22</td>
+          <td itemprop="publicationDate">2017-08-22</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems</span></td>
+          <td itemprop="title">Configurable router for a network on chip (NoC) 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9660942B2/en">
+              <span itemprop="publicationNumber">US9660942B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2015-02-03</td>
+          <td itemprop="publicationDate">2017-05-23</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems</span></td>
+          <td itemprop="title">Automatic buffer sizing for optimal network-on-chip design 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9568970B1/en">
+              <span itemprop="publicationNumber">US9568970B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2015-02-12</td>
+          <td itemprop="publicationDate">2017-02-14</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems, Inc.</span></td>
+          <td itemprop="title">Hardware and software enabled implementation of power profile management instructions in system on chip 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US10348563B2/en">
+              <span itemprop="publicationNumber">US10348563B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2015-02-18</td>
+          <td itemprop="publicationDate">2019-07-09</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems, Inc.</span></td>
+          <td itemprop="title">System-on-chip (SoC) optimization through transformation and generation of a network-on-chip (NoC) topology 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US10218580B2/en">
+              <span itemprop="publicationNumber">US10218580B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2015-06-18</td>
+          <td itemprop="publicationDate">2019-02-26</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems</span></td>
+          <td itemprop="title">Generating physically aware network-on-chip design from a physical system-on-chip specification 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US10452124B2/en">
+              <span itemprop="publicationNumber">US10452124B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2016-09-12</td>
+          <td itemprop="publicationDate">2019-10-22</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems, Inc.</span></td>
+          <td itemprop="title">Systems and methods for facilitating low power on a network-on-chip 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US10419300B2/en">
+              <span itemprop="publicationNumber">US10419300B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2017-02-01</td>
+          <td itemprop="publicationDate">2019-09-17</td>
+          <td><span itemprop="assigneeOriginal">Netspeed Systems, Inc.</span></td>
+          <td itemprop="title">Cost management against requirements for the generation of a NoC 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Citations (8)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US4322611A/en">
+              <span itemprop="publicationNumber">US4322611A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1979-07-25</td>
+          <td itemprop="publicationDate">1982-03-30</td>
+          <td><span itemprop="assigneeOriginal">Alan Edelman</span></td>
+          <td itemprop="title">Method and apparatus for detecting and indicating data 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6317839B1/en">
+              <span itemprop="publicationNumber">US6317839B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-01-19</td>
+          <td itemprop="publicationDate">2001-11-13</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Method of and apparatus for controlling supply of power to a peripheral device in a computer system 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6657534B1/en">
+              <span itemprop="publicationNumber">US6657534B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-12-23</td>
+          <td itemprop="publicationDate">2003-12-02</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Remote power control 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040184203A1/en">
+              <span itemprop="publicationNumber">US20040184203A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-06-22</td>
+          <td itemprop="publicationDate">2004-09-23</td>
+          <td><span itemprop="assigneeOriginal">Hitachi, Ltd.</span></td>
+          <td itemprop="title">Power plant operation control system and a power plant maintaining and managing method 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040268111A1/en">
+              <span itemprop="publicationNumber">US20040268111A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-06-25</td>
+          <td itemprop="publicationDate">2004-12-30</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Remote power control in a multi-node, partitioned data processing system via network interface cards 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050152379A1/en">
+              <span itemprop="publicationNumber">US20050152379A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-11-19</td>
+          <td itemprop="publicationDate">2005-07-14</td>
+          <td><span itemprop="assigneeOriginal">Honeywell International Inc.</span></td>
+          <td itemprop="title">Self-checking pair on a braided ring network 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050289426A1/en">
+              <span itemprop="publicationNumber">US20050289426A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-07-10</td>
+          <td itemprop="publicationDate">2005-12-29</td>
+          <td><span itemprop="assigneeOriginal">Donato Forlenza</span></td>
+          <td itemprop="title">Functional pattern logic diagnostic method 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20060259201A1/en">
+              <span itemprop="publicationNumber">US20060259201A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1992-11-17</td>
+          <td itemprop="publicationDate">2006-11-16</td>
+          <td><span itemprop="assigneeOriginal">Health Hero Network, Inc.</span></td>
+          <td itemprop="title">Home power management system 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+    <ul>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2004</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2004-09-07</span>
+            <span itemprop="countryCode">US</span>
+            <span itemprop="applicationNumber">US10/935,587</span>
+            <a href="/patent/US7281142B2/en"><span itemprop="documentId">patent/US7281142B2/en</span></a>
+            <span itemprop="legalStatusCat">not_active</span>
+            <span itemprop="legalStatus">Expired - Fee Related</span>
+            
+            <span itemprop="thisApp" content="true" bool></span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+    
+
+    </section>
+
+  <section>
+    <h2>Patent Citations (8)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US4322611A/en">
+              <span itemprop="publicationNumber">US4322611A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1979-07-25</td>
+          <td itemprop="publicationDate">1982-03-30</td>
+          <td><span itemprop="assigneeOriginal">Alan Edelman</span></td>
+          <td itemprop="title">Method and apparatus for detecting and indicating data 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20060259201A1/en">
+              <span itemprop="publicationNumber">US20060259201A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1992-11-17</td>
+          <td itemprop="publicationDate">2006-11-16</td>
+          <td><span itemprop="assigneeOriginal">Health Hero Network, Inc.</span></td>
+          <td itemprop="title">Home power management system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6317839B1/en">
+              <span itemprop="publicationNumber">US6317839B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-01-19</td>
+          <td itemprop="publicationDate">2001-11-13</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Method of and apparatus for controlling supply of power to a peripheral device in a computer system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6657534B1/en">
+              <span itemprop="publicationNumber">US6657534B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-12-23</td>
+          <td itemprop="publicationDate">2003-12-02</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Remote power control 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040184203A1/en">
+              <span itemprop="publicationNumber">US20040184203A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-06-22</td>
+          <td itemprop="publicationDate">2004-09-23</td>
+          <td><span itemprop="assigneeOriginal">Hitachi, Ltd.</span></td>
+          <td itemprop="title">Power plant operation control system and a power plant maintaining and managing method 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050289426A1/en">
+              <span itemprop="publicationNumber">US20050289426A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-07-10</td>
+          <td itemprop="publicationDate">2005-12-29</td>
+          <td><span itemprop="assigneeOriginal">Donato Forlenza</span></td>
+          <td itemprop="title">Functional pattern logic diagnostic method 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040268111A1/en">
+              <span itemprop="publicationNumber">US20040268111A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-06-25</td>
+          <td itemprop="publicationDate">2004-12-30</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Remote power control in a multi-node, partitioned data processing system via network interface cards 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050152379A1/en">
+              <span itemprop="publicationNumber">US20050152379A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-11-19</td>
+          <td itemprop="publicationDate">2005-07-14</td>
+          <td><span itemprop="assigneeOriginal">Honeywell International Inc.</span></td>
+          <td itemprop="title">Self-checking pair on a braided ring network 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  
+
+  <h2>Cited By (1)</h2>
+  <table>
+    <caption>* Cited by examiner, â€  Cited by third party</caption>
+    <thead>
+      <tr>
+        <th>Publication number</th>
+        <th>Priority date</th>
+        <th>Publication date</th>
+        <th>Assignee</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US20110090830A1/en">
+            <span itemprop="publicationNumber">US20110090830A1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2009-10-19</td>
+        <td itemprop="publicationDate">2011-04-21</td>
+        <td><span itemprop="assigneeOriginal">Canon Kabushiki Kaisha</span></td>
+        <td itemprop="title">Information processing apparatus including plurality of communication interfaces and control method for information processing apparatus 
+       </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section>
+    <h2>Also Published As</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Publication date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20060053312A1/en">
+              <span itemprop="publicationNumber">US20060053312A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2006-03-09</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN102469740B/en">
+                <span itemprop="publicationNumber">CN102469740B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-04-27">2016-04-27</time>
+            
+            
+          </td>
+          <td itemprop="title">  Modular storage servers and rack-level framework  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US5852720A/en">
+                <span itemprop="publicationNumber">US5852720A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="1998-12-22">1998-12-22</time>
+            
+            
+          </td>
+          <td itemprop="title">System for storing display data during first time period prior to failure of computer and during second time period after reset of the computer 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6170059B1/en">
+                <span itemprop="publicationNumber">US6170059B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2001-01-02">2001-01-02</time>
+            
+            
+          </td>
+          <td itemprop="title">Tracking memory modules within a computer system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20020099934A1/en">
+                <span itemprop="publicationNumber">US20020099934A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-07-25">2002-07-25</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for customizing a client computer system configuration for a current user using BIOS settings downloaded from a server 
+     </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN101785247B/en">
+                <span itemprop="publicationNumber">CN101785247B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-01-02">2013-01-02</time>
+            
+            
+          </td>
+          <td itemprop="title">Group power management of network devices 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6357007B1/en">
+                <span itemprop="publicationNumber">US6357007B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-03-12">2002-03-12</time>
+            
+            
+          </td>
+          <td itemprop="title">System for detecting tamper events and capturing the time of their occurrence 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7337355B2/en">
+                <span itemprop="publicationNumber">US7337355B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-02-26">2008-02-26</time>
+            
+            
+          </td>
+          <td itemprop="title">Method, system, and program for error handling in a dual adaptor system where one adaptor is a master 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6502203B2/en">
+                <span itemprop="publicationNumber">US6502203B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-12-31">2002-12-31</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for cluster system operation 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20080089338A1/en">
+                <span itemprop="publicationNumber">US20080089338A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-04-17">2008-04-17</time>
+            
+            
+          </td>
+          <td itemprop="title">Methods for remotely creating and managing virtual machines 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7293182B2/en">
+                <span itemprop="publicationNumber">US7293182B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-11-06">2007-11-06</time>
+            
+            
+          </td>
+          <td itemprop="title">Methods and apparatus for powering a data communications port 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6601097B1/en">
+                <span itemprop="publicationNumber">US6601097B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2003-07-29">2003-07-29</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for determining the physical location of computers in a network by storing a room location and MAC address in the ethernet wall plate 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6154790A/en">
+                <span itemprop="publicationNumber">US6154790A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2000-11-28">2000-11-28</time>
+            
+            
+          </td>
+          <td itemprop="title">Monitoring and reporting hard disk drives identification using radio frequency 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6263440B1/en">
+                <span itemprop="publicationNumber">US6263440B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2001-07-17">2001-07-17</time>
+            
+            
+          </td>
+          <td itemprop="title">Tracking and protection of display monitors by reporting their identity 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6973658B2/en">
+                <span itemprop="publicationNumber">US6973658B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-12-06">2005-12-06</time>
+            
+            
+          </td>
+          <td itemprop="title">Reconfigurable communication interface and method therefor 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6804703B1/en">
+                <span itemprop="publicationNumber">US6804703B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-10-12">2004-10-12</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for establishing persistent reserves to nonvolatile storage in a clustered computer environment 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20030226015A1/en">
+                <span itemprop="publicationNumber">US20030226015A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2003-12-04">2003-12-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for configuring security options in a computer system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7970880B2/en">
+                <span itemprop="publicationNumber">US7970880B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2011-06-28">2011-06-28</time>
+            
+            
+          </td>
+          <td itemprop="title">Computer program product for recovery of a failed flash of a blade service processor in a server chassis 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6408334B1/en">
+                <span itemprop="publicationNumber">US6408334B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-06-18">2002-06-18</time>
+            
+            
+          </td>
+          <td itemprop="title">Communications system for multiple computer system management circuits 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6101608A/en">
+                <span itemprop="publicationNumber">US6101608A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2000-08-08">2000-08-08</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for secure remote wake-up of a computer over a network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20090055157A1/en">
+                <span itemprop="publicationNumber">US20090055157A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-02-26">2009-02-26</time>
+            
+            
+          </td>
+          <td itemprop="title">Server Having Remotely Manageable Emulated Functions 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8589520B2/en">
+                <span itemprop="publicationNumber">US8589520B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-11-19">2013-11-19</time>
+            
+            
+          </td>
+          <td itemprop="title">Network merge testing 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6493104B1/en">
+                <span itemprop="publicationNumber">US6493104B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-12-10">2002-12-10</time>
+            
+            
+          </td>
+          <td itemprop="title">Data processing system and method for permitting a computer to automatically detect a presence of and establish a communications link with a printer 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20070078910A1/en">
+                <span itemprop="publicationNumber">US20070078910A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-04-05">2007-04-05</time>
+            
+            
+          </td>
+          <td itemprop="title">Back-up storage for home network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8291246B2/en">
+                <span itemprop="publicationNumber">US8291246B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-10-16">2012-10-16</time>
+            
+            
+          </td>
+          <td itemprop="title">High speed network interface with automatic power management with auto-negotiation 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US5826015A/en">
+                <span itemprop="publicationNumber">US5826015A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="1998-10-20">1998-10-20</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for secure remote programming of firmware and configurations of a computer over a network 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2005-02-18">2005-02-18</time></td>
+          <td itemprop="code">AS</td>
+          <td itemprop="title">Assignment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Owner name</strong>:
+              <span itemprop="value">INTERNATIONAL BUSINESS MACHINES CORPORATION, NEW Y</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:JONES, CARL EVAN;KUBO, ROBERT AKIRA;LUCAS, GREGG STEVEN;AND OTHERS;REEL/FRAME:015696/0597;SIGNING DATES FROM 20040827 TO 20040901</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2011-01-29">2011-01-29</time></td>
+          <td itemprop="code">FPAY</td>
+          <td itemprop="title">Fee payment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Year of fee payment</strong>:
+              <span itemprop="value">4</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2015-05-22">2015-05-22</time></td>
+          <td itemprop="code">REMI</td>
+          <td itemprop="title">Maintenance fee reminder mailed</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2015-10-09">2015-10-09</time></td>
+          <td itemprop="code">LAPS</td>
+          <td itemprop="title">Lapse for failure to pay maintenance fees</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2015-11-09">2015-11-09</time></td>
+          <td itemprop="code">STCH</td>
+          <td itemprop="title">Information on status: patent discontinuation</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">PATENT EXPIRED DUE TO NONPAYMENT OF MAINTENANCE FEES UNDER 37 CFR 1.362</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2015-12-01">2015-12-01</time></td>
+          <td itemprop="code">FP</td>
+          <td itemprop="title">Expired due to failure to pay maintenance fee</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20151009</span>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
+
+    </search-app>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script async="" defer="" src="//www.google.com/insights/consumersurveys/async_survey?site=cxkjf7ipxgbnnjy6k35ezcvbbe"></script>
+  </body>
+</html>

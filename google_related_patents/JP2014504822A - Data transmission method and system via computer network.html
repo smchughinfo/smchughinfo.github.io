@@ -1,0 +1,3974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JP2014504822A - Data transmission method and system via computer network 
+        - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/JP2014504822A/en">
+    <meta name="description" content="
+     A computer-implemented method for transparently optimizing data transmission between a first endpoint and a second endpoint in a computer network is provided. The first and second endpoints have a data session established directly between the first endpoint and the second endpoint. A data session is identified to at least itself by each endpoint in the same manner throughout the session. The method uses a network optimization service to transparently relay data between a first endpoint and a second endpoint in a session, the first endpoint and the second endpoint Transparently changing or storing at least part of the data transmitted from the second endpoint to the first endpoint using a network optimization service to optimize data communication with Including. The step of transparently changing at least part of the data is to change the data, replace the data, or the first endpoint receives data different from the data sent by the second endpoint. Including inserting additional data into. 
+   
+   ">
+    
+    <meta name="DC.type" content="patent">
+    
+    <meta name="DC.title" content="Data transmission method and system via computer network 
+       ">
+    
+    <meta name="DC.date" content="2011-12-30" scheme="dateSubmitted">
+    
+    <meta name="DC.description" content="
+     A computer-implemented method for transparently optimizing data transmission between a first endpoint and a second endpoint in a computer network is provided. The first and second endpoints have a data session established directly between the first endpoint and the second endpoint. A data session is identified to at least itself by each endpoint in the same manner throughout the session. The method uses a network optimization service to transparently relay data between a first endpoint and a second endpoint in a session, the first endpoint and the second endpoint Transparently changing or storing at least part of the data transmitted from the second endpoint to the first endpoint using a network optimization service to optimize data communication with Including. The step of transparently changing at least part of the data is to change the data, replace the data, or the first endpoint receives data different from the data sent by the second endpoint. Including inserting additional data into. 
+   
+   ">
+    
+    <meta name="citation_patent_application_number" content="JP:2013547704A">
+    
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/b5/a9/b4/a829411e71792a/JP2014504822A.pdf">
+    
+    <meta name="citation_patent_publication_number" content="JP:2014504822:A">
+    
+    <meta name="DC.date" content="2014-02-24">
+    
+    <meta name="DC.contributor" content="ã‚¢ãƒ­ãƒ­ãƒ´ã‚£ãƒƒãƒï¼Œã‚¢ãƒ©ãƒ³" scheme="inventor">
+    
+    <meta name="DC.contributor" content="ãƒã‚«ãƒ¼ï¼Œã‚·ãƒ¥ãƒ ã‚¨ãƒ«" scheme="inventor">
+    
+    <meta name="DC.contributor" content="ã‚¬ãƒ´ã‚£ãƒƒã‚·ãƒ¥ï¼Œãƒ‰ãƒ­ã‚¢ãƒ¼ï¼Œãƒ¢ã‚·ã‚§" scheme="inventor">
+    
+    <meta name="DC.contributor" content="ã‚°ãƒªãƒ³ï¼Œã‚·ãƒ£ãƒãƒ¼ï¼Œã‚¬ã‚¤" scheme="inventor">
+    
+    <meta name="DC.contributor" content="ã‚·ã‚§ãƒžãƒ¼ï¼Œã‚·ãƒ£ã‚¤" scheme="inventor">
+    
+    <meta name="DC.contributor" content="ãƒ”ãƒ¼ãƒ©ãƒƒãƒ—  ãƒªãƒŸãƒ†ãƒƒãƒ‰" scheme="assignee">
+    
+    <meta name="DC.relation" content="JP:2001109743:A" scheme="references">
+    
+    <meta name="DC.relation" content="JP:2002247112:A" scheme="references">
+    
+    <meta name="DC.relation" content="JP:2006279394:A" scheme="references">
+    
+    <meta name="DC.relation" content="JP:2009089197:A" scheme="references">
+    
+    <meta name="DC.relation" content="WO:2009101004:A1" scheme="references">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <style>
+      body { transition: none; }
+    </style>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27188110-4', 'auto');
+
+      version = 'patent-search.search_20191028_RC01';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.profilePicture = "";
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.html">
+    
+  </head>
+  <body unresolved>
+    
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.js"></script>
+    
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">JP2014504822A - Data transmission method and system via computer network 
+        - Google Patents</h1>
+  <span itemprop="title">Data transmission method and system via computer network 
+       </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/b5/a9/b4/a829411e71792a/JP2014504822A.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">JP2014504822A</dd>
+    <meta itemprop="numberWithoutCodes" content="2014504822">
+    <meta itemprop="kindCode" content="A">
+    <meta itemprop="publicationDescription" content="Published unexamined patent application (based on international application)">
+    
+    <span>JP2014504822A</span>
+    
+    <span>JP2013547704A</span>
+    
+    <span>JP2013547704A</span>
+    
+    <span>JP2014504822A</span>
+    
+    <span>JP 2014504822 A</span>
+    
+    <span>JP2014504822 A</span>
+    
+    <span>JP 2014504822A</span>
+    
+    <span>JP 2013547704 A</span>
+    
+    <span>JP2013547704 A</span>
+    
+    <span>JP 2013547704A</span>
+    
+    <span>JP 2013547704 A</span>
+    
+    <span>JP2013547704 A</span>
+    
+    <span>JP 2013547704A</span>
+    
+    <span>JP 2014504822 A</span>
+    
+    <span>JP2014504822 A</span>
+    
+    <span>JP 2014504822A</span>
+    
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">JP</dd>
+    <dd itemprop="countryName">Japan</dd>
+
+    <dt>Prior art keywords</dt>
+    
+    <dd itemprop="priorArtKeywords" repeat>endpoint</dd>
+    <dd itemprop="priorArtKeywords" repeat>data</dd>
+    <dd itemprop="priorArtKeywords" repeat>session</dd>
+    <dd itemprop="priorArtKeywords" repeat>method</dd>
+    <dd itemprop="priorArtKeywords" repeat>response</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2010-12-30">2010-12-30</time></dd>
+
+    <dt>Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)</dt>
+    <dd itemprop="legalStatusIfi" itemscope>
+      <span itemprop="status">Granted</span>
+    </dd>
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">JP2013547704A</dd>
+
+  <dt>Other languages</dt>
+  <dd itemprop="otherLanguages" itemscope repeat>
+    <a href="/patent/JP2014504822A/ja">
+      <span itemprop="name">Japanese</span> (<span itemprop="code">ja</span>)
+    </a>
+  </dd>
+
+  <dt>Other versions</dt>
+  <dd itemprop="directAssociations" itemscope repeat>
+    
+    <a href="/patent/JP6035248B2/en">
+      <span itemprop="publicationNumber">JP6035248B2</span>
+      (<span itemprop="primaryLanguage">en</span>
+    </a>
+  </dd>
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>ã‚¢ãƒ­ãƒ­ãƒ´ã‚£ãƒƒãƒï¼Œã‚¢ãƒ©ãƒ³</dd>
+  <dd itemprop="inventor" repeat>ãƒã‚«ãƒ¼ï¼Œã‚·ãƒ¥ãƒ ã‚¨ãƒ«</dd>
+  <dd itemprop="inventor" repeat>ã‚¬ãƒ´ã‚£ãƒƒã‚·ãƒ¥ï¼Œãƒ‰ãƒ­ã‚¢ãƒ¼ï¼Œãƒ¢ã‚·ã‚§</dd>
+  <dd itemprop="inventor" repeat>ã‚°ãƒªãƒ³ï¼Œã‚·ãƒ£ãƒãƒ¼ï¼Œã‚¬ã‚¤</dd>
+  <dd itemprop="inventor" repeat>ã‚·ã‚§ãƒžãƒ¼ï¼Œã‚·ãƒ£ã‚¤</dd>
+  
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>ãƒ”ãƒ¼ãƒ©ãƒƒãƒ—  ãƒªãƒŸãƒ†ãƒƒãƒ‰</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2010-12-30">2010-12-30</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2011-12-30">2011-12-30</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2014-02-24">2014-02-24</time></dd>
+
+  
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2010-12-30">2010-12-30</time>
+    <span itemprop="title">Priority to US201061428527P</span>
+    <span itemprop="type">priority</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2010-12-30">2010-12-30</time>
+    <span itemprop="title">Priority to US61/428,527</span>
+    <span itemprop="type">priority</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2011-12-30">2011-12-30</time>
+    <span itemprop="title">Application filed by ãƒ”ãƒ¼ãƒ©ãƒƒãƒ—  ãƒªãƒŸãƒ†ãƒƒãƒ‰</span>
+    <span itemprop="type">filed</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">ãƒ”ãƒ¼ãƒ©ãƒƒãƒ—  ãƒªãƒŸãƒ†ãƒƒãƒ‰</span>
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2011-12-30">2011-12-30</time>
+    <span itemprop="title">Priority to PCT/US2011/068172</span>
+    <span itemprop="type">priority</span>
+    
+    
+    
+    <span itemprop="documentId">patent/WO2012092586A2/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2014-02-24">2014-02-24</time>
+    <span itemprop="title">Publication of JP2014504822A</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/JP2014504822A/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2016-11-30">2016-11-30</time>
+    <span itemprop="title">Application granted</span>
+    <span itemprop="type">granted</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2016-11-30">2016-11-30</time>
+    <span itemprop="title">Publication of JP6035248B2</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/JP6035248B2/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-11-17">2019-11-17</time>
+    <span itemprop="title">Application status is Active</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2031-12-30">2031-12-30</time>
+    <span itemprop="title">Anticipated expiration</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+
+  <h2>Links</h2>
+
+  <ul>
+    
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=JP&amp;NR=2014504822A&amp;KC=A&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="globalDossierLink">
+          <a href="http://globaldossier.uspto.gov/#/result/publication/JP/2014504822/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+        </li>
+
+      
+
+      
+
+      
+
+      
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="stackexchangeLink">
+          <a href="https://patents.stackexchange.com/questions/tagged/JP2014504822A" itemprop="url"><span itemprop="text">Discuss</span></a>
+        </li>
+  </ul>
+
+  
+
+  <section>
+    <h2>Images</h2>
+    <ul>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/8d/d0/f0/2d0412d65a8d38/2014504822-3.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/d3/da/d8/fa060c20cca94b/2014504822-3.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/63/80/bf/d22ec7ca1ec58a/2014504822-4.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/2b/dc/af/9398c5d8099cb0/2014504822-4.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/d0/33/db/12faee0293c320/2014504822-5.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/ff/d5/d5/efaed4bae4f4c0/2014504822-5.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/34/10/0d/30d95b2bc26adc/2014504822-6.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/07/39/38/3c8a73b99e34e7/2014504822-6.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/4e/be/59/43a10df1736bd6/2014504822-7.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/67/2f/41/18583daa12dbbd/2014504822-7.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/b8/81/1e/4e25dda11e9904/2014504822-8.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/71/d6/5f/e5a762ecd96910/2014504822-8.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/1a/30/3e/70bd93303301e0/2014504822-9.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/87/80/00/beaa2431c790c1/2014504822-9.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/67/fa/c9/790b0a9b5d55fa/2014504822-10.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/4a/22/ac/d6432bfc6350a3/2014504822-10.png">
+        <ul>
+          
+        </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>Classifications</h2>
+    
+    <ul>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/00</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/10</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications in which an application is distributed across nodes in the network</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/1095</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications in which an application is distributed across nodes in the network for supporting replication or mirroring of data, e.g. scheduling or transport for data synchronisation between network nodes or user terminals or syncML</span>
+            <meta itemprop="Leaf" content="true">
+            
+            <meta itemprop="FirstCode" content="true">
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/00</span>&mdash;<span itemprop="Description">Data switching networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/66</span>&mdash;<span itemprop="Description">Arrangements for connecting between networks having differing types of switching systems, e.g. gateways</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/00</span>&mdash;<span itemprop="Description">Arrangements, apparatus, circuits or systems, not covered by a single one of groups H04L1/00 - H04L27/00</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/02</span>&mdash;<span itemprop="Description">Communication control; Communication processing</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/06</span>&mdash;<span itemprop="Description">Communication control; Communication processing characterised by a protocol</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/08</span>&mdash;<span itemprop="Description">Transmission control procedure, e.g. data link level control procedure</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/08081</span>&mdash;<span itemprop="Description">Protocols for network applications</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/08702</span>&mdash;<span itemprop="Description">Protocols for network applications involving intermediate processing or storage in the network, e.g. proxy</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/08729</span>&mdash;<span itemprop="Description">Arrangements for intermediate storage, e.g. caching</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L45/00</span>&mdash;<span itemprop="Description">Routing or path finding of packets in data switching networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L45/16</span>&mdash;<span itemprop="Description">Multipoint routing</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L45/00</span>&mdash;<span itemprop="Description">Routing or path finding of packets in data switching networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L45/22</span>&mdash;<span itemprop="Description">Alternate routing</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L61/00</span>&mdash;<span itemprop="Description">Network arrangements or network protocols for addressing or naming</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L61/20</span>&mdash;<span itemprop="Description">Address allocation</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L61/2007</span>&mdash;<span itemprop="Description">Address allocation internet protocol [IP] addresses</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/00</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/14</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications for session management</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/00</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/28</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications for the provision of proxy services, e.g. intermediate processing or storage in the network</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/2823</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications for the provision of proxy services, e.g. intermediate processing or storage in the network for conversion or adaptation of application content or format</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/2828</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications for the provision of proxy services, e.g. intermediate processing or storage in the network for conversion or adaptation of application content or format for reducing the amount or size of exchanged application data</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/00</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/32</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications for scheduling or organising the servicing of application requests, e.g. requests for application data transmissions involving the analysis and optimisation of the required network resources</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L67/327</span>&mdash;<span itemprop="Description">Network-specific arrangements or communication protocols supporting networked applications for scheduling or organising the servicing of application requests, e.g. requests for application data transmissions involving the analysis and optimisation of the required network resources whereby the routing of a service request to a node providing the service depends on the content or context of the request, e.g. profile, connectivity status, payload or application type</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L69/00</span>&mdash;<span itemprop="Description">Application independent communication protocol aspects or techniques in packet data networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L69/16</span>&mdash;<span itemprop="Description">Transmission control protocol/internet protocol [TCP/IP] or user datagram protocol [UDP]</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L69/163</span>&mdash;<span itemprop="Description">Adaptation of TCP data exchange control procedures</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA311261542" lang="EN" source="translation" load-source="google">
+    <div class="abstract">A computer-implemented method for transparently optimizing data transmission between a first endpoint and a second endpoint in a computer network is provided. The first and second endpoints have a data session established directly between the first endpoint and the second endpoint. A data session is identified to at least itself by each endpoint in the same manner throughout the session. The method uses a network optimization service to transparently relay data between a first endpoint and a second endpoint in a session, the first endpoint and the second endpoint Transparently changing or storing at least part of the data transmitted from the second endpoint to the first endpoint using a network optimization service to optimize data communication with Including. The step of transparently changing at least part of the data is to change the data, replace the data, or the first endpoint receives data different from the data sent by the second endpoint. Including inserting additional data into.</div>
+  </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    
+    <div itemprop="content" html><div mxw-id="PDES203937826" lang="EN" load-source="google" class="description">
+    <technical-field>
+      <p>
+Â Â The present invention relates to the transmission of data over a computer network such as the Internet, a local area network, a wide area network, a wireless network, and the like.
+</p>
+      <p>
+Â Â This application claims priority from US Provisional Patent Application No. 61 / 428,527, filed 30 December 2010, entitled â€œMethods And Systems For Transmission Of Data Over Computer Networksâ€. The contents of the provisional US patent application are hereby incorporated by reference in their entirety.
+</p>
+    </technical-field>
+    <background-art>
+      <p>
+Â Â Both enterprise and consumer broadband networks have seen significant and constant increases in traffic volume over the past 3-5 years. The increase in traffic is driven by the introduction of high-speed end-user connectivity options, the adoption of various bandwidth intensive applications, and the introduction of various consumer electronics connected to the Internet.
+</p>
+      <p>
+Â Â Broadband network operators control their network costs, including increasing network scale, to meet network congestion, reduced application performance and the need to continually upgrade their networks caused by broadband growth, A variety of network optimization solutions and services have been introduced with the aim of improving the performance and security of Internet applications and creating new revenue streams for operators.
+</p>
+      <p>
+Â Â Such solutions include, among other things, content caching, video transcoding and transrating, content adaptation, content filtering, intrusion detection and prevention.
+</p>
+      <p>
+Â Â All these solution classes share some common deployment requirements. These classes of solutions should be deployed in a transparent manner so that Internet applications operate without change.
+</p>
+      <p>
+Â Â It is also common for some network optimization solutions to change the Internet content flow and / or the content payload itself.
+</p>
+      <p>
+Â Â In addition, network optimization solutions should address the scale requirements of modern broadband networks operating frequently at 10 Gbps, 40 Gbps and 100 Gbps scales.
+</p>
+      <p>
+Â Â Network-based optimization common solution architecture is a network optimization platform that resides in the data path and is deployed with network elements that redirect traffic to the network optimization platform (eg, routing, switching or dedicated DPI equipment) including.
+</p>
+      <p>
+Â Â Network elements typically employ selective redirection of network traffic to match the type of traffic flow to the network optimization service used.
+</p>
+      <p>
+Â Â Network optimization services typically use an application proxy architecture. A connection is established between two endpoints &#39;A&#39; and &#39;B&#39;, otherwise (eg Internet browser and web browser), terminated by a proxy &#39;P&#39;, and two separate transport sessions (TCP Or UDP) is formed on the one hand between A and P and on the other hand between P and B. Following connection setup, the proxy P relays data between two sessions at the application level.
+</p>
+      <p>
+Â Â The proxy architecture maintains a transport (TCP or UDP) stack for all sessions flowing between networks, replicates data to relay all data at the application level, and back and forth from the data frame to the application buffer. Has a significant performance penalty due to the need to perform the conversion.
+</p>
+      <p>
+Â Â As a result of these limitations, the proxy architecture limits the throughput of network optimization applications to 1-2 Gbps per standard Intel-based server and simultaneously limits the number of flows supported to thousands. Performance limitations effectively prevent network optimization solutions from scaling to 10/40 / 100Gbps network scale in an economical manner.
+</p>
+    </background-art>
+    
+    <summary-of-invention>
+      <tech-problem>
+        <p num="0014">
+Â Â Therefore, an alternative architecture is needed for a network optimization platform that removes the previous bottleneck of the application proxy architecture.
+</p>
+      </tech-problem>
+      <tech-solution>
+        <p num="0015">
+Â Â According to one or more embodiments, a computer-implemented method is provided for transparently optimizing data transmission between a first endpoint and a second endpoint in a computer network. Endpoints directly establish a data session between them. A data session is identified to at least itself by each endpoint in the same manner throughout the session. The method relays data between endpoints transparently in a session using a network optimization service, and uses a network optimization service to optimize data communication between the endpoints. Changing or storing at least some of the data transmitted from the point to the first endpoint to transparent, and changing at least some of the data to transparent changes the data, replaces the data Or inserting additional data such that the first endpoint receives data different from the data sent by the second endpoint.
+</p>
+        <p num="0016">
+Â Â According to one or more further embodiments, an optimal service is provided to transparently optimize data transmission between a first endpoint and a second endpoint in a computer network. Endpoints have a data session established directly between them. A data session is identified to at least itself by each endpoint in the same manner throughout the session. The optimization service uses the network optimization service to relay data between the endpoints transparently in the session and optimize the data communication between the endpoints in order to optimize the data communication between the endpoints. At least some of the data sent from the point to the first endpoint is changed or stored transparently, changing the data can change the data, replace the data, or the first endpoint can Further data is inserted to receive data different from the data sent by the endpoint.
+</p>
+        <p num="0017">
+Â Â Various embodiments of the invention are provided in the following detailed description. As will be realized, the invention is capable of other and different embodiments, and its several details are capable of modifications in various respects, without departing from the invention. . Accordingly, the drawings and descriptions are to be regarded as illustrative in nature and not in a limiting sense, within the scope of the present application as set forth in the claims.
+</p>
+      </tech-solution>
+    </summary-of-invention>
+    
+    <description-of-drawings>
+      <p>
+        <figref num="1">6 is a flow diagram illustrating the formation of a set between endpoints according to one or more embodiments.</figref>
+        <figref num="2A">FIG. 6 is a simplified diagram illustrating the placement of optimization services, according to one or more embodiments.</figref>
+        <figref num="2B">FIG. 6 is a simplified diagram illustrating the placement of optimization services, according to one or more embodiments.</figref>
+        <figref num="3">FIG. 6 is a simplified diagram illustrating an arrangement of optimization services operating in a tunnel according to one or more embodiments.</figref>
+        <figref num="4">3 is a flow diagram illustrating response caching according to one or more embodiments.</figref>
+        <figref num="5">6 is a flow diagram illustrating data changes according to one or more embodiments.</figref>
+        <figref num="6">6 is a flow diagram illustrating the introduction of a new request according to one or more embodiments.</figref>
+        <figref num="7">1 is a simplified diagram illustrating an example network architecture in accordance with one or more embodiments. FIG. Similar or identical reference signs are used to identify common or similar elements.</figref>
+      </p>
+    </description-of-drawings>
+    <description-of-embodiments>
+      <p>
+Â Â The various embodiments disclosed herein are directed to services that optimize data transmission in a computer network between endpoints having sessions established directly between the endpoints. The optimization service introduces new requests to the endpoints to change or store at least some of the data transmitted between the endpoints transparently or to optimize data communication between the endpoints. Each endpoint identifies the session to itself in the same way throughout the session.
+</p>
+      <p>
+Â Â As used herein, the term â€œnetwork nodeâ€ connects to computer servers, personal computers (including desktops, notebooks, and tablet computers), smart phones, and other networks, without limitation. Devices connected to an IP-based network, including devices that are connected.
+</p>
+      <p>
+Â Â As used herein, the term â€œendpointâ€ refers to an endpoint of a two-way interprocess communication flow with an IP-based network at a network node connected to the IP-based network. Examples of endpoints include but are not limited to TCP sockets, SCTP sockets, UDP sockets and raw IP sockets.
+</p>
+      <p>
+Â Â The optimization service operates as part of a device involved in relaying data between network nodes on an IP-based network. Examples of such devices include, but are not limited to, residential home gateways, WiFi hotspots, firewalls, routers, Metro Ethernet (registered trademark) switches, optical switches, DPI devices, computer servers, application gateways, cable modem termination systems (CMTS), optical line terminal (OLT), broadband network gateway (BNG), broadband access server (BRAS), DSL access multiplexer (DSLAM), gateway GPRS support node (GGSN), and PDM gateway (PGW).
+</p>
+      <p>
+Â Â As shown in FIGS. 1 and 2, two endpoints &#39;A&#39; and &#39;B&#39; on an IP-based computer network, such as an ISP subscriber and an Internet-based server, may have a data session &#39;S&#39; between each other. Establish. In the case of the TCP protocol, the session setup phase includes a TCP session handshake, including network and transport parameter negotiation.
+</p>
+      <p>
+Â Â Session S between endpoints A and B includes data queries sent to A and B, and in some cases, data responses sent by A to B. The session optionally includes queries and responses sent by both endpoints.
+</p>
+      <p>
+Â Â Each endpoint typically represents a data session S with at least five tuples, the IP address and port of the local endpoint, the IP address and port of the remote endpoint, and the protocol used (eg, TCP, UDP, etc.) Identify. The definition of session S by endpoints A and B may not be the same in the case of network address translation (NAT) performed on the network between A and B.
+</p>
+      <p>
+Â Â Endpoints A and B optionally keep track of the data sent and received by counting the bytes and / or frames sent and received. Endpoints A and B may keep track of the data sent and received by remote endpoints, especially for packet loss detection and retransmission, congestion avoidance, and congestion control.
+</p>
+      <p>
+Â Â With each endpoint, the identity of session S does not change throughout the lifetime of the session.
+</p>
+      <p>According to one or more embodiments, following the establishment of session S between endpoints A and B, the optimization service &#39;C&#39; is the network and transformer as defined by the TCP / IP model per RFC 1122. At both the port levels, endpoint <sub>A</sub> forms a transparent endpoint CA facing endpoint A, visible to endpoint B.</p>
+      <p>As illustrated in Figure 1, the service C is two transparent endpoint C <sub>A</sub> and C <sub>B</sub> optionally form, endpoint C <sub>A</sub> is visible as an endpoint B to endpoint A, endpoint C <sub>B</sub> appears to endpoint B as endpoint A.</p>
+      <p>
+Â Â According to one or more embodiments, service C forms a transparent endpoint in only a few sessions processed by the service, and the determination may be, for example, time information, order information, frequency information, endpoint identification information, Required by C based on at least one variable such as session identification information, network state information and external policy information.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C is either on the data path between the endpoints of the session, or is in the data path as shown in FIGS. 2A and 2B, and the particular data session is to service C. Relay all data frames in session S between A and B by using one or more dedicated redirect devices to redirect.
+</p>
+      <p>
+Â Â According to another embodiment, service C relays only a part of the data frame in the session between A and B. For example, the redirect device uses a Layer 7 analysis of the session to determine whether the session should be redirected to service C, and then starts session S to service C, starting from a predetermined frame within the session. cure.
+</p>
+      <p>
+Â Â When service C relays a data frame between endpoint A and endpoint B without forming a transparent endpoint, the data frame at the physical level (eg by switching the data frame from port to port) Or relay data frames at the link level (for example, by changing the MAC address and / or VLAN tag), or relay data frames according to the previous combination.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C optionally performs network address translation (NAT) for sessions handled by the service.
+</p>
+      <p>As part of the relay, C continuously tracks and stores the state of the connection, including all or some variables from the following groups: <br/> Static session identifier (endpoint address and port number, transport protocol used). <br/> The dynamic transport state of each endpoint, including but not limited to the sequence identifiers of data sent and authorized by each endpoint. <br/> Transport attributes through session and individual endpoint negotiation, including but not limited to TCP options such as selective ACKs, timestamps and scaled windows. <br/> Dynamic network-level attributes of data frames sent in each direction, including but not limited to IP DSCP, IP TOS, and IPv6 flow labels. <br/> Dynamic link-level attributes of data frames sent in each direction, including but not limited to source and destination MAC addresses, 802.1Q VLAN tag, 802.1P priority bits, QinQ stack VLAN tag. <br/> Dynamic circuit-level attributes of data frames sent in each direction, including but not limited to ingress and egress port identities, physical port properties.</p>
+      <p>According to one or more embodiments, service C is between A and B across service C in a tunnel established between <sub>two</sub> endpoints T <sub>1</sub> and T <sub>2</sub> as illustrated in FIG. Provide data modification and caching services for one or more data sessions S â€².</p>
+      <p>
+Â Â Tunnel protocols supported by service C include, but are not limited to, L2Tp, PPPoE, PPPoA, L2TP, GRE, GTP-U, IP in IP, MPLS, Teredo, 6RD, 6to4, and PMIP.
+</p>
+      <p>According to one or more embodiments shown in FIG. 3, service C is tunneled between endpoints T <sub>1</sub> and T <sub>2</sub> across multiple connections between endpoints A and B that traverse the tunnel. Track session state.</p>
+      <p>
+Â Â As will be described in more detail below, service C according to various embodiments may: (a) caching data responses; (b) changing data queries and data responses; and (c) introducing new requests. Provides numerous session changes and other functions including.
+</p>
+      <p>(A) Response Caching Following the establishment of the data session S between the endpoints A and B described above, the data inquiry from the endpoint A to the endpoint B reaches the service C.</p>
+      <p>
+Â Â According to one or more embodiments, service C analyzes the data query and matches it with the previously stored data response. To do so, C analyzes the query received from endpoint A based on at least one variable selected from the group consisting of time information, order information, frequency information, client information, and ID information.
+</p>
+      <p>
+Â Â If a matching response is found in storage, C transmits the stored response to endpoint A alone.
+</p>
+      <p>
+Â Â According to one or more embodiments, if a match response has been previously stored by service C, service C does not relay the query to endpoint B, but responds to the query alone.
+</p>
+      <p>
+Â Â According to one or more alternative embodiments, service C relays the query received from endpoint A to endpoint B, receives a response or part of the response from endpoint B, and endpoint A The data query received from, the data response received from endpoint B, or a portion of the response is matched to the data response previously stored by C.
+</p>
+      <p>
+Â Â In this case, if a matching stored response is identified by service C, the stored response or part of the response is communicated to endpoint A. In this case, the service C prevents the response received from the endpoint B from being relayed.
+</p>
+      <p>
+Â Â If the data response is being communicated by C, C causes endpoint B to terminate data session S or to postpone the transmission of the response.
+</p>
+      <p>
+Â Â When sending a new data frame not received from the opposite endpoint to endpoints A and B in session S, service C, as described above, sets the IP and port address of the opposite endpoint, It is used in the same way as the session state continuously stored by the service.
+</p>
+      <p>As shown in FIG. 4, endpoints A and B begin sequencing their data streams in session S starting at X <sub>0</sub> and Y <sub>0</sub> , respectively. From endpoint A to service C is C responds to when receiving the data query, the service C relays data of N <sub>B</sub> bytes from data and B N <sub>A</sub> byte from A to B to A, N <sub>a</sub> and N <sub>B</sub> is equal to the greater or zero than zero.</p>
+      <p>Service C keeps track of the sequence of both endpoints A and B and the acknowledgment response by each endpoint. When service C begins to communicate its response to endpoint A, service C begins to sequence its data with Y <sub>0</sub> + N <sub>B</sub> in the pending data sequence previously used by endpoint B. in continuation of the sequence sent by endpoint a above, expect new data from the endpoint a starting from X <sub>0</sub> + N <sub>a.</sub> Endpoints C <sub>A</sub> in TCP sequence number Y <sub>0</sub> + N <sub>B</sub> and the acknowledgment number X <sub>0</sub> + N <sub>A</sub> C can be said to initialize.</p>
+      <p>
+Â Â As a result, the data conveyed by C appears to endpoint A as a seamless continuation of session S between A and B.
+</p>
+      <p>If the packet sent by endpoint B to endpoint A that is sequenced between Y <sub>0</sub> and Y <sub>0</sub> + N <sub>B</sub> is lost in the network segment between C and A, endpoint A C is after began sends the sequence data processed in its own Y <sub>0</sub> + N <sub>B</sub> above, it responds by sending a back frame having a small acknowledgment sequence than Y <sub>0</sub> + N <sub>B.</sub> According to one or more embodiments, C relays such a packet to endpoint B and causes endpoint B to retransmit the lost packet. In this case, C is relays data only endpoint A in the range between Y <sub>0</sub> and Y <sub>0</sub> + N <sub>B.</sub> </p>
+      <p>
+Â Â Similarly, when sending its own data (ie not received from other endpoints) to endpoint B, service C, as seen by service C, of endpoint A in session S Use the current state.
+</p>
+      <p>
+Â Â The description of the sequence processing of transmitted and received data performed by service C includes but is not limited to other segments, including sequence processing of individual frames exchanged between two endpoints. The same applies to semantics like TCP based on individual bytes of data as well.
+</p>
+      <p>
+Â Â Service C uses the same method for sequencing the data described above, but is not limited to protocols such as PPP and PPP, TCP / IP sessions over UDP / IP tunnels, IPv6 over IPv4 tunnels. Can be applied to multiple protocol layers utilizing the data stored using the multi-level session tracking described above within the same session including the session formed in
+</p>
+      <p>According to one or more embodiments, for transmitting the stored data responses or other data prior to the service C is (e.g., TCP / IP or like UDP / IP sockets) transparently transport endpoint C <sub>A</sub> formed, as performed by endpoint a and B, endpoint C <sub>a</sub> is a packet loss and retransmission makes it possible to deal with aspects of the congestion detection and avoidance, and other transport data transmission.</p>
+      <p>Service C is single endpoint C <sub>A</sub> facing the endpoint A, or to form an endpoint pair C <sub>A</sub> and C <sub>B</sub> facing each A and B. Endpoint C <sub>A</sub> facing the endpoint A, the opposite endpoint B address (IP address IP <sub>B</sub> and port P <sub>B),</sub> and as a result of the tracking of the formation prior to the session endpoint C <sub>A,</sub> service C The transport state of the endpoint B stored by Similarly, endpoint C <sub>B</sub> has the attributes of endpoint A (IP address IP <sub>A</sub> and port P <sub>A</sub> ).</p>
+      <p>
+Â Â According to one or more embodiments, service C stores data queries and data responses when relayed between endpoints A and B without becoming a transport level endpoint.
+</p>
+      <p>
+Â Â According to other embodiments, service C obtains a data response from one of the endpoints or receives a data response from another data source.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C responds to data queries from both endpoints A and B.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C responds to data queries from endpoints A and / or B based on at least one variable from the following groups: Configuration information, time information, frequency information, order information, system load information, network status information, client information, and ID information.
+</p>
+      <p>According to one or more embodiments, endpoint A sends query QA <sub>1</sub> to endpoint B, and service C sends endpoint RC a previously stored response RC <sub>1.</sub> respond. In response to receiving the response RC <sub>1</sub> , the endpoint A sends another data inquiry QA <sub>2</sub> . When the service C does not store the matching response to the inquiry QA <sub>2</sub> , the inquiry is relayed to the end point B, the response RB <sub>2</sub> is received, and the end point A is relayed.</p>
+      <p>As a result of the response RC <sub>1</sub> communicated by service C to the endpoint, the transmission of endpoints A and B and the inverse of the received data may not match. In order to allow the switch to return to the relay mode in which the query and response are relayed again between A and B, service C can for example have a sequence of data frames that relay between A and B as shown in FIG. Make ongoing changes. For example, when the request QA <sub>2</sub> is received from the endpoint A, the endpoint A as part of the RC <sub>1</sub> response, reports the received data to Y <sub>3</sub> &#39;to reflect the data received from the endpoint C <sub>A</sub> . At the same time, endpoint B, as part of communication with the endpoint C <sub>B,</sub> and sends the data to the sequence Y <sub>2.</sub> </p>
+      <p>Similarly, the inverse of the data received by endpoint B and sent by endpoint A (respectively X <sub>3</sub> â€² and X <sub>4</sub> ) is inconsistent.</p>
+      <p>Data sent and received when service C relays data in both directions between A and B to eliminate the difference between Y <sub>3</sub> &#39;and Y <sub>2</sub> as well as X <sub>3</sub> &#39; and X <sub>4</sub> Change the sequence.</p>
+      <p>In addition, endpoint A initiates another query QA <sub>3</sub> answered by service C using the previously stored response RC <sub>3</sub> .</p>
+      <p>
+Â Â In other words, service C alternates between responding to endpoint queries from one or both endpoints and relaying queries and responses between the two endpoints.
+</p>
+      <p>(B) Query and response modification According to one or more embodiments, following the establishment of session 5 as described above, service C, as illustrated by the example of FIG. Change the data query and / or data response relayed between B.</p>
+      <p>
+Â Â According to one or more embodiments, service C does not use the transport endpoint to send out modified data, but keeps track of the transport status of endpoints A and B and sends it out. Trust the endpoint to resend data in case of packet loss.
+</p>
+      <p>
+Â Â As part of the relayed data change, service C needs to change the protocol checksum of the frame to reflect the new payload.
+</p>
+      <p>
+Â Â In the case of a change by C of data sent from A to B, a packet loss of the changed data may occur between C and B. In this case, C relays the data frame reflecting the loss from B to A, causes the endpoint A to retransmit the lost frame, and causes the service C to apply the change again. C uses the stored session state information to track the retransmitted frame and reapply the changes.
+</p>
+      <p>In other embodiments, for transmitting the modified data to the endpoint B, service C will form a new transport endpoint C <sub>B</sub> facing the endpoint B. The endpoint C <sub>B</sub> uses the IP address IP <sub>A</sub> and port P <sub>A</sub> of the endpoint A and relays the changed data in the continuation of the frame relayed before from the endpoint A to the endpoint B.</p>
+      <p>When service C forms endpoint CB to communicate changed data to endpoint <sub>B</sub> , service C can easily communicate with endpoint A, for example, to receive a data response from endpoint A to, sometimes arbitrarily formed endpoint C <sub>a.</sub> Similar to endpoint C <sub>B</sub> , endpoint C <sub>A</sub> uses the IP address IP <sub>B</sub> and port P <sub>B</sub> of the opposite endpoint <sub>B</sub> and in the continuation of the frame previously relayed from endpoint B to endpoint A, Communicate with endpoint B.</p>
+      <p>
+Â Â Upon completion of the transmission of the changed data, service C falls back to relay the frame between A and B while making the necessary adjustments to the sequence of transmitted and received data described above. Back.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C is relayed from endpoint A to endpoint B as a result of endpoint function negotiations to affect the format, protocol, or other attributes of session S. Change the data query and / or response.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C modifies the parameters of the data query sent by endpoint A to disable the functionality reported by endpoint A. For example, service C changes its ability to receive a response in the compressed format reported by A and causes the opposite endpoint B to send the response in a compressed format.
+</p>
+      <p>Service C receives the compressed response RB <sub>10</sub> , modifies the received response by decompressing the payload, communicates it to endpoint A in a modified format, and optimizes the network between B and C. Resulting in improved performance.</p>
+      <p>According to one or more embodiments, service C includes, but is not limited to, rendering of texture data in different formats, image adaptation to endpoint device functionality, changes in video quality, and audio to different formats And / or change the response RB <sub>11</sub> received from the endpoint B, including transcoding of video data and the like.</p>
+      <p>
+Â Â Many of the response changes described above include improved utilization of network resources between service C and the endpoint that receives the changed data, adapting the data response to the endpoint application function, improving application performance, etc. Can be done for that purpose.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C is used in peer-to-peer protocols such as Bittorrent, eDonkey, etc. for end-of-data items or portions of data items that are available at one or both endpoints. Change the data response relayed between points A and B.
+</p>
+      <p>(C) Introducing a new request According to one or more embodiments, service C may add a session S in addition to or instead of the query sent by each endpoint, as shown in FIG. Introduce a new request into endpoint A and / or endpoint B.</p>
+      <p>
+Â Â According to one or more embodiments, service C may utilize an endpoint approach to sending new queries and receiving responses from endpoints A and B, as described above.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C combines response and response modification caching, introduction of a new request by response caching, and relaying of data between endpoints in the same session S.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C may be included in a data item (or part of a data item) stored by service C and / or a data item (or data item that is not stored by service C). In order to improve service C&#39;s cache hit rate by excluding (part), the data availability response is modified in combination when reported by one or both endpoints.
+</p>
+      <p>
+Â Â According to a further embodiment, service C can change the data availability information as reported by one or both endpoints, and can be used by service C as a way to populate the cache managed by service C. Forces the endpoint to communicate unstored data items (or portions of data items).
+</p>
+      <p>
+Â Â According to one or more embodiments, service C may use data between endpoint A and endpoint B to disable the use of end-to-end encryption and allow subsequent caching of data responses. Change the query.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C stores the modified data response when communicated to the endpoint by service C, and does not perform the modification on the fly, but the modified data response. Get a stored copy of.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C communicates a data response stored by the response caching mechanism described above if the stored copy of the data response matches the need for modification.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C does not allow a complete data response to be communicated from endpoint B, but is stored as an input to the data change by the response storage mechanism described above. Use a stored copy of the data response.
+</p>
+      <p>
+Â Â According to one or more embodiments, service C introduces a new request to session S to trigger the endpoint response required for optimal response caching.
+</p>
+      <p>
+Â Â Such data responses include, but are not limited to, missing content objects already stored in service C, content objects identified as popular, but not yet stored by service C Contains objects, content objects related to other objects known to service C (eg, objects referenced by HTML pages or further playback levels of adaptive bitrate video).
+</p>
+      <p>
+Â Â According to one or more embodiments, the systems include each other including at least one of the IP networks designed or configured to provide at least one of the services (a)-(c) described above. A transparent change of at least one data communication session between two endpoints A and B is provided in a manner that requires endpoints A and B to establish a data session between.
+</p>
+      <p>
+Â Â According to one or more embodiments, the optimization system is on single or multiple service provider networks, dedicated hosting locations, data centers, and corporate or residential premises, as shown in FIG. 7 below.
+</p>
+      <p>
+Â Â According to one or more embodiments, the system includes multiple components at different physical locations.
+</p>
+      <p>
+Â Â According to one or more embodiments, multiple systems exist in series in the data path of the same connection S between the two endpoints A and B.
+</p>
+      <p>
+Â Â According to one or more embodiments, the optimization service operates on the same network node with one of the endpoints.
+</p>
+      <p>
+Â Â According to one or more embodiments, multiple optimization services operate in series, as illustrated in FIG.
+</p>
+      <p>
+Â Â According to one or more embodiments, a plurality of optimization services operate in parallel as part of a load balance of a session performed by a redirect device, for example.
+</p>
+      <p>
+Â Â According to one or more embodiments, multiple instances of an optimization service can operate in series and / or in parallel, with each instance of optimization performing different and / or the same data modification and storage processing. Run.
+</p>
+      <p>
+Â Â According to one or more embodiments, multiple instances of an optimization service can operate in series and / or in parallel, with each instance of optimization cooperating with each other to provide different data modification and storage processing. Execute.
+</p>
+      <p>
+Â Â The processing of the optimization service described above is realized by software, hardware, firmware, or a combination thereof. This process is implemented with one or more computer programs executing on a processor, a processor-readable recording medium (eg, volatile and non-volatile memory and / or storage elements), and a programmable device including input and output devices. It is preferable. Each computer program can be a set of instructions (program code) in a code module in the random access memory of the device. Until requested by the device, the set of instructions is stored in another computer memory (eg, hard disk drive or removable memory such as an optical disk, memory card or flash drive) or stored in another computer system And downloaded over the Internet or other networks.
+</p>
+      <p>
+Â Â While several exemplary embodiments have been described, it should be understood that various changes, improvements, and improvements will be made by those skilled in the art. Such alterations, modifications, and improvements form part of this disclosure, and are intended to be within the spirit and scope of this disclosure. Although some examples presented herein include specific combinations of functional or structural elements, those functions and elements may be combined in other ways in accordance with this disclosure to achieve the same or different objectives. Please understand that. In particular, acts, elements and features described in connection with one embodiment are not intended to be excluded from similar or other roles in other embodiments.
+</p>
+      <p>
+Â Â Further, the elements and components described herein may be divided into further components or combined together to form fewer components to perform the same function. For example, the optimization service includes one or more physical machines or virtual machines that run on one or more physical machines. In addition, the optimization service includes a cluster of computers or various distributed computers connected by the Internet or another network.
+</p>
+      <p>
+Â Â Accordingly, the foregoing description and accompanying drawings are illustrative and are not intended to be limiting.
+</p>
+    </description-of-embodiments>
+  </div>
+  </div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">30</span>)</h2>
+    
+    <div itemprop="content" html><ol mxw-id="PCLM197771013" lang="EN" load-source="google" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">A computer-implemented method for transparently optimizing data transmission between a first endpoint and a second endpoint in a computer network, comprising: <br/> The first and second endpoints have a data session established directly between the first endpoint and the second endpoint, and the data session is in the same way throughout the session. Identified at least by itself for each endpoint, <br/> The method <br/> Relaying data between the first endpoint and the second endpoint transparently in the session using a network optimization service; <br/> Sent from the second endpoint to the first endpoint using the network optimization service to optimize data communication between the first endpoint and the second endpoint. Transparently changing or storing at least a portion of the stored data, and <br/> The step of transparently changing at least a part of the data includes changing the data, replacing the data, or data sent by the second endpoint by the first endpoint. Including inserting further data to receive different data, <br/> A method characterized by that.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">The session includes a TCP or UDP session, <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">The session is identified by an identifier including the IP address and transport port of the first endpoint, the second endpoint IP address and transport port, the transport protocol used; <br/> The identifier does not change throughout the lifetime of the session; <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">The optimization service or a redirect service communicating with the optimization service is in a data path between the first endpoint and the second endpoint; <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">Relaying the data includes forming a first transparent endpoint facing the first endpoint; <br/> The first transparent endpoint appears to the first endpoint as the second endpoint such that the first endpoint communicates with the first transparent endpoint; <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">Relaying the data includes forming a second transparent endpoint facing the second endpoint; <br/> The second transparent endpoint appears to the second endpoint as the first endpoint such that the second endpoint communicates with the second transparent endpoint; <br/> The method of claim 5.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">The step of relaying the data is performed without forming a separate transparent endpoint; instead, the endpoint tracking the transport state of the endpoint and sending the data in case of packet loss Done by having the point re-send the data and changing the re-sent data to be sent to the second endpoint, <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">Relaying the data includes receiving data communicated between the first endpoint and the second endpoint through a redirect device; <br/> Relaying the data includes relaying only a portion of a data frame in a session between the first endpoint and the second endpoint; <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">Relaying the data includes tracking what data is sent and received by each endpoint, transport level attributes, link level attributes, or network level attributes of the session. Continuously tracking and storing the state of the session, <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">Said tracking comprises monitoring a plurality of tunneling layers; <br/> The method of claim 9.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">The step of changing transparently includes a data query from the first endpoint directed to the second endpoint and / or a data response to the data query received from the second endpoint. Analyzing the data query and the data response against a previously stored data response, while preventing the relay of the data response from the second endpoint, Communicating a previously stored data response, <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">Further comprising causing the second endpoint to terminate the session or postpone transmission of the data response; <br/> The method of claim 11.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">Delivering the previously stored data response includes the IP address and port address of the second endpoint, and the continuation of the session between the first endpoint and the second endpoint. Utilizing the session state of the session, <br/> The method of claim 11.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">The collating is based on at least one variable selected from the group consisting of time information, order information, frequency information, client information and ID information. <br/> The method of claim 11.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">The step of changing transparently comprises: <br/> Analyzing a first data query from the first endpoint directed to the second endpoint; <br/> Collating the first data query with a previously stored data response; <br/> Communicating the previously stored data response to the first endpoint through a separate transparent endpoint; <br/> Receiving a second data query from the first endpoint directed to the second endpoint; <br/> Determining whether a data response in response to the second data query is stored at the optimization service; <br/> Relaying the second data query to the second endpoint; <br/> Receiving the data response corresponding to the second query from the second endpoint; <br/> Without using a separate transparent endpoint while changing the transport parameters of the data response to appear as a continuation of the session between the first endpoint and the second endpoint Relaying the data response from the second endpoint to the first endpoint; <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">The step of transparently changing the data is to render the texture data in different formats, adapt the data to the device capabilities of the endpoint, change the video quality, or format the audio and / or video data in different formats Transcoding to, <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">The step of transparently changing includes changing data query or data response parameters from one endpoint to another to affect the attributes of the session. <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">Relaying the data includes forming a first transparent endpoint facing the first endpoint; <br/> The first transparent endpoint appears to the first endpoint as the second endpoint such that the first endpoint communicates with the first transparent endpoint; <br/> The method of claim 17.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">The relaying of the data is performed without forming a separate transparent endpoint; instead, it tracks the transport state of the endpoint and provides packet loss to the endpoint sending the data. By re-sending the data and changing the re-sent data to be sent to the second endpoint, <br/> The method of claim 17.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">The transparently changing step affects the attributes of subsequent data queries or data responses so that the data query cacheability in the session is improved, so that from one endpoint to another endpoint. Including changing data query or data response parameters, <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">Said transparently changing comprises utilizing a previously stored data response for subsequent modification of the data response; <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">The step of transparently changing the endpoint is to exchange information about data availability, to improve a cache hit rate by the optimization service, or to a data item that is not currently stored in the optimization service. Change the data availability response reported by the endpoint to be forwarded to <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">The step of introducing the new request is performed in order to transmit the data response required for data caching to the endpoint. <br/> The method of claim 1.</div>
+    </div>
+    </li> <li class="claim"> <div num="24" class="claim">
+      <div class="claim-text">An optimization service that transparently optimizes data transmission between a first endpoint and a second endpoint in a computer network, <br/> The first and second endpoints have a data session established directly between the first endpoint and the second endpoint, and the data session is in the same way throughout the session. Identified at least by itself for each endpoint, <br/> The optimization service is <br/> Relay data between the first endpoint and the second endpoint transparently in the session using a network optimization service; <br/> Sent from the second endpoint to the first endpoint using the network optimization service to optimize data communication between the first endpoint and the second endpoint. Transparently change or store at least part of the data <br/> The data change may change the data, replace the data, or insert additional data so that the first endpoint receives data different from the data sent by the second endpoint Including <br/> Optimization service characterized by that.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">The optimization service is realized in an apparatus included in relaying data between network nodes on an IP-based network, <br/> 25. The optimization service according to claim 24.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">The optimization service operates on a network node with one of the endpoints; <br/> 25. The optimization service according to claim 24.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">The optimization service includes one of a plurality of optimization services operating in series. <br/> 25. The optimization service according to claim 24.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">The optimization service includes one of a plurality of optimization services operating in parallel. <br/> 25. The optimization service according to claim 24.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">The optimization service includes a plurality of instances operating in series and / or in parallel; <br/> Each instance of the optimization service performs different data modification and storage processing and / or the same data modification and storage processing. <br/> 25. The optimization service according to claim 24.</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">The optimization service includes a plurality of instances operating in series and / or in parallel; <br/> Each instance of the optimization service emphasizes each other and performs different data modification and storage processing. <br/> 25. The optimization service according to claim 24.</div>
+    </div>
+  </li> </ol>
+  </div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+        <span itemprop="applicationNumber">JP2013547704A</span>
+        <span itemprop="priorityDate">2010-12-30</span>
+        <span itemprop="filingDate">2011-12-30</span>
+        <span itemprop="title">Data transmission method and system via computer network 
+       </span>
+        <span itemprop="ifiStatus">Active</span>
+        
+        <a href="/patent/JP6035248B2/en">
+            <span itemprop="representativePublication">JP6035248B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+        </a>
+    </section>
+
+    <h2>Priority Applications (3)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">US201061428527P</span>
+                   <span itemprop="isUsProvisional">true</span>
+                   
+                <td itemprop="priorityDate">2010-12-30</td>
+                <td itemprop="filingDate">2010-12-30</td>
+                <td itemprop="title"></td>
+              </tr><tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">US61/428,527</span>
+                   
+                   
+                <td itemprop="priorityDate"></td>
+                <td itemprop="filingDate">2010-12-30</td>
+                <td itemprop="title"></td>
+              </tr><tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">PCT/US2011/068172</span>
+                   
+                   <a href="/patent/WO2012092586A2/en">
+                        <span itemprop="representativePublication">WO2012092586A2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2010-12-30</td>
+                <td itemprop="filingDate">2011-12-30</td>
+                <td itemprop="title">Methods and systems for transmission of data over computer networks 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    
+
+    
+
+    
+
+    <h2>Publications (2)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Publication Number</th>
+                    <th>Publication Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">JP2014504822A</span>
+                   
+                   <span itemprop="thisPatent">true</span>
+                   <a href="/patent/JP2014504822A/en">JP2014504822A
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2014-02-24</td>
+              </tr><tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">JP6035248B2</span>
+                   
+                   <a href="/patent/JP6035248B2/en">JP6035248B2
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2016-11-30</td>
+              </tr>
+           </tbody>
+        </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=45973904</h2>
+
+    <h2>Family Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Title</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="applications" itemscope repeat>
+                <td>
+                    <span itemprop="applicationNumber">JP2013547704A</span>
+                    <span itemprop="ifiStatus">Active</span>
+                    
+                    <a href="/patent/JP6035248B2/en">
+                        <span itemprop="representativePublication">JP6035248B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                </td>
+                <td itemprop="priorityDate">2010-12-30</td>
+                <td itemprop="filingDate">2011-12-30</td>
+                <td itemprop="title">Data transmission method and system via computer network 
+       </td>
+              </tr>
+           </tbody>
+        </table>
+
+    
+
+    
+
+    <h2>Country Status (5)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">US</span>
+                (<span itemprop="num">3</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/US20120102148A1/en">
+                <span itemprop="representativePublication">US20120102148A1</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">EP</span>
+                (<span itemprop="num">2</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/EP3518504A1/en">
+                <span itemprop="representativePublication">EP3518504A1</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">JP</span>
+                (<span itemprop="num">1</span>)
+              <meta itemprop="thisCountry" content="true">
+            </td>
+            <td>
+              <a href="/patent/JP6035248B2/en">
+                <span itemprop="representativePublication">JP6035248B2</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">CN</span>
+                (<span itemprop="num">1</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/CN103548307B/en">
+                <span itemprop="representativePublication">CN103548307B</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">WO</span>
+                (<span itemprop="num">1</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/WO2012092586A2/en">
+                <span itemprop="representativePublication">WO2012092586A2</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    <h2>Cited By (1)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2018096609A1/en">
+              <span itemprop="publicationNumber">WO2018096609A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2016-11-24</td>
+          <td itemprop="publicationDate">2018-05-31</td>
+          <td><span itemprop="assigneeOriginal">æ ªå¼ä¼šç¤¾æ—¥ç«‹è£½ä½œæ‰€</span></td>
+          <td itemprop="title">Computing machine, communication control method, and program 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Families Citing this family (11)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8655986B2/en">
+              <span itemprop="publicationNumber">US8655986B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2011-05-06</td>
+          <td itemprop="publicationDate">2014-02-18</td>
+          <td><span itemprop="assigneeOriginal">Allot Communications Ltd.</span></td>
+          <td itemprop="title">Data path processing 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9705729B2/en">
+              <span itemprop="publicationNumber">US9705729B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2012-06-01</td>
+          <td itemprop="publicationDate">2017-07-11</td>
+          <td><span itemprop="assigneeOriginal">Dell Products L.P.</span></td>
+          <td itemprop="title">General client engine with load balancing for client-server communication 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8817815B2/en">
+              <span itemprop="publicationNumber">US8817815B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2011-12-22</td>
+          <td itemprop="publicationDate">2014-08-26</td>
+          <td><span itemprop="assigneeOriginal">Cisco Technology, Inc.</span></td>
+          <td itemprop="title">Traffic optimization over network link 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9356904B1/en">
+              <span itemprop="publicationNumber">US9356904B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2012-05-14</td>
+          <td itemprop="publicationDate">2016-05-31</td>
+          <td><span itemprop="assigneeOriginal">Google Inc.</span></td>
+          <td itemprop="title">Event invitations having cinemagraphs 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9185180B2/en">
+              <span itemprop="publicationNumber">US9185180B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2012-08-20</td>
+          <td itemprop="publicationDate">2015-11-10</td>
+          <td><span itemprop="assigneeOriginal">Cisco Technology, Inc.</span></td>
+          <td itemprop="title">Hybrid caching system 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9407725B2/en">
+              <span itemprop="publicationNumber">US9407725B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2013-06-14</td>
+          <td itemprop="publicationDate">2016-08-02</td>
+          <td><span itemprop="assigneeOriginal">Dell Products L.P.</span></td>
+          <td itemprop="title">Generic transcoding service for client-server communication 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9300669B2/en">
+              <span itemprop="publicationNumber">US9300669B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2013-06-14</td>
+          <td itemprop="publicationDate">2016-03-29</td>
+          <td><span itemprop="assigneeOriginal">Dell Products L.P.</span></td>
+          <td itemprop="title">Runtime API framework for client-server communication 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9716740B2/en">
+              <span itemprop="publicationNumber">US9716740B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2013-06-14</td>
+          <td itemprop="publicationDate">2017-07-25</td>
+          <td><span itemprop="assigneeOriginal">Dell Products L.P.</span></td>
+          <td itemprop="title">Web-based transcoding to clients for client-server communication 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2015070427A1/en">
+              <span itemprop="publicationNumber">WO2015070427A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2013-11-15</td>
+          <td itemprop="publicationDate">2015-05-21</td>
+          <td><span itemprop="assigneeOriginal">åŽä¸ºæŠ€æœ¯æœ‰é™å…¬å¸</span></td>
+          <td itemprop="title">Method, device, and system for configuring maintenance association (ma) 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/CN104202229B/en">
+              <span itemprop="publicationNumber">CN104202229B</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2014-09-13</td>
+          <td itemprop="publicationDate">2017-10-27</td>
+          <td><span itemprop="assigneeOriginal">æ½åŠå­¦é™¢</span></td>
+          <td itemprop="title">A kind of device for passive optical network OLT QINQ message processing methods and system 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/GB2539003B/en">
+              <span itemprop="publicationNumber">GB2539003B</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2015-06-03</td>
+          <td itemprop="publicationDate">2018-05-09</td>
+          <td><span itemprop="assigneeOriginal">Openwave Mobility Inc</span></td>
+          <td itemprop="title">A method and apparatus for managing connections in a communication network 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Citations (5)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2001109743A/en">
+              <span itemprop="publicationNumber">JP2001109743A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1999-08-26</td>
+          <td itemprop="publicationDate">2001-04-20</td>
+          <td><span itemprop="assigneeOriginal">Internatl Business Mach Corp &lt;Ibm&gt;</span></td>
+          <td itemprop="title">System and method for inserting semantic characteristics into syntactic document transcoding framework of format drive 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2002247112A/en">
+              <span itemprop="publicationNumber">JP2002247112A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2001-02-20</td>
+          <td itemprop="publicationDate">2002-08-30</td>
+          <td><span itemprop="assigneeOriginal">Ntt Docomo Inc</span></td>
+          <td itemprop="title">Tcp repeater and sequence number conversion method 
+     </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2006279394A/en">
+              <span itemprop="publicationNumber">JP2006279394A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2005-03-29</td>
+          <td itemprop="publicationDate">2006-10-12</td>
+          <td><span itemprop="assigneeOriginal">Nec Corp</span></td>
+          <td itemprop="title">Session relaying apparatus, and session relaying method and program 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2009089197A/en">
+              <span itemprop="publicationNumber">JP2009089197A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2007-10-01</td>
+          <td itemprop="publicationDate">2009-04-23</td>
+          <td><span itemprop="assigneeOriginal">Fujitsu Ltd</span></td>
+          <td itemprop="title">Repeating device 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2009101004A1/en">
+              <span itemprop="publicationNumber">WO2009101004A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-02-12</td>
+          <td itemprop="publicationDate">2009-08-20</td>
+          <td><span itemprop="assigneeOriginal">Ipwireless Inc</span></td>
+          <td itemprop="title">Method and arrangement for tcp flow control 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Family Cites Families (72)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US3289358A/en">
+              <span itemprop="publicationNumber">US3289358A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1964-05-21</td>
+          <td itemprop="publicationDate">1966-12-06</td>
+          <td><span itemprop="assigneeOriginal">Longobardi Felice</span></td>
+          <td itemprop="title">Razor blade holder and stropper for a hone and strop 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JPH0827769B2/en">
+              <span itemprop="publicationNumber">JPH0827769B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1992-10-30</td>
+          <td itemprop="publicationDate">1996-03-21</td>
+          <td><span itemprop="assigneeOriginal">ã‚¤ãƒ³ã‚¿ãƒ¼ãƒŠã‚·ãƒ§ãƒŠãƒ«ãƒ»ãƒ“ã‚¸ãƒã‚¹ãƒ»ãƒžã‚·ãƒ¼ãƒ³ã‚ºãƒ»ã‚³ãƒ¼ãƒãƒ¬ã‚¤ã‚·ãƒ§ãƒ³</span></td>
+          <td itemprop="title">  Generating system and method of communication interface  </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5526358A/en">
+              <span itemprop="publicationNumber">US5526358A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1994-08-19</td>
+          <td itemprop="publicationDate">1996-06-11</td>
+          <td><span itemprop="assigneeOriginal">Peerlogic, Inc.</span></td>
+          <td itemprop="title">Node management in scalable distributed computing enviroment 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP0867003A2/en">
+              <span itemprop="publicationNumber">EP0867003A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1995-12-12</td>
+          <td itemprop="publicationDate">1998-09-30</td>
+          <td><span itemprop="assigneeOriginal">The Board of Trustees for the University of Illinois</span></td>
+          <td itemprop="title">Method of and system for transmitting and/or retrieving real-time video and audio information over performance-limited transmission systems 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5884046A/en">
+              <span itemprop="publicationNumber">US5884046A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-10-23</td>
+          <td itemprop="publicationDate">1999-03-16</td>
+          <td><span itemprop="assigneeOriginal">Pluris, Inc.</span></td>
+          <td itemprop="title">Apparatus and method for sharing data and routing messages between a plurality of workstations in a local area network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5852717A/en">
+              <span itemprop="publicationNumber">US5852717A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-11-20</td>
+          <td itemprop="publicationDate">1998-12-22</td>
+          <td><span itemprop="assigneeOriginal">Shiva Corporation</span></td>
+          <td itemprop="title">Performance optimizations for computer networks utilizing HTTP 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6424992B2/en">
+              <span itemprop="publicationNumber">US6424992B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-12-23</td>
+          <td itemprop="publicationDate">2002-07-23</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Affinity-based router and routing method 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5950198A/en">
+              <span itemprop="publicationNumber">US5950198A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-03-24</td>
+          <td itemprop="publicationDate">1999-09-07</td>
+          <td><span itemprop="assigneeOriginal">Novell, Inc.</span></td>
+          <td itemprop="title">Processes and apparatuses for generating file correspondency through replication and synchronization between target and source computers 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5907678A/en">
+              <span itemprop="publicationNumber">US5907678A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-05-07</td>
+          <td itemprop="publicationDate">1999-05-25</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Client/server system in which protocol caches for multiple sessions are selectively copied into a common checkpoint cache upon receiving a checkpoint request 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5987376A/en">
+              <span itemprop="publicationNumber">US5987376A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-07-16</td>
+          <td itemprop="publicationDate">1999-11-16</td>
+          <td><span itemprop="assigneeOriginal">Microsoft Corporation</span></td>
+          <td itemprop="title">System and method for the distribution and synchronization of data and state information between clients in a distributed processing system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5960404A/en">
+              <span itemprop="publicationNumber">US5960404A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-08-28</td>
+          <td itemprop="publicationDate">1999-09-28</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corp.</span></td>
+          <td itemprop="title">Mechanism for heterogeneous, peer-to-peer, and disconnected workflow operation 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6003045A/en">
+              <span itemprop="publicationNumber">US6003045A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-09-17</td>
+          <td itemprop="publicationDate">1999-12-14</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Accessing stored files from multiple storage devices 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6105029A/en">
+              <span itemprop="publicationNumber">US6105029A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-09-17</td>
+          <td itemprop="publicationDate">2000-08-15</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Retrieving network files through parallel channels 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5950205A/en">
+              <span itemprop="publicationNumber">US5950205A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-09-25</td>
+          <td itemprop="publicationDate">1999-09-07</td>
+          <td><span itemprop="assigneeOriginal">Cisco Technology, Inc.</span></td>
+          <td itemprop="title">Data transmission over the internet using a cache memory file system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6240461B1/en">
+              <span itemprop="publicationNumber">US6240461B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1997-09-25</td>
+          <td itemprop="publicationDate">2001-05-29</td>
+          <td><span itemprop="assigneeOriginal">Cisco Technology, Inc.</span></td>
+          <td itemprop="title">Methods and apparatus for caching network data traffic 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6185598B1/en">
+              <span itemprop="publicationNumber">US6185598B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-02-10</td>
+          <td itemprop="publicationDate">2001-02-06</td>
+          <td><span itemprop="assigneeOriginal">Digital Island, Inc.</span></td>
+          <td itemprop="title">Optimized network resource location 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6460087B1/en">
+              <span itemprop="publicationNumber">US6460087B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-02-25</td>
+          <td itemprop="publicationDate">2002-10-01</td>
+          <td><span itemprop="assigneeOriginal">Kdd Corporation</span></td>
+          <td itemprop="title">Method of transferring file 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6085251A/en">
+              <span itemprop="publicationNumber">US6085251A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-04-02</td>
+          <td itemprop="publicationDate">2000-07-04</td>
+          <td><span itemprop="assigneeOriginal">The United States Of America As Represented By The Secretary Of The Air Force</span></td>
+          <td itemprop="title">Implementing a parallel file transfer protocol 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6018780A/en">
+              <span itemprop="publicationNumber">US6018780A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-05-19</td>
+          <td itemprop="publicationDate">2000-01-25</td>
+          <td><span itemprop="assigneeOriginal">Lucent Technologies Inc.</span></td>
+          <td itemprop="title">Method and apparatus for downloading a file to a remote unit 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6199107B1/en">
+              <span itemprop="publicationNumber">US6199107B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-07-22</td>
+          <td itemprop="publicationDate">2001-03-06</td>
+          <td><span itemprop="assigneeOriginal">Microsoft Corporation</span></td>
+          <td itemprop="title">Partial file caching and read range resume system and method 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6219786B1/en">
+              <span itemprop="publicationNumber">US6219786B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-09-09</td>
+          <td itemprop="publicationDate">2001-04-17</td>
+          <td><span itemprop="assigneeOriginal">Surfcontrol, Inc.</span></td>
+          <td itemprop="title">Method and system for monitoring and controlling network access 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6286084B1/en">
+              <span itemprop="publicationNumber">US6286084B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-09-16</td>
+          <td itemprop="publicationDate">2001-09-04</td>
+          <td><span itemprop="assigneeOriginal">Cisco Technology, Inc.</span></td>
+          <td itemprop="title">Methods and apparatus for populating a network cache 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6304914B1/en">
+              <span itemprop="publicationNumber">US6304914B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-09-22</td>
+          <td itemprop="publicationDate">2001-10-16</td>
+          <td><span itemprop="assigneeOriginal">Microsoft Corporation</span></td>
+          <td itemprop="title">Method and apparatus for pre-compression packaging 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6622157B1/en">
+              <span itemprop="publicationNumber">US6622157B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-09-28</td>
+          <td itemprop="publicationDate">2003-09-16</td>
+          <td><span itemprop="assigneeOriginal">Certeon, Inc.</span></td>
+          <td itemprop="title">Extending network services using mobile agents 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6389462B1/en">
+              <span itemprop="publicationNumber">US6389462B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1998-12-16</td>
+          <td itemprop="publicationDate">2002-05-14</td>
+          <td><span itemprop="assigneeOriginal">Lucent Technologies Inc.</span></td>
+          <td itemprop="title">Method and apparatus for transparently directing requests for web objects to proxy caches 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6434608B1/en">
+              <span itemprop="publicationNumber">US6434608B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-02-26</td>
+          <td itemprop="publicationDate">2002-08-13</td>
+          <td><span itemprop="assigneeOriginal">Cisco Technology, Inc.</span></td>
+          <td itemprop="title">Methods and apparatus for caching network traffic 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP4299911B2/en">
+              <span itemprop="publicationNumber">JP4299911B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1999-03-24</td>
+          <td itemprop="publicationDate">2009-07-22</td>
+          <td><span itemprop="assigneeOriginal">æ ªå¼ä¼šç¤¾æ±èŠ</span></td>
+          <td itemprop="title">Information transfer system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6263371B1/en">
+              <span itemprop="publicationNumber">US6263371B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-06-10</td>
+          <td itemprop="publicationDate">2001-07-17</td>
+          <td><span itemprop="assigneeOriginal">Cacheflow, Inc.</span></td>
+          <td itemprop="title">Method and apparatus for seaming of streaming content 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6976165B1/en">
+              <span itemprop="publicationNumber">US6976165B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-09-07</td>
+          <td itemprop="publicationDate">2005-12-13</td>
+          <td><span itemprop="assigneeOriginal">Emc Corporation</span></td>
+          <td itemprop="title">System and method for secure storage, transfer and retrieval of content addressable information 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6339785B1/en">
+              <span itemprop="publicationNumber">US6339785B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-11-24</td>
+          <td itemprop="publicationDate">2002-01-15</td>
+          <td><span itemprop="assigneeOriginal">Idan Feigenbaum</span></td>
+          <td itemprop="title">Multi-server file download 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6366907B1/en">
+              <span itemprop="publicationNumber">US6366907B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-12-15</td>
+          <td itemprop="publicationDate">2002-04-02</td>
+          <td><span itemprop="assigneeOriginal">Napster, Inc.</span></td>
+          <td itemprop="title">Real-time search engine 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20020010866A1/en">
+              <span itemprop="publicationNumber">US20020010866A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-12-16</td>
+          <td itemprop="publicationDate">2002-01-24</td>
+          <td><span itemprop="assigneeOriginal">Mccullough David J.</span></td>
+          <td itemprop="title">Method and apparatus for improving peer-to-peer bandwidth between remote networks by combining multiple connections which use arbitrary data paths 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7240100B1/en">
+              <span itemprop="publicationNumber">US7240100B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-04-14</td>
+          <td itemprop="publicationDate">2007-07-03</td>
+          <td><span itemprop="assigneeOriginal">Akamai Technologies, Inc.</span></td>
+          <td itemprop="title">Content delivery network (CDN) content server request handling mechanism with metadata framework support 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6996616B1/en">
+              <span itemprop="publicationNumber">US6996616B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-04-17</td>
+          <td itemprop="publicationDate">2006-02-07</td>
+          <td><span itemprop="assigneeOriginal">Akamai Technologies, Inc.</span></td>
+          <td itemprop="title">HTML delivery from edge-of-network servers in a content delivery network (CDN) 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6742023B1/en">
+              <span itemprop="publicationNumber">US6742023B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-04-28</td>
+          <td itemprop="publicationDate">2004-05-25</td>
+          <td><span itemprop="assigneeOriginal">Roxio, Inc.</span></td>
+          <td itemprop="title">Use-sensitive distribution of data files between users 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6865600B1/en">
+              <span itemprop="publicationNumber">US6865600B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-05-19</td>
+          <td itemprop="publicationDate">2005-03-08</td>
+          <td><span itemprop="assigneeOriginal">Napster, Inc.</span></td>
+          <td itemprop="title">System and method for selecting internet media channels 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20020049760A1/en">
+              <span itemprop="publicationNumber">US20020049760A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-06-16</td>
+          <td itemprop="publicationDate">2002-04-25</td>
+          <td><span itemprop="assigneeOriginal">Flycode, Inc.</span></td>
+          <td itemprop="title">Technique for accessing information in a peer-to-peer network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7010578B1/en">
+              <span itemprop="publicationNumber">US7010578B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-09-21</td>
+          <td itemprop="publicationDate">2006-03-07</td>
+          <td><span itemprop="assigneeOriginal">Akamai Technologies, Inc.</span></td>
+          <td itemprop="title">Internet content delivery service with third party cache interface support 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7203741B2/en">
+              <span itemprop="publicationNumber">US7203741B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-10-12</td>
+          <td itemprop="publicationDate">2007-04-10</td>
+          <td><span itemprop="assigneeOriginal">Peerapp Ltd.</span></td>
+          <td itemprop="title">Method and system for accelerating receipt of data in a client-to-client network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7111057B1/en">
+              <span itemprop="publicationNumber">US7111057B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-10-31</td>
+          <td itemprop="publicationDate">2006-09-19</td>
+          <td><span itemprop="assigneeOriginal">Akamai Technologies, Inc.</span></td>
+          <td itemprop="title">Method and system for purging content from a content delivery network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6940835B2/en">
+              <span itemprop="publicationNumber">US6940835B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-12-28</td>
+          <td itemprop="publicationDate">2005-09-06</td>
+          <td><span itemprop="assigneeOriginal">Nortel Networks Limited</span></td>
+          <td itemprop="title">Application-level mobility support in communications network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7043644B2/en">
+              <span itemprop="publicationNumber">US7043644B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2001-01-31</td>
+          <td itemprop="publicationDate">2006-05-09</td>
+          <td><span itemprop="assigneeOriginal">Qurio Holdings, Inc.</span></td>
+          <td itemprop="title">Facilitating file access from firewall-protected nodes in a peer-to-peer network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7454485B2/en">
+              <span itemprop="publicationNumber">US7454485B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2001-06-29</td>
+          <td itemprop="publicationDate">2008-11-18</td>
+          <td><span itemprop="assigneeOriginal">Intel Corporation</span></td>
+          <td itemprop="title">Providing uninterrupted media streaming using multiple network sites 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7089304B2/en">
+              <span itemprop="publicationNumber">US7089304B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2001-08-30</td>
+          <td itemprop="publicationDate">2006-08-08</td>
+          <td><span itemprop="assigneeOriginal">Microsoft Corporation</span></td>
+          <td itemprop="title">Metered Internet usage 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP4053269B2/en">
+              <span itemprop="publicationNumber">JP4053269B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2001-09-27</td>
+          <td itemprop="publicationDate">2008-02-27</td>
+          <td><span itemprop="assigneeOriginal">æ ªå¼ä¼šç¤¾æ±èŠ</span></td>
+          <td itemprop="title">Data transfer apparatus and data transfer method 
+     </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6868439B2/en">
+              <span itemprop="publicationNumber">US6868439B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2002-04-04</td>
+          <td itemprop="publicationDate">2005-03-15</td>
+          <td><span itemprop="assigneeOriginal">Hewlett-Packard Development Company, L.P.</span></td>
+          <td itemprop="title">System and method for supervising use of shared storage by multiple caching servers physically connected through a switching router to said shared storage via a robust high speed connection 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7801945B1/en">
+              <span itemprop="publicationNumber">US7801945B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-07-03</td>
+          <td itemprop="publicationDate">2010-09-21</td>
+          <td><span itemprop="assigneeOriginal">Sprint Spectrum L.P.</span></td>
+          <td itemprop="title">Method and system for inserting web content through intermediation between a content server and a client station 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7395355B2/en">
+              <span itemprop="publicationNumber">US7395355B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2002-07-11</td>
+          <td itemprop="publicationDate">2008-07-01</td>
+          <td><span itemprop="assigneeOriginal">Akamai Technologies, Inc.</span></td>
+          <td itemprop="title">Method for caching and delivery of compressed content in a content delivery network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2004070860A/en">
+              <span itemprop="publicationNumber">JP2004070860A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-08-09</td>
+          <td itemprop="publicationDate">2004-03-04</td>
+          <td><span itemprop="assigneeOriginal">Hitachi Ltd</span></td>
+          <td itemprop="title">Stream contents distribution system and proxy server 
+     </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP4309629B2/en">
+              <span itemprop="publicationNumber">JP4309629B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2002-09-13</td>
+          <td itemprop="publicationDate">2009-08-05</td>
+          <td><span itemprop="assigneeOriginal">æ ªå¼ä¼šç¤¾æ—¥ç«‹è£½ä½œæ‰€</span></td>
+          <td itemprop="title">Network system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2004030296A1/en">
+              <span itemprop="publicationNumber">WO2004030296A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-09-30</td>
+          <td itemprop="publicationDate">2004-04-08</td>
+          <td><span itemprop="assigneeOriginal">Corposoft Ltd.</span></td>
+          <td itemprop="title">Method and devices for prioritizing electronic messages 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7793342B1/en">
+              <span itemprop="publicationNumber">US7793342B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2002-10-15</td>
+          <td itemprop="publicationDate">2010-09-07</td>
+          <td><span itemprop="assigneeOriginal">Novell, Inc.</span></td>
+          <td itemprop="title">Single sign-on with basic authentication for a transparent proxy 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8473620B2/en">
+              <span itemprop="publicationNumber">US8473620B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-04-14</td>
+          <td itemprop="publicationDate">2013-06-25</td>
+          <td><span itemprop="assigneeOriginal">Riverbed Technology, Inc.</span></td>
+          <td itemprop="title">Interception of a cloud-based communication connection 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7616625B1/en">
+              <span itemprop="publicationNumber">US7616625B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-10-22</td>
+          <td itemprop="publicationDate">2009-11-10</td>
+          <td><span itemprop="assigneeOriginal">Sprint Communications Company L.P.</span></td>
+          <td itemprop="title">System and method for selective enhanced data connections in an asymmetrically routed network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7564792B2/en">
+              <span itemprop="publicationNumber">US7564792B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-11-05</td>
+          <td itemprop="publicationDate">2009-07-21</td>
+          <td><span itemprop="assigneeOriginal">Juniper Networks, Inc.</span></td>
+          <td itemprop="title">Transparent optimization for transmission control protocol flow control 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP4171910B2/en">
+              <span itemprop="publicationNumber">JP4171910B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-03-17</td>
+          <td itemprop="publicationDate">2008-10-29</td>
+          <td><span itemprop="assigneeOriginal">æ—¥æœ¬é›»æ°—æ ªå¼ä¼šç¤¾</span></td>
+          <td itemprop="title">Parallel processing system and parallel processing program 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20080005349A1/en">
+              <span itemprop="publicationNumber">US20080005349A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-04-16</td>
+          <td itemprop="publicationDate">2008-01-03</td>
+          <td><span itemprop="assigneeOriginal">Utstarcom</span></td>
+          <td itemprop="title">Distributed multimedia streaming system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP4558396B2/en">
+              <span itemprop="publicationNumber">JP4558396B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-07-14</td>
+          <td itemprop="publicationDate">2010-10-06</td>
+          <td><span itemprop="assigneeOriginal">æ ªå¼ä¼šç¤¾æ±æµ·ç†åŒ–é›»æ©Ÿè£½ä½œæ‰€</span></td>
+          <td itemprop="title">Input control device 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2006139398A/en">
+              <span itemprop="publicationNumber">JP2006139398A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-11-10</td>
+          <td itemprop="publicationDate">2006-06-01</td>
+          <td><span itemprop="assigneeOriginal">Nippon Telegr &amp; Teleph Corp &lt;Ntt&gt;</span></td>
+          <td itemprop="title">Cache server and content selection/holding method 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20060212584A1/en">
+              <span itemprop="publicationNumber">US20060212584A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2005-03-15</td>
+          <td itemprop="publicationDate">2006-09-21</td>
+          <td><span itemprop="assigneeOriginal">Qian Xiang Shi Ji (Beijing) Technology Development Co. Ltd.</span></td>
+          <td itemprop="title">Method and system for accelerating downloading of web page content by a peer-to-peer network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7706266B2/en">
+              <span itemprop="publicationNumber">US7706266B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2007-03-12</td>
+          <td itemprop="publicationDate">2010-04-27</td>
+          <td><span itemprop="assigneeOriginal">Citrix Systems, Inc.</span></td>
+          <td itemprop="title">Systems and methods of providing proxy-based quality of service 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/CN101282167B/en">
+              <span itemprop="publicationNumber">CN101282167B</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2007-04-05</td>
+          <td itemprop="publicationDate">2012-10-10</td>
+          <td><span itemprop="assigneeOriginal">ä¸­å…´é€šè®¯è‚¡ä»½æœ‰é™å…¬å¸</span></td>
+          <td itemprop="title">Signal transmission method shared by transparent relay and non-transparent relay in MMR system 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2153340A4/en">
+              <span itemprop="publicationNumber">EP2153340A4</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2007-05-08</td>
+          <td itemprop="publicationDate">2015-10-21</td>
+          <td><span itemprop="assigneeOriginal">Riverbed Technology Inc</span></td>
+          <td itemprop="title">A hybrid segment-oriented file server and wan accelerator 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8583810B2/en">
+              <span itemprop="publicationNumber">US8583810B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2008-01-04</td>
+          <td itemprop="publicationDate">2013-11-12</td>
+          <td><span itemprop="assigneeOriginal">Red Hat, Inc.</span></td>
+          <td itemprop="title">Session affinity cache and manager 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2248038A4/en">
+              <span itemprop="publicationNumber">EP2248038A4</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2008-01-07</td>
+          <td itemprop="publicationDate">2013-10-16</td>
+          <td><span itemprop="assigneeOriginal">Peerapp Ltd</span></td>
+          <td itemprop="title">Method and system for transmitting data in a computer network 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/PT2385682E/en">
+              <span itemprop="publicationNumber">PT2385682E</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-05-15</td>
+          <td itemprop="publicationDate">2013-12-04</td>
+          <td><span itemprop="assigneeOriginal">Nomad Spectrum Ltd</span></td>
+          <td itemprop="title">Method for optimising packet-oriented data transmission and computer program product 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8463941B1/en">
+              <span itemprop="publicationNumber">US8463941B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-06-16</td>
+          <td itemprop="publicationDate">2013-06-11</td>
+          <td><span itemprop="assigneeOriginal">Riverbed Technology, Inc.</span></td>
+          <td itemprop="title">Cross-session protocol acceleration and its application to storage area network file systems 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8041893B1/en">
+              <span itemprop="publicationNumber">US8041893B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2008-09-09</td>
+          <td itemprop="publicationDate">2011-10-18</td>
+          <td><span itemprop="assigneeOriginal">Vignette Software Llc</span></td>
+          <td itemprop="title">System and method for managing large filesystem-based caches 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8504716B2/en">
+              <span itemprop="publicationNumber">US8504716B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-10-08</td>
+          <td itemprop="publicationDate">2013-08-06</td>
+          <td><span itemprop="assigneeOriginal">Citrix Systems, Inc</span></td>
+          <td itemprop="title">Systems and methods for allocating bandwidth by an intermediary for flow control 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2380320A1/en">
+              <span itemprop="publicationNumber">EP2380320A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-12-23</td>
+          <td itemprop="publicationDate">2011-10-26</td>
+          <td><span itemprop="assigneeOriginal">Movik Networks</span></td>
+          <td itemprop="title">Transparent interaction with multi-layer protocols via selective bridging and proxying 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2467786B1/en">
+              <span itemprop="publicationNumber">EP2467786B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-08-17</td>
+          <td itemprop="publicationDate">2019-07-31</td>
+          <td><span itemprop="assigneeOriginal">Akamai Technologies, Inc.</span></td>
+          <td itemprop="title">Method and system for http-based stream delivery 
+       </td>
+        </tr><tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8903891B2/en">
+              <span itemprop="publicationNumber">US8903891B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2010-06-24</td>
+          <td itemprop="publicationDate">2014-12-02</td>
+          <td><span itemprop="assigneeOriginal">Sap Se</span></td>
+          <td itemprop="title">User interface communication utilizing service request identification to manage service requests 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+    <ul>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2011</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2011-12-30</span>
+            <span itemprop="countryCode">US</span>
+            <span itemprop="applicationNumber">US13/341,409</span>
+            <a href="/patent/US20120102148A1/en"><span itemprop="documentId">patent/US20120102148A1/en</span></a>
+            <span itemprop="legalStatusCat">not_active</span>
+            <span itemprop="legalStatus">Abandoned</span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2011-12-30</span>
+            <span itemprop="countryCode">EP</span>
+            <span itemprop="applicationNumber">EP19163542.4A</span>
+            <a href="/patent/EP3518504A1/en"><span itemprop="documentId">patent/EP3518504A1/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Pending</span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2011-12-30</span>
+            <span itemprop="countryCode">JP</span>
+            <span itemprop="applicationNumber">JP2013547704A</span>
+            <a href="/patent/JP6035248B2/en"><span itemprop="documentId">patent/JP6035248B2/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            
+            <span itemprop="thisApp" content="true" bool></span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2011-12-30</span>
+            <span itemprop="countryCode">EP</span>
+            <span itemprop="applicationNumber">EP11854377.6A</span>
+            <a href="/patent/EP2659623B1/en"><span itemprop="documentId">patent/EP2659623B1/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2011-12-30</span>
+            <span itemprop="countryCode">WO</span>
+            <span itemprop="applicationNumber">PCT/US2011/068172</span>
+            <a href="/patent/WO2012092586A2/en"><span itemprop="documentId">patent/WO2012092586A2/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Application Filing</span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2011-12-30</span>
+            <span itemprop="countryCode">CN</span>
+            <span itemprop="applicationNumber">CN201180068664.6A</span>
+            <a href="/patent/CN103548307B/en"><span itemprop="documentId">patent/CN103548307B/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">IP Right Grant</span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2015</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2015-04-03</span>
+            <span itemprop="countryCode">US</span>
+            <span itemprop="applicationNumber">US14/678,537</span>
+            <a href="/patent/US10225340B2/en"><span itemprop="documentId">patent/US10225340B2/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2019</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2019-03-01</span>
+            <span itemprop="countryCode">US</span>
+            <span itemprop="applicationNumber">US16/290,775</span>
+            <a href="/patent/US20190208015A1/en"><span itemprop="documentId">patent/US20190208015A1/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Pending</span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+    
+
+    </section>
+
+  <section>
+    <h2>Patent Citations (5)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2001109743A/en">
+              <span itemprop="publicationNumber">JP2001109743A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1999-08-26</td>
+          <td itemprop="publicationDate">2001-04-20</td>
+          <td><span itemprop="assigneeOriginal">Internatl Business Mach Corp &lt;Ibm&gt;</span></td>
+          <td itemprop="title">System and method for inserting semantic characteristics into syntactic document transcoding framework of format drive 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2002247112A/en">
+              <span itemprop="publicationNumber">JP2002247112A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2001-02-20</td>
+          <td itemprop="publicationDate">2002-08-30</td>
+          <td><span itemprop="assigneeOriginal">Ntt Docomo Inc</span></td>
+          <td itemprop="title">Tcp repeater and sequence number conversion method 
+     </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2006279394A/en">
+              <span itemprop="publicationNumber">JP2006279394A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2005-03-29</td>
+          <td itemprop="publicationDate">2006-10-12</td>
+          <td><span itemprop="assigneeOriginal">Nec Corp</span></td>
+          <td itemprop="title">Session relaying apparatus, and session relaying method and program 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP2009089197A/en">
+              <span itemprop="publicationNumber">JP2009089197A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2007-10-01</td>
+          <td itemprop="publicationDate">2009-04-23</td>
+          <td><span itemprop="assigneeOriginal">Fujitsu Ltd</span></td>
+          <td itemprop="title">Repeating device 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2009101004A1/en">
+              <span itemprop="publicationNumber">WO2009101004A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-02-12</td>
+          <td itemprop="publicationDate">2009-08-20</td>
+          <td><span itemprop="assigneeOriginal">Ipwireless Inc</span></td>
+          <td itemprop="title">Method and arrangement for tcp flow control 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  
+
+  <h2>Cited By (1)</h2>
+  <table>
+    <caption>* Cited by examiner, â€  Cited by third party</caption>
+    <thead>
+      <tr>
+        <th>Publication number</th>
+        <th>Priority date</th>
+        <th>Publication date</th>
+        <th>Assignee</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/WO2018096609A1/en">
+            <span itemprop="publicationNumber">WO2018096609A1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2016-11-24</td>
+        <td itemprop="publicationDate">2018-05-31</td>
+        <td><span itemprop="assigneeOriginal">æ ªå¼ä¼šç¤¾æ—¥ç«‹è£½ä½œæ‰€</span></td>
+        <td itemprop="title">Computing machine, communication control method, and program 
+       </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section>
+    <h2>Also Published As</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Publication date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP3518504A1/en">
+              <span itemprop="publicationNumber">EP3518504A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2019-07-31</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20120102148A1/en">
+              <span itemprop="publicationNumber">US20120102148A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2012-04-26</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2659623A2/en">
+              <span itemprop="publicationNumber">EP2659623A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2013-11-06</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2659623B1/en">
+              <span itemprop="publicationNumber">EP2659623B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2019-03-20</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2012092586A2/en">
+              <span itemprop="publicationNumber">WO2012092586A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2012-07-05</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20150358405A1/en">
+              <span itemprop="publicationNumber">US20150358405A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2015-12-10</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US10225340B2/en">
+              <span itemprop="publicationNumber">US10225340B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2019-03-05</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20190208015A1/en">
+              <span itemprop="publicationNumber">US20190208015A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2019-07-04</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/CN103548307B/en">
+              <span itemprop="publicationNumber">CN103548307B</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2018-05-29</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2012092586A3/en">
+              <span itemprop="publicationNumber">WO2012092586A3</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2013-01-17</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2659623A4/en">
+              <span itemprop="publicationNumber">EP2659623A4</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2017-07-19</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/JP6035248B2/en">
+              <span itemprop="publicationNumber">JP6035248B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2016-11-30</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/CN103548307A/en">
+              <span itemprop="publicationNumber">CN103548307A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2014-01-29</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="17615897586235012982">
+              <a href="/scholar/17615897586235012982"><span itemprop="scholarAuthors">Spatscheck et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2000">2000</time>
+            
+          </td>
+          <td itemprop="title">Optimizing TCP forwarder performance</td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US9444785B2/en">
+                <span itemprop="publicationNumber">US9444785B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-09-13">2016-09-13</time>
+            
+            
+          </td>
+          <td itemprop="title">Transparent provisioning of network access to an application 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6687245B2/en">
+                <span itemprop="publicationNumber">US6687245B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-02-03">2004-02-03</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for performing IP telephony 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8209430B2/en">
+                <span itemprop="publicationNumber">US8209430B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-06-26">2012-06-26</time>
+            
+            
+          </td>
+          <td itemprop="title">Apparatus and method for remote communication and bandwidth adjustments 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CA2421665C/en">
+                <span itemprop="publicationNumber">CA2421665C</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-11-25">2008-11-25</time>
+            
+            
+          </td>
+          <td itemprop="title">Wireless provisioning device 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7526577B2/en">
+                <span itemprop="publicationNumber">US7526577B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-04-28">2009-04-28</time>
+            
+            
+          </td>
+          <td itemprop="title">Multiple offload of network state objects with support for failover events 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/JP3853765B2/en">
+                <span itemprop="publicationNumber">JP3853765B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-12-06">2006-12-06</time>
+            
+            
+          </td>
+          <td itemprop="title">  Packet compression scheme and a packet restoration system, as well as packet compression method and a packet restoration method  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP3043528B1/en">
+                <span itemprop="publicationNumber">EP3043528B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-04-10">2019-04-10</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for internet protocol based content router 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7290064B2/en">
+                <span itemprop="publicationNumber">US7290064B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-10-30">2007-10-30</time>
+            
+            
+          </td>
+          <td itemprop="title">Adaptive feedback technique implemented in mobile IP networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US9674030B2/en">
+                <span itemprop="publicationNumber">US9674030B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2017-06-06">2017-06-06</time>
+            
+            
+          </td>
+          <td itemprop="title">Methods and apparatus for a common control protocol for wired and wireless nodes 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US9043439B2/en">
+                <span itemprop="publicationNumber">US9043439B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-05-26">2015-05-26</time>
+            
+            
+          </td>
+          <td itemprop="title">Method for streaming packet captures from network access devices to a cloud server over HTTP 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8433783B2/en">
+                <span itemprop="publicationNumber">US8433783B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-04-30">2013-04-30</time>
+            
+            
+          </td>
+          <td itemprop="title">Systems and methods for providing quality of service via a flow controlled tunnel 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1333642B1/en">
+                <span itemprop="publicationNumber">EP1333642B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-08-20">2008-08-20</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for integrating performance enhancing functions in a virtual private network (VPN) 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US10110714B2/en">
+                <span itemprop="publicationNumber">US10110714B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-10-23">2018-10-23</time>
+            
+            
+          </td>
+          <td itemprop="title">Methods for exchanging network management messages using UDP over HTTP protocol 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8990380B2/en">
+                <span itemprop="publicationNumber">US8990380B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-03-24">2015-03-24</time>
+            
+            
+          </td>
+          <td itemprop="title">Systems and methods for quality of service of ICA published applications 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN103354989B/en">
+                <span itemprop="publicationNumber">CN103354989B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-08-03">2016-08-03</time>
+            
+            
+          </td>
+          <td itemprop="title">  Systems and methods for multi-level quality of service classification means intermediate  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20020141389A1/en">
+                <span itemprop="publicationNumber">US20020141389A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-10-03">2002-10-03</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for routing IP packets 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR20090083339A/en">
+                <span itemprop="publicationNumber">KR20090083339A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-08-03">2009-08-03</time>
+            
+            
+          </td>
+          <td itemprop="title">Systems and methods of improving performance of transport protocols in a multi-path environment 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR101900536B1/en">
+                <span itemprop="publicationNumber">KR101900536B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-09-19">2018-09-19</time>
+            
+            
+          </td>
+          <td itemprop="title">Implementing a 3g packet core in a cloud computer with openflow data and control planes 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7586899B1/en">
+                <span itemprop="publicationNumber">US7586899B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-09-08">2009-09-08</time>
+            
+            
+          </td>
+          <td itemprop="title">Methods and apparatus providing an overlay network for voice over internet protocol applications 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN100588175C/en">
+                <span itemprop="publicationNumber">CN100588175C</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-02-03">2010-02-03</time>
+            
+            
+          </td>
+          <td itemprop="title">Processing of communication flows in asymmetrically routed networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1443732A2/en">
+                <span itemprop="publicationNumber">EP1443732A2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-08-04">2004-08-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for adaptively applying performance enhancing functions 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/ES2433073T3/en">
+                <span itemprop="publicationNumber">ES2433073T3</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-12-09">2013-12-09</time>
+            
+            
+          </td>
+          <td itemprop="title">Application of policies to manage a service flow 
+     </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1443731A2/en">
+                <span itemprop="publicationNumber">EP1443731A2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-08-04">2004-08-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for providing security in performance enhanced network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6857009B1/en">
+                <span itemprop="publicationNumber">US6857009B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-02-15">2005-02-15</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for network access without reconfiguration 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2014-12-23">2014-12-23</time></td>
+          <td itemprop="code">A621</td>
+          <td itemprop="title">Written request for application examination</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">JAPANESE INTERMEDIATE CODE: A621</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20141222</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2015-11-18">2015-11-18</time></td>
+          <td itemprop="code">A131</td>
+          <td itemprop="title">Notification of reasons for refusal</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">JAPANESE INTERMEDIATE CODE: A131</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20151117</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-02-16">2016-02-16</time></td>
+          <td itemprop="code">A601</td>
+          <td itemprop="title">Written request for extension of time</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">JAPANESE INTERMEDIATE CODE: A601</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20160216</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-04-15">2016-04-15</time></td>
+          <td itemprop="code">A521</td>
+          <td itemprop="title">Written amendment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">JAPANESE INTERMEDIATE CODE: A523</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20160415</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-09-27">2016-09-27</time></td>
+          <td itemprop="code">TRDD</td>
+          <td itemprop="title">Decision of grant or rejection written</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-10-04">2016-10-04</time></td>
+          <td itemprop="code">A01</td>
+          <td itemprop="title">Written decision to grant a patent or to grant a registration (utility model)</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">JAPANESE INTERMEDIATE CODE: A01</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20161004</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-11-04">2016-11-04</time></td>
+          <td itemprop="code">A61</td>
+          <td itemprop="title">First payment of annual fees (during grant procedure)</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">JAPANESE INTERMEDIATE CODE: A61</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20161031</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-11-04">2016-11-04</time></td>
+          <td itemprop="code">R150</td>
+          <td itemprop="title">Certificate of patent or registration of utility model</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Ref document number</strong>:
+              <span itemprop="value">6035248</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Country of ref document</strong>:
+              <span itemprop="value">JP</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">JAPANESE INTERMEDIATE CODE: R150</span>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
+
+    </search-app>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script async="" defer="" src="//www.google.com/insights/consumersurveys/async_survey?site=cxkjf7ipxgbnnjy6k35ezcvbbe"></script>
+  </body>
+</html>

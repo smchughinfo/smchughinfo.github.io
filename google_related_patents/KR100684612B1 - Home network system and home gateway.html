@@ -1,0 +1,1884 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>KR100684612B1 - Home network system and home gateway 
+        - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/KR100684612B1/en">
+    <meta name="description" content="
+     A home network system and a home gateway are provided to enable addresses of IPv6 nodes of an external network to be managed through the home gateway and enable each Zigbee node to have an intrinsic IPv6 address, thereby easily interworking the IPv6 node with the Zigbee node within a home. A home network system(100) comprises the followings: at least one Zigbee node(120) which inserts an identity code of a destination IPv6(Internet Protocol version 6) node into a specific field of a Zigbee packet which will be transmitted and transmits the packet; and a home gateway(110) which detects an IPv6 address corresponding to the inserted identity code of the IPv6 node after receiving the Zigbee packet transmitted from the Zigbee node(120), translates the received Zigbee packet into an IPv6 packet and transmits the translated packet to an IPv6 node(200) corresponding to the detected IPv6 address. 
+   
+   ">
+    
+    <meta name="DC.type" content="patent">
+    
+    <meta name="DC.title" content="Home network system and home gateway 
+       ">
+    
+    <meta name="DC.date" content="2006-03-07" scheme="dateSubmitted">
+    
+    <meta name="DC.description" content="
+     A home network system and a home gateway are provided to enable addresses of IPv6 nodes of an external network to be managed through the home gateway and enable each Zigbee node to have an intrinsic IPv6 address, thereby easily interworking the IPv6 node with the Zigbee node within a home. A home network system(100) comprises the followings: at least one Zigbee node(120) which inserts an identity code of a destination IPv6(Internet Protocol version 6) node into a specific field of a Zigbee packet which will be transmitted and transmits the packet; and a home gateway(110) which detects an IPv6 address corresponding to the inserted identity code of the IPv6 node after receiving the Zigbee packet transmitted from the Zigbee node(120), translates the received Zigbee packet into an IPv6 packet and transmits the translated packet to an IPv6 node(200) corresponding to the detected IPv6 address. 
+   
+   ">
+    
+    <meta name="citation_patent_application_number" content="KR:1020060021463A">
+    
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/0a/64/28/9fccb652acef1b/KR100684612B1.pdf">
+    
+    <meta name="citation_patent_number" content="KR:100684612:B1">
+    
+    <meta name="DC.date" content="2007-02-13" scheme="issue">
+    
+    <meta name="DC.contributor" content="ê°•íƒœìš±" scheme="inventor">
+    
+    <meta name="DC.contributor" content="ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤" scheme="assignee">
+    
+    <meta name="DC.relation" content="US:20020031108:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050255880:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20020039357:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050271032:A1" scheme="references">
+    
+    <meta name="DC.relation" content="KR:20060052472:A" scheme="references">
+    
+    <meta name="DC.relation" content="KR:20060074679:A" scheme="references">
+    
+    <meta name="DC.relation" content="KR:20060133699:A" scheme="references">
+    
+    <meta name="citation_reference" content="ë…¼ë¬¸" scheme="references">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <style>
+      body { transition: none; }
+    </style>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27188110-4', 'auto');
+
+      version = 'patent-search.search_20191028_RC01';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.profilePicture = "";
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.html">
+    
+  </head>
+  <body unresolved>
+    
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.js"></script>
+    
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">KR100684612B1 - Home network system and home gateway 
+        - Google Patents</h1>
+  <span itemprop="title">Home network system and home gateway 
+       </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/0a/64/28/9fccb652acef1b/KR100684612B1.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">KR100684612B1</dd>
+    <meta itemprop="numberWithoutCodes" content="100684612">
+    <meta itemprop="kindCode" content="B1">
+    <meta itemprop="publicationDescription" content="Patent specification">
+    
+    <span>KR100684612B1</span>
+    
+    <span>KR1020060021463A</span>
+    
+    <span>KR20060021463A</span>
+    
+    <span>KR100684612B1</span>
+    
+    <span>KR 100684612 B1</span>
+    
+    <span>KR100684612 B1</span>
+    
+    <span>KR 100684612B1</span>
+    
+    <span>KR 1020060021463 A</span>
+    
+    <span>KR1020060021463 A</span>
+    
+    <span>KR 1020060021463A</span>
+    
+    <span>KR 20060021463 A</span>
+    
+    <span>KR20060021463 A</span>
+    
+    <span>KR 20060021463A</span>
+    
+    <span>KR 100684612 B1</span>
+    
+    <span>KR100684612 B1</span>
+    
+    <span>KR 100684612B1</span>
+    
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">KR</dd>
+    <dd itemprop="countryName">South Korea</dd>
+
+    <dt>Prior art keywords</dt>
+    
+    <dd itemprop="priorArtKeywords" repeat>ipv6</dd>
+    <dd itemprop="priorArtKeywords" repeat>packet</dd>
+    <dd itemprop="priorArtKeywords" repeat>zigbee</dd>
+    <dd itemprop="priorArtKeywords" repeat>node</dd>
+    <dd itemprop="priorArtKeywords" repeat>address</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2006-03-07">2006-03-07</time></dd>
+
+    
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">KR1020060021463A</dd>
+
+  <dt>Other languages</dt>
+  <dd itemprop="otherLanguages" itemscope repeat>
+    <a href="/patent/KR100684612B1/ko">
+      <span itemprop="name">Korean</span> (<span itemprop="code">ko</span>)
+    </a>
+  </dd>
+
+  
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>ê°•íƒœìš±</dd>
+  
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2006-03-07">2006-03-07</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2006-03-07">2006-03-07</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2007-02-13">2007-02-13</time></dd>
+
+  
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2006-03-07">2006-03-07</time>
+    <span itemprop="title">Application filed by ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤</span>
+    <span itemprop="type">filed</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">ì£¼ì‹íšŒì‚¬ ëŒ€ìš°ì¼ë ‰íŠ¸ë¡œë‹‰ìŠ¤</span>
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2006-03-07">2006-03-07</time>
+    <span itemprop="title">Priority to KR1020060021463A</span>
+    <span itemprop="type">priority</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/KR100684612B1/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-02-13">2007-02-13</time>
+    <span itemprop="title">Application granted</span>
+    <span itemprop="type">granted</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-02-13">2007-02-13</time>
+    <span itemprop="title">Publication of KR100684612B1</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/KR100684612B1/en</span>
+    
+    
+    
+  </dd>
+  
+
+  <h2>Links</h2>
+
+  <ul>
+    
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=KR&amp;NR=100684612B1&amp;KC=B1&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="globalDossierLink">
+          <a href="http://globaldossier.uspto.gov/#/result/publication/KR/100684612/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+        </li>
+
+      
+
+      
+
+      
+
+      
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="stackexchangeLink">
+          <a href="https://patents.stackexchange.com/questions/tagged/KR100684612B1" itemprop="url"><span itemprop="text">Discuss</span></a>
+        </li>
+  </ul>
+
+  
+  <ul itemprop="concept" itemscope>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000000875</span>
+      <span itemprop="name">corresponding</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>abstract</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+  </ul>
+  
+
+  <section>
+    <h2>Images</h2>
+    <ul>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/22/65/90/1af257ec580d4e/112006016255964-pat00001.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/00/b6/ee/45e52079c5b48a/112006016255964-pat00001.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="120">
+            <meta itemprop="label" content="ZigBee node">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="316">
+              <meta itemprop="top" content="33">
+              <meta itemprop="right" content="350">
+              <meta itemprop="bottom" content="94">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/60/bf/77/8ebba5d899d1a3/112006016255964-pat00002.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/a3/00/bc/e35716b3b98c20/112006016255964-pat00002.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/f4/81/f0/18e65cdc160e23/112006016255964-pat00003.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/b6/55/36/d3683782f6a620/112006016255964-pat00003.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/0f/53/f0/3e43d0ac02358e/112006016255964-pat00004.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/4b/24/13/a1e61f90588b40/112006016255964-pat00004.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="110">
+            <meta itemprop="label" content="home gateway">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="625">
+              <meta itemprop="top" content="23">
+              <meta itemprop="right" content="692">
+              <meta itemprop="bottom" content="60">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="111">
+            <meta itemprop="label" content="IPv6 interface module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="544">
+              <meta itemprop="top" content="256">
+              <meta itemprop="right" content="612">
+              <meta itemprop="bottom" content="293">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="control module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="578">
+              <meta itemprop="top" content="405">
+              <meta itemprop="right" content="642">
+              <meta itemprop="bottom" content="442">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="113">
+            <meta itemprop="label" content="ID extraction unit">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="552">
+              <meta itemprop="top" content="509">
+              <meta itemprop="right" content="608">
+              <meta itemprop="bottom" content="545">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="114">
+            <meta itemprop="label" content="ZigBee packet generator">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="546">
+              <meta itemprop="top" content="576">
+              <meta itemprop="right" content="609">
+              <meta itemprop="bottom" content="614">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="115">
+            <meta itemprop="label" content="address detection section">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="540">
+              <meta itemprop="top" content="687">
+              <meta itemprop="right" content="613">
+              <meta itemprop="bottom" content="727">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="116">
+            <meta itemprop="label" content="packet generation section">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="541">
+              <meta itemprop="top" content="766">
+              <meta itemprop="right" content="610">
+              <meta itemprop="bottom" content="804">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="117">
+            <meta itemprop="label" content="ZigBee interface module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="547">
+              <meta itemprop="top" content="969">
+              <meta itemprop="right" content="612">
+              <meta itemprop="bottom" content="1006">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="118">
+            <meta itemprop="label" content="database">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="924">
+              <meta itemprop="top" content="608">
+              <meta itemprop="right" content="990">
+              <meta itemprop="bottom" content="645">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/0b/a3/ab/f30d6f45cca211/112006016255964-pat00005.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/79/4f/5d/707dd13360ced4/112006016255964-pat00005.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/0e/11/f1/bc101ecfcd86ac/112006016255964-pat00006.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/ef/62/d2/46ef0076c5a3ae/112006016255964-pat00006.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="5">
+            <meta itemprop="id" content="10">
+            <meta itemprop="label" content="application layer">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="586">
+              <meta itemprop="top" content="41">
+              <meta itemprop="right" content="637">
+              <meta itemprop="bottom" content="76">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="5">
+            <meta itemprop="id" content="30">
+            <meta itemprop="label" content="IPv6 layer">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="586">
+              <meta itemprop="top" content="226">
+              <meta itemprop="right" content="634">
+              <meta itemprop="bottom" content="262">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/a5/a7/bb/20c2ad08706ec0/112006016255964-pat00007.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/0d/5f/e4/e8dba1bfa4f71a/112006016255964-pat00007.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/79/33/9c/a5a19cb1b28264/112006016255964-pat00008.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/ac/ef/80/9b5f4d9e173c55/112006016255964-pat00008.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/a0/cc/0f/9079f4c8c36734/112006016255964-pat00009.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/d4/32/84/8cdd6d6d7a3e01/112006016255964-pat00009.png">
+        <ul>
+          
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/a4/47/46/73e4bdc9f3cf0e/112006016255964-pat00010.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/24/00/9b/0982e7abd4678b/112006016255964-pat00010.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="9">
+            <meta itemprop="id" content="111">
+            <meta itemprop="label" content="IPv6 interface module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="31">
+              <meta itemprop="top" content="934">
+              <meta itemprop="right" content="97">
+              <meta itemprop="bottom" content="973">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="9">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="control module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="32">
+              <meta itemprop="top" content="505">
+              <meta itemprop="right" content="93">
+              <meta itemprop="bottom" content="541">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="9">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="control module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="34">
+              <meta itemprop="top" content="656">
+              <meta itemprop="right" content="91">
+              <meta itemprop="bottom" content="695">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="9">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="control module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="30">
+              <meta itemprop="top" content="796">
+              <meta itemprop="right" content="96">
+              <meta itemprop="bottom" content="834">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="9">
+            <meta itemprop="id" content="117">
+            <meta itemprop="label" content="ZigBee interface module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="31">
+              <meta itemprop="top" content="398">
+              <meta itemprop="right" content="97">
+              <meta itemprop="bottom" content="436">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="9">
+            <meta itemprop="id" content="200">
+            <meta itemprop="label" content="IPv6 node">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="27">
+              <meta itemprop="top" content="193">
+              <meta itemprop="right" content="100">
+              <meta itemprop="bottom" content="230">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/9d/7b/5f/066ff4993c98e8/112006016255964-pat00011.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/f0/0c/7f/d0bcaf31af644d/112006016255964-pat00011.png">
+        <ul>
+          
+        </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>Classifications</h2>
+    
+    <ul>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/00</span>&mdash;<span itemprop="Description">Data switching networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/28</span>&mdash;<span itemprop="Description">Data switching networks characterised by path configuration, e.g. local area networks [LAN], wide area networks [WAN]</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/00</span>&mdash;<span itemprop="Description">Data switching networks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L12/66</span>&mdash;<span itemprop="Description">Arrangements for connecting between networks having differing types of switching systems, e.g. gateways</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/00</span>&mdash;<span itemprop="Description">Arrangements, apparatus, circuits or systems, not covered by a single one of groups H04L1/00 - H04L27/00</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/02</span>&mdash;<span itemprop="Description">Communication control; Communication processing</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L29/06</span>&mdash;<span itemprop="Description">Communication control; Communication processing characterised by a protocol</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA96958561" lang="EN" source="national office" load-source="docdb">
+    <div class="abstract">A home network system and a home gateway are provided to enable addresses of IPv6 nodes of an external network to be managed through the home gateway and enable each Zigbee node to have an intrinsic IPv6 address, thereby easily interworking the IPv6 node with the Zigbee node within a home. A home network system(100) comprises the followings: at least one Zigbee node(120) which inserts an identity code of a destination IPv6(Internet Protocol version 6) node into a specific field of a Zigbee packet which will be transmitted and transmits the packet; and a home gateway(110) which detects an IPv6 address corresponding to the inserted identity code of the IPv6 node after receiving the Zigbee packet transmitted from the Zigbee node(120), translates the received Zigbee packet into an IPv6 packet and transmits the translated packet to an IPv6 node(200) corresponding to the detected IPv6 address.</div>
+  </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    <aside>Translated from <span itemprop="translatedLanguage">Korean</span></aside>
+    <div itemprop="content" html><div mxw-id="PDES36129923" lang="KO" load-source="patent-office" class="description"> <invention-title lang="KO"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë° í™ˆ ê²Œì´íŠ¸ì›¨ì´ {Home Network System and Home Gateway}</span> Home network system and home gateway {Home Network System and Home Gateway}</span> </invention-title> <description-of-drawings> <p num="1"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 1ì€ ë³¸ ë°œëª…ì˜ ë°”ëžŒì§í•œ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ êµ¬ì„±ì„ ë„ì‹œí•˜ëŠ” ë¸”ë¡ë„ì´ë‹¤.</span> 1 is a block diagram showing the configuration of a home network system according to an embodiment of the present invention.</span> </p> <p num="2"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2aëŠ” IPv6ì˜ í—¤ë” í˜•íƒœë¥¼ ë„ì‹œí•˜ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 2a is an illustration showing a header in the form of IPv6.</span> </p> <p num="3"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2bëŠ” IPv6ì˜ ì£¼ì†Œ í˜•íƒœë¥¼ ë„ì‹œí•˜ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 2b is an illustration showing the address type of IPv6.</span> </p> <p num="4"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 3ì€ ë„ 1ì— ë„ì‹œëœ í™ˆ ê²Œì´íŠ¸ì›¨ì´ì˜ êµ¬ì„±ì„ ë„ì‹œí•˜ëŠ” ë¸”ë¡ë„ì´ë‹¤.</span> 3 is a block diagram showing the structure of a home gateway shown in FIG.</span> </p> <p num="5"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 4ëŠ” ë„ 1ì— ë„ì‹œëœ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ë°ì´í„° ìˆ˜ì‹  ë™ìž‘ì„ ì„¤ëª…í•˜ê¸° ìœ„í•œ íë¦„ë„ì´ë‹¤.</span> Figure 4 is a flow chart showing the data receiving operation of the home network system shown in FIG.</span> </p> <p num="6"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 5ëŠ” IPv6 ìŠ¤íƒì˜ êµ¬ì¡°ë¥¼ ë„ì‹œí•˜ëŠ” ë¸”ë¡ë„ì´ë‹¤.</span> 5 is a block diagram showing the structure of the IPv6 stack.</span> </p> <p num="7"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6aëŠ” ì§€ê·¸ë¹„ í”„ë¡œí† ì½œì˜ ê¸°ë³¸ í—¤ë” êµ¬ì¡°ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 6a is an exemplary form of the basic structure of the ZigBee protocol header.</span> </p> <p num="8"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6bëŠ” ì œì–´ ë°ì´í„°ì˜ ì „ì†¡ì„ ìœ„í•œ KVP(Key Value Pair) íŒ¨í‚·ì—ì„œ ì¶”ê°€ë  ìˆ˜ ìžˆëŠ” í—¤ë” êµ¬ì¡°ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 6b is a view illustrating the structure of one form of header that may be added in KVP (Key Value Pair) packets for transmission of control data.</span> </p> <p num="9"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6cëŠ” ë©”ì§€ì§€ ì „ì†¡ì„ ìœ„í•œ MSG íŒ¨í‚·ì—ì„œ ì¶”ê°€ë  ìˆ˜ ìžˆëŠ” í—¤ë” êµ¬ì¡°ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 6c is an illustration showing the structure of one form of header that may be added in the MSG packet for transmission also supported methoxy.</span> </p> <p num="10"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 7ì€ ë„ 1ì— ë„ì‹œëœ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ ë°ì´í„° ì†¡ì‹  ë™ìž‘ì„ ì„¤ëª…í•˜ê¸° ìœ„í•œ íë¦„ë„ì´ë‹¤.</span> 7 is a flow chart for explaining the data transmission operation of the home network system shown in FIG.</span> </p> <p num="11"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 8ì€ ë°ì´í„°ë² ì´ìŠ¤ì— ì €ìž¥ë˜ëŠ” ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 8 is an illustration showing a form of identification code / IPv6 address table stored in the database also.</span> </p> <p num="12"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">&lt;ë„ë©´ì˜ ì£¼ìš” ë¶€ë¶„ì— ëŒ€í•œ ë¶€í˜¸ ì„¤ëª…&gt;</span> &lt;Reference Numerals [&gt;</span> </p> <p num="13"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">100 : í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ</span> 100 Home Network System</span> </p> <p num="14"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">110 : í™ˆ ê²Œì´íŠ¸ì›¨ì´</span> 110: home gateway</span> </p> <p num="15"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">111 : IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ</span> 111: IPv6 Interface Module</span> </p> <p num="16"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">112 : ì œì–´ ëª¨ë“ˆ</span> 112: The control module</span> </p> <p num="17"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">113 : IPv6 ë…¸ë“œ ID ì¶”ì¶œë¶€</span> 113: IPv6 node ID extractor</span> </p> <p num="18"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">114 : ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€</span> 114: ZigBee packet generator</span> </p> <p num="19"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">115 : IPv6 ì£¼ì†Œ ê²€ì¶œë¶€</span> 115: IPv6 address detector</span> </p> <p num="20"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">116 : IPv6 íŒ¨í‚· ìƒì„±ë¶€</span> 116: IPv6 packet generator</span> </p> <p num="21"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">117 : ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ</span> 117: zigbee interface module</span> </p> <p num="22"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">118 : ë°ì´í„°ë² ì´ìŠ¤</span> 118: Database</span> </p> <p num="23"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">120 : ì§€ê·¸ë¹„ ë…¸ë“œ</span> 120: ZigBee node</span> </p> <p num="24"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">200 : IPv6 ë…¸ë“œ</span> 200: IPv6 node</span> </p> </description-of-drawings> <background-art> <p num="25"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë³¸ ë°œëª…ì€ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(Home Network System) ë° í™ˆ ê²Œì´íŠ¸ì›¨ì´(Home Gateway)ì— ê´€í•œ ê²ƒìœ¼ë¡œ, ì¢€ë” ìƒì„¸í•˜ê²ŒëŠ”, ì¸í„°ë„· í”„ë¡œí† ì½œ ë²„ì „6(IPv6 : Internet Protocol Version 6)ê³¼ ì§€ê·¸ë¹„(Zigbee) ë„¤íŠ¸ì›Œí¬ë¥¼ ì—°ë™ì‹œí‚¬ ìˆ˜ ìžˆëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë° í™ˆ ê²Œì´íŠ¸ì›¨ì´ì— ê´€í•œ ê²ƒì´ë‹¤.</span> The present invention home network (Home Network System) and home gateway relates to (Home Gateway), more specifically, the Internet Protocol version 6 (IPv6: Internet Protocol Version 6) and Zigbee (Zigbee), which can be linked to the network Home relates to a network system and home gateway.</span> </p> <p num="26"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìµœê·¼ ë“¤ì–´, ìœ ë¬´ì„  ë°ì´í„° í†µì‹  ê¸°ìˆ ì˜ ê¸‰ê²©í•œ ë°œë‹¬ê³¼ ê·¸ ê¸°ë°˜ì´ ë˜ëŠ” í†µì‹  ë„¤íŠ¸ì›Œí¬ì˜ í™•ëŒ€ ë³´ê¸‰ì€ ì¸í„°ë„· ë“±ê³¼ ê°™ì€ ì´ˆê³ ì† í†µì‹  ì„œë¹„ìŠ¤ì˜ ëŒ€ì¤‘í™”ë¥¼ ê°€ì ¸ì™”ë‹¤.</span> In recent years, expanding the spread of communications networks and the rapid development of wireless data communications technology that is based on those brought to the popularization of high-speed communication services such as the Internet.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">íŠ¹ížˆ, ê°€ì • ë‚´ë¡œ ì´ˆê³ ì† ì¸í„°ë„·ì´ ë³´ê¸‰ë¨ì— ë”°ë¼ ê¸°ì¡´ì— ì´ë£¨ì–´ì§€ë˜ PC ê¸°ë°˜ì˜ ë„¤íŠ¸ì›Œí¬ êµ¬ì¶• ê¸°ìˆ ì€ ê°€ì • ë‚´ì˜ ë””ì§€í„¸ ì •ë³´ê°€ì „ë“¤ì„ ì›ê²©ì§€ì—ì„œ ì œì–´í•  ìˆ˜ ìžˆë„ë¡ í•˜ê¸° ìœ„í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ê¸°ìˆ ë¡œ ì§„í™”í•˜ê³  ìžˆë‹¤.</span> In particular, as high-speed Internet penetration into the home networking technology of PC-based spilling made to the existing home network technology has evolved to allow for the control of digital information appliances in the home, from remote locations.</span> </p> <p num="27"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì´ëž€ ê¸°ì¡´ì˜ í™ˆì˜¤í† ë©”ì´ì…˜(Home Automation) ì‹œìŠ¤í…œìœ¼ë¡œë¶€í„° ë°œì „ëœ ê°œë…ìœ¼ë¡œì„œ, ê°€ì • ë‚´ì— ì„¤ì¹˜ë˜ëŠ” í‹°ë¸Œì´, ì˜¤ë””ì˜¤, ë¹„ë””ì˜¤, ì»´í“¨í„°, ëƒ‰ìž¥ê³ , ì„¸íƒê¸°, ì „ê¸°ë°¥í†µ, ì—ì–´ì»¨, ë³´ì¼ëŸ¬ ë“±ê³¼ ê°™ì€ ë””ì§€í„¸ ì •ë³´ ê°€ì „ê¸°ê¸°ë¥¼ ìœ ì„  ë˜ëŠ” ë¬´ì„  ë„¤íŠ¸ì›Œí¬ë¡œ ì—°ê²°í•˜ì—¬ ì‚¬ìš©ìžê°€ ì›í•˜ëŠ” ê°€ì „ê¸°ê¸°ë¥¼ ì–¸ì œ ì–´ë””ì„œë‚˜ ìžìœ ë¡­ê²Œ ì œì–´í•  ìˆ˜ ìžˆë„ë¡ í•˜ëŠ” ì‹œìŠ¤í…œì„ ì˜ë¯¸í•œë‹¤.</span> The home network system is the conventional home automation (Home Automation) as advanced concepts from the system, TV installed in a home, audio, video, computer, refrigerator, washing machine, electric rice cookers, air conditioners, digital information appliances wired or wireless, such as boiler connecting to the network by means of the system that allows the user to freely control the desired appliances anytime and anywhere.</span> </p> <p num="28"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì„ ì´ìš©í•˜ë©´ ì‚¬ìš©ìžëŠ” ê¸°ë³¸ì ìœ¼ë¡œ ê¸°ì¡´ì˜ í™ˆì˜¤í† ë©”ì´ì…˜ ì‹œìŠ¤í…œì—ì„œ ì œê³µë˜ë˜ í˜„ê´€ë¬¸ ê°œí, ì¹¨ìž…ìž ê°ì§€, ê°€ìŠ¤ ê²½ë³´, í™”ìž¬ ê°ì§€ ë“±ê³¼ ê°™ì€ ê¸°ëŠ¥ë“¤ì„ í•œì¸µ ì—…ê·¸ë ˆì´ë“œëœ í˜•íƒœë¡œ ì œê³µë°›ì„ ìˆ˜ ìžˆì„ ë¿ë§Œ ì•„ë‹ˆë¼, ê³ í’ˆì§ˆ ë©€í‹°ë¯¸ë””ì–´ ì„œë¹„ìŠ¤, ì›ê²© êµìœ¡, ì£¼ë¬¸í˜• ë¹„ë””ì˜¤ ì„œë¹„ìŠ¤ ë“±ê³¼ ê°™ì€ ì—”í„°í…Œì¸ë¨¼íŠ¸ ì„œë¹„ìŠ¤(Entertainment Service)ì™€, ê°œì¸, ê°€ì¡±ì˜ ì •ë³´ ê´€ë¦¬, í™ˆì‡¼í•‘, ì „ìžìƒê±°ëž˜, í™ˆ ì‹œíë¦¬í‹° ë“±ê³¼ ê°™ì€ ì¸í¬ë©”ì´ì…˜ ì„œë¹„ìŠ¤(Information Service) ë° ì •ë³´ ê°€ì „ í†µí•© ì œì–´ ê´€ë¦¬, ì›ê²© ì—ë„ˆì§€ ìžì›ê´€ë¦¬ ë“±ê³¼ ê°™ì€ ì»¤ë®¤ë‹ˆì¼€ì´ì…˜ ì„œë¹„ìŠ¤(Communication Service) ë“±ì„ ì œê³µ ë°›ì„ ìˆ˜ ìžˆë‹¤.</span> With this home network users are basically the release of door provided in existing home automation system, switchgear, intruder detection, as well as be provided with gas alarms, fire detection a further upgrade of the form features such as high-quality multimedia services remote education, entertainment services (Entertainment service) and personal information services such as the family of information management, home shopping, e-commerce, home security (information service), and information appliances integrated control management, remote energy management, such as video-on-demand service communications services (communication service), such as may be provided and the like.</span> </p> <p num="29"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í†µìƒ, ì´ëŸ¬í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì„ êµ¬ì„±í•˜ê¸° ìœ„í•´ì„œëŠ” ìœ ì„  ë˜ëŠ” ë¬´ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ì´ ì‚¬ìš©ëœë‹¤.</span> In order to configure the normal, the home network system is a wired or wireless networking technology is used.</span> </p> <p num="30"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìœ ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ë¡œëŠ” ê°€ì • ë‚´ì— ì„¤ì¹˜ëœ ì „ë ¥ì„ ì„ ì´ìš©í•˜ëŠ” ì „ë ¥ì„  í†µì‹ (PLC : Power Line Communication), ê°€ì • ë‚´ì— ì„¤ì¹˜ëœ ì „í™”ì„ ì„ ì´ìš©í•˜ëŠ” í™ˆí”¼ì—”ì—ì´(HomePNA : Home Phone Networking Alliance) ë° AV ê¸°ê¸°ë“¤ì˜ ì‹¤ì‹œê°„ ê³ ì† ë°ì´í„° ì „ì†¡ì— ì‚¬ìš©ë˜ëŠ” ì§ë ¬ë²„ìŠ¤ ë°©ì‹ì¸ IEEE(Institute of Electrical and Electronics Engineers)1394 ë“±ì´ ìžˆë‹¤.</span> In this case, a wired networking technology in the power line communication using a power line installed in a home used for real-time high-speed data transfer of:: (Home Phone Networking Alliance HomePNA) and the AV apparatus homepage using a telephone line installed in a (PLC Power Line Communication), home RNA a (Institute of Electrical and Electronics Engineers) IEEE 1394 serial bus system which can include.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë˜í•œ, ë¬´ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ë¡œëŠ” IEEE 802.11 ê³„ì—´ë¡œì„œ 2.4GHz ë˜ëŠ” 5GHz ëŒ€ì—­ì„ ì‚¬ìš©í•˜ëŠ” ë¬´ì„ ëžœ(Wireless LAN)ê³¼, ê·¼ê±°ë¦¬ ë””ë°”ì´ìŠ¤ê°„ì˜ í†µì‹ ì„ ì§€ì›í•˜ê¸° ìœ„í•œ 2.4GHz ëŒ€ì—­ì˜ ë¬´ì„ ì ‘ì† ì‚°ì—…í‘œì¤€ì¸ ë¸”ë£¨íˆ¬ìŠ¤(Bluetooth), ê·¼ê±°ë¦¬ ê´‘ëŒ€ì—­ í†µì‹  ê¸°ìˆ ì¸ UWB(Ultra Wide Band), ì €ì† ì „ì†¡ ì†ë„ë¥¼ ê°–ëŠ” í™ˆì˜¤í† ë©”ì´ì…˜ ë° ë°ì´í„° ë„¤íŠ¸ì›Œí¬ë¥¼ ìœ„í•œ ì‚°ì—… í‘œì¤€ì¸ ì§€ê·¸ë¹„(ZigBee) ë“±ì´ ìžˆë‹¤.</span> In addition, wireless networking technologies in the wireless access industry standard Bluetooth (Bluetooth) in the 2.4GHz band to support communication between the WLAN (Wireless LAN) and a short-range devices using the 2.4GHz or 5GHz band as IEEE 802.11-based, short-range and the like broadband communication technology, UWB (Ultra wide Band), the industry standard for home automation and data network having a slower transmission rate ZigBee (ZigBee).</span> </p> <p num="31"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ í™ˆ ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ë“¤ ì¤‘ ì§€ê·¸ë¹„ëŠ” IEEE 802.15.4ì— ê¸°ë°˜ì„ ë‘” ë¬´ì„  ë„¤íŠ¸ì›Œí‚¹ ê¸°ìˆ ë¡œì„œ, 2002ë…„ì— ê·¸ ì—°êµ¬ ë° í‘œì¤€í™”ë¥¼ ìœ„í•œ ì–¼ë¼ì´ì–¸ìŠ¤(Alliance)ê°€ êµ¬ì„±ë˜ì—ˆìœ¼ë©° 2004ë…„ 12ì›”ì— ë²„ì „ 1.0ì´ ë°œí‘œëœ ë°” ìžˆë‹¤.</span> Such as home networking technology of ZigBee wireless networking technology based on the IEEE 802.15.4 one in 2002 and the study was composed Alliance (Alliance) to standardize the bar is version 1.0 released in December 2004.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì§€ê·¸ë¹„ëŠ” êµ¬ì¶•ë¹„ìš©ì´ ì €ë ´í•˜ë©° ì „ë ¥ ì†Œëª¨ê°€ ìž‘ê³  ì €ì†ì˜ íŠ¹ì„±ì„ ê°€ì§€ê¸° ë•Œë¬¸ì— íš¨ìœ¨ì ì¸ í™ˆ ë„¤íŠ¸ì›Œí¬ êµ¬ì¶•ì— ìš©ì´í•œ ì´ì ì´ ìžˆì–´, ê·¼ê±°ë¦¬ ë¬´ì„  ë„¤íŠ¸ì›Œí¬ ë° ì„¼ì„œ ë„¤íŠ¸ì›Œí¬ì˜ ë°œë‹¬ì„ ì´ëŒ ê²ƒìœ¼ë¡œ ì „ë§ë˜ê³  ìžˆë‹¤.</span> ZigBee is a low construction costs, and it is easy to advantage for efficient home networks due to its low-speed characteristics of small power consumption, is expected to lead to the development of local wireless networks and sensor networks.</span> </p> <p num="32"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì€ ì™¸ë¶€ í†µì‹ ë§, ì˜ˆë¥¼ ë“¤ë©´ ìœ ì„  ì¸í„°ë„· ë˜ëŠ” ë¬´ì„  ì¸í„°ë„·ê³¼ ì—°ê²°ë¨ìœ¼ë¡œì¨ ì™¸ë¶€ì™€ ì—°ë™ëœë‹¤.</span> On the other hand, home network systems are linked with the outside by being, for external communication network such as a wired Internet connection or a wireless Internet.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìƒê¸° ì¸í„°ë„·ì—ëŠ” ì‚¬ìš©ìžê°€ ê°€ì „ê¸°ê¸°ë“¤ì„ ì™¸ë¶€ì—ì„œ ì œì–´í•  ìˆ˜ ìžˆë„ë¡ í•˜ê¸° ìœ„í•œ ì‚¬ìš©ìž ë‹¨ë§ê¸°ì™€ ì¸í„°ë„· ì„œë²„ ë“±ì´ ì ‘ì†ë  ìˆ˜ ìžˆë‹¤.</span> Here, the Internet may be a user terminal and a server, such as Internet connection for enabling the user to control the home appliances from the outside.</span> </p> <p num="33"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì¸í„°ë„·ì€ í‘œì¤€ í”„ë¡œí† ì½œì¸ TCP/IP(Transport Control Protocol/ Internet Protocol) ê·œì•½ì— ë”°ë¥¸ë‹¤.</span> The Internet is subject to the terms of the standard protocol TCP / IP (Transport Control Protocol / Internet Protocol).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, TCP/IP í”„ë¡œí† ì½œ ìŠ¤íƒì€ ìƒìœ„ê³„ì¸µì¸ TCPì™€ í•˜ìœ„ê³„ì¸µì¸ IPë¼ëŠ” 2ê°œì˜ ì¤‘ìš”í•œ í”„ë¡œí† ì½œì„ ê¸°ë°˜ìœ¼ë¡œ ì´ë£¨ì–´ì§€ëŠ”ë°, ìƒê¸° IP í”„ë¡œí† ì½œì€ OSI(Open Systems Interface) ê³„ì¸µ 3ì— í•´ë‹¹í•˜ëŠ” í”„ë¡œí† ì½œë¡œì„œ, í˜„ìž¬ ë²„ì „4(IPv4 : Internet Protocol Version 4)ê°€ ì£¼ë¡œ ì‚¬ìš©ë˜ê³  ìžˆë‹¤.</span> In this case, TCP / IP protocol stack has an upper layer of makin made based on the two most important protocols of TCP and the lower layer of IP, the IP protocol is a protocol corresponding to 3 OSI (Open Systems Interface) layer, a current version 4 ( IPv4: it is mainly used for Internet Protocol Version 4).</span> </p> <p num="34"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° IPv4ëŠ” 32ë¹„íŠ¸ì˜ ì£¼ì†Œ ì²´ê³„ë¥¼ ê°–ëŠ”ë‹¤.</span> The IPv4 has an address system of 32 bits.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì˜ˆë¥¼ ë“¤ë©´, IPv4ëŠ” &#39;XXX:XXX:XXX:XXX&#39;ì™€ ê°™ì€ IP ì£¼ì†Œ ì²´ê³„ë¥¼ ê°€ì§ˆ ìˆ˜ ìžˆë‹¤.</span> For example, IPv4 can have an IP addressing scheme such as &#39;XXX: XXX XXX:: XXX&#39;.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ê°&#39;XXX&#39;ëŠ” 8bitì´ë¯€ë¡œ ì´ ë¹„íŠ¸ìˆ˜ëŠ” 32ë¹„íŠ¸ê°€ ëœë‹¤.</span> At this time, because each &#39;XXX&#39; is 8bit total number of bits it is 32 bits.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ, IPv4ì˜ ì£¼ì†Œ ì²´ê³„ë¡œ í• ë‹¹ë  ìˆ˜ ìžˆëŠ” ì£¼ì†Œì˜ ê°œìˆ˜ëŠ” ëŒ€ëžµ 43ì–µ ê°œ ì •ë„ë¼ê³  í•  ìˆ˜ ìžˆë‹¤.</span> Thus, the number of addresses that can be assigned to a system of IPv4 addresses that can be roughly 4.3 billion.</span> </p> <p num="35"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ëŸ¬ë‚˜, ì´ëŸ¬í•œ IPv4ê°€ ê°–ëŠ” ì£¼ì†Œ ì²´ê³„ë¡œëŠ” ê¸°í•˜ê¸‰ìˆ˜ì ìœ¼ë¡œ ëŠ˜ì–´ë‚˜ëŠ” IP ì£¼ì†Œë“¤ì„ ìˆ˜ìš©í•˜ê¸°ì— ë¶€ì¡±í•œ ë¬¸ì œê°€ ìžˆë‹¤.</span> However, as with IPv4 addressing schemes, these are problems large enough to accommodate the growing IP addresses exponentially.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">íŠ¹ížˆ, í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œê³¼ ê°™ì´ ë§Žì€ ìˆ˜ì˜ ì£¼ì†Œë¥¼ ìš”êµ¬í•˜ëŠ” í™˜ê²½ì—ì„œëŠ” ìƒê¸° IPv4 ì£¼ì†Œ ì²´ê³„ë¥¼ ì‚¬ìš©í•˜ê¸°ì— í•œê³„ ìžˆë‹¤.</span> In particular, in applications requiring a large number of addresses as the home network system is limited to using the IPv4 address system.</span> </p> <p num="36"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ì— ëŒ€í•œ í•´ê²°ì±…ìœ¼ë¡œ ë„¤íŠ¸ì›Œí¬ ì£¼ì†Œ ë³€í™˜(NAT : Network Address Translation)ì´ ì‚¬ìš©ë˜ê³  ìžˆê¸°ëŠ” í•˜ë‚˜, ë„¤íŠ¸ì›Œí¬ ì£¼ì†Œ ë³€í™˜ì€ ì™¸ë¶€ì˜ ì¸í„°ë„·ê³¼ í™ˆ ë„¤íŠ¸ì›Œí¬ì™€ ê°™ì€ ë‚´ë¶€ ë„¤íŠ¸ì›Œí¬ë¥¼ ì—°ê²°í•˜ê¸° ìœ„í•˜ì—¬ ë³„ë„ì˜ ë§¤í•‘ ê³¼ì •ì„ í†µí•˜ì—¬ ì£¼ì†Œë¥¼ ë³€í™˜ì‹œí‚¤ëŠ” ê³¼ì •ì´ í•„ìš”í•˜ê³ , ê¸°ê¸°ì˜ ì¶”ê°€, ì‚­ì œ ë“±ì´ ì´ë£¨ì–´ì§€ë©´ ë§¤í•‘ ì •ë³´ë¥¼ ì—…ë°ì´íŠ¸í•´ì•¼í•˜ëŠ” ë“± íš¨ìœ¨ì„±ë©´ì—ì„œ ì¢‹ì§€ ì•Šì€ ë¬¸ì œê°€ ìžˆë‹¤.</span> The solution to the network address translation for (NAT: Network Address Translation) is there is a single, network address translation is being used is the process of changing the address through the separate mapping process in order to connect the internal network, such as the external Internet and the home network necessary, and there is poor in efficiency, etc. If you need to update the mapping is done, add, delete, etc. of machine problems.</span> </p> <p num="37"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ ì´ëŸ¬í•œ IPv4ë¥¼ ëŒ€ì²´í•˜ê¸° ìœ„í•˜ì—¬ ì°¨ì„¸ëŒ€ IP(IPng : Internet Protocol next generation)ë¼ê³ ë„ ë¶ˆë¦¬ëŠ” ì¸í„°ë„· í”„ë¡œí† ì½œ ë²„ì „6 ì¦‰, IPv6ì´ ê°œë°œë˜ì—ˆë‹¤.</span> Therefore, the next generation of IP to replace these IPv4 (IPng: Internet Protocol next generation), also known as Internet Protocol version 6, that is, it has been developed IPv6.</span> </p> <p num="38"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">IPv6ì€ IP ì£¼ì†Œì˜ ê¸¸ì´ë¥¼ ê¸°ì¡´ì˜ 32ë¹„íŠ¸ì—ì„œ 128ë¹„íŠ¸ë¡œ í™•ìž¥í–ˆê¸° ë•Œë¬¸ì— ì¸í„°ë„· ì£¼ì†Œ ìžì›ì˜ ê³ ê°ˆì„ í•´ì†Œí•  ìˆ˜ ìžˆìœ¼ë©°, IPsec(Internet Protocol Security Protocol)ì„ í”„ë¡œí† ì½œ ë‚´ì— íƒ‘ìž¬í•¨ìœ¼ë¡œì¨ ë³´ì•ˆ ê¸°ëŠ¥ì„ ê°•í™”ì‹œí‚¬ ìˆ˜ ìžˆê¸° ë•Œë¬¸ì— í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œê³¼ì˜ ì—°ë™ì— ìžˆì–´ì„œë„ ê°•ì ì„ ë³´ì¼ ê²ƒìœ¼ë¡œ ì „ë§ë˜ê³  ìžˆë‹¤.</span> Because IPv6 is can enhance security by mounting the length of the IP address in the because it extended to 128 bits from the existing 32-bit, which can relieve the exhaustion of Internet address resources, IPsec (Internet Protocol Security Protocol) protocol, home network also in conjunction with the system it is expected to show strength.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° IPv6ì€ IETF(Internet Engineering Task Force)ì˜ í‘œì¤€ì•ˆ RFC 2460 ë“±ì—ì„œ ìƒì„¸ížˆ ê¸°ìˆ í•˜ê³  ìžˆë‹¤.</span> The IPv6 has been described in detail in RFC 2460 standard, etc. (Internet Engineering Task Force) IETF.</span> </p> <p num="39"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ, ì´ëŸ¬í•œ IPv6ê³¼ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì„ ì—°ë™ì‹œì¼œ IP ì£¼ì†Œì˜ ë¶€ì¡± ë¬¸ì œë¥¼ í•´ê²°í•˜ê³  IPv6 ë…¸ë“œì™€ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ ë‚´ì˜ ë„¤íŠ¸ì›Œí¬ ë…¸ë“œë“¤ì„ ì›í™œížˆ ì—°ë™ì‹œí‚¬ ìˆ˜ ìžˆëŠ” ê¸°ìˆ ë“¤ì´ ì‹œê¸‰ížˆ ìš”êµ¬ë˜ê³  ìžˆë‹¤.</span> Thus, by linking this with the IPv6 home network system it has been correct the shortage of the IP addresses and technologies that can be smoothly interlocked the network nodes in the IPv6 node and the home network system are urgently needed.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">íŠ¹ížˆ, ì•žì„œë„ ì–¸ê¸‰í–ˆë“¯ì´ ê·¼ê±°ë¦¬ ë¬´ì„  ë„¤íŠ¸ì›Œí¬ ë° ì„¼ì„œ ë„¤íŠ¸ì›Œí¬ì— íš¨ìœ¨ì ìœ¼ë¡œ ì ìš©ë  ìˆ˜ ìžˆëŠ” ì§€ê·¸ë¹„ ë…¸ë“œë¥¼ IPv6 ì£¼ì†Œ ì²´ê³„ë¥¼ ê°–ëŠ” ì¸í„°ë„·ê³¼ ì—°ê²°ì‹œí‚¬ ìˆ˜ ìžˆëŠ” ê¸°ìˆ ì´ ìš”êµ¬ë˜ê³  ìžˆë‹¤.</span> In particular, As described above, the there is a short-range wireless network technology and a ZigBee nodes that may be applied efficiently to the sensor network can be connected to the Internet having the IPv6 address system is required.</span> </p> </background-art> <disclosure> <tech-problem> <p num="40"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë³¸ ë°œëª…ì€ ì´ëŸ¬í•œ ë°°ê²½ì—ì„œ ì°½ì•ˆëœ ê²ƒìœ¼ë¡œ, í™ˆ ê²Œì´íŠ¸ì›¨ì´ë¥¼ ì´ìš©í•˜ì—¬ ì™¸ë¶€ì˜ IPv6 ë…¸ë“œì™€ íš¨ìœ¨ì ìœ¼ë¡œ ë°ì´í„°ë¥¼ ì†¡ìˆ˜ì‹ í•  ìˆ˜ ìžˆëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì„ ì œê³µ í•˜ëŠ”ë° ë³¸ ë°œëª…ì˜ ì œ 1 ëª©ì ì´ ìžˆë‹¤.</span> The present invention provides a home network system capable of transmitting and receiving the as efficiently as the data to an external IPv6 node using the home gateway conceived in this context there is a first object of the present invention.</span> </p> <p num="41"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë˜í•œ, ìƒê¸° í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì— ìš©ì´í•˜ê²Œ ì ìš©ë  ìˆ˜ ìžˆëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´ë¥¼ ì œê³µí•˜ëŠ”ë° ë³¸ ë°œëª…ì˜ ì œ 2 ëª©ì ì´ ìžˆë‹¤.</span> Further, to provide a home gateway that can easily be applied to the home network system, there is a second object of the present invention.</span> </p> </tech-problem> <tech-solution> <p num="42"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ ë³¸ ë°œëª…ì˜ ì œ 1 ëª©ì ì„ ë‹¬ì„±í•˜ê¸° ìœ„í•œ ë³¸ ë°œëª…ì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì€, ì „ì†¡í•  ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ íŠ¹ì • í•„ë“œì— ëª©ì ì§€ ì¸í„°ë„· í”„ë¡œí† ì½œ ë²„ì „6(IPv6) ë…¸ë“œì˜ ì‹ë³„ ì½”ë“œë¥¼ ì‚½ìž…í•˜ì—¬ ì†¡ì¶œí•˜ëŠ” ì ì–´ë„ í•˜ë‚˜ì˜ ì§€ê·¸ë¹„ ë…¸ë“œ;</span> A home network system, to send at least one of the Zigbee node to transmit to insert an identification code of the node, a destination Internet Protocol version 6 (IPv6) in a particular field of ZigBee packet in accordance with the invention to achieve this first object of the present invention;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë° ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œë¡œë¶€í„° ì†¡ì¶œëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ìƒê¸° ì‚½ìž…ëœ IPv6 ë…¸ë“œì˜ ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•˜ê³ , ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ IPv6 íŒ¨í‚·ìœ¼ë¡œ ë³€í™˜ì‹œì¼œ ìƒê¸° ê²€ì¶œëœ IPv6 ì£¼ì†Œì— í•´ë‹¹í•˜ëŠ” IPv6 ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´ë¥¼ í¬í•¨í•œë‹¤.</span> And IPv6 nodes that converts the ZigBee packet detecting the IPv6 address, and the received corresponding to the identification code of the IPv6 node, the said insert receives the ZigBee packet transmitted from the Zigbee node in the IPv6 packet corresponding to the detected IPv6 address and a home gateway to be transmitted to.</span> </p> <p num="43"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìƒê¸° í™ˆ ê²Œì´íŠ¸ì›¨ì´ëŠ” ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì— ì‚½ìž…ëœ ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ê²€ìƒ‰í•˜ì—¬ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•œë‹¤.</span> In this case, the home gateway detects the IPv6 address corresponding to the identification code to extract the identification code on the received ZigBee packet, it searches the identification code / IPv6 address table.</span> </p> <p num="44"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë˜í•œ, ìƒê¸° í™ˆ ê²Œì´íŠ¸ì›¨ì´ëŠ” ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° IPv6 íŒ¨í‚·ì´ ìˆ˜ì‹ ë˜ë©´, ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œì—ì„œ ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ê³  ìƒê¸° ì¶”ì¶œëœ ë…¸ë“œ IDê°€ ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œì— ëŒ€ì‘ë  ê²½ìš° ìƒê¸° IPv6 íŒ¨í‚·ì˜ ì†ŒìŠ¤ ì£¼ì†Œë¥¼ ì†Œì •ì˜ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ì‹œì¼œ ìƒê¸° ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì— ì €ìž¥í•œë‹¤.</span> In addition, the home gateway when receiving the IPv6 packet from an external network, extracts the node ID in the destination address of the received IPv6 packet is the extracted node ID is corresponding to the ZigBee node given the source address of the IPv6 packet to the corresponding to the identification code is stored in the identification code / IPv6 address table.</span> </p> <p num="45"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ìƒìˆ í•œ ë³¸ ë°œëª…ì˜ ì œ 2 ëª©ì ì„ ë‹¬ì„±í•˜ê¸° ìœ„í•œ ë³¸ ë°œëª…ì— ë”°ë¥¸ í™ˆ ê²Œì´ íŠ¸ì›¨ì´ëŠ”, ì ì–´ë„ í•˜ë‚˜ì˜ ì§€ê·¸ë¹„ ë…¸ë“œì™€ ì ì–´ë„ í•˜ë‚˜ì˜ IPv6 ë…¸ë“œê°„ì˜ í†µì‹  ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ì œê³µí•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´ì— ìžˆì–´ì„œ, ìƒê¸° IPv6 ë…¸ë“œë¥¼ ì‹ë³„í•  ìˆ˜ ìžˆëŠ” ì‹ë³„ ì½”ë“œì™€ ê·¸ì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œê°€ ì§€ì •ë˜ëŠ” ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ì €ìž¥í•˜ëŠ” ë°ì´í„°ë² ì´ìŠ¤;</span> On the other hand, the home according to the present invention for achieving the second object of the invention described above the gateway, in the home gateway, for providing at least one communication interface between the at least one IPv6 node and a Zigbee node, identifying the IPv6 node identification code and correspondingly identified that IPv6 addressing in which the code / IPv6 address database that stores a table that can;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë° ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œë¡œë¶€í„° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì—ì„œ ìƒê¸° ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ìƒê¸° ë°ì´í„°ë² ì´ìŠ¤ì— ì €ìž¥ëœ ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ê²€ìƒ‰í•˜ì—¬ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•˜ê³ , ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìƒê¸° IPv6 íŒ¨í‚·ì˜ í˜•íƒœë¡œ ë³€í™˜í•˜ì—¬ ìƒê¸° ê²€ì¶œëœ IPv6 ì£¼ì†Œì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” ì œì–´ ëª¨ë“ˆì„ í¬í•¨í•œë‹¤.</span> And wherein the ZigBee packet detecting the IPv6 address, and the received corresponding to the identification code to extract the identification code, retrieve the identification code / IPv6 address table stored in the database in a ZigBee packet received from the ZigBee node IPv6 conversion in the form of a packet by a control module for transmitting to the IPv6 node that corresponds to the detected IPv6 address.</span> </p> <p num="46"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì œì–´ ëª¨ë“ˆì€ ìƒê¸° IPv6 íŒ¨í‚·ìœ¼ë¡œë¶€í„° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì—ì„œ ìƒê¸° ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ê³ , ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì„ ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœë¡œ ë³€í™˜í•˜ì—¬ ìƒê¸° ì¶”ì¶œëœ ë…¸ë“œ IDì— ëŒ€ì‘ë˜ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œë¡œ ì†¡ì‹ í•œë‹¤.</span> The control module and transmits it to the ZigBee node corresponding to the node ID extracts the node ID, and the extraction converts the received IPv6 packet to the ZigBee packet type in the IPv6 packet received from the IPv6 packet.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìƒê¸° ë°ì´í„°ë² ì´ìŠ¤ëŠ” ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ì†ŒìŠ¤ ì£¼ì†Œë¥¼ ì†Œì •ì˜ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ì‹œì¼œ ìƒê¸° ì‹ë³„ì½”ë“œ/IPv6 í…Œì´ë¸”ì— ì €ìž¥í•œë‹¤.</span> In this case, the database will be in association with the source address of the received IPv6 packet to the predetermined identification code stored in the identification code / IPv6 table.</span> </p> <p num="47"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° í™ˆ ê²Œì´íŠ¸ì›¨ì´ëŠ”, ìƒê¸° IPv6 ë…¸ë“œë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œ ì „ì†¡í•˜ê³ , ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œë¶€í„° ì œê³µë˜ëŠ” IPv6 íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ê·¸ IPv6 íŒ¨í‚·ì˜ ì£¼ì†Œì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ;</span> The home gateway, IPv6 interface module that receives the IPv6 packet transmitted from the IPv6 node sent to the control module, by receiving an IPv6 packet to be supplied from the control module, sent to the IPv6 node corresponding to the address of the IPv6 packet .;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë° ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œ ì „ì†¡í•˜ê³ , ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œë¶€í„° ì œê³µë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ê·¸ ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ ì£¼ì†Œì— ëŒ€ì‘ë˜ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆì„ ë” í¬í•¨í•  ìˆ˜ ìžˆë‹¤.</span> And it may further include a ZigBee interface module for receiving a ZigBee packet transmitted from the Zigbee node sent to the control module, and send the ZigBee packet provided from the control module to the ZigBee node corresponding to the address of the ZigBee packet .</span> </p> <p num="48"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì œì–´ ëª¨ë“ˆì€, ìƒê¸° IPv6 ë…¸ë“œë¡œë¶€í„° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œ í•„ë“œì— í¬í•¨ëœ ìƒê¸° ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ëŠ” IPv6 ë…¸ë“œ ID ì¶”ì¶œë¶€ì™€;</span> The control module, IPv6 node ID extraction which extracts the node ID included in the destination address field of the IPv6 packet received from the IPv6 node unit;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ í—¤ë”ë¥¼ ì²˜ë¦¬í•˜ì—¬ ìƒê¸° ì§€ê·¸ë¹„ íŒ¨í‚·ìœ¼ë¡œ ë³€í™˜ì‹œí‚¤ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€ì™€;</span> ZigBee packet generation section that processes the header of the received IPv6 packet and converted to the ZigBee packet;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì—ì„œ ìƒê¸° ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•˜ëŠ” IPv6 ì£¼ì†Œ ê²€ì¶œë¶€;</span> IPv6 address detection unit for extracting the ID code and detects the IPv6 address corresponding to the identification code from the received packet ZigBee;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë° ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì— í—¤ë”ë¥¼ ì¶”ê°€í•˜ì—¬ IPv6 íŒ¨í‚·ì„ ìƒì„±í•˜ëŠ” IPv6 íŒ¨í‚· ìƒì„±ë¶€ë¥¼ í¬í•¨í•  ìˆ˜ ìžˆë‹¤.</span> And it may include a generated IPv6 packet to generate an IPv6 packet by adding a header to the received packet ZigBee.</span> </p> <p num="49"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ìƒê¸° IPv6 íŒ¨í‚·ì˜ ë°ì´í„° í•„ë“œì—ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœì˜ ë°ì´í„°ê°€ ì‚½ìž…ë˜ê³ , ìƒê¸° ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€ëŠ” ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ í—¤ë”ë¥¼ ì œê±°í•˜ì—¬ ìƒê¸° ë°ì´í„° í•„ë“œì— ì €ìž¥ëœ ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœì„ ì¶”ì¶œí•œë‹¤.</span> On the other hand, the data field of the IPv6 packet, the data packet of the ZigBee type is inserted, and extracts the ZigBee packet generation unit hyeongtaeeul ZigBee packet stored in the data field by removing the header of the received IPv6 packet.</span> </p> <p num="50"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´í•˜, ë³¸ ë°œëª…ì´ ì†í•˜ëŠ” ë¶„ì•¼ì— í†µìƒì˜ ì§€ì‹ì„ ê°€ì§„ìžê°€ ë³¸ ë°œëª…ì„ ìš©ì´í•˜ê²Œ ì‹¤ì‹œí•  ìˆ˜ ìžˆë„ë¡ ë³¸ ë°œëª…ì˜ ë°”ëžŒì§í•œ ì‹¤ì‹œì˜ˆë¥¼ ì²¨ë¶€ëœ ë„ë©´ì„ ì°¸ì¡°í•˜ì—¬ ìƒì„¸ížˆ ì„¤ëª…í•œë‹¤.</span> With reference to the accompanying drawings, preferred embodiments of the present to be easily self invention having ordinary skill in the art to which the invention pertains invention will be described in detail.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë˜í•œ, ë„ë©´ì— ì˜ˆì‹œëœ ë³¸ ë°œëª…ì˜ ë°”ëžŒì§í•œ ì‹¤ì‹œì˜ˆë¥¼ ì„¤ëª…í•¨ì— ìžˆì–´ì„œ ë‚´ìš©ì˜ ëª…ë£Œì„±ì„ ìœ„í•˜ì—¬ íŠ¹ì •í•œ ê¸°ìˆ  ìš©ì–´ë¥¼ ì‚¬ìš©í•œë‹¤.</span> In the following description a preferred embodiment of the invention illustrated in the drawings, specific technical terms are used for clarity of the content.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•˜ì§€ë§Œ, ë³¸ ë°œëª…ì€ ì´ì™€ ê°™ì€ ì„ íƒëœ íŠ¹ì • ìš©ì–´ì— í•œì •ë˜ì§€ ì•Šìœ¼ë©°, ê°ê°ì˜ íŠ¹ì • ìš©ì–´ê°€ ìœ ì‚¬í•œ ëª©ì ì„ ë‹¬ì„±í•˜ê¸° ìœ„í•˜ì—¬ ìœ ì‚¬í•œ ë°©ì‹ìœ¼ë¡œ ë™ìž‘í•˜ëŠ” ëª¨ë“  ê¸°ìˆ  ë™ì˜ì–´ë¥¼ í¬í•¨í•¨ì„ ë°í˜€ë‘”ë‹¤.</span> However, the invention is not limited to such a specific term selected, it puts out that each specific term includes all technical synonyms operating in a similar manner to accomplish a similar purpose.</span> </p> <p num="51"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 1ì€ ë³¸ ë°œëª…ì˜ ë°”ëžŒì§í•œ ì‹¤ì‹œì˜ˆì— ë”°ë¥¸ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œì˜ êµ¬ì„±ì„ ë„ì‹œí•˜ëŠ” ë¸”ë¡ë„ì´ë‹¤.</span> 1 is a block diagram showing the configuration of a home network system according to an embodiment of the present invention.</span> </p> <p num="52"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 1ì— ë„ì‹œëœ ë°”ì™€ ê°™ì´, í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì€ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110) ë° ê·¸ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì™€ ì§€ê·¸ë¹„ í”„ë¡œí† ì½œì„ í†µí•˜ì—¬ ìƒí˜¸ ë¬´ì„  ì—°ë™ë˜ëŠ” ë³µìˆ˜ì˜ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ë¡œ êµ¬ì„±ëœë‹¤.</span> As seen, the home network system 100 illustrated in Figure 1 is composed of a home gateway 110 and the home gateway 110 and a plurality of ZigBee node 120, which are mutually linked through a wireless ZigBee protocol.</span> </p> <p num="53"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ëŠ” ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ì™€ IPv6ì— ì •ì˜ëœ ê·œì¹™ì„ í†µí•˜ì—¬ ì—°ë™ëœë‹¤.</span> In this case, the home gateway 110 is linked through the rules defined in the external network and the IPv6.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì¦‰, í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ëŠ” ì™¸ë¶€ì— ì¡´ìž¬í•˜ëŠ” ì ì–´ë„ í•˜ë‚˜ ì´ìƒì˜ IPv6 ë…¸ë“œ(200)ì™€ ì—°ë™ëœë‹¤.</span> In other words, the home gateway 110 is linked with at least one IPv6 node 200 present on the exterior.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ ê° ì§€ê·¸ë¹„ ë…¸ë“œ(120)ë“¤ì€ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ë¥¼ ê²½ìœ í•˜ì—¬ ì™¸ë¶€ì˜ IPv6 ë…¸ë“œ(200)ì™€ ì ‘ì†ë  ìˆ˜ ìžˆëŠ”ë°, ì´ë¥¼ ìœ„í•´ì„œ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ëŠ” ê³ ìœ ì˜ IPv6 ì£¼ì†Œë¥¼ ê°€ì ¸ì•¼ í•œë‹¤.</span> Therefore, each Zigbee node 120 there are groove via the gateway 110 may be connected to an external IPv6 node 200, it should have a Zigbee node 120 a unique IPv6 address for this purpose.</span> </p> <p num="54"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° IPv6 ë…¸ë“œ(200)ëŠ” IPv6 ê·œì¹™ì„ í†µí•˜ì—¬ í†µì‹ í•˜ëŠ” ì‚¬ìš©ìž ë‹¨ë§ê¸°, ì˜ˆë¥¼ ë“¤ë©´ ì‚¬ìš©ìž ì»´í“¨í„°ë‚˜ ì´ë™ í†µì‹  ë‹¨ë§ê¸° ë“±ì´ ë  ìˆ˜ ìžˆë‹¤.</span> The IPv6 node 200 may be a communication terminal user, for example, the user&#39;s computer or mobile communication terminal, such as via the IPv6 rules.</span> </p> <p num="55"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2aëŠ” IPv6ì˜ í—¤ë” í˜•íƒœë¥¼ ë„ì‹œí•˜ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 2a is an illustration showing a header in the form of IPv6.</span> </p> <p num="56"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2aë¥¼ ì°¸ì¡°í•˜ë©´, IPv6ì˜ í—¤ë”ëŠ”&#34;Version&#34;, &#34;Traffic Class&#34;, &#34;Flow Label&#34;, Payload Length&#34;, &#34;Next Header&#34;, &#34;Hop Limit&#34;, &#34;Source Address&#34;, &#34;Destination Address&#34; í•„ë“œë¡œ êµ¬ì„±ëœë‹¤. ì´ë•Œ, ìƒê¸° &#34;Source Address&#34; í•„ë“œì™€ &#34;Destination Address&#34; í•„ë“œëŠ” ê°ê° íŒ¨í‚·ì„ ì†¡ì‹ í•˜ëŠ” ì†ŒìŠ¤ ì£¼ì†Œì™€ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ëŠ” ëª©ì ì§€ ì£¼ì†Œë¥¼ ì˜ë¯¸í•œë‹¤.</span> Referring to Figure 2a, the IPv6 header is &#34;Version&#34;, &#34;Traffic Class&#34;, &#34;Flow Label&#34;, Payload Length &#34;,&#34; Next Header &#34;,&#34; Hop Limit &#34;,&#34; Source Address &#34;,&#34; consists of a Destination Address &#34;field It is. In this case, the &#34;source address&#34; field and the &#34;destination address&#34; field indicates the destination address for receiving a source address and a packet for transmitting the packet, respectively.</span> </p> <p num="57"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2bëŠ” IPv6ì˜ ì£¼ì†Œ í˜•íƒœë¥¼ ë„ì‹œí•˜ëŠ” ì˜ˆì‹œë„ì´ë‹¤.</span> Figure 2b is an illustration showing the address type of IPv6.</span> </p> <p num="58"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 2bì— ë„ì‹œëœ ë°”ì™€ ê°™ì´, IPv6ì˜ ì£¼ì†ŒëŠ” ì´ 128ë¹„íŠ¸ë¡œ êµ¬ì„±ë˜ë©°, 64ë¹„íŠ¸ì˜ ë„¤íŠ¸ì›Œí¬ IDì™€ 64ë¹„íŠ¸ì˜ ë…¸ë“œ IDë¡œ ë‚˜ë‰  ìˆ˜ ìžˆë‹¤.</span> As shown in Figure 2b, the IPv6 address consists of 128 bits, it can be divided into a network ID and a node ID of 64 bits of the 64 bits.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì˜ˆë¥¼ ë“¤ë©´, IPv6 ì£¼ì†ŒëŠ” &#34;1080:0000:0000:0000:0008:0800:200C:417A&#34;ì™€ ê°™ì´ í‘œí˜„ë  ìˆ˜ ìžˆë‹¤.</span> For example, IPv6 address can be represented as &#34;1080: 0000: 0000: 0000: 0008: 0800:: 200C 417A&#34;.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ê°ê°ì˜ &#34;XXXX&#34;ì€ 16ë¹„íŠ¸ì´ë©° ê° ë¹„íŠ¸ëŠ” 16ì§„ìˆ˜(Hexadecimal)ë¡œ í‘œí˜„ëœë‹¤.</span> At this time, each of &#34;XXXX&#34; is 16 bits and each bit is represented by a hexadecimal number (Hexadecimal).</span> </p> <p num="59"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„¤íŠ¸ì›Œí¬ IDëŠ” ìƒìœ„ 64ë¹„íŠ¸ë¡œ êµ¬ì„±ë˜ë©°, ê° ë„¤íŠ¸ì›Œí¬ì— í• ë‹¹ë˜ëŠ” í”„ë¦¬í”½ìŠ¤ì— ì˜í•˜ì—¬ ê²°ì •ëœë‹¤.</span> Network ID is composed of the upper 64 bits, it is determined by the prefixes allocated to each network.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ í”„ë¦¬í”½ìŠ¤ ì •ë³´ëŠ” ì¸í„°ë„· í†µì‹ ë§ ê´€ë¦¬ ê·œì •ì— ì˜í•˜ì—¬ ë¯¸ë¦¬ ì •ì˜ëœ ì •ë³´ë¥¼ ì´ìš©í•˜ê±°ë‚˜ ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ì— ì—°ê²°ë˜ëŠ” ë³„ë„ì˜ ë¼ìš°í„°(Router)ë¡œë¶€í„° í• ë‹¹ë°›ì„ ìˆ˜ ìžˆë‹¤.</span> At this time, prefix information may be allocated from a separate router (Router) is used to pre-defined information by the Internet communication network control regulations or to the external network.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ë¼ìš°í„°ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´ë¥¼ ì‚¬ìš©í•  ìˆ˜ë„ ìžˆë‹¤.</span> The router may use a home gateway.</span> </p> <p num="60"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë…¸ë“œ IDëŠ” í•˜ìœ„ 64ë¹„íŠ¸ë¡œ êµ¬ì„±ë˜ë©°, ê° ìž¥ì¹˜ë“¤ì´ ê°€ì§€ëŠ” 48ë¹„íŠ¸ì˜ ë§¤ì²´ ì ‘ê·¼ ì œì–´(MAC : Media Access Control) ì£¼ì†Œë¥¼ ì´ìš©í•˜ì—¬ êµ¬ì„±í•œë‹¤.</span> The node ID is composed of the lower 64 bits, each of devices having a 48-bit Media Access Control: The configuration using the (MAC Media Access Control) address.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ ê²½ìš° EUI(Extended Unique Identifier)-64 í¬ë§· ë°©ì‹ì„ ì‚¬ìš©í•˜ì—¬ ê° ìž¥ì¹˜ë“¤ë§Œì˜ ê³ ìœ í•œ 64ë¹„íŠ¸ì˜ ë…¸ë“œ IDë¥¼ ìƒì„±í•  ìˆ˜ ìžˆë‹¤.</span> In this case, it is possible to generate a node ID of a unique 64-bit only of each device by using the (Extended Unique Identifier) â€‹â€‹EUI -64 formatted.</span> </p> <p num="61"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì˜ˆë¥¼ ë“¤ë©´, ìƒê¸° í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì˜ IPv6 ì£¼ì†ŒëŠ” í”„ë¦¬í”½ìŠ¤ ì •ë³´ì— ì˜í•œ 64ë¹„íŠ¸ì˜ ë„¤íŠ¸ì›Œí¬ IDì™€ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ê°€ ê°€ì§€ëŠ” ê³ ìœ í•œ MAC ì£¼ì†Œë¥¼ EUI-64 í¬ë§·ìœ¼ë¡œ ë³€í™˜ì‹œí‚¨ 64ë¹„íŠ¸ì˜ ë…¸ë“œ IDë¥¼ ì´ìš©í•˜ì—¬ êµ¬ì„±í•  ìˆ˜ ìžˆë‹¤.</span> For example, IPv6 address of the home gateway 110 using the unique MAC address, a node ID of 64 bits is converted by the EUI-64 format with the network ID and the home gateway 110 is a 64-bit by the prefix information and it can be configured.</span> </p> <p num="62"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì™€ ì—°ë™ë˜ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì˜ IPv6 ì£¼ì†Œì˜ ê²½ìš°, ë„¤íŠ¸ì›Œí¬ IDëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì™€ ë™ì¼í•œ ë„¤íŠ¸ì›Œí¬ IDë¡œ ì„¤ì •í•˜ê³ , ë…¸ë“œ IDëŠ” í•´ë‹¹ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ê°€ ê°€ì§€ëŠ” 64ë¹„íŠ¸ì˜ IEEE ì£¼ì†Œë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.</span> On the other hand, the home gateway when the IPv6 address of the Zigbee node 120 is in conjunction with 110, the network ID is set to the same network ID and the home gateway 110, and the node ID of 64 bits with the corresponding Zigbee node 120 the IEEE address can be used.</span> </p> <p num="63"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ëª¨ë“  ì§€ê·¸ë¹„ í•˜ë“œì›¨ì–´ëŠ” ìœ ì¼í•œ 64ë¹„íŠ¸ì˜ IEEE ì£¼ì†Œ ë° 16ë¹„íŠ¸ ì‡¼íŠ¸(Short) ì£¼ì†Œë¥¼ ê°€ì§€ëŠ”ë° ê·¸ ì¤‘ IEEE ì£¼ì†Œë¥¼ í•´ë‹¹ ì§€ê·¸ë¹„ ë…¸ë“œì˜ ë…¸ë“œ IDë¡œ í™œìš©í•˜ëŠ” ê²ƒì´ë‹¤.</span> All ZigBee hardware is to utilize the IEEE address of the I of the IEEE address and 16-bit Short (Short) address of the unique 64-bit node ID of the Zigbee node.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì˜ˆë¥¼ ë“¤ë©´, íŠ¹ì • ì§€ê·¸ë¹„ ë…¸ë“œì˜ IEEE ì£¼ì†Œê°€ &#34;000000000001&#34;ì´ë©´ &#34;0000:0000:0000:0001&#34;ê³¼ ê°™ì´ ë…¸ë“œ IDë¥¼ êµ¬ì„±í•  ìˆ˜ ìžˆë‹¤.</span> For example, the IEEE address of a particular Zigbee node is &#34;000000000001&#34; may constitute a node ID, such as &#34;0000: 0000: 0000 0001&#34;.</span> </p> <p num="64"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 3ì€ ë„ 1ì— ë„ì‹œëœ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì˜ êµ¬ì„±ì„ ë„ì‹œí•˜ëŠ” ë¸”ë¡ë„ì´ë‹¤.</span> 3 is a block diagram showing the structure of a home gateway 110 shown in FIG.</span> </p> <p num="65"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 3ì„ ì°¸ì¡°í•˜ë©´, í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ëŠ” IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111), ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117), ë°ì´í„°ë² ì´ìŠ¤(118) ë° ì œì–´ ëª¨ë“ˆ(112)ë¡œ êµ¬ì„±ëœë‹¤.</span> 3, the home gateway 110 is composed of IPv6 interface module 111, a ZigBee interface module 117, a database 118 and a control module (112).</span> </p> <p num="66"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ì€ ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ì™€ IPv6 íŒ¨í‚·ì„ êµí™˜í•  ìˆ˜ ìžˆë„ë¡ ë¬¼ë¦¬ì ì¸ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ìˆ˜í–‰í•œë‹¤.</span> IPv6 interface module 111 performs the physical interface to exchange the external network and the IPv6 packet.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì¦‰, ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ì œì–´ ëª¨ë“ˆ(112)ë¡œ ì „ì†¡í•˜ê³ , ì œì–´ ëª¨ë“ˆ(112)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì„ ê·¸ IPv6 ì£¼ì†Œì— ë”°ë¼ í•´ë‹¹ IPv6 ë…¸ë“œ(200) ì¸¡ìœ¼ë¡œ ì „ì†¡í•œë‹¤.</span> That is, it receives the IPv6 packet transmitted from the foreign network to the transmission control module 112, and send the IPv6 packet transmitted from the control module 112 toward the IPv6 node 200 in accordance with the IPv6 address.</span> </p> <p num="67"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117)ì€ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì™€ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ êµí™˜í•  ìˆ˜ ìžˆë„ë¡ RF(Radio Frequency) ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ìˆ˜í–‰í•œë‹¤.</span> ZigBee-interface module 117 performs an RF (Radio Frequency) interface to exchange packets with the ZigBee ZigBee node 120.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì¦‰, ì§€ê·¸ë¹„ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ì œì–´ ëª¨ë“ˆ(112)ë¡œ ì „ì†¡í•˜ê³ , ì œì–´ ëª¨ë“ˆ(112)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ê·¸ ë…¸ë“œ IDì— ëŒ€ì‘ë˜ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ë¡œ ì „ì†¡í•œë‹¤.</span> That is, by receiving the packet transmitted from the ZigBee ZigBee network transmits a ZigBee packet transmitted from the control module to the transmission 112, and control module 112 to the ZigBee node 120 corresponding to the node ID.</span> </p> <p num="68"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œì–´ ëª¨ë“ˆ(112)ì€ IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œì—ì„œ ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ê³ , ìƒê¸° IPv6 íŒ¨í‚·ì„ ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœë¡œ ë³€í™˜ì‹œí‚¨ ë’¤, ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117)ë¡œ ì „ì†¡í•œë‹¤.</span> Control module 112 and transmits it to the IPv6 interface module 111 extracts the node ID in the destination address of the IPv6 packet, and after that converts the IPv6 packet to the ZigBee packet type, a ZigBee interface module 117 is sent from.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìˆ˜ì‹ ë˜ëŠ” IPv6 íŒ¨í‚·ì˜ ì†ŒìŠ¤ ì£¼ì†ŒëŠ” ë°ì´í„°ë² ì´ìŠ¤(118)ì—ì„œ ì†Œì •ì˜ ì‹ë³„ ì½”ë“œì™€ ëŒ€ì‘ë˜ê²Œ ê´€ë¦¬ëœë‹¤.</span> At this time, the source address of the IPv6 packet to be received is managed to correspond to the predetermined identification code from database 118.</span> </p> <p num="69"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë˜í•œ, ì œì–´ ëª¨ë“ˆ(112)ì€ ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì—ì„œ ëª©ì ì§€ IPv6 ë…¸ë“œ(200)ì˜ ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ê·¸ ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•œ ë’¤, IPv6 íŒ¨í‚·ì„ ìƒì„±ì‹œì¼œ IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ë¡œ ì „ì†¡í•œë‹¤.</span> In addition, the control module 112 generates the back, IPv6 packets detects the IPv6 address corresponding to the identification code extracted, and the identification code of the destination IPv6 node 200 in the ZigBee packet transmitted from the ZigBee interface module 117 to be sent to the IPv6 interface module 111.</span> </p> <p num="70"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì œì–´ ëª¨ë“ˆ(112)ì€ IPv6 ë…¸ë“œ ID ì¶”ì¶œë¶€(113), ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€(114), IPv6 ì£¼ì†Œ ê²€ì¶œë¶€(115) ë° IPv6 íŒ¨í‚· ìƒì„±ë¶€(116)ë¡œ êµ¬ì„±ë  ìˆ˜ ìžˆë‹¤.</span> The control module 112 may be configured to IPv6 node ID extraction unit 113, the ZigBee packet generating unit (114) IPv6 address detection section 115 and the IPv6 packet generation section 116. The</span> </p> <p num="71"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">IPv6 ë…¸ë“œ ID ì¶”ì¶œë¶€(113)ëŠ” IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œ í•„ë“œì— í¬í•¨ëœ 128ë¹„íŠ¸ì˜ ì£¼ì†Œì—ì„œ í•˜ìœ„ 64ë¹„íŠ¸ì˜ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì˜ ì£¼ì†Œë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë…¸ë“œ ID ì£¼ì†Œë¥¼ ì¶”ì¶œí•œë‹¤.</span> IPv6 node ID extraction unit 113 extracts the node ID address indicating the address of the Zigbee node 120 of the lower 64 bits in the address of the 128 bits contained in the destination address field of the IPv6 packet transmitted from the IPv6 interface module 111 do.</span> </p> <p num="72"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€(114)ëŠ” IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì˜ í—¤ë”ë¥¼ ì²˜ë¦¬í•˜ì—¬ ì§€ê·¸ë¹„ íŒ¨í‚·ìœ¼ë¡œ ë³€í™˜ì‹œí‚¤ëŠ” ê¸°ëŠ¥ì„ ìˆ˜í–‰í•œë‹¤.</span> ZigBee packet generator 114 processes the header of the IPv6 packet transmitted from the IPv6 interface module 111 performs a function for converting a ZigBee packet.</span> </p> <p num="73"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í†µìƒ, IPv6 íŒ¨í‚·ì˜ í—¤ë”ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ê°€ ì²˜ë¦¬í•˜ì§€ ëª»í•  ì •ë„ë¡œ í° í¬ê¸°ë¥¼ ê°€ì§€ë¯€ë¡œ, ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€(114)ëŠ” ì§€ê·¸ë¹„ í”„ë¡œí† ì½œì— ë§žë„ë¡ íŒ¨í‚· í—¤ë”ë¥¼ ë°”ê¿”ì¤˜ì•¼ í•œë‹¤.</span> Typically, the header of the IPv6 packet is because of the large size, so can not handle the Zigbee node 120, ZigBee packet generator 114 will then change, the packet header to match the ZigBee protocol.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ì™¸ë¶€ì˜ IPv6 ìŠ¤íƒì˜ ì–´í”Œë¦¬ì¼€ì´ì…˜ ê³„ì¸µ(Application Layer)ì—ì„œ ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœë¡œ ë°ì´í„°ë¥¼ êµ¬ì„±í•˜ë©´, ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€(114)ëŠ” IPv6 íŒ¨í‚·ì—ì„œ í—¤ë”ë¥¼ ì œê±°í•œ ë’¤ ì§€ê·¸ë¹„ íŒ¨í‚·ë§Œì„ ì¶”ì¶œí•  ìˆ˜ ìžˆë‹¤.</span> At this time, if in the IPv6 stack in an external application layer (Application Layer) configuration data to the ZigBee packet form, ZigBee packet generation unit 114 may extract only after removal of the ZigBee packet header in the IPv6 packet.</span> </p> <p num="74"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">IPv6 ì£¼ì†Œ ê²€ì¶œë¶€(115)ëŠ” ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì—ì„œ ëª©ì ì§€ IPv6 ë…¸ë“œ(200)ì˜ ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ë°ì´í„°ë² ì´ìŠ¤(118)ì— ì €ìž¥ëœ ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ê²€ìƒ‰í•˜ì—¬ ëª©ì ì§€ IPv6 ë…¸ë“œì˜ IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•œë‹¤.</span> IPv6 address detection section 115 extracts the identification code of the destination IPv6 node 200 in the ZigBee packet transmitted from the ZigBee interface module 117, searches the identification code / IPv6 address table stored in the database 118, the destination IPv6 node It detects the IPv6 address.</span> </p> <p num="75"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">IPv6 íŒ¨í‚· ìƒì„±ë¶€(116)ëŠ” ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì— í—¤ë”ë¥¼ ì¶”ê°€í•˜ì—¬ IPv6 íŒ¨í‚·ì„ ìƒì„±í•œë‹¤.</span> IPv6 packet generation unit 116 generates the IPv6 packet by adding a header to the ZigBee packet transmitted from the ZigBee interface module 117.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìƒì„±ëœ IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†ŒëŠ” IPv6 ì£¼ì†Œ ê²€ì¶œë¶€(115)ì— ì˜í•˜ì—¬ ê²€ì¶œëœ IPv6 ì£¼ì†Œê°€ ëœë‹¤.</span> At this time, the destination address of the generated IPv6 packet is the IPv6 address detected by the IPv6 address detector (115).</span> </p> <p num="76"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ê°ê°ì˜ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ëŠ” ì§€ê·¸ë¹„ ì¹©ì„ êµ¬ë¹„í•˜ëŠ” ê°€ì • ë‚´ì˜ ìž¥ì¹˜ë“¤, ì˜ˆë¥¼ ë“¤ë©´ ê°€ì „ê¸°ê¸°, ì„¼ì„œê¸°ê¸°, ë³´ì•ˆê¸°ê¸°, ì œì–´ê¸°ê¸° ë“±ì¼ ìˆ˜ ìžˆë‹¤.</span> On the other hand, each of the Zigbee node 120 may be a device within the home including a Zigbee chip, for example, consumer electronic devices, sensor devices, security devices, the control devices.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì¦‰, ì§€ê·¸ë¹„ í”„ë¡œí† ì½œì— ë”°ë¼ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ë¥¼ í†µí•˜ì—¬ ì™¸ë¶€ IPv6 ë…¸ë“œ(200)ì™€ í†µì‹  ê°€ëŠ¥í•œ ìž¥ì¹˜ë¥¼ ì˜ë¯¸í•œë‹¤.</span> That is, according to the ZigBee protocol via a home gateway 110 it refers to the external IPv6 node 200 capable of communicating with the device.</span> </p> <p num="77"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œ(120)ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ì™¸ë¶€ì˜ IPv6 ë…¸ë“œ(120)ì— ì˜í•œ ì œì–´ ì •ë³´, ìƒíƒœ ìš”ì²­ ì •ë³´ ë“±ì„ ìˆ˜ì‹ í•˜ê³ , ìˆ˜ì‹ ëœ ì •ë³´ì— ëŒ€ì‘í•˜ëŠ” ì‘ë‹µ ì •ë³´ë¥¼ ì§€ê·¸ë¹„ íŒ¨í‚·ìœ¼ë¡œ êµ¬ì„±í•˜ì—¬ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ë¡œ ì „ì†¡í•œë‹¤.</span> The ZigBee node 120 is the home receives the ZigBee packet transmitted from the gateway 110 receives the control information, status request information and the like by an external IPv6 node 120, and the ZigBee response information corresponding to the received information by configuring a packet and transmits it to the home gateway 110.</span> </p> <p num="78"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ì§€ê·¸ë¹„ íŒ¨í‚·ì„ í†µí•˜ì—¬ ëª©ì ì§€ IPv6 ë…¸ë“œ(200)ì˜ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë°ëŠ” ê·¸ ê°œìˆ˜ê°€ í•œì •ì ì´ê¸° ë•Œë¬¸ì—, ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†ŒëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì˜ ì£¼ì†Œë¡œ í•˜ê³ , íŠ¹ì • í•„ë“œ ë‚´ì— IPv6 ë…¸ë“œ(200)ì˜ ì£¼ì†Œë¥¼ ì‹ë³„í•  ìˆ˜ ìžˆë„ë¡ í•˜ëŠ” IPv6 ë…¸ë“œ ì‹ë³„ ì •ë³´ë¥¼ ì‚½ìž…í•œë‹¤.</span> At this time, since through the ZigBee packet There points to the address of the destination IPv6 node 200 is that the number is limited, the destination address of ZigBee packet and the address of the home gateway 110, the address of the IPv6 node 200 within a certain field the inserts IPv6 node identification information to identify.</span> </p> <p num="79"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì˜ˆë¥¼ ë“¤ë©´, ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ ëª©ì ì§€ ì¢…ë‹¨ í¬ì¸íŠ¸(DEP : Destination End Point) í•„ë“œì— ì‹ë³„ ì½”ë“œë¥¼ ì‚½ìž…í•œë‹¤.</span> For example, the destination end-point of ZigBee packet: insert the identification code to (DEP Destination End Point) field.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, DEP í•„ë“œëŠ” 0~255ì˜ ì½”ë“œë¥¼ ì‚½ìž…í•  ìˆ˜ ìžˆëŠ”ë°, ì½”ë“œ 0ì€ ìž¥ì¹˜ ê´€ë¦¬ì— í• ë‹¹ë˜ì–´ ìžˆëŠ” ì½”ë“œì´ê³ , ì½”ë“œ 241~255ê¹Œì§€ëŠ” í†µìƒ ì˜ˆë¹„ìš©ìœ¼ë¡œ ë‚¨ê²¨ë‘ê¸° ë•Œë¬¸ì— ë³´í†µì€ 240ê°œì˜ ì½”ë“œë¥¼ ì‚½ìž…í•  ìˆ˜ ìžˆë‹¤.</span> At this time, DEP field may be inserted into the code of 0 to 255, the code 0 is a code which is assigned to the device management, because by code 241-255 leave a conventional spare usually can insert 240 code .</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ, DEP í•„ë“œ ë‚´ì— IPv6 ë…¸ë“œ ì‹ë³„ ì½”ë“œë¥¼ ì‚½ìž…í•˜ë©´ 240ê°œì˜ IPv6 ë…¸ë“œë¥¼ ì‹ë³„í•  ìˆ˜ ìžˆë‹¤.</span> Therefore, when inserting the IPv6 node identification code in a DEP field can identify 240 an IPv6 node.</span> </p> <p num="80"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° IPv6 ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œ ì£¼ì†ŒëŠ” ë°ì´í„°ë² ì´ìŠ¤ ë‚´ì˜ ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì— ì €ìž¥ë˜ì–´ ìžˆë‹¤.</span> IPv6 address corresponding to the IPv6 node identification code is stored in the identification code / IPv6 address tables in the database.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì€, í†µìƒ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100) ë‚´ì˜ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì— ì ‘ì†í•˜ì—¬ ì œì–´ ë˜ëŠ” ëª¨ë‹ˆí„°ë§ì„ ìˆ˜í–‰í•˜ëŠ” ë‹¨ë§ê¸°ì˜ ê°œìˆ˜ê°€ 240ê°œ ë³´ë‹¤ëŠ” ìž‘ì€ ê²½ìš°ê°€ ëŒ€ë¶€ë¶„ì´ë¯€ë¡œ, ê¸°ë³¸ì ìœ¼ë¡œ ë°ì´í„°ë² ì´ìŠ¤(118) ë‚´ì— ë¯¸ë¦¬ ì†Œì •ì´ ê°œìˆ˜ë§Œí¼ ì €ìž¥í•´ ë†“ì„ ìˆ˜ ìžˆìœ¼ë©°, ë˜í•œ IPv6 ë…¸ë“œ(200)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì˜ ì£¼ì†Œ ì •ë³´ë¥¼ í† ëŒ€ë¡œ ìˆ˜ì‹œë¡œ ì—…ë°ì´íŠ¸í•  ìˆ˜ ìžˆ ë‹¤.</span> Since the identification code / IPv6 address table, the conventional home network system 100, the ZigBee node 120 connected to a is less than the number of the 240 of the terminal that performs the control or monitor the in most cases, by default database 118 It can be placed beforehand stored as a predetermined number within, also can be updated from time to time on the basis of the address information of the IPv6 packet transmitted from the IPv6 node 200.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ì—…ê·¸ë ˆì´ë“œë˜ëŠ” ì •ë³´ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì—ì„œ ê³µìœ ë  ìˆ˜ ìžˆë‹¤.</span> At this time, the upgrade information may be shared by the Zigbee node 120.</span> </p> <p num="81"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ DEP í•„ë“œì— í¬í•¨ëœ IPv6 ë…¸ë“œ ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ì—¬ ë°ì´í„°ë² ì´ìŠ¤(118)ë¥¼ ê²€ìƒ‰í•¨ìœ¼ë¡œì¨ ì „ì†¡í•  ëª©ì ì§€ IPv6 ë…¸ë“œ(200)ì˜ ì£¼ì†Œë¥¼ ê²€ì¶œí•  ìˆ˜ ìžˆê²Œ ëœë‹¤.</span> Therefore, the home gateway 110 can detect the address of the destination IPv6 node 200 transferred by searching the database 118 extracts the IPv6 node, an identification code contained in the DEP field of ZigBee packet transmitted from the Zigbee node 120 it is possible.</span> </p> <p num="82"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´í•˜, ë„ 4 ë‚´ì§€ ë„ 8ì„ ì°¸ì¡°í•˜ì—¬ ìƒìˆ í•œ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì˜ ìˆ˜ì‹  ë™ìž‘ ë° ì†¡ì‹  ë™ìž‘ì„ ì„¤ëª…í•œë‹¤.</span> With reference to figures 4 to 8 will be explained the receiving operation and transmitting operation of the above-described home network system 100.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´í•˜ì˜ ì†¡ìˆ˜ì‹  ë™ìž‘ ì„¤ëª…ì— ì˜í•˜ì—¬ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì´ ê°€ì§€ëŠ” ê° êµ¬ì„±ìš”ì†Œ(110~120)ë“¤ì˜ ê¸°ëŠ¥ ë° ë™ìž‘ë“¤ì€ ë”ìš± ëª…í™•í•´ì§ˆ ê²ƒì´ë‹¤.</span> Function and operation of the home network system 100 in each component (110 to 120) having transmitting and receiving operations by the following description of the invention will become more apparent.</span> </p> <p num="83"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 4ëŠ” ë„ 1ì— ë„ì‹œëœ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(110)ì˜ ë°ì´í„° ìˆ˜ì‹  ë™ìž‘ì„ ì„¤ëª…í•˜ê¸° ìœ„í•œ íë¦„ë„ì´ë‹¤.</span> Figure 4 is a flow chart showing the data receiving operation of the home network system 110 shown in FIG.</span> </p> <p num="84"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 4ë¥¼ ì°¸ì¡°í•˜ë©´, ë¨¼ì €, í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì˜ IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ì€ IPv6 ë…¸ë“œ(200)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì„ ìˆ˜ì‹ í•œë‹¤(ë‹¨ê³„:S1).</span> 4, the first, IPv6 interface module 111 of the home gateway 110 receives the IPv6 packet transmitted from the IPv6 node 200 (step: S1).</span> </p> <p num="85"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìˆ˜ì‹ ë˜ëŠ” IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œ ë° ì†ŒìŠ¤ ì£¼ì†ŒëŠ” 128ë¹„íŠ¸ë¡œ êµ¬ì„±ë˜ë©°, ëª©ì ì§€ ì£¼ì†Œì˜ í•˜ìœ„ 64ë¹„íŠ¸ê°€ ê°€ì§€ëŠ” ë…¸ë“œ IDëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì˜ IEEE ì£¼ì†Œë¡œ êµ¬ì„±ëœë‹¤.</span> At this time, the destination address and source address of the IPv6 packet is received is composed of 128 bits, the node ID of the lower 64 bits of the destination address that has consists IEEE address of the Zigbee node 120.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë˜í•œ, ìƒê¸° IPv6 íŒ¨í‚·ì˜ ë°ì´í„° í•„ë“œì—ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœì˜ ë°ì´í„°ê°€ ì‚½ìž…ëœë‹¤.</span> Further, the data field of the IPv6 packet is inserted into the data packets of the ZigBee type.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŸ¬í•œ IPv6 íŒ¨í‚·ì€ ë„ 5ì— ë„ì‹œëœ IPv6 ìŠ¤íƒ êµ¬ì¡°ì— ì˜í•˜ì—¬ ìƒì„±ë  ìˆ˜ ìžˆë‹¤.</span> This IPv6 packet may be generated by the IPv6 stack structure shown in FIG.</span> </p> <p num="86"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 5ëŠ” IPv6 ìŠ¤íƒì˜ êµ¬ì¡°ë¥¼ ë„ì‹œí•˜ëŠ” ë¸”ë¡ë„ë¡œì„œ, ë„ 5ë¥¼ ì°¸ì¡°í•˜ë©´, IPv6 ìŠ¤íƒì€ ì–´í”Œë¦¬ì¼€ì´ì…˜ ê³„ì¸µ(10), íŠ¸ëžœìŠ¤í¬íŠ¸ ê³„ì¸µ(Transport Layer, TCP/UDP)(20), IPv6 ê³„ì¸µ(30), ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ ê³„ì¸µ(40)ìœ¼ë¡œ êµ¬ì„±ë  ìˆ˜ ìžˆë‹¤.</span> Figure 5 if a block diagram showing the structure of the IPv6 stack, referring to Figure 5, IPv6 stack is the application layer 10, a transport layer (Transport Layer, TCP / UDP), (20), IPv6 layer 30, It may be composed of a network interface layer (40).</span> </p> <p num="87"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì–´í”Œë¦¬ì¼€ì´ì…˜ ê³„ì¸µ(10)ì—ì„œëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ í—¤ë” êµ¬ì¡°ë¥¼ ê°€ì§€ëŠ” ë°ì´í„°ê°€ ì‚½ìž…ëœë‹¤.</span> In the application layer 10 is data having the header structure of the ZigBee packet is inserted.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ìƒê¸° ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ í—¤ë” êµ¬ì¡°ëŠ” ë„ 6a ë‚´ì§€ ë„ 6cì— ë„ì‹œë˜ì–´ ìžˆë‹¤.</span> At this time, the header structure of the ZigBee packet is shown in Figure 6a through 6c.</span> </p> <p num="88"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6aëŠ” ì§€ê·¸ë¹„ í”„ë¡œí† ì½œì˜ ê¸°ë³¸ í—¤ë” êµ¬ì¡°ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ê³  ìžˆë‹¤.</span> Figure 6a shows a form of the main header structure of the ZigBee protocol.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6aë¥¼ ì°¸ì¡°í•˜ë©´, ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ í—¤ë”ì—ëŠ” &#34;Frame type&#34;, &#34; Delivery mode&#34;, &#34;Indirect address mode&#34;, &#34;Security&#34;, &#34;Ack. request&#34;, &#34;Resereved&#34;, &#34;Destination end Point&#34;, &#34;Cluster Identifier&#34;, &#34;Profile Identifier&#34; í•„ë“œ ë“±ì´ í¬í•¨ë  ìˆ˜ ìžˆë‹¤.</span> Referring to Figure 6a, the header of ZigBee packet &#34;Frame type&#34;, &#34;Delivery mode&#34;, &#34;Indirect address mode&#34;, &#34;Security&#34;, &#34;Ack. Request&#34;, &#34;Resereved&#34;, &#34;Destination end Point&#34;, &#34;Cluster Identifier &#34;,&#34; it might include Profile Identifier &#34;field.</span> </p> <p num="89"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6bëŠ” ì œì–´ ë°ì´í„°ì˜ ì „ì†¡ì„ ìœ„í•œ KVP(Key Value Pair) íŒ¨í‚·ì—ì„œ ì¶”ê°€ë  ìˆ˜ ìžˆëŠ” í—¤ë” êµ¬ì¡°ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ê³  ìžˆë‹¤.</span> Figure 6b shows the structure of one form of header that may be added in KVP (Key Value Pair) packets for transmission of control data.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6bë¥¼ ì°¸ì¡°í•˜ë©´, KVP íŒ¨í‚·ì˜ ì¶”ê°€ í—¤ë”ì—ëŠ” &#34;Frame type&#34;, &#34;Command type identifier&#34;, &#34;Attribute Identifier&#34;, Error Code&#34;, &#34;Attribute Data&#34; í•„ë“œ ë“±ì´ í¬í•¨ë  ìˆ˜ ìžˆë‹¤.</span> Referring to Figure 6b, it is added to the header of the packet KVP might include &#34;Frame type&#34;, &#34;Command type identifier&#34;, &#34;Attribute Identifier&#34;, Error Code &#34;,&#34; Attribute Data &#34;field.</span> </p> <p num="90"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6cëŠ” ë©”ì§€ì§€ ì „ì†¡ì„ ìœ„í•œ MSG íŒ¨í‚·ì—ì„œ ì¶”ê°€ë  ìˆ˜ ìžˆëŠ” í—¤ë” êµ¬ì¡°ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ê³  ìžˆë‹¤.</span> Figure 6c shows the structure of one form of header that may be added in the MSG packet for transmission mail support.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 6cë¥¼ ì°¸ì¡°í•˜ë©´, MSG íŒ¨í‚·ì˜ ì¶”ê°€ í—¤ë”ì—ëŠ” &#34;Frame type&#34;, &#34;Message Length&#34;, &#34;Message data&#34; í•„ë“œ ë“±ì´ í¬í•¨ë  ìˆ˜ ìžˆë‹¤.</span> Referring to Figure 6c, is an extra header of the MSG packet may be included, such as &#34;Frame type&#34;, &#34;Message Length&#34;, &#34;Message data&#34; field.</span> </p> <p num="91"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ì™€ ê°™ì€ êµ¬ì¡° ë° ê° í•„ë“œì— ëŒ€í•œ ì •ì˜ëŠ” ì§€ê·¸ë¹„ í‘œì¤€ ë¬¸ì„œì— ìƒì„¸ížˆ ì •ì˜ë˜ì–´ ìžˆë‹¤.</span> Such structure and definition of each field is defined in detail in the ZigBee standard document.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì–´í”Œë¦¬ì¼€ì´ì…˜ ê³„ì¸µì—ì„œ ì´ì™€ ê°™ì€ êµ¬ì¡°ê°€ í¬í•¨ëœ íŒ¨í‚·ì´ ìƒì„±ë˜ë©´, ê·¸ í•˜ìœ„ ê³„ì¸µë“¤ì€ IPv6 ì „ì†¡ì„ ìœ„í•˜ì—¬ ê°ê° í•„ìš”í•œ í—¤ë”ë“¤ì„ ì¶”ê°€í•œë‹¤.</span> If this contains the same structure of the packet generated in the application layer, the lower layer should add each of the required header to the IPv6 transmission.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ IPv6 íŒ¨í‚·ì´ ìƒì„±ëœë‹¤.</span> Therefore, the IPv6 packet is generated.</span> </p> <p num="92"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ì´ëŸ¬í•œ IPv6 íŒ¨í‚·ì´ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì˜ IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ë¡œ ìˆ˜ì‹ ë˜ë©´, í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì˜ ì œì–´ ëª¨ë“ˆ(112)ì€ ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œì—ì„œ ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ì—¬(ë‹¨ê³„:S2), í•´ë‹¹ IPv6 íŒ¨í‚·ì´ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ë¡œ ì „ì†¡ëœë‹¤ëŠ” ê²ƒì„ ì¸ì‹í•œ ë’¤, ìƒê¸° IPv6 íŒ¨í‚·ì˜ í—¤ë”ë¥¼ ì œê±°í•˜ì—¬ ì§€ê·¸ë¹„ íŒ¨í‚·ìœ¼ë¡œ ë³€í™˜í•œë‹¤(ë‹¨ê³„:S3).</span> On the other hand, if this IPv6 packet is received by the IPv6 interface module 111 of the home gateway 110, the control module 112 of the home gateway 110 extracts the node ID in the destination address of the received IPv6 packet (Step : S2), and the IPv6 packet is converted to a Zigbee node 120, a rear, ZigBee packet by removing the header of the IPv6 packet to recognize that the transmission (step: S3).</span> </p> <p num="93"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ì•žì„œ ì„¤ëª…í–ˆë“¯ì´, IPv6 ìŠ¤íƒì˜ ì–´í”Œë¦¬ì¼€ì´ì…˜ ê³„ì¸µì—ì„œ ë°ì´í„° í•„ë“œì— ì§€ê·¸ë¹„ í˜•íƒœì˜ íŒ¨í‚·ì„ ì‚½ìž…í•˜ì—¬ ì „ì†¡í•˜ì˜€ìœ¼ë¯€ë¡œ, IPv6ì˜ í•˜ìœ„ê³„ì¸µì—ì„œ ì¶”ê°€ëœ í—¤ë”ë¥¼ ì œê±°í•˜ë©´ ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœì˜ ë°ì´í„°ë¥¼ ìš©ì´í•˜ê²Œ ì¶”ì¶œí•  ìˆ˜ ìžˆë‹¤.</span> In this case, As previously described, since transmission of the packet by inserting a ZigBee form the data fields in the application layer of the IPv6 stack, removing a header added in the lower layer of IPv6 can be easily extract data of ZigBee packet form.</span> </p> <p num="94"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ì–´ì„œ, ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117)ì€ ì œì–´ ëª¨ë“ˆ(112)ì— ì˜í•˜ì—¬ ë³€í™˜ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìƒê¸° ë…¸ë“œ IDì— ëŒ€ì‘ë˜ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ë¡œ ì „ì†¡í•œë‹¤(ë‹¨ê³„:S4).</span> Then, a ZigBee interface module 117 and transmits it to the ZigBee node 120 corresponding to the node ID of the ZigBee packet converted by control module 112 (step: S4).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ, ì§€ê·¸ë¹„ ë…¸ë“œ(120)ëŠ” IPv6 ë…¸ë“œ(200)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì œì–´ ì •ë³´, ìƒíƒœ ìš”ì²­ ì •ë³´ ë“±ì„ ìˆ˜ì‹ í•  ìˆ˜ ìžˆë‹¤.</span> Therefore, the ZigBee node 120 may receive the control information, such as status request information transmitted from the IPv6 node 200.</span> </p> <p num="95"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í•œíŽ¸, ë°ì´í„°ë² ì´ìŠ¤(118)ëŠ” ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ì†ŒìŠ¤ ì£¼ì†Œë¥¼ íŠ¹ì • ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ì‹œì¼œ ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì— ì €ìž¥í•œë‹¤.</span> On the other hand, the database 118 in association with the source address of the received IPv6 packet to a specific identification code is stored in the identification code / IPv6 address table.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì—ì„œ IPv6 ë…¸ë“œ(200)ë¡œ ë°ì´í„°ë¥¼ ì „ì†¡í•  ë•Œ ìš©ì´í•˜ê²Œ ì‚¬ìš©ë  ìˆ˜ ìžˆë‹¤.</span> This can easily be used to transfer data to IPv6 node 200 in the ZigBee node 120.</span> </p> <p num="96"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 7ì€ ë„ 1ì— ë„ì‹œëœ í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ(100)ì˜ ë°ì´í„° ì†¡ì‹  ë™ìž‘ì„ ì„¤ëª…í•˜ê¸° ìœ„í•œ íë¦„ë„ì´ë‹¤.</span> 7 is a flow chart for explaining the data transmission operation of the home network system 100 shown in FIG.</span> </p> <p num="97"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 7ì„ ì°¸ì¡°í•˜ë©´, ë¨¼ì €, ì§€ê·¸ë¹„ ë…¸ë“œ(120)ëŠ” ì „ì†¡í•  ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œë¥¼ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ë¡œ í•˜ê³ , DEP í•„ë“œì—ëŠ” ëª©ì ì§€ IPv6 ë…¸ë“œ(200)ì˜ ì‹ë³„ ì •ë³´, ì˜ˆë¥¼ ë“¤ë©´ ì‹ë³„ ì½”ë“œë¥¼ ì‚½ìž…í•˜ì—¬ í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ë¡œ ì „ì†¡í•œë‹¤(ë‹¨ê³„:S11).</span> 7, first, the ZigBee node 120 to transmit the destination address of ZigBee packet to the home gateway 110, and, DEP field by inserting the identification information, such as identification code of the destination IPv6 node 200 and it transmits it to the home gateway 110 (step: S11).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ì‹ë³„ ì½”ë“œëŠ” 1~240ê¹Œì§€ì˜ ìˆ˜ë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.</span> In this case, the identification code may be the number of 1 to 240.</span> </p> <p num="98"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">í™ˆ ê²Œì´íŠ¸ì›¨ì´(110)ì˜ ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(117)ì€ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬(ë‹¨ê³„:S12), ì œì–´ ëª¨ë“ˆ(112)ë¡œ ì „ë‹¬í•œë‹¤.</span> ZigBee-interface module 117 of the home gateway 110 is a ZigBee node 120 receives the packet transmitted from the Zigbee: passes (step S12), the control module 112.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œì–´ ëª¨ë“ˆ(112)ì€ ì „ì†¡ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì—ì„œ ìƒê¸° DEP í•„ë“œì— ì‚½ìž…ëœ IPv6 ë…¸ë“œ(200)ì˜ ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ (ë‹¨ê³„:S13), ë°ì´í„°ë² ì´ìŠ¤(118)ì— ì €ìž¥ëœ ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ê²€ìƒ‰í•˜ì—¬ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•œë‹¤(ë‹¨ê³„:S14).</span> Control module 112 extracts the identification code of the IPv6 node 200 inserted into the DEP field in the transmitted ZigBee packet: in which to search for the identification code / IPv6 address table stored in the (step S13), the database (118) It detects the IPv6 address corresponding to the identification code (step: S14).</span> </p> <p num="99"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë„ 8ì€ ë°ì´í„°ë² ì´ìŠ¤(118)ì— ì €ìž¥ë˜ëŠ” ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì˜ í•œ í˜•íƒœë¥¼ ë³´ì—¬ì£¼ëŠ” ì˜ˆì‹œë„ë¡œì„œ, ë„ 8ì„ ì°¸ì¡°í•˜ë©´, DEP í•„ë“œì— ì‚½ìž…ë˜ëŠ” ì‹ë³„ì½”ë“œê°€ 1~240ê°œê¹Œì§€ ì •ì˜ë˜ê³ , ê° ì‹ë³„ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œê°€ ì •ì˜ë˜ì–´ ìžˆìŒì„ ì•Œ ìˆ˜ ìžˆë‹¤.</span> Figure 8 is identified that is stored in the database 118, code / IPv6 address if as an example showing a form of table, the reference to Figure 8, the identification code is inserted into the DEP field is defined to 1-240, each identification code IPv6 addresses corresponding to it can be seen that have been defined.</span> </p> <p num="100"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì˜ˆë¥¼ ë“¤ë©´, ì‹ë³„ì½”ë“œê°€ &#34;1&#34;ì¼ ê²½ìš° ê·¸ì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œì˜ ì£¼ì†ŒëŠ” 21DA:00D3:0000:2F3B:02AA:00FF:FE28:9C5A&#34;ì´ë©°, ì‹ë³„ ì½”ë“œê°€ &#34;240&#34;ì¼ ê²½ìš° ê·¸ì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œì˜ ì£¼ì†ŒëŠ” &#34;2001:0230:ABCD:FFFF:0000:0000:FFFF:1111&#34;ìž„ì„ ì•Œ ìˆ˜ ìžˆë‹¤.</span> IPv6 is 9C5A &#34;, and the identification code&#34; corresponding thereto when the 240 &#34;: for example, the identification code if the&#34; 1 &#34;address of the IPv6 node corresponding thereto is 21DA: 00D3: 0000: 2F3B: 02AA: 00FF: FE28 address of the node can be seen that &#34;2001: 1111 0230: ABCD: FFFF: 0000: 0000:: FFFF&#34;.</span> </p> <p num="101"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ì–´ì„œ, ì œì–´ ëª¨ë“ˆ(112)ì€ ìƒê¸° ì§€ê·¸ë¹„ íŒ¨í‚·ì— í—¤ë”ë¥¼ ì¶”ê°€í•˜ì—¬ IPv6 ê·œê²©ì— ë§žë„ë¡ ë³€í™˜ì‹œí‚¨ ë’¤(ë‹¨ê³„:S15), IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ë¡œ ì „ì†¡í•œë‹¤.</span> Then the control module 112 is converted back to fit the IPv6 standard by adding a header to the ZigBee packet: and transmits it to (step S15), IPv6 interface module 111.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ë•Œ, ë³€í™˜ëœ IPv6 íŒ¨í‚·ì˜ ì£¼ì†Œ í•„ë“œì—ëŠ” ìƒê¸° ê²€ì¶œëœ IPv6 ì£¼ì†Œê°€ ì‚½ìž…ëœë‹¤.</span> At this time, the address field of the IPv6 packet, converts the IPv6 address of the detection are inserted.</span> </p> <p num="102"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ(111)ì€ ì œì–´ ëª¨ë“ˆ(112)ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì„ ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ë¡œ ì „ì†¡í•œë‹¤(ë‹¨ê³„:S16).</span> IPv6 interface module 111 transmits the IPv6 packet transmitted from the control module 112 to the external network (step: S16).</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ, IPv6 íŒ¨í‚·ì€ ì œì–´ ëª¨ë“ˆ(112)ì— ì˜í•˜ì—¬ ê²€ì¶œëœ IPv6 ì£¼ì†Œì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œ(200)ë¡œ ì „ì†¡ëœë‹¤.</span> Thus, IPv6 packet is then sent to the IPv6 node 200 corresponding to the IPv6 address detected by the control module 112.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ê·¸ëŸ¬ë¯€ë¡œ, IPv6 ë…¸ë“œ (200)ëŠ” íŒ¨í‚·ì„ ì „ì†¡í•œ ì§€ê·¸ë¹„ ë…¸ë“œ(120)ì˜ ì œì–´ ì‘ë‹µ ì •ë³´, ìƒíƒœ ì •ë³´ ë“±ì„ ìˆ˜ì§‘í•  ìˆ˜ ìžˆê²Œ ëœë‹¤.</span> Thus, IPv6 node 200 is able to collect the response control information of the ZigBee node 120 transmits a packet, the status information, and the like.</span> </p> <p num="103"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ìƒ ë³¸ ë°œëª…ì— ëŒ€í•˜ì—¬ ê·¸ ë°”ëžŒì§í•œ ì‹¤ì‹œì˜ˆë¥¼ ì°¸ì¡°í•˜ì—¬ ì„¤ëª…í•˜ì˜€ì§€ë§Œ, í•´ë‹¹ ê¸°ìˆ  ë¶„ì•¼ì˜ ìˆ™ë ¨ëœ ë‹¹ì—…ìžëŠ” í•˜ê¸°ì˜ íŠ¹í—ˆ ì²­êµ¬ì˜ ë²”ìœ„ì— ê¸°ìž¬ëœ ë³¸ ë°œëª…ì˜ ê¸°ìˆ ì  ì‚¬ìƒ ë° ì˜ì—­ìœ¼ë¡œë¶€í„° ë²—ì–´ë‚˜ì§€ ì•ŠëŠ” ë²”ìœ„ ë‚´ì—ì„œ ë³¸ ë°œëª…ì„ ë‹¤ì–‘í•˜ê²Œ ìˆ˜ì • ë° ë³€ê²½ì‹œì¼œ ì‹¤ì‹œí•  ìˆ˜ ìžˆìŒì„ ì´í•´í•  ìˆ˜ ìžˆì„ ê²ƒì´ë‹¤.</span> Above has been described with reference to a preferred embodiment thereof with respect to the present invention, various modifications of the invention within the scope not departing from the spirit and scope of the invention defined in the claims below are those skilled in the art and it will be understood that the changes to be carried out.</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë”°ë¼ì„œ, ë³¸ ë°œëª…ì˜ ì•žìœ¼ë¡œì˜ ì‹¤ì‹œì˜ˆë“¤ì˜ ë³€ê²½ì€ ë³¸ ë°œëª…ì˜ ê¸°ìˆ ì„ ë²—ì–´ë‚  ìˆ˜ ì—†ì„ ê²ƒì´ë‹¤.</span> Thus, changes of the embodiments of the future of the present invention will not be out the technique of the present invention.</span> </p> </tech-solution> <advantageous-effects> <p num="104"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì´ìƒ ì„¤ëª…í•œ ë°”ì™€ ê°™ì´, ë³¸ ë°œëª…ì— ë”°ë¥´ë©´ í™ˆ ê²Œì´íŠ¸ì›¨ì´ í†µí•˜ì—¬ ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ì˜ IPv6 ë…¸ë“œë“¤ì˜ ì£¼ì†Œê°€ ê´€ë¦¬ë˜ê³  ê°ê°ì˜ ì§€ê·¸ë¹„ ë…¸ë“œë“¤ì´ ê³ ìœ í•œ IPv6 ì£¼ì†Œë¥¼ ê°€ì§€ë¯€ë¡œ, IPv6 ë…¸ë“œì™€ ê°€ì • ë‚´ì˜ ì§€ê·¸ë¹„ ë…¸ë“œê°€ ìš©ì´í•˜ê²Œ ì—°ë™ë  ìˆ˜ ìžˆë‹¤.</span> As described above, the present invention Since the addresses of the external network IPv6 node management and of an IPv6 address for each of the Zigbee node are unique throughout the home gateway, the Zigbee node in the IPv6 node and the home can be easily linked.</span> </p> </advantageous-effects> </disclosure> </div></div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">10</span>)</h2>
+    <aside>Translated from <span itemprop="translatedLanguage">Korean</span></aside>
+    <div itemprop="content" html><ol mxw-id="PCLM29670355" lang="KO" load-source="patent-office" class="claims"> <li class="claim"> <div num="1" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì „ì†¡í•  ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ íŠ¹ì • í•„ë“œì— ëª©ì ì§€ ì¸í„°ë„· í”„ë¡œí† ì½œ ë²„ì „6(IPv6) ë…¸ë“œì˜ ì‹ë³„ ì½”ë“œë¥¼ ì‚½ìž…í•˜ì—¬ ì†¡ì¶œí•˜ëŠ” ì ì–´ë„ í•˜ë‚˜ì˜ ì§€ê·¸ë¹„ ë…¸ë“œ;</span> At least one of the Zigbee node to transmit to insert an identification code of the node destination Internet Protocol version 6 (IPv6) in a particular field of ZigBee packet to be transmitted;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë°</span> And</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œë¡œë¶€í„° ì†¡ì¶œëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ìƒê¸° ì‚½ìž…ëœ IPv6 ë…¸ë“œì˜ ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•˜ê³ , ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ IPv6 íŒ¨í‚·ìœ¼ë¡œ ë³€í™˜ì‹œì¼œ ìƒê¸° ê²€ì¶œëœ IPv6 ì£¼ì†Œì— í•´ë‹¹í•˜ëŠ” IPv6 ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´ë¥¼ í¬í•¨í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> Converts the ZigBee packet detecting the IPv6 address, and the received corresponding to the identification code of the IPv6 node, the said insert receives the ZigBee packet transmitted from the Zigbee node in the IPv6 packet to the IPv6 node corresponding to the detected IPv6 address the home network system comprises a home gateway transmitting.</span> </div> </div> </li> <li class="claim-dependent"> <div num="2" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 1 í•­ì— ìžˆì–´ì„œ, ìƒê¸° í™ˆ ê²Œì´íŠ¸ì›¨ì´ëŠ” ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì— ì‚½ìž…ëœ ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ê²€ìƒ‰í•˜ì—¬ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The method of claim 1, wherein the home gateway, the home network, characterized in that for detecting the IPv6 address corresponding to the identification code to extract the identification code on the ZigBee packet is received, searches the identification code / IPv6 address table system.</span> </div> </div> </li> <li class="claim-dependent"> <div num="3" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 2 í•­ì— ìžˆì–´ì„œ, ìƒê¸° í™ˆ ê²Œì´íŠ¸ì›¨ì´ëŠ” ì™¸ë¶€ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° IPv6 íŒ¨í‚·ì´ ìˆ˜ì‹ ë˜ë©´, ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œì—ì„œ ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ê³  ìƒê¸° ì¶”ì¶œëœ ë…¸ë“œ IDê°€ ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œì— ëŒ€ì‘ë  ê²½ìš° ìƒê¸° IPv6 íŒ¨í‚·ì˜ ì†ŒìŠ¤ ì£¼ì†Œë¥¼ ì†Œì •ì˜ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ì‹œì¼œ ìƒê¸° ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì— ì €ìž¥í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The method of claim 2, wherein, when the home gateway receives the IPv6 packet from an external network, extracts the node ID in the destination address of the received IPv6 packet is the extracted node ID is corresponding to the Zigbee node of the IPv6 packet in association with the source address to a predetermined identification code, the home network system, characterized in that stored in the identification code / IPv6 address table.</span> </div> </div> </li> <li class="claim-dependent"> <div num="4" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 1 í•­ì— ìžˆì–´ì„œ, ìƒê¸° íŠ¹ì • í•„ë“œëŠ” ëª©ì ì§€ ì¢…ë‹¨ í¬ì¸íŠ¸(Destination End Point) í•„ë“œì¸ ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ë„¤íŠ¸ì›Œí¬ ì‹œìŠ¤í…œ.</span> The method of claim 1, wherein the specific field is a home network system, characterized in that the destination end-point (Destination End Point) field.</span> </div> </div> </li> <li class="claim"> <div num="5" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì ì–´ë„ í•˜ë‚˜ì˜ ì§€ê·¸ë¹„ ë…¸ë“œì™€ ì ì–´ë„ í•˜ë‚˜ì˜ IPv6 ë…¸ë“œê°„ì˜ í†µì‹  ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ì œê³µí•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´ì— ìžˆì–´ì„œ,</span> In the home gateway that provides a communications interface between at least one of the Zigbee node and at least one IPv6 node,</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° IPv6 ë…¸ë“œë¥¼ ì‹ë³„í•  ìˆ˜ ìžˆëŠ” ì‹ë³„ ì½”ë“œì™€ ê·¸ì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œê°€ ì§€ì •ë˜ëŠ” ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ì €ìž¥í•˜ëŠ” ë°ì´í„°ë² ì´ìŠ¤;</span> The identification for identifying the IPv6 node code and correspondingly identified that IPv6 addressing in which the code / IPv6 address database that stores the table;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë°</span> And</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œë¡œë¶€í„° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì—ì„œ ìƒê¸° ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ìƒê¸° ë°ì´í„°ë² ì´ìŠ¤ì— ì €ìž¥ëœ ì‹ë³„ì½”ë“œ/IPv6 ì£¼ì†Œ í…Œì´ë¸”ì„ ê²€ìƒ‰í•˜ì—¬ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•˜ê³ , ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìƒê¸° IPv6 íŒ¨í‚·ì˜ í˜•íƒœë¡œ ë³€í™˜í•˜ì—¬ ìƒê¸° ê²€ì¶œëœ IPv6 ì£¼ì†Œì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” ì œì–´ ëª¨ë“ˆì„ í¬í•¨í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´.</span> In the ZigBee packet received from the ZigBee nodes and extract the identification code, the identification code / retrieves the IPv6 address table, the IPv6 packet ZigBee packet detected an IPv6 address, and the received corresponding to the identification code stored in the database a home gateway comprising a control module for transmitting to the IPv6 node that corresponds to the detected IPv6 address is converted into the form of a.</span> </div> </div> </li> <li class="claim-dependent"> <div num="6" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 5 í•­ì— ìžˆì–´ì„œ, ìƒê¸° ì œì–´ ëª¨ë“ˆì€ ìƒê¸° IPv6 íŒ¨í‚·ìœ¼ë¡œë¶€í„° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì—ì„œ ìƒê¸° ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ê³ , ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì„ ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœë¡œ ë³€í™˜í•˜ì—¬ ìƒê¸° ì¶”ì¶œëœ ë…¸ë“œ IDì— ëŒ€ì‘ë˜ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œë¡œ ì†¡ì‹ í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´.</span> The method of claim 5, wherein the control module is transmitted to the ZigBee nodes that extracts the node ID in the IPv6 packet received from the IPv6 packet, corresponding to the extracted node ID and converts the received IPv6 packet to the ZigBee packet types Home gateway characterized in that.</span> </div> </div> </li> <li class="claim-dependent"> <div num="7" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 6 í•­ì— ìžˆì–´ì„œ, ìƒê¸° ë°ì´í„°ë² ì´ìŠ¤ëŠ” ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ì†ŒìŠ¤ ì£¼ì†Œë¥¼ ì†Œì •ì˜ ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ì‹œì¼œ ìƒê¸° ì‹ë³„ì½”ë“œ/IPv6 í…Œì´ë¸”ì— ì €ìž¥í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´.</span> The method of claim 6, wherein the database is a home gateway, which in association with the source address of the received IPv6 packet to the predetermined identification code, characterized in that stored in the identification code / IPv6 table.</span> </div> </div> </li> <li class="claim-dependent"> <div num="8" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 6 í•­ì— ìžˆì–´ì„œ, ìƒê¸° í™ˆ ê²Œì´íŠ¸ì›¨ì´ëŠ”,</span> The method of claim 6, wherein the home gateway,</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° IPv6 ë…¸ë“œë¡œë¶€í„° ì „ì†¡ë˜ëŠ” IPv6 íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œ ì „ì†¡í•˜ê³ , ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œë¶€í„° ì œê³µë˜ëŠ” IPv6 íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ê·¸ IPv6 íŒ¨í‚·ì˜ ì£¼ì†Œì— ëŒ€ì‘ë˜ëŠ” IPv6 ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” IPv6 ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆ;</span> IPv6 interface module that receives the IPv6 packet transmitted from the IPv6 node sent to the control module, by receiving an IPv6 packet to be supplied from the transmission control module to the IPv6 node corresponding to the address of the IPv6 packet;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë°</span> And</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ì§€ê·¸ë¹„ ë…¸ë“œë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ìˆ˜ì‹ í•˜ì—¬ ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œ ì „ì†¡í•˜ê³ , ìƒê¸° ì œì–´ ëª¨ë“ˆë¡œë¶€í„° ì œê³µë˜ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚·ì„ ê·¸ ì§€ê·¸ë¹„ íŒ¨í‚·ì˜ ì£¼ì†Œì— ëŒ€ì‘ë˜ëŠ” ì§€ê·¸ë¹„ ë…¸ë“œë¡œ ì „ì†¡í•˜ëŠ” ì§€ê·¸ë¹„ ì¸í„°íŽ˜ì´ìŠ¤ ëª¨ë“ˆì„ ë” í¬í•¨í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´.</span> Receiving a ZigBee packet transmitted from the Zigbee node sent to the control module, and a Zigbee packets provided from the control module further comprises a ZigBee interface module to be transmitted to the ZigBee node corresponding to the address of the ZigBee packet Home gateway.</span> </div> </div> </li> <li class="claim-dependent"> <div num="9" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 5 í•­ì— ìžˆì–´ì„œ, ìƒê¸° ì œì–´ ëª¨ë“ˆì€,</span> The method of claim 5, wherein the control module comprises:</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° IPv6 ë…¸ë“œë¡œë¶€í„° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ ëª©ì ì§€ ì£¼ì†Œ í•„ë“œì— í¬í•¨ëœ ìƒê¸° ë…¸ë“œ IDë¥¼ ì¶”ì¶œí•˜ëŠ” IPv6 ë…¸ë“œ ID ì¶”ì¶œë¶€;</span> IPv6 node ID extracting unit which extracts the node ID included in the destination address field of the IPv6 packet received from the IPv6 node;</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ í—¤ë”ë¥¼ ì²˜ë¦¬í•˜ì—¬ ìƒê¸° ì§€ê·¸ë¹„ íŒ¨í‚·ìœ¼ë¡œ ë³€í™˜ì‹œí‚¤ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€;</span> ZigBee packet generation section that processes the header of the received IPv6 packet converted into the ZigBee packet;</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì—ì„œ ìƒê¸° ì‹ë³„ ì½”ë“œë¥¼ ì¶”ì¶œí•˜ê³ , ìƒê¸° ì‹ë³„ ì½”ë“œì— ëŒ€ì‘ë˜ëŠ” IPv6 ì£¼ì†Œë¥¼ ê²€ì¶œí•˜ëŠ” IPv6 ì£¼ì†Œ ê²€ì¶œë¶€;</span> IPv6 address detection unit for extracting the ID code and detects the IPv6 address corresponding to the identification code from the received packet ZigBee;</span> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ë°</span> And</span> </div> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ìƒê¸° ìˆ˜ì‹ ëœ ì§€ê·¸ë¹„ íŒ¨í‚·ì— í—¤ë”ë¥¼ ì¶”ê°€í•˜ì—¬ IPv6 íŒ¨í‚·ì„ ìƒì„±í•˜ëŠ” IPv6 íŒ¨í‚· ìƒì„±ë¶€ë¥¼ í¬í•¨í•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´.</span> A home gateway comprising: generating IPv6 packet unit to generate an IPv6 packet by adding a header to the received packet ZigBee.</span> </div> </div> </li> <li class="claim-dependent"> <div num="10" class="claim"> <div class="claim-text"> <span class="notranslate"> <span class="google-src-text" style="direction: ltr; text-align: left">ì œ 9 í•­ì— ìžˆì–´ì„œ, ìƒê¸° IPv6 íŒ¨í‚·ì˜ ë°ì´í„° í•„ë“œì—ëŠ” ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœì˜ ë°ì´í„°ê°€ ì‚½ìž…ë˜ê³ , ìƒê¸° ì§€ê·¸ë¹„ íŒ¨í‚· ìƒì„±ë¶€ëŠ” ìƒê¸° ìˆ˜ì‹ ëœ IPv6 íŒ¨í‚·ì˜ í—¤ë”ë¥¼ ì œê±°í•˜ì—¬ ìƒê¸° ë°ì´í„° í•„ë“œì— ì €ìž¥ëœ ì§€ê·¸ë¹„ íŒ¨í‚· í˜•íƒœì„ ì¶”ì¶œí•˜ëŠ” ê²ƒì„ íŠ¹ì§•ìœ¼ë¡œ í•˜ëŠ” í™ˆ ê²Œì´íŠ¸ì›¨ì´.</span> 10. The method of claim 9, characterized in that it is inserted the data from the ZigBee packet type data field of the IPv6 packet is extracted generate the ZigBee packet portion ZigBee packet hyeongtaeeul stored in the data field by removing the header of the received IPv6 packet Home gateway.</span> </div> </div> </li> </ol></div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+        <span itemprop="applicationNumber">KR1020060021463A</span>
+        <span itemprop="priorityDate">2006-03-07</span>
+        <span itemprop="filingDate">2006-03-07</span>
+        <span itemprop="title">Home network system and home gateway 
+       </span>
+        
+        
+        <a href="/patent/KR100684612B1/en">
+            <span itemprop="representativePublication">KR100684612B1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+        </a>
+    </section>
+
+    <h2>Priority Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">KR1020060021463A</span>
+                   
+                   <a href="/patent/KR100684612B1/en">
+                        <span itemprop="representativePublication">KR100684612B1</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2006-03-07</td>
+                <td itemprop="filingDate">2006-03-07</td>
+                <td itemprop="title">Home network system and home gateway 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    <h2>Applications Claiming Priority (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="appsClaimingPriority" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">KR1020060021463A</span>
+                   <a href="/patent/KR100684612B1/en">
+                        <span itemprop="representativePublication">KR100684612B1</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2006-03-07</td>
+                <td itemprop="filingDate">2006-03-07</td>
+                <td itemprop="title">Home network system and home gateway 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    
+
+    
+
+    <h2>Publications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Publication Number</th>
+                    <th>Publication Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">KR100684612B1</span>
+                   
+                   <span itemprop="thisPatent">true</span>
+                   <a href="/patent/KR100684612B1/en">KR100684612B1
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2007-02-13</td>
+              </tr>
+           </tbody>
+        </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=38104061</h2>
+
+    <h2>Family Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Title</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="applications" itemscope repeat>
+                <td>
+                    <span itemprop="applicationNumber">KR1020060021463A</span>
+                    
+                    
+                    <a href="/patent/KR100684612B1/en">
+                        <span itemprop="representativePublication">KR100684612B1</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                </td>
+                <td itemprop="priorityDate">2006-03-07</td>
+                <td itemprop="filingDate">2006-03-07</td>
+                <td itemprop="title">Home network system and home gateway 
+       </td>
+              </tr>
+           </tbody>
+        </table>
+
+    
+
+    
+
+    <h2>Country Status (1)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">KR</span>
+                (<span itemprop="num">1</span>)
+              <meta itemprop="thisCountry" content="true">
+            </td>
+            <td>
+              <a href="/patent/KR100684612B1/en">
+                <span itemprop="representativePublication">KR100684612B1</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    <h2>Cited By (3)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2011002177A2/en">
+              <span itemprop="publicationNumber">WO2011002177A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-07-03</td>
+          <td itemprop="publicationDate">2011-01-06</td>
+          <td><span itemprop="assigneeOriginal">ì£¼ì‹íšŒì‚¬ ì¼€ì´í‹°</span></td>
+          <td itemprop="title">Zigbee gateway, and ip service server interconnected with the zigbee gateway via an ip network 
+       </td>
+        </tr><tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2011027937A1/en">
+              <span itemprop="publicationNumber">WO2011027937A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-09-01</td>
+          <td itemprop="publicationDate">2011-03-10</td>
+          <td><span itemprop="assigneeOriginal">ì—ìŠ¤ì¼€ì´ í…”ë ˆì½¤ì£¼ì‹íšŒì‚¬</span></td>
+          <td itemprop="title">Network interworking system and a method for the same 
+       </td>
+        </tr><tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/CN104331053B/en">
+              <span itemprop="publicationNumber">CN104331053B</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2014-11-10</td>
+          <td itemprop="publicationDate">2016-10-26</td>
+          <td><span itemprop="assigneeOriginal">é‡åº†é‚®ç”µå¤§å­¦</span></td>
+          <td itemprop="title">  6LoWPAN implementation of intelligent home  </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    <h2>Citations (6)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20020031108A1/en">
+              <span itemprop="publicationNumber">US20020031108A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-09-08</td>
+          <td itemprop="publicationDate">2002-03-14</td>
+          <td><span itemprop="assigneeOriginal">Kabushiki Kaisha Toshiba</span></td>
+          <td itemprop="title">Communication system with mobile terminal accessible to mobile communication network and local network simultaneously 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20020039357A1/en">
+              <span itemprop="publicationNumber">US20020039357A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-09-29</td>
+          <td itemprop="publicationDate">2002-04-04</td>
+          <td><span itemprop="assigneeOriginal">Jaakko Lipasti</span></td>
+          <td itemprop="title">Addressing and routing in mobile ad hoc networks 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050271032A1/en">
+              <span itemprop="publicationNumber">US20050271032A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-05-10</td>
+          <td itemprop="publicationDate">2005-12-08</td>
+          <td><span itemprop="assigneeOriginal">Samsung Electronics Co., Ltd.</span></td>
+          <td itemprop="title">Communication method and apparatus in mobile station having multiple interfaces 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20060052472A/en">
+              <span itemprop="publicationNumber">KR20060052472A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-11-05</td>
+          <td itemprop="publicationDate">2006-05-19</td>
+          <td><span itemprop="assigneeOriginal">ì¸í„°ë””ì§€íƒˆ í…Œí¬ë‚ ëŸ¬ì§€ ì½”í¬ë ˆì´ì…˜</span></td>
+          <td itemprop="title">Wireless communication method and system for implementing media independent handover between technologically diversified access networks 
+     </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20060074679A/en">
+              <span itemprop="publicationNumber">KR20060074679A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-12-28</td>
+          <td itemprop="publicationDate">2006-07-03</td>
+          <td><span itemprop="assigneeOriginal">ì‚¼ì„±ì „ìžì£¼ì‹íšŒì‚¬</span></td>
+          <td itemprop="title">Ad hoc network for extending routing to support internet protocol version 6 protocol and routing extending method thereof 
+     </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20060133699A/en">
+              <span itemprop="publicationNumber">KR20060133699A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2005-06-21</td>
+          <td itemprop="publicationDate">2006-12-27</td>
+          <td><span itemprop="assigneeOriginal">ì£¼ì‹íšŒì‚¬ ì¼€ì´í‹°</span></td>
+          <td itemprop="title">Inter-network connection relay device and method for different kind of networks 
+     </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+    <ul>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2006</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2006-03-07</span>
+            <span itemprop="countryCode">KR</span>
+            <span itemprop="applicationNumber">KR1020060021463A</span>
+            <a href="/patent/KR100684612B1/en"><span itemprop="documentId">patent/KR100684612B1/en</span></a>
+            <span itemprop="legalStatusCat">not_active</span>
+            <span itemprop="legalStatus">IP Right Cessation</span>
+            
+            <span itemprop="thisApp" content="true" bool></span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+    
+
+    </section>
+
+  <section>
+    <h2>Patent Citations (7)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20020031108A1/en">
+              <span itemprop="publicationNumber">US20020031108A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-09-08</td>
+          <td itemprop="publicationDate">2002-03-14</td>
+          <td><span itemprop="assigneeOriginal">Kabushiki Kaisha Toshiba</span></td>
+          <td itemprop="title">Communication system with mobile terminal accessible to mobile communication network and local network simultaneously 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050255880A1/en">
+              <span itemprop="publicationNumber">US20050255880A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-09-08</td>
+          <td itemprop="publicationDate">2005-11-17</td>
+          <td><span itemprop="assigneeOriginal">Kabushiki Kaisha Toshiba</span></td>
+          <td itemprop="title">Communication system with mobile terminal accessible to mobile communication network and local network simultaneously 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20020039357A1/en">
+              <span itemprop="publicationNumber">US20020039357A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-09-29</td>
+          <td itemprop="publicationDate">2002-04-04</td>
+          <td><span itemprop="assigneeOriginal">Jaakko Lipasti</span></td>
+          <td itemprop="title">Addressing and routing in mobile ad hoc networks 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050271032A1/en">
+              <span itemprop="publicationNumber">US20050271032A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-05-10</td>
+          <td itemprop="publicationDate">2005-12-08</td>
+          <td><span itemprop="assigneeOriginal">Samsung Electronics Co., Ltd.</span></td>
+          <td itemprop="title">Communication method and apparatus in mobile station having multiple interfaces 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20060052472A/en">
+              <span itemprop="publicationNumber">KR20060052472A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-11-05</td>
+          <td itemprop="publicationDate">2006-05-19</td>
+          <td><span itemprop="assigneeOriginal">ì¸í„°ë””ì§€íƒˆ í…Œí¬ë‚ ëŸ¬ì§€ ì½”í¬ë ˆì´ì…˜</span></td>
+          <td itemprop="title">Wireless communication method and system for implementing media independent handover between technologically diversified access networks 
+     </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20060074679A/en">
+              <span itemprop="publicationNumber">KR20060074679A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-12-28</td>
+          <td itemprop="publicationDate">2006-07-03</td>
+          <td><span itemprop="assigneeOriginal">ì‚¼ì„±ì „ìžì£¼ì‹íšŒì‚¬</span></td>
+          <td itemprop="title">Ad hoc network for extending routing to support internet protocol version 6 protocol and routing extending method thereof 
+     </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/KR20060133699A/en">
+              <span itemprop="publicationNumber">KR20060133699A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2005-06-21</td>
+          <td itemprop="publicationDate">2006-12-27</td>
+          <td><span itemprop="assigneeOriginal">ì£¼ì‹íšŒì‚¬ ì¼€ì´í‹°</span></td>
+          <td itemprop="title">Inter-network connection relay device and method for different kind of networks 
+     </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Non-Patent Citations (1)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">ë…¼ë¬¸</span>
+            
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <h2>Cited By (4)</h2>
+  <table>
+    <caption>* Cited by examiner, â€  Cited by third party</caption>
+    <thead>
+      <tr>
+        <th>Publication number</th>
+        <th>Priority date</th>
+        <th>Publication date</th>
+        <th>Assignee</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/WO2011002177A2/en">
+            <span itemprop="publicationNumber">WO2011002177A2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2009-07-03</td>
+        <td itemprop="publicationDate">2011-01-06</td>
+        <td><span itemprop="assigneeOriginal">ì£¼ì‹íšŒì‚¬ ì¼€ì´í‹°</span></td>
+        <td itemprop="title">Zigbee gateway, and ip service server interconnected with the zigbee gateway via an ip network 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/WO2011002177A3/en">
+            <span itemprop="publicationNumber">WO2011002177A3</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2009-07-03</td>
+        <td itemprop="publicationDate">2011-04-14</td>
+        <td><span itemprop="assigneeOriginal">ì£¼ì‹íšŒì‚¬ ì¼€ì´í‹°</span></td>
+        <td itemprop="title">Zigbee gateway, and ip service server interconnected with the zigbee gateway via an ip network 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/WO2011027937A1/en">
+            <span itemprop="publicationNumber">WO2011027937A1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2009-09-01</td>
+        <td itemprop="publicationDate">2011-03-10</td>
+        <td><span itemprop="assigneeOriginal">ì—ìŠ¤ì¼€ì´ í…”ë ˆì½¤ì£¼ì‹íšŒì‚¬</span></td>
+        <td itemprop="title">Network interworking system and a method for the same 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/CN104331053B/en">
+            <span itemprop="publicationNumber">CN104331053B</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2014-11-10</td>
+        <td itemprop="publicationDate">2016-10-26</td>
+        <td><span itemprop="assigneeOriginal">é‡åº†é‚®ç”µå¤§å­¦</span></td>
+        <td itemprop="title">  6LoWPAN implementation of intelligent home  </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR101986691B1/en">
+                <span itemprop="publicationNumber">KR101986691B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-06-07">2019-06-07</time>
+            
+            
+          </td>
+          <td itemprop="title">Efficient communication for devices of a home network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="14369994587732562144">
+              <a href="/scholar/14369994587732562144"><span itemprop="scholarAuthors">Culler et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2009">2009</time>
+            
+          </td>
+          <td itemprop="title">6LoWPAN: Incorporating IEEE 802.15. 4 into the IP architecture</td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN101512974B/en">
+                <span itemprop="publicationNumber">CN101512974B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-07-04">2012-07-04</time>
+            
+            
+          </td>
+          <td itemprop="title">ZigBee/IP gateway 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1216563B1/en">
+                <span itemprop="publicationNumber">EP1216563B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-01-25">2012-01-25</time>
+            
+            
+          </td>
+          <td itemprop="title">A segmentation protocol that supports compressed segmentation headers 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/JP3531367B2/en">
+                <span itemprop="publicationNumber">JP3531367B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-05-31">2004-05-31</time>
+            
+            
+          </td>
+          <td itemprop="title">  Translator  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20040218611A1/en">
+                <span itemprop="publicationNumber">US20040218611A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-11-04">2004-11-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Gateway for supporting communications between network devices of different private networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20020039357A1/en">
+                <span itemprop="publicationNumber">US20020039357A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-04-04">2002-04-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Addressing and routing in mobile ad hoc networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/JP3136140B2/en">
+                <span itemprop="publicationNumber">JP3136140B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2001-02-19">2001-02-19</time>
+            
+            
+          </td>
+          <td itemprop="title">  Internet-connected soho gateway device  </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6891830B2/en">
+                <span itemprop="publicationNumber">US6891830B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-05-10">2005-05-10</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for automatically determining an appropriate transmission method in a network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN101641908B/en">
+                <span itemprop="publicationNumber">CN101641908B</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-12-11">2013-12-11</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system of providing ip-based packet communications in a utility network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CA2570843C/en">
+                <span itemprop="publicationNumber">CA2570843C</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-12-22">2009-12-22</time>
+            
+            
+          </td>
+          <td itemprop="title">Arrangement for reaching ipv4 public network nodes by a node in an ipv4 private network via an ipv6 access network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP2314021B1/en">
+                <span itemprop="publicationNumber">EP2314021B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-09-19">2018-09-19</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for wireless process communication over distinct networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7167923B2/en">
+                <span itemprop="publicationNumber">US7167923B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-01-23">2007-01-23</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for selectively bridging and routing data packets between multiple networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR100765325B1/en">
+                <span itemprop="publicationNumber">KR100765325B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-10-09">2007-10-09</time>
+            
+            
+          </td>
+          <td itemprop="title">Symmetric Network Address Translator using STUN and Method Thereof 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7418511B2/en">
+                <span itemprop="publicationNumber">US7418511B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-08-26">2008-08-26</time>
+            
+            
+          </td>
+          <td itemprop="title">Secured TCP/IP communication system for devices and private networks connected to the internet 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/JP2006060515A/en">
+                <span itemprop="publicationNumber">JP2006060515A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-03-02">2006-03-02</time>
+            
+            
+          </td>
+          <td itemprop="title">Radio communication system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="6805136644823782632">
+              <a href="/scholar/6805136644823782632"><span itemprop="scholarAuthors">Jara et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2012">2012</time>
+            
+          </td>
+          <td itemprop="title">Glowbal IP: An adaptive and transparent IPv6 integration in the Internet of Things</td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7352726B2/en">
+                <span itemprop="publicationNumber">US7352726B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-04-01">2008-04-01</time>
+            
+            
+          </td>
+          <td itemprop="title">Communication device, communication method and program for packet communications between two networks that conform to different standards 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6771666B2/en">
+                <span itemprop="publicationNumber">US6771666B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-08-03">2004-08-03</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for trans-medium address resolution on an ad-hoc network with at least one highly disconnected medium having multiple access points to other media 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/JP5327832B2/en">
+                <span itemprop="publicationNumber">JP5327832B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-10-30">2013-10-30</time>
+            
+            
+          </td>
+          <td itemprop="title">Packet communication method using node identifier and position indicator 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7657642B2/en">
+                <span itemprop="publicationNumber">US7657642B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-02-02">2010-02-02</time>
+            
+            
+          </td>
+          <td itemprop="title">IP network node and middleware for establishing connectivity to both the IPv4 and IPv6 networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20050018677A1/en">
+                <span itemprop="publicationNumber">US20050018677A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-01-27">2005-01-27</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for generating IP addresses of access terminals and transmitting messages for generation of IP addresses in an IP system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR100796865B1/en">
+                <span itemprop="publicationNumber">KR100796865B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-01-22">2008-01-22</time>
+            
+            
+          </td>
+          <td itemprop="title">Mobile Terminal, System and Method for connecting Network by using the same 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20020052972A1/en">
+                <span itemprop="publicationNumber">US20020052972A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-05-02">2002-05-02</time>
+            
+            
+          </td>
+          <td itemprop="title">Communication method among a plurality of virtual LANs in an IP subnet 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US9992098B2/en">
+                <span itemprop="publicationNumber">US9992098B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-06-05">2018-06-05</time>
+            
+            
+          </td>
+          <td itemprop="title">Content centric M2M system 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2006-03-07">2006-03-07</time></td>
+          <td itemprop="code">A201</td>
+          <td itemprop="title">Request for examination</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2007-01-26">2007-01-26</time></td>
+          <td itemprop="code">E701</td>
+          <td itemprop="title">Decision to grant or registration of patent right</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2007-02-13">2007-02-13</time></td>
+          <td itemprop="code">GRNT</td>
+          <td itemprop="title">Written decision to grant</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2011-01-31">2011-01-31</time></td>
+          <td itemprop="code">FPAY</td>
+          <td itemprop="title">Annual fee payment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Payment date</strong>:
+              <span itemprop="value">20110201</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Year of fee payment</strong>:
+              <span itemprop="value">5</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2012-02-14">2012-02-14</time></td>
+          <td itemprop="code">LAPS</td>
+          <td itemprop="title">Lapse due to unpaid annual fee</td>
+          <td>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
+
+    </search-app>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script async="" defer="" src="//www.google.com/insights/consumersurveys/async_survey?site=cxkjf7ipxgbnnjy6k35ezcvbbe"></script>
+  </body>
+</html>

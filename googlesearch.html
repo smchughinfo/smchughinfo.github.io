@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>search</title>
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                overflow:hidden;
+            }
+            iframe {
+                height: calc(100% - 50px);
+                width: 100%;
+                border: none;
+            }
+            footer {
+                vertical-align: center;
+                padding-top: 6px;
+                text-align: center;
+            }
+            footer > button {
+                background-color: aqua;
+                width: calc(50% - 40px);
+            }
+            #prev {
+                float: left;
+                margin-left: 20px;
+            }
+            #note {
+                margin-left: auto;
+                margin-right: auto;
+                filter:hue-rotate(95deg);
+            }
+            #next {
+                float: right;
+                margin-right: 20px;
+            }
+            #pageMarker {
+                position: fixed;
+                top: 5px;
+                left: 5px;
+                background: white;
+                border: 1px solid black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+                padding: 2px;
+            }
+            #numerator {
+                width: 45px;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe src="usptog06f_related_patents/United States Patent 4916738.html"></iframe>
+        <footer>
+            <button id="prev">PREV</button>
+            <button id="next">NEXT</button>
+        </footer>
+        <div id="pageMarker">
+            <input id="numerator"/>
+            of
+            <span id="denominator"></span>
+        </div>
+    </body>
+    <script>
+        var pageIndex = 0;
+        var pages = ["C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\CA2320715A1 - Information security method and apparatus.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\CN100373284C - Embedded processor with direct connection of security devices for enhanced security.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\CN106295409A - Network informatization security application device.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\CN106778364A - A kind of network security controller of computer.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\CN107851047A - System, the method and apparatus for performing intrusion detection and analyzing using the power feature of such as side channel information       - Google Patents.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\CN1665201A - System and method for securing a computer system connected to a network from attacks.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\EP2690511A1 - Apparatus and method for detecting an intrusion in electric power networks.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\JP2014504822A - Data transmission method and system via computer network.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\JP6391889B2 - Relay device.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\KR100684612B1 - Home network system and home gateway.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\KR20070104757A - Home network system and method of processing events thereof       - Google Patents.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\KR20090032072A - Relay device.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US10460117B2 - System and method for removing internet attack surface from internet connected devices.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US20040122833A1 - Intelligent electronic device having network access.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US20190004917A1 - Kernel-based power consumption and isolation and defense against emerging power attacks       - Google Patents.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US20190146442A1 - Methods and systems for home automation using an internet of things platform.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US6202153B1 - Security switching device.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US7007302B1 - Efficient management and blocking of malicious code and hacking attempts in a network environment.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US7281142B2 - Apparatus, system, and method for securely providing power supply commands.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US8214899B2 - Identifying unauthorized access to a network resource.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US8450874B2 - User managed power system with security.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US8577035B2 - Electronic circuit for securing data interchanges between a computer station and a network.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\US8739195B2 - Microchips with an internal hardware firewall protected portion and a network portion with microprocessors which execute shared processing operations with the network.html","C:\\Users\\Sean\\Desktop\\HANK\\patent\\google_related_patents\\WO2018078321A1 - Apparatus and methods for increasing security at edge nodes.html"];
+        function setPageToCurrentPageIndex() {
+            document.querySelector("iframe").src = pages[pageIndex];
+            document.getElementById("numerator").value = (pageIndex + 1);
+            document.getElementById("denominator").innerHTML = (pages.length);
+        }
+        setPageToCurrentPageIndex();
+
+        document.getElementById("next").addEventListener("click", function() {
+            pageIndex = pageIndex + 1;
+            if(pageIndex == pages.length)
+            {
+                pageIndex = 0;
+            }
+            setPageToCurrentPageIndex();
+        });
+
+        document.getElementById("prev").addEventListener("click", function() {
+            pageIndex = pageIndex - 1;
+            if(pageIndex == -1)
+            {
+                pageIndex = pages.length - 1;
+            }
+            setPageToCurrentPageIndex();
+        });
+
+        document.getElementById("numerator").addEventListener("keypress", function(e) {
+            if(e.keyCode == 13)
+            {
+                pageIndex = parseInt(document.getElementById("numerator").value, 10) - 1;
+                setPageToCurrentPageIndex();
+            }
+        });
+    </script>
+</html>

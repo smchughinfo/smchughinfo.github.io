@@ -1,0 +1,4236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>US8450874B2 - User managed power system with security 
+        - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/US8450874B2/en">
+    <meta name="description" content="
+     The present invention is related to user managed power systems with security. The invention encompasses a method and system of managing a power system wherein a data center user determines whether there is a desire to control remote power supply socket assigned to the user&#39;s data module. The data center user is able to sign into the remote power supply through a security protocol. Then the data center user can gain control over the remote power supply socket assigned to the user&#39;s data module. Finally, this allows the data center user to remotely control the power supply socket assigned to the user&#39;s data module. 
+   
+   ">
+    
+    <meta name="DC.type" content="patent">
+    
+    <meta name="DC.title" content="User managed power system with security 
+       ">
+    
+    <meta name="DC.date" content="2007-12-07" scheme="dateSubmitted">
+    
+    <meta name="DC.description" content="
+     The present invention is related to user managed power systems with security. The invention encompasses a method and system of managing a power system wherein a data center user determines whether there is a desire to control remote power supply socket assigned to the user&#39;s data module. The data center user is able to sign into the remote power supply through a security protocol. Then the data center user can gain control over the remote power supply socket assigned to the user&#39;s data module. Finally, this allows the data center user to remotely control the power supply socket assigned to the user&#39;s data module. 
+   
+   ">
+    
+    <meta name="citation_patent_application_number" content="US:11/952,756">
+    
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/21/57/e7/b82847a7888284/US8450874.pdf">
+    
+    <meta name="citation_patent_number" content="US:8450874">
+    
+    <meta name="DC.date" content="2013-05-28" scheme="issue">
+    
+    <meta name="DC.contributor" content="Gregory W. RATCLIFF" scheme="inventor">
+    
+    <meta name="DC.contributor" content="Philip R. ALDAG" scheme="inventor">
+    
+    <meta name="DC.contributor" content="Vertiv Corp" scheme="assignee">
+    
+    <meta name="DC.relation" content="US:5281859" scheme="references">
+    
+    <meta name="DC.relation" content="WO:1993010615:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:5424903" scheme="references">
+    
+    <meta name="DC.relation" content="US:6711613" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050203987:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:7099934" scheme="references">
+    
+    <meta name="DC.relation" content="US:7162521" scheme="references">
+    
+    <meta name="DC.relation" content="US:7171461" scheme="references">
+    
+    <meta name="DC.relation" content="US:7010589" scheme="references">
+    
+    <meta name="DC.relation" content="US:7043543" scheme="references">
+    
+    <meta name="DC.relation" content="US:5862393" scheme="references">
+    
+    <meta name="DC.relation" content="US:6618772" scheme="references">
+    
+    <meta name="DC.relation" content="WO:2000069081:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:6410994" scheme="references">
+    
+    <meta name="DC.relation" content="EP:1081921:A2" scheme="references">
+    
+    <meta name="DC.relation" content="US:6608406" scheme="references">
+    
+    <meta name="DC.relation" content="US:6445087" scheme="references">
+    
+    <meta name="DC.relation" content="US:7141891" scheme="references">
+    
+    <meta name="DC.relation" content="US:6741442" scheme="references">
+    
+    <meta name="DC.relation" content="US:6937461" scheme="references">
+    
+    <meta name="DC.relation" content="US:6744150" scheme="references">
+    
+    <meta name="DC.relation" content="US:20030122683:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:6826036" scheme="references">
+    
+    <meta name="DC.relation" content="US:20040165358:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20040178270:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050018372:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050021252:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20060200681:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050259383:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:7196900" scheme="references">
+    
+    <meta name="DC.relation" content="US:7268998" scheme="references">
+    
+    <meta name="DC.relation" content="US:20070089163:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:7280931" scheme="references">
+    
+    <meta name="citation_reference" content="Anastassiades, G., European Examination Report for European Patent Application No. 07 869 041.9, European Patent Office, Germany, dated Aug. 2, 2011." scheme="references">
+    
+    <meta name="citation_reference" content="B. Levine and A. Swales. &#34;Wanted: IP addresses for factory network devices! & Software solution for industrial IP addressing tasks.&#34; The Industrial Ethernet Book, Jan. 2004, Issue 18." scheme="references">
+    
+    <meta name="citation_reference" content="Ellen Moyse, International Patent Report on Patentability for International Patent Application No. PCT/US2007/086809, dated Jun. 18, 2009, The International Bureau of WIPO, Switzerland." scheme="references">
+    
+    <meta name="citation_reference" content="Ellen Moyse, International Patents Report on Patentability for International Patent Application No. PCT/US2007/086810, dated Jun. 18, 2009, The International Bureau of WIPO, Switzerland." scheme="references">
+    
+    <meta name="citation_reference" content="International Search Report for International Patent Application No. PCT/US2007/086809." scheme="references">
+    
+    <meta name="citation_reference" content="Jorg Riegle R, Written Opinion for International Patent Application No. PCT/US2007/086810, European Patent Office, Germany." scheme="references">
+    
+    <meta name="citation_reference" content="Jorg Riegler, International Search Report for International Patent Application No. PCT/US2007/086810, European Patent Office, Germany." scheme="references">
+    
+    <meta name="citation_reference" content="Written Opinion for International Patent Application No. PCT/US2007/086809." scheme="references">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <style>
+      body { transition: none; }
+    </style>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27188110-4', 'auto');
+
+      version = 'patent-search.search_20191028_RC01';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.profilePicture = "";
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.html">
+    
+  </head>
+  <body unresolved>
+    
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.js"></script>
+    
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">US8450874B2 - User managed power system with security 
+        - Google Patents</h1>
+  <span itemprop="title">User managed power system with security 
+       </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/21/57/e7/b82847a7888284/US8450874.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">US8450874B2</dd>
+    <meta itemprop="numberWithoutCodes" content="8450874">
+    <meta itemprop="kindCode" content="B2">
+    <meta itemprop="publicationDescription" content="Patent ( having previously published pre-grant publication)">
+    
+    <span>US8450874B2</span>
+    
+    <span>US11/952,756</span>
+    
+    <span>US95275607A</span>
+    
+    <span>US8450874B2</span>
+    
+    <span>US 8450874 B2</span>
+    
+    <span>US8450874 B2</span>
+    
+    <span>US 8450874B2</span>
+    
+    <span>  </span>
+    
+    <span> </span>
+    
+    <span> </span>
+    
+    <span>US 95275607 A</span>
+    
+    <span>US95275607 A</span>
+    
+    <span>US 95275607A</span>
+    
+    <span>US 8450874 B2</span>
+    
+    <span>US8450874 B2</span>
+    
+    <span>US 8450874B2</span>
+    
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">US</dd>
+    <dd itemprop="countryName">United States</dd>
+
+    <dt>Prior art keywords</dt>
+    
+    <dd itemprop="priorArtKeywords" repeat>power</dd>
+    <dd itemprop="priorArtKeywords" repeat>user</dd>
+    <dd itemprop="priorArtKeywords" repeat>device</dd>
+    <dd itemprop="priorArtKeywords" repeat>server</dd>
+    <dd itemprop="priorArtKeywords" repeat>powered</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2006-12-08">2006-12-08</time></dd>
+
+    <dt>Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)</dt>
+    <dd itemprop="legalStatusIfi" itemscope>
+      <span itemprop="status">Active</span>, expires <time itemprop="expiration" datetime="2030-09-24">2030-09-24</time>
+    </dd>
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">US11/952,756</dd>
+
+  
+
+  <dt>Other versions</dt>
+  <dd itemprop="directAssociations" itemscope repeat>
+    
+    <a href="/patent/US20080136607A1/en">
+      <span itemprop="publicationNumber">US20080136607A1</span>
+      (<span itemprop="primaryLanguage">en</span>
+    </a>
+  </dd>
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>Gregory W. RATCLIFF</dd>
+  <dd itemprop="inventor" repeat>Philip R. ALDAG</dd>
+  <dt>Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)</dt>
+  <dd itemprop="assigneeCurrent" repeat>
+    Vertiv Corp
+  </dd>
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>Vertiv Corp</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2006-12-08">2006-12-08</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2007-12-07">2007-12-07</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2013-05-28">2013-05-28</time></dd>
+
+  
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2006-12-08">2006-12-08</time>
+    <span itemprop="title">Priority to US86921506P</span>
+    <span itemprop="type">priority</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-12-07">2007-12-07</time>
+    <span itemprop="title">Application filed by Vertiv Corp</span>
+    <span itemprop="type">filed</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">Vertiv Corp</span>
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-12-07">2007-12-07</time>
+    <span itemprop="title">Priority to US11/952,756</span>
+    <span itemprop="type">priority</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US8450874B2/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2007-12-12">2007-12-12</time>
+    <span itemprop="title">Assigned to LIEBERT CORPORATION</span>
+    <span itemprop="type">reassignment</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">LIEBERT CORPORATION</span>
+    
+    
+    <span itemprop="description" repeat>ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS).</span>
+    
+    <span itemprop="description" repeat>Assignors: ALDAG, PHILIP R., RATCLIFF, GREGORY W.</span>
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2008-06-12">2008-06-12</time>
+    <span itemprop="title">Publication of US20080136607A1</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US20080136607A1/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2013-05-28">2013-05-28</time>
+    <span itemprop="title">Application granted</span>
+    <span itemprop="type">granted</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2013-05-28">2013-05-28</time>
+    <span itemprop="title">Publication of US8450874B2</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US8450874B2/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2016-12-01">2016-12-01</time>
+    <span itemprop="title">Assigned to JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT</span>
+    <span itemprop="type">reassignment</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT</span>
+    
+    
+    <span itemprop="description" repeat>SECURITY AGREEMENT</span>
+    
+    <span itemprop="description" repeat>Assignors: ALBER CORP., ASCO POWER TECHNOLOGIES, L.P., AVOCENT CORPORATION, AVOCENT FREMONT, LLC, AVOCENT HUNTSVILLE, LLC, AVOCENT REDMOND CORP., ELECTRICAL RELIABILITY SERVICES, INC., EMERSON NETWORK POWER, ENERGY SYSTEMS, NORTH AMERICA, INC., LIEBERT CORPORATION, LIEBERT NORTH AMERICA, INC., NORTHERN TECHNOLOGIES, INC.</span>
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2016-12-02">2016-12-02</time>
+    <span itemprop="title">Assigned to JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT</span>
+    <span itemprop="type">reassignment</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT</span>
+    
+    
+    <span itemprop="description" repeat>SECURITY AGREEMENT</span>
+    
+    <span itemprop="description" repeat>Assignors: ALBER CORP., ASCO POWER TECHNOLOGIES, L.P., AVOCENT CORPORATION, AVOCENT FREMONT, LLC, AVOCENT HUNTSVILLE, LLC, AVOCENT REDMOND CORP., ELECTRICAL RELIABILITY SERVICES, INC., EMERSON NETWORK POWER, ENERGY SYSTEMS, NORTH AMERICA, INC., LIEBERT CORPORATION, LIEBERT NORTH AMERICA, INC., NORTHERN TECHNOLOGIES, INC.</span>
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2018-09-19">2018-09-19</time>
+    <span itemprop="title">Assigned to Vertiv Corporation</span>
+    <span itemprop="type">reassignment</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">Vertiv Corporation</span>
+    
+    
+    <span itemprop="description" repeat>CHANGE OF NAME (SEE DOCUMENT FOR DETAILS).</span>
+    
+    <span itemprop="description" repeat>Assignors: LIEBERT CORPORATION</span>
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-06-10">2019-06-10</time>
+    <span itemprop="title">Assigned to THE BANK OF NEW YORK MELLON TRUST COMPANY, N.A.</span>
+    <span itemprop="type">reassignment</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">THE BANK OF NEW YORK MELLON TRUST COMPANY, N.A.</span>
+    
+    
+    <span itemprop="description" repeat>SECOND LIEN SECURITY AGREEMENT</span>
+    
+    <span itemprop="description" repeat>Assignors: ELECTRICAL RELIABILITY SERVICES, INC., Vertiv Corporation, VERTIV ENERGY SYSTEMS, INC., VERTIV IT SYSTEMS, INC., VERTIV NORTH AMERICA, INC.</span>
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-11-17">2019-11-17</time>
+    <span itemprop="title">Application status is Active</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2030-09-24">2030-09-24</time>
+    <span itemprop="title">Adjusted expiration</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+
+  <h2>Links</h2>
+
+  <ul>
+    
+          <li itemprop="links" itemscope repeat>
+            <meta itemprop="id" content="usptoLink">
+            <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&d=PALL&s1=8450874.PN." itemprop="url" target="_blank"><span itemprop="text">USPTO</span></a>
+          </li>
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="usptoAssignmentLink">
+          <a href="https://assignment.uspto.gov/patent/index.html#/patent/search/resultFilter?searchInput=8450874" itemprop="url" target="_blank"><span itemprop="text">USPTO Assignment</span></a>
+        </li>
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=US&amp;NR=8450874B2&amp;KC=B2&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    
+      <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="globalDossierLink">
+          <a href="http://globaldossier.uspto.gov/#/result/patent/US/8450874/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="stackexchangeLink">
+          <a href="https://patents.stackexchange.com/questions/tagged/US8450874" itemprop="url"><span itemprop="text">Discuss</span></a>
+        </li>
+      
+  </ul>
+
+  
+  <ul itemprop="concept" itemscope>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004891</span>
+      <span itemprop="name">communication</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">9</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000009826</span>
+      <span itemprop="name">distribution</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">8</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001276</span>
+      <span itemprop="name">controlling effects</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">3</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000007514</span>
+      <span itemprop="name">turning</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000003860</span>
+      <span itemprop="name">storage</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">6</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">239000000047</span>
+      <span itemprop="name">products</span>
+      <span itemprop="domain">Substances</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">4</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000003044</span>
+      <span itemprop="name">adaptive</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">3</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004048</span>
+      <span itemprop="name">modification</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">3</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000006011</span>
+      <span itemprop="name">modification</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">3</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000018109</span>
+      <span itemprop="name">developmental process</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000009434</span>
+      <span itemprop="name">installation</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000003993</span>
+      <span itemprop="name">interaction</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">229920000638</span>
+      <span itemprop="name">styrene acrylonitrile</span>
+      <span itemprop="domain">Polymers</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004075</span>
+      <span itemprop="name">alteration</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000005516</span>
+      <span itemprop="name">engineering processes</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000000670</span>
+      <span itemprop="name">limiting</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000009740</span>
+      <span itemprop="name">moulding (composite fabrication)</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000002093</span>
+      <span itemprop="name">peripheral</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000002633</span>
+      <span itemprop="name">protecting</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004224</span>
+      <span itemprop="name">protection</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004044</span>
+      <span itemprop="name">response</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001360</span>
+      <span itemprop="name">synchronised</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+  </ul>
+  
+
+  <section>
+    <h2>Images</h2>
+    <ul>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/e7/87/17/cf84492234a349/US08450874-20130528-D00000.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/9c/d6/26/1692baae35d8ac/US08450874-20130528-D00000.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="10">
+            <meta itemprop="label" content="configurable power strip">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="859">
+              <meta itemprop="top" content="63">
+              <meta itemprop="right" content="1022">
+              <meta itemprop="bottom" content="165">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="12">
+            <meta itemprop="label" content="cord">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="80">
+              <meta itemprop="top" content="178">
+              <meta itemprop="right" content="170">
+              <meta itemprop="bottom" content="238">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="14">
+            <meta itemprop="label" content="communications port">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="146">
+              <meta itemprop="top" content="856">
+              <meta itemprop="right" content="218">
+              <meta itemprop="bottom" content="918">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="16">
+            <meta itemprop="label" content="power socket">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="150">
+              <meta itemprop="top" content="1282">
+              <meta itemprop="right" content="238">
+              <meta itemprop="bottom" content="1342">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/75/11/fd/7ec840d25aed87/US08450874-20130528-D00001.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/d4/38/40/ba7717d8539550/US08450874-20130528-D00001.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="10">
+            <meta itemprop="label" content="configurable power strip">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="933">
+              <meta itemprop="top" content="114">
+              <meta itemprop="right" content="1076">
+              <meta itemprop="bottom" content="213">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="12">
+            <meta itemprop="label" content="cord">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="119">
+              <meta itemprop="top" content="220">
+              <meta itemprop="right" content="196">
+              <meta itemprop="bottom" content="287">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="16">
+            <meta itemprop="label" content="power socket">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="184">
+              <meta itemprop="top" content="1326">
+              <meta itemprop="right" content="258">
+              <meta itemprop="bottom" content="1390">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/d5/6e/72/cc3acd45587792/US08450874-20130528-D00002.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/d8/90/1b/7bdbac0034dc00/US08450874-20130528-D00002.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="20">
+            <meta itemprop="label" content="Data center">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="59">
+              <meta itemprop="top" content="108">
+              <meta itemprop="right" content="158">
+              <meta itemprop="bottom" content="176">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="22">
+            <meta itemprop="label" content="multiple power strips">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="436">
+              <meta itemprop="top" content="1392">
+              <meta itemprop="right" content="521">
+              <meta itemprop="bottom" content="1458">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="24">
+            <meta itemprop="label" content="multiple power strips">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1328">
+              <meta itemprop="top" content="1396">
+              <meta itemprop="right" content="1404">
+              <meta itemprop="bottom" content="1455">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="26">
+            <meta itemprop="label" content="communications protocol">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="429">
+              <meta itemprop="top" content="170">
+              <meta itemprop="right" content="522">
+              <meta itemprop="bottom" content="234">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="28">
+            <meta itemprop="label" content="multiple power sockets">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1296">
+              <meta itemprop="top" content="810">
+              <meta itemprop="right" content="1410">
+              <meta itemprop="bottom" content="874">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="30">
+            <meta itemprop="label" content="server">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1067">
+              <meta itemprop="top" content="1268">
+              <meta itemprop="right" content="1144">
+              <meta itemprop="bottom" content="1325">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="32">
+            <meta itemprop="label" content="individual power sockets">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1324">
+              <meta itemprop="top" content="1064">
+              <meta itemprop="right" content="1408">
+              <meta itemprop="bottom" content="1128">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="34">
+            <meta itemprop="label" content="individual power sockets">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="440">
+              <meta itemprop="top" content="1060">
+              <meta itemprop="right" content="518">
+              <meta itemprop="bottom" content="1120">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="40">
+            <meta itemprop="label" content="step">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1358">
+              <meta itemprop="top" content="172">
+              <meta itemprop="right" content="1429">
+              <meta itemprop="bottom" content="234">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="40">
+            <meta itemprop="label" content="step">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="408">
+              <meta itemprop="top" content="1730">
+              <meta itemprop="right" content="528">
+              <meta itemprop="bottom" content="1800">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="42">
+            <meta itemprop="label" content="step">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="418">
+              <meta itemprop="top" content="1985">
+              <meta itemprop="right" content="497">
+              <meta itemprop="bottom" content="2045">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="44">
+            <meta itemprop="label" content="step">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="410">
+              <meta itemprop="top" content="2232">
+              <meta itemprop="right" content="496">
+              <meta itemprop="bottom" content="2299">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="46">
+            <meta itemprop="label" content="step">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="419">
+              <meta itemprop="top" content="2483">
+              <meta itemprop="right" content="495">
+              <meta itemprop="bottom" content="2540">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/12/8c/2c/d489de0904c8b1/US08450874-20130528-D00003.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/a4/86/3d/4ac94ee34aaf4f/US08450874-20130528-D00003.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="50">
+            <meta itemprop="label" content="Data center">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1615">
+              <meta itemprop="top" content="78">
+              <meta itemprop="right" content="1697">
+              <meta itemprop="bottom" content="173">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="52">
+            <meta itemprop="label" content="more power strips">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="434">
+              <meta itemprop="top" content="1569">
+              <meta itemprop="right" content="516">
+              <meta itemprop="bottom" content="1632">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="54">
+            <meta itemprop="label" content="more power strips">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1321">
+              <meta itemprop="top" content="1568">
+              <meta itemprop="right" content="1402">
+              <meta itemprop="bottom" content="1630">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="56">
+            <meta itemprop="label" content="mid-level manager">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="116">
+              <meta itemprop="top" content="504">
+              <meta itemprop="right" content="192">
+              <meta itemprop="bottom" content="570">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="58">
+            <meta itemprop="label" content="communications protocol">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="114">
+              <meta itemprop="top" content="179">
+              <meta itemprop="right" content="202">
+              <meta itemprop="bottom" content="245">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="60">
+            <meta itemprop="label" content="multiple power sockets">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1337">
+              <meta itemprop="top" content="972">
+              <meta itemprop="right" content="1411">
+              <meta itemprop="bottom" content="1066">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="62">
+            <meta itemprop="label" content="server">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1064">
+              <meta itemprop="top" content="1396">
+              <meta itemprop="right" content="1136">
+              <meta itemprop="bottom" content="1458">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/b4/b8/4d/b6b0e99b5221ee/US08450874-20130528-D00004.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/20/f8/37/aba2239dedbb04/US08450874-20130528-D00004.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="4">
+            <meta itemprop="id" content="70">
+            <meta itemprop="label" content="adaptable power strip">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="205">
+              <meta itemprop="top" content="152">
+              <meta itemprop="right" content="308">
+              <meta itemprop="bottom" content="217">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="4">
+            <meta itemprop="id" content="72">
+            <meta itemprop="label" content="SMTP server">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1920">
+              <meta itemprop="top" content="322">
+              <meta itemprop="right" content="1996">
+              <meta itemprop="bottom" content="388">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="4">
+            <meta itemprop="id" content="74">
+            <meta itemprop="label" content="email server">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1922">
+              <meta itemprop="top" content="1522">
+              <meta itemprop="right" content="2001">
+              <meta itemprop="bottom" content="1584">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="4">
+            <meta itemprop="id" content="76">
+            <meta itemprop="label" content="client computer">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="273">
+              <meta itemprop="top" content="1520">
+              <meta itemprop="right" content="348">
+              <meta itemprop="bottom" content="1585">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/3c/c5/01/64ffb45af60484/US08450874-20130528-D00005.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/5a/11/27/156791115a81ec/US08450874-20130528-D00005.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="5">
+            <meta itemprop="id" content="80">
+            <meta itemprop="label" content="adaptable power strip">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="209">
+              <meta itemprop="top" content="128">
+              <meta itemprop="right" content="290">
+              <meta itemprop="bottom" content="189">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="5">
+            <meta itemprop="id" content="82">
+            <meta itemprop="label" content="SMTP server">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1924">
+              <meta itemprop="top" content="299">
+              <meta itemprop="right" content="2013">
+              <meta itemprop="bottom" content="366">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="5">
+            <meta itemprop="id" content="84">
+            <meta itemprop="label" content="SMS Center">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1922">
+              <meta itemprop="top" content="1499">
+              <meta itemprop="right" content="2007">
+              <meta itemprop="bottom" content="1564">
+            </span>
+          </li>
+        </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>Classifications</h2>
+    
+    <ul>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F1/00</span>&mdash;<span itemprop="Description">Details not covered by groups G06F3/00 â€“ G06F13/00 and G06F21/00</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F1/26</span>&mdash;<span itemprop="Description">Power supply means, e.g. regulation thereof</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F1/266</span>&mdash;<span itemprop="Description">Arrangements to supply power to external peripherals either directly from the computer or under computer control, e.g. supply of power through the communication port, computer controlled power-strips</span>
+            <meta itemprop="Leaf" content="true">
+            
+            <meta itemprop="FirstCode" content="true">
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/00</span>&mdash;<span itemprop="Description">Security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/30</span>&mdash;<span itemprop="Description">Authentication, i.e. establishing the identity or authorisation of security principals</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/305</span>&mdash;<span itemprop="Description">Authentication, i.e. establishing the identity or authorisation of security principals by remotely controlling device operation</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/00</span>&mdash;<span itemprop="Description">Security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/70</span>&mdash;<span itemprop="Description">Protecting specific internal or peripheral components, in which the protection of a component leads to protection of the entire computer</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/81</span>&mdash;<span itemprop="Description">Protecting specific internal or peripheral components, in which the protection of a component leads to protection of the entire computer by operating on the power supply, e.g. enabling or disabling power-on, sleep or resume operations</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H05</span>&mdash;<span itemprop="Description">ELECTRIC TECHNIQUES NOT OTHERWISE PROVIDED FOR</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H05K</span>&mdash;<span itemprop="Description">PRINTED CIRCUITS; CASINGS OR CONSTRUCTIONAL DETAILS OF ELECTRIC APPARATUS; MANUFACTURE OF ASSEMBLAGES OF ELECTRICAL COMPONENTS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H05K7/00</span>&mdash;<span itemprop="Description">Constructional details common to different types of electric apparatus</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H05K7/14</span>&mdash;<span itemprop="Description">Mounting supporting structure in casing or on frame or rack</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H05K7/1485</span>&mdash;<span itemprop="Description">Servers; Data center rooms, e.g. 19-inch computer racks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H05K7/1488</span>&mdash;<span itemprop="Description">Cabinets therefore, e.g. chassis, racks</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H05K7/1492</span>&mdash;<span itemprop="Description">Cabinets therefore, e.g. chassis, racks having electrical distribution arrangements, e.g. power supply or data communications</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y</span>&mdash;<span itemprop="Description">GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10</span>&mdash;<span itemprop="Description">TECHNICAL SUBJECTS COVERED BY FORMER USPC</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T</span>&mdash;<span itemprop="Description">TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/00</span>&mdash;<span itemprop="Description">Electrical transmission or interconnection systems</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/25</span>&mdash;<span itemprop="Description">Plural load circuit systems</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/406</span>&mdash;<span itemprop="Description">Control of current or power</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/422</span>&mdash;<span itemprop="Description">Constant magnitude control</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/43</span>&mdash;<span itemprop="Description">By control of one or more load circuits</span>
+            <meta itemprop="Leaf" content="true">
+            <meta itemprop="Additional" content="true">
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y</span>&mdash;<span itemprop="Description">GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10</span>&mdash;<span itemprop="Description">TECHNICAL SUBJECTS COVERED BY FORMER USPC</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T</span>&mdash;<span itemprop="Description">TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/00</span>&mdash;<span itemprop="Description">Electrical transmission or interconnection systems</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/25</span>&mdash;<span itemprop="Description">Plural load circuit systems</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">Y10T307/461</span>&mdash;<span itemprop="Description">Selectively connected or controlled load circuits</span>
+            <meta itemprop="Leaf" content="true">
+            <meta itemprop="Additional" content="true">
+            
+          </li>
+          </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA111380743" lang="EN" load-source="patent-office">
+    <div num="p-0001" class="abstract">The present invention is related to user managed power systems with security. The invention encompasses a method and system of managing a power system wherein a data center user determines whether there is a desire to control remote power supply socket assigned to the user&#39;s data module. The data center user is able to sign into the remote power supply through a security protocol. Then the data center user can gain control over the remote power supply socket assigned to the user&#39;s data module. Finally, this allows the data center user to remotely control the power supply socket assigned to the user&#39;s data module.</div>
+  </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    
+    <div itemprop="content" html><div mxw-id="PDES59281865" lang="EN" load-source="patent-office" class="description">
+    
+    <heading>CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+    <p num="p-0002">This application claims benefit of and priority to U.S. provisional patent application Ser. No. 60/869,215, filed on Dec. 8, 2006, the entire contents of which are incorporated herein by reference for all purposes.</p>
+    
+    
+    <heading>STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH OR DEVELOPMENT</heading>
+    <p num="p-0003">Not applicable.</p>
+    <heading>REFERENCE TO APPENDIX</heading>
+    <p num="p-0004">Not applicable.</p>
+    <heading>BACKGROUND OF THE INVENTION</heading>
+    <p num="p-0005">1. Field of the Invention</p>
+    <p num="p-0006">The invention disclosed and taught herein relates generally to management of remote power systems; and more specifically related to user managed power systems.</p>
+    <p num="p-0007">2. Description of the Related Art</p>
+    <p num="p-0008">A data center is a facility used for housing electronic equipment, typically a large number of computers, communications, and peripheral equipment. As the name implies, a data center is usually maintained by an organization for the purpose of handling the data necessary for its operations. A bank, for example, may have a data center, where all of its customers&#39; account information is maintained and transactions involving these accounts are carried out. Practically every company that is mid-sized or larger has some kind of data center and larger companies often have dozens of data centers. Most large cities have many purpose-built data center buildings in secure locations close to telecommunications services.</p>
+    <p num="p-0009">A data center may occupy one room of a building, one or more floors, or an entire building. Most of the equipment is often in the form of servers organized in rack and/or cabinets, which are usually placed in single rows forming corridors between them. This allows people access to the front and rear of each cabinet. Servers differ greatly in size from 1U servers to huge storage silos that occupy many tiles on the floor. Some equipment such as mainframe computers, blade chassis and storage devices are often as big as the racks themselves, and are placed alongside them.</p>
+    <p num="p-0010">Communications in data centers today are most often based on networks running the Internet protocol (IP) suite. Data centers typically contain routers and switches that transport data traffic between the servers and the outside world. Redundancy is sometimes provided by sourcing the network connections from multiple vendors. Some of the servers at the data center are used for running the basic Internet and intranet services needed by internal users in the organization; such as email servers, proxy servers, DNS servers, etc. Network security elements are also usually deployed, such as firewalls, VPN gateways, Intrusion detection systems, etc. Also common are monitoring systems for the network and some of the applications. Additional offsite monitoring systems are also typical, in case of a failure of communications inside the data center.</p>
+    <p num="p-0011">Many IT and networking centers are experiencing higher load densities with more servers and components packed into racks and cabinets. This has created a clear need to monitor and manage the power supplied to each and all of these loads. IT and Facility Managers have the basic need to reliably and efficiently distribute power in the rack or cabinet to their networking equipment. There may be some differences depending on application and requirements these users have with respect to the functionality and connectivity of their devices. In general, these needs are classified by the capabilities of the physical device, its functional behavior, its network infrastructure and its software management models. Furthermore, market needs are addressed by certain expected product requirements.</p>
+    <p num="p-0012">Each data center is often equipped with controllable and configurable power strips. One such example is the MP Advanced power strip with OpenComms EM PDU. Another prior art example is the MP Advanced power strip with the MP Advanced Access Server. Both products are available from Liebert Corporation.</p>
+    <p num="p-0013">One of the more troublesome and risky practices in data centers occurs when a server or system locks up and a system administrator requests a power-off reboot. Ideally, the system administrator has individual access to the device and should be able to control the device directly, including power.</p>
+    <p num="p-0014">Previously all solutions have been hierarchical from the uninterruptible power supply (UPS) to the power distribution unit (PDU) to power strip to socket, and have been managed, installed, and controlled by data center staff. In a typical prior art system, such as a data center, there is an individual in charge of, for example, the email systems. There is also, generally, an individual in charge of all the Web servers. If the Web server administrator wishes to do Web page maintenance of some kind, such as reboot the Web server, the administrator typically calls in to the data center to request a reboot by the data center staff.</p>
+    <p num="p-0015">The present inventions are directed to improve methods and apparatuses allowing end users to manage power to their servers directly and more efficiently.</p>
+    <heading>BRIEF SUMMARY OF THE INVENTION</heading>
+    <p num="p-0016">A method of managing a power to a remote device is contemplated that comprises determining whether manipulation of a remote power supply assigned to a specific device is permitted; accessing the remote power supply through a security protocol; and manipulating the power supplied to the device.</p>
+    <p num="p-0017">In addition, a user managed power system is contemplated comprising a powered user device at a first location; an interface at a second location remote from the first location and connected to the first location for data communication between the interface and the device with a security protocol; a power distribution device supplying power to the user device and in data communication with the user device and interface; and wherein the a command entered at the interface causes manipulation of the power supplied to the device.</p>
+    
+    
+    <description-of-drawings>
+      <heading>BRIEF DESCRIPTION OF THE SEVERAL VIEWS OF THE DRAWINGS</heading>
+      <p num="p-0018"> <figref idrefs="DRAWINGS">FIG. 1</figref> illustrates one embodiment of an IP configurable power strip for utilization in the present system.</p>
+      <p num="p-0019"> <figref idrefs="DRAWINGS">FIG. 2</figref> illustrates a server controlled according to the present invention.</p>
+      <p num="p-0020"> <figref idrefs="DRAWINGS">FIG. 3</figref> illustrates a flow chart embodying the present invention.</p>
+      <p num="p-0021"> <figref idrefs="DRAWINGS">FIG. 4</figref> illustrates an embodiment of the present invention with a mid-level asset manager.</p>
+      <p num="p-0022"> <figref idrefs="DRAWINGS">FIG. 5</figref> illustrates a method of sending email alerts to a client from the system.</p>
+      <p num="p-0023"> <figref idrefs="DRAWINGS">FIG. 6</figref> illustrates a method of sending SMS messages to a client from the system.</p>
+    </description-of-drawings>
+    
+    
+    <heading>DETAILED DESCRIPTION</heading>
+    <p num="p-0024">The Figures described above and the written description of specific structures and functions below are not presented to limit the scope of what Applicants have invented or the scope of the appended claims. Rather, the Figures and written description are provided to teach any person skilled in the art to make and use the inventions for which patent protection is sought. Those skilled in the art will appreciate that not all features of a commercial embodiment of the inventions are described or shown for the sake of clarity and understanding. Persons of skill in this art will also appreciate that the development of an actual commercial embodiment incorporating aspects of the present inventions will require numerous implementation-specific decisions to achieve the developer&#39;s ultimate goal for the commercial embodiment. Such implementation-specific decisions may include, and likely are not limited to, compliance with system-related, business-related, government-related and other constraints, which may vary by specific implementation, location and from time to time. While a developer&#39;s efforts might be complex and time-consuming in an absolute sense, such efforts would be, nevertheless, a routine undertaking for those of skill this art having benefit of this disclosure. It must be understood that the inventions disclosed and taught herein are susceptible to numerous and various modifications and alternative forms. Lastly, the use of a singular term, such as, but not limited to, â€œa,â€ is not intended as limiting of the number of items. Also, the use of relational terms, such as, but not limited to, â€œtop,â€ â€œbottom,â€ â€œleft,â€ â€œright,â€ â€œupper,â€ â€œlower,â€ â€œdown,â€ â€œup,â€ â€œside,â€ and the like are used in the written description for clarity in specific reference to the Figures and are not intended to limit the scope of the invention or the appended claims.</p>
+    <p num="p-0025">In general, Applicants have created a method of managing a power to a remote device that comprises determining whether manipulation of a remote power supply assigned to a specific device is permitted; accessing the remote power supply through a security protocol; and manipulating the power supplied to the device. A user managed power system may comprise a powered user device at a first location; an interface at a second location remote from the first location and connected to the first location for data communication between the interface and the device with a security protocol; a power distribution device supplying power to the user device and in data communication with the user device and interface; and wherein the a command entered at the interface causes manipulation of the power supplied to the device.</p>
+    <p num="p-0026">One embodiment of the present invention comprises an IP configurable and manageable power strip <b>10</b> as shown in <figref idrefs="DRAWINGS">FIG. 1</figref>, although any IP configurable power strip is contemplated. Power is supplied to the strip, such as by cord <b>12</b>. The configurable power strip <b>10</b> further comprises at least one communications port <b>14</b>. The communications port may be adapted to provide support for both IEEE 802.3 compliant 10 Base T, 100 BaseT Ethernet and Gigabit Ethernet networks, or some other communication protocol. The communications port <b>10</b> is preferably a dual RJ-45 modular connector. Furthermore, the power strip <b>10</b> may be adapted to provide support as a powered device (PD) for Power-Over-Ethernet operation for the 10 Base T, 100 BaseT Ethernet and Gigabit Ethernet, or other communication protocol, port. The power strip is further comprised of at least one power socket <b>16</b>.</p>
+    <p num="p-0027">A commercial example of an IP configurable and manageable power strip is the MP Advanced power strips as sold by the Liebert Corporation. Monitoring and controlling of the MP Advanced power strips is accomplished using the OpenComms EM PDU or the Liebert IntelliSlot Asset Manager and IntelliRack, which includes a basic web interface. Another commercial embodiment is an MP Advanced power strip with the MP Advanced Access Server. Both products are available from Liebert Corporation. The Web interface of the MP Advanced Access Server offers summary status of the control module, power strip and each module installed in the access server. The Web interface also permits the user to access information about the individual power strips and controls for each receptacle on any power strip connected to the MP Advanced Access Server.</p>
+    <p num="p-0028"> <figref idrefs="DRAWINGS">FIG. 2</figref> illustrates a typical setup at a data center. Data center <b>20</b> comprises multiple power strips <b>22</b> and <b>24</b>. Each power strip is given an individual IP Address and is connected a communications protocol <b>26</b>, such as the Internet, a Web, SNMP, or a local network. Each power strip comprises multiple power sockets <b>28</b>. The data center further comprises a server <b>30</b>, such as, but not limited to, an e-mail server. The server draws its power from the individual power sockets <b>32</b> and <b>34</b> of the power strips.</p>
+    <p num="p-0029">Under certain circumstances, it may become necessary for an administrator of a server, such as an email server, to request that actions be performed with respect to the power supplied to that server. This may include performing a â€œpower-offâ€ reboot of the server. The present invention allows the individual power sockets to be controlled remotely by the server user by the same method and security methodology as the user controls the server. For example, the present invention allows for a power strip design that allows for the complete management of the power strip to be performed using the same security methodology employed by the server being powered. If the owner of a rack space in a data center has control access on, or privilege to, a piece of equipment, then the security software will enable them and grant them direct control of the particular power socket that supplies power to the system by the same method.</p>
+    <p num="p-0030">For example, and without limitation, if a Storage Area Network (SAN) is controlled and managed via a Radius authentication server, then this invention provides Web-based interface that ties the same SAN authentication to the power strip receptacle that supplies that product. SANs are distinguished from other forms of network storage by the low-level access method that they use. Access methods on SANs are very similar to those used for internal disk drives, like ATA and SCSI. In a storage network, a server issues a request for specific blocks, or data segments, from specific disk drives. This method is known as block storage. The device acts in a similar fashion to an internal drive, accessing the specified block, and sending the response across the network.</p>
+    <p num="p-0031">RADIUS Authentication is known in the art. Remote Authentication Dial In User Service (RADIUS) is an AAA (authentication, authorization and accounting) protocol for applications such as network access or IP mobility developed by Interlink Networks. It is intended to work in both local and roaming situations. Some ISPs (commonly modem, DSL, or wireless 802.11 services) require you to enter a username and password in order to connect on to the Internet. Before access to the network is granted, this information is passed to a Network Access Server (NAS) device over a protocol, then to a RADIUS server over the RADIUS protocol. The RADIUS server checks that the information is correct using authentication schemes like PAP, CHAP or EAP. If accepted, the server will then authorize access to the ISP system and select an IP address, L2TP parameters, etc. The RADIUS server will also be notified if and when the session starts and stops, so that the user can be billed accordingly; or the data can be used for statistical purposes. Additionally RADIUS is widely used by VoIP service providers. It is used to pass login credentials of a SIP end point (like a broadband phone) to a SIP Registrar using digest authentication, and then to RADIUS server using RADIUS.</p>
+    <p num="p-0032">Another embodiment of the present invention is adapted for a power socket running a Windows 2003 system. Normally, the load utilizing that socket is controlled by an Active Directory Secured Microsoft Windows Server. An Active Directory Secured Microsoft Windows Server is an implementation of LDAP directory services by Microsoft for use in Windows environments. An Active Directory Secured Microsoft Windows Server allows administrators to assign enterprise-wide policies, deploy programs to many computers, and apply critical updates to an entire organization. An Active Directory Secured Microsoft Windows Server stores information and settings relating to an organization in a central, organized, accessible database. An Active Directory Secured Microsoft Windows Server networks can vary from a small installation with a few hundred objects, to a large installation with millions of objects. In this embodiment of the present invention, the Active Directory Secured Microsoft Windows Server may be used to control and manage the power to the load.</p>
+    <p num="p-0033">Another typical security service that allows the consumer to control the power sockets is Kerberos, which is freely available from the Massachusetts Institute of Technology. Kerberos is a computer network authentication protocol, which allows individuals communicating over an insecure network to prove their identity to one another in a secure manner. Kerberos prevents eavesdropping or replay attacks, and ensures the integrity of the transmitted data. It provides mutual authenticationâ€”both the user and the server verify each other&#39;s identity. Kerberos builds on symmetric key cryptography and uses, as its basis, the Needham-Schroeder protocol. It makes use of a trusted third party, termed a Key Distribution Center (KDC), which consists of two logically separate parts: an Authentication Server (AS) and a Ticket Granting Server (TGS). Kerberos works on the basis of â€œticketsâ€ which serve to prove the identity of users. Kerberos maintains a database of secret keys; each entity on the networkâ€”whether a client or a serverâ€”shares a secret key known only to itself and to Kerberos. Knowledge of this key serves to prove an entity&#39;s identity. For communication between two entities, Kerberos generates a session key, which they can use to secure their interactions. In this embodiment of the invention the user access and control are managed by the Kerberos systems.</p>
+    <p num="p-0034">Further, the present invention allows control of the adaptive power strips through a web based interaction, such as an HTTPS or HTTP interface, which can also provide security. One aspect of this invention is to connect the plurality of adaptive power strips to a mid level asset manager as shown in <figref idrefs="DRAWINGS">FIG. 4</figref>. Data center <b>50</b> comprises one or more power strips <b>52</b> and <b>54</b>. Each power strip is given an individual IP Address and is connected a mid-level manager <b>56</b>. The mid-level manager is in turn connected to a communications protocol <b>58</b>, such as the Internet, a Web, SNMP, or a local network. Each power strip comprises multiple power sockets <b>60</b>. The data center further comprises a server <b>62</b>, such as, but not limited to, an e-mail server.</p>
+    <p num="p-0035">The midlevel manager may consist of a serial interface card and a web card. The web card can provide web-management capability for enhanced communications and control. The mid-level manager allows the system of adaptive power strips to be operated over the network using a web browser running on a computer. The web interface can be used by a client computer running any modern operating system (e.g. Windows, Mac OS X, Linux, etc) since web browser programs are available for all of them.</p>
+    <p num="p-0036"> <figref idrefs="DRAWINGS">FIG. 3</figref> illustrates an embodiment of a method utilizing the current invention. At step <b>40</b> an administrator of an email server desires to control the power output of the email server. At step <b>42</b>, the administrator logs into the email server through a typical security protocol, such as Active Directory, RADIUS, or Kerberos. At step <b>44</b>, the administrator gains control over the email server. He is also given access to control the power socket to that server. The interface with the power control only shows the strips and the sockets associated with his email server. At step <b>46</b>, the administrator performs a reboot, such as by momentarily interrupting power to the email server, or other necessary power control and monitoring.</p>
+    <p num="p-0037">Another advantage of the current invention is that systems utilizing this invention will not require personnel at the data center to be directly involved in the day to day operation of the power sockets running a piece of equipment. The security for controlling the power strip socket is kept up-to-date with the security access for the server or item managed. For example, if a user loses their access rights to a server, their access rights to control the power to the server are automatically removed also and kept synchronized with the power strips.</p>
+    <p num="p-0038">A further embodiment of the current invention is a system that is able to notify the user of events, errors, and warnings via short message service (SMS) or email. <figref idrefs="DRAWINGS">FIG. 5</figref> is a block diagram that shows how an email message is sent to a recipient in a preferred embodiment. The following steps are taken to deliver an email message. First, the email is sent by the adaptable power strip <b>70</b> to the configured SMTP server <b>72</b>. The SMTP server <b>72</b> delivers the email to the email server <b>74</b> specified in the email address. The email is delivered to an email account specified in the email address. The client computer <b>76</b> retrieves the email message from the mail server. POP3, Microsoft Exchange, and web interfaces are examples of how a client may retrieve an email message from the destination email server.</p>
+    <p num="p-0039"> <figref idrefs="DRAWINGS">FIG. 6</figref> illustrates a block diagram that shows how a SMS message is sent to a mobile device. From the point of view of the adaptable power strip <b>80</b>, a SMS message is initiated by sending an email message to one or more configured email addresses. The following steps are taken to deliver a SMS message. First, the SMS email is sent by the adaptable power strip <b>80</b> to the configured SMTP server <b>82</b>. The SMTP server <b>82</b> delivers the SMS email to the specified email address. This SMS email is delivered to an email account monitored by a SMS Center <b>84</b>. The SMS Center <b>84</b> delivers the SMS message to the mobile device specified in the â€œtoâ€ address of the SMS email. Some routing of SMS messages may occur after being received by the SMS Center, however it is not shown in the diagram.</p>
+    <p num="p-0040">Other and further embodiments utilizing one or more aspects of the inventions described above can be devised without departing from the spirit of Applicant&#39;s invention. Further, the various methods and embodiments of the invention can be included in combination with each other to produce variations of the disclosed methods and embodiments. Discussion of singular elements can include plural elements and vice-versa.</p>
+    <p num="p-0041">The order of steps can occur in a variety of sequences unless otherwise specifically limited. The various steps described herein can be combined with other steps, interlineated with the stated steps, and/or split into multiple steps. Similarly, elements have been described functionally and can be embodied as separate components or can be combined into components having multiple functions.</p>
+    <p num="p-0042">The inventions have been described in the context of preferred and other embodiments and not every embodiment of the invention has been described. Obvious modifications and alterations to the described embodiments are available to those of ordinary skill in the art. The disclosed and undisclosed embodiments are not intended to limit or restrict the scope or applicability of the invention conceived of by the Applicants, but rather, in conformity with the patent laws, Applicants intend to fully protect all such modifications and improvements that come within the scope or range of equivalent of the following claims.</p>
+    
+  </div>
+  </div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">20</span>)</h2>
+    
+    <div itemprop="content" html><div mxw-id="PCLM52211716" lang="EN" load-source="patent-office" class="claims">
+    <claim-statement>What is claimed is:</claim-statement>
+    <div class="claim"> <div id="CLM-00001" num="00001" class="claim">
+      <div class="claim-text">1. A method of managing power to a remote device comprising:
+<div class="claim-text">connecting the remote device to an IP configurable power strip having multiple power sockets, the remote device receiving power through a specific one of the power sockets, the remote device and the IP configurable power strip each adapted to require authentication by a user;</div>
+<div class="claim-text">connecting each of the IP configurable power strip and the remote device to a network, the IP configurable power strip having an IP address assigned thereto;</div>
+<div class="claim-text">determining whether the user has been successfully authenticated on the remote device in accordance with a predefined security protocol, the IP configurable power strip configured to permit the user control of the specific one of the power sockets over the network without authentication by the user on the IP configurable power strip if the user has been successfully authenticated on the remote device;</div>
+<div class="claim-text">accessing the IP configurable power strip over the network using the IP address assigned thereto; and</div>
+<div class="claim-text">manipulating the power supplied to the remote device by controlling the specific one of the power sockets on the IP configurable power strip over the network.</div>
+</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00002" num="00002" class="claim">
+      <div class="claim-text">2. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the remote device is a server.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00003" num="00003" class="claim">
+      <div class="claim-text">3. The method of <claim-ref idref="CLM-00002">claim 2</claim-ref>, wherein the server is a computer server or web hosting server.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00004" num="00004" class="claim">
+      <div class="claim-text">4. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, further wherein manipulating the power comprises turning off, on, and off then on the power supplied to the remote device.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00005" num="00005" class="claim">
+      <div class="claim-text">5. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the security protocol is Kerberos.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00006" num="00006" class="claim">
+      <div class="claim-text">6. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the security protocol is Active Desktop.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00007" num="00007" class="claim">
+      <div class="claim-text">7. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the security protocol is an external security protocol such as RADIUS.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00008" num="00008" class="claim">
+      <div class="claim-text">8. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising accessing the specific power socket assigned to the device.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00009" num="00009" class="claim">
+      <div class="claim-text">9. The method of <claim-ref idref="CLM-00008">claim 8</claim-ref>, wherein manipulating the power comprises turning off, on, and off then on the power supplied to the device.</div>
+    </div>
+    </div> <div class="claim"> <div id="CLM-00010" num="00010" class="claim">
+      <div class="claim-text">10. A user managed power system comprising:
+<div class="claim-text">an interface configured for data communication with a powered user device at a first location, the interface residing at a second location remote from the first location and connected to the powered user device at the first location;</div>
+<div class="claim-text">a power distribution device at the first location having a plurality of power sockets and supplying power to the powered user device through a specific one of the power sockets, the power distribution device in data communication with the interface, the powered user device and the power distribution device each adapted to require authentication by a user; and</div>
+<div class="claim-text">wherein, upon successful authentication of the user on the powered user device in accordance with a security protocol, a command entered at the interface causes manipulation of the power supplied to the powered user device through the specific one of the power sockets without authentication by the user on the power distribution device.</div>
+</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00011" num="00011" class="claim">
+      <div class="claim-text">11. The user managed power system of <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the user device is a server.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00012" num="00012" class="claim">
+      <div class="claim-text">12. The user managed power system of <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the security protocol is Kerberos.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00013" num="00013" class="claim">
+      <div class="claim-text">13. The user managed power system of <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the security protocol is Active Desktop.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00014" num="00014" class="claim">
+      <div class="claim-text">14. The user managed power system of <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the security protocol is an external security protocol, such as RADIUS.</div>
+    </div>
+    </div> <div class="claim"> <div id="CLM-00015" num="00015" class="claim">
+      <div class="claim-text">15. A user managed power system comprising:
+<div class="claim-text">one or more AC power supplies configured to be connected to a powered user device at a first location, each AC power supply having multiple power sockets thereon, the one or more AC power supplies providing power to the powered user device through a specific power socket thereof, the powered user device and the one or more AC power supplies each requiring authentication by a user; and</div>
+<div class="claim-text">a network interface residing in each AC power supply, the network interface configured to connect each AC power supply to an authentication server at a second location using a communications protocol, the authentication server configured to authenticate the user on the powered user device;</div>
+<div class="claim-text">wherein each AC power supply is further configured to allow the power provided to the powered user device through the specific power socket thereof to be manipulated by the user without authentication by the user on the AC power supply upon successful authentication of the user on the powered user device.</div>
+</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00016" num="00016" class="claim">
+      <div class="claim-text">16. The user managed power system of <claim-ref idref="CLM-00015">claim 15</claim-ref>, further comprising a mid-level manager connected to the one or more AC power supplies.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00017" num="00017" class="claim">
+      <div class="claim-text">17. The user managed power system of <claim-ref idref="CLM-00016">claim 16</claim-ref>, wherein the one or more AC power supplies is adapted to be controlled remotely by a user through the mid-level manager.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00018" num="00018" class="claim">
+      <div class="claim-text">18. The user managed power system of <claim-ref idref="CLM-00017">claim 17</claim-ref> wherein the user controls the one or more AC power supplies through a web based interface.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00019" num="00019" class="claim">
+      <div class="claim-text">19. The user managed power system of <claim-ref idref="CLM-00018">claim 18</claim-ref> wherein the web based interface contains security protocols.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00020" num="00020" class="claim">
+      <div class="claim-text">20. The user managed power system of <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the one or more AC power supplies are power strips. </div>
+    </div>
+  </div> </div>
+  </div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+        <span itemprop="applicationNumber">US11/952,756</span>
+        <span itemprop="priorityDate">2006-12-08</span>
+        <span itemprop="filingDate">2007-12-07</span>
+        <span itemprop="title">User managed power system with security 
+       </span>
+        <span itemprop="ifiStatus">Active</span>
+        <span itemprop="ifiExpiration">2030-09-24</span>
+        <a href="/patent/US8450874B2/en">
+            <span itemprop="representativePublication">US8450874B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+        </a>
+    </section>
+
+    <h2>Priority Applications (2)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">US86921506P</span>
+                   <span itemprop="isUsProvisional">true</span>
+                   
+                <td itemprop="priorityDate">2006-12-08</td>
+                <td itemprop="filingDate">2006-12-08</td>
+                <td itemprop="title"></td>
+              </tr><tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">US11/952,756</span>
+                   
+                   <a href="/patent/US8450874B2/en">
+                        <span itemprop="representativePublication">US8450874B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2006-12-08</td>
+                <td itemprop="filingDate">2007-12-07</td>
+                <td itemprop="title">User managed power system with security 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    <h2>Applications Claiming Priority (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="appsClaimingPriority" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">US11/952,756</span>
+                   <a href="/patent/US8450874B2/en">
+                        <span itemprop="representativePublication">US8450874B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2006-12-08</td>
+                <td itemprop="filingDate">2007-12-07</td>
+                <td itemprop="title">User managed power system with security 
+       </td>
+              </tr>
+           </tbody>
+       </table>
+
+    
+
+    
+
+    <h2>Publications (2)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Publication Number</th>
+                    <th>Publication Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">US20080136607A1</span>
+                   
+                   <a href="/patent/US20080136607A1/en">US20080136607A1
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2008-06-12</td>
+              </tr><tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">US8450874B2</span>
+                   
+                   <span itemprop="thisPatent">true</span>
+                   <a href="/patent/US8450874B2/en">US8450874B2
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2013-05-28</td>
+              </tr>
+           </tbody>
+        </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=39431004</h2>
+
+    <h2>Family Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Title</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="applications" itemscope repeat>
+                <td>
+                    <span itemprop="applicationNumber">US11/952,756</span>
+                    <span itemprop="ifiStatus">Active</span>
+                    <span itemprop="ifiExpiration">2030-09-24</span>
+                    <a href="/patent/US8450874B2/en">
+                        <span itemprop="representativePublication">US8450874B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                </td>
+                <td itemprop="priorityDate">2006-12-08</td>
+                <td itemprop="filingDate">2007-12-07</td>
+                <td itemprop="title">User managed power system with security 
+       </td>
+              </tr>
+           </tbody>
+        </table>
+
+    
+
+    
+
+    <h2>Country Status (3)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">US</span>
+                (<span itemprop="num">1</span>)
+              <meta itemprop="thisCountry" content="true">
+            </td>
+            <td>
+              <a href="/patent/US8450874B2/en">
+                <span itemprop="representativePublication">US8450874B2</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">EP</span>
+                (<span itemprop="num">1</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/EP2095203B1/en">
+                <span itemprop="representativePublication">EP2095203B1</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">WO</span>
+                (<span itemprop="num">1</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/WO2008073833A2/en">
+                <span itemprop="representativePublication">WO2008073833A2</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    <h2>Cited By (6)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20120153746A1/en">
+              <span itemprop="publicationNumber">US20120153746A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2010-12-20</td>
+          <td itemprop="publicationDate">2012-06-21</td>
+          <td><span itemprop="assigneeOriginal">Nai-Chien Chang</span></td>
+          <td itemprop="title">Network connector module with switching function 
+       </td>
+        </tr><tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20140118892A1/en">
+              <span itemprop="publicationNumber">US20140118892A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2010-04-07</td>
+          <td itemprop="publicationDate">2014-05-01</td>
+          <td><span itemprop="assigneeOriginal">The Wiremold Company</span></td>
+          <td itemprop="title">Customizable bus systems 
+       </td>
+        </tr><tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20140144670A1/en">
+              <span itemprop="publicationNumber">US20140144670A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2012-07-26</td>
+          <td itemprop="publicationDate">2014-05-29</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Multi-position input cord assembly for a power distribution unit 
+       </td>
+        </tr><tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9438017B2/en">
+              <span itemprop="publicationNumber">US9438017B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2012-07-26</td>
+          <td itemprop="publicationDate">2016-09-06</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Multi-position input cord assembly for a power distribution unit 
+       </td>
+        </tr><tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9640960B2/en">
+              <span itemprop="publicationNumber">US9640960B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2010-04-07</td>
+          <td itemprop="publicationDate">2017-05-02</td>
+          <td><span itemprop="assigneeOriginal">The Wiremold Company</span></td>
+          <td itemprop="title">Customizable bus systems 
+       </td>
+        </tr><tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9804210B2/en">
+              <span itemprop="publicationNumber">US9804210B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2015-08-31</td>
+          <td itemprop="publicationDate">2017-10-31</td>
+          <td><span itemprop="assigneeOriginal">Comcast Cable Communications, Llc</span></td>
+          <td itemprop="title">Authentication, authorization, and/or accounting of power-consuming devices 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Families Citing this family (13)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/DE112009000697T5/en">
+              <span itemprop="publicationNumber">DE112009000697T5</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-03-19</td>
+          <td itemprop="publicationDate">2011-02-10</td>
+          <td><span itemprop="assigneeOriginal">Liebert Corp., Columbus</span></td>
+          <td itemprop="title">Customizable power strip 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8876548B2/en">
+              <span itemprop="publicationNumber">US8876548B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2008-03-31</td>
+          <td itemprop="publicationDate">2014-11-04</td>
+          <td><span itemprop="assigneeOriginal">Panduit Corp.</span></td>
+          <td itemprop="title">Rack unit outlet spacing for power outlet units 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9178768B2/en">
+              <span itemprop="publicationNumber">US9178768B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-01-07</td>
+          <td itemprop="publicationDate">2015-11-03</td>
+          <td><span itemprop="assigneeOriginal">Ixia</span></td>
+          <td itemprop="title">Methods, systems, and computer readable media for combining voice over internet protocol (VoIP) call data with geographical information 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/GB0910025D0/en">
+              <span itemprop="publicationNumber">GB0910025D0</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-06-10</td>
+          <td itemprop="publicationDate">2009-07-22</td>
+          <td><span itemprop="assigneeOriginal">Bgm Group The Ltd</span></td>
+          <td itemprop="title">Apparatus and method for power management 
+     </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8627118B2/en">
+              <span itemprop="publicationNumber">US8627118B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2010-05-24</td>
+          <td itemprop="publicationDate">2014-01-07</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Chassis power allocation using expedited power permissions 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8805998B2/en">
+              <span itemprop="publicationNumber">US8805998B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2010-06-11</td>
+          <td itemprop="publicationDate">2014-08-12</td>
+          <td><span itemprop="assigneeOriginal">Eaton Corporation</span></td>
+          <td itemprop="title">Automatic matching of sources to loads 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US10205319B2/en">
+              <span itemprop="publicationNumber">US10205319B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2010-06-11</td>
+          <td itemprop="publicationDate">2019-02-12</td>
+          <td><span itemprop="assigneeOriginal">Eaton Intelligent Power Limited</span></td>
+          <td itemprop="title">Automatic matching of sources to loads 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2689598B1/en">
+              <span itemprop="publicationNumber">EP2689598B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2011-03-25</td>
+          <td itemprop="publicationDate">2015-11-25</td>
+          <td><span itemprop="assigneeOriginal">Certicom Corp.</span></td>
+          <td itemprop="title">Interrogating an authentication device 
+     </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/CN103503366B/en">
+              <span itemprop="publicationNumber">CN103503366B</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2011-05-06</td>
+          <td itemprop="publicationDate">2016-10-12</td>
+          <td><span itemprop="assigneeOriginal">å¡žå°”è’‚å¡å§†å…¬å¸</span></td>
+          <td itemprop="title">  Management data for authentication devices  </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US8949053B2/en">
+              <span itemprop="publicationNumber">US8949053B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2011-07-29</td>
+          <td itemprop="publicationDate">2015-02-03</td>
+          <td><span itemprop="assigneeOriginal">Schneider Electric It Corporation</span></td>
+          <td itemprop="title">Systems and methods for current and voltage monitoring 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9369290B2/en">
+              <span itemprop="publicationNumber">US9369290B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2012-11-30</td>
+          <td itemprop="publicationDate">2016-06-14</td>
+          <td><span itemprop="assigneeOriginal">Certicom Corp.</span></td>
+          <td itemprop="title">Challenge-response authentication using a masked response value 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9727720B2/en">
+              <span itemprop="publicationNumber">US9727720B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2012-11-30</td>
+          <td itemprop="publicationDate">2017-08-08</td>
+          <td><span itemprop="assigneeOriginal">Certicom Corp.</span></td>
+          <td itemprop="title">Challenge-response authentication using a masked response value 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US9736051B2/en">
+              <span itemprop="publicationNumber">US9736051B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2014-04-30</td>
+          <td itemprop="publicationDate">2017-08-15</td>
+          <td><span itemprop="assigneeOriginal">Ixia</span></td>
+          <td itemprop="title">Smartap arrangement and methods thereof 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Citations (28)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO1993010615A1/en">
+              <span itemprop="publicationNumber">WO1993010615A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1991-11-15</td>
+          <td itemprop="publicationDate">1993-05-27</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Systeme for protecting and restarting computers and peripherals at remote sites which are accessible by telephone communication 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5281859A/en">
+              <span itemprop="publicationNumber">US5281859A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1991-06-13</td>
+          <td itemprop="publicationDate">1994-01-25</td>
+          <td><span itemprop="assigneeOriginal">Molex Incorporated</span></td>
+          <td itemprop="title">Automatically switched power receptacle 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5424903A/en">
+              <span itemprop="publicationNumber">US5424903A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1993-01-12</td>
+          <td itemprop="publicationDate">1995-06-13</td>
+          <td><span itemprop="assigneeOriginal">Tandy Corporation</span></td>
+          <td itemprop="title">Intelligent power switcher 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5862393A/en">
+              <span itemprop="publicationNumber">US5862393A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-10-07</td>
+          <td itemprop="publicationDate">1999-01-19</td>
+          <td><span itemprop="assigneeOriginal">Lxe, Inc.</span></td>
+          <td itemprop="title">System for managing power of a computer with removable devices 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2000069081A1/en">
+              <span itemprop="publicationNumber">WO2000069081A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-05-11</td>
+          <td itemprop="publicationDate">2000-11-16</td>
+          <td><span itemprop="assigneeOriginal">Cyber Switching, Inc.</span></td>
+          <td itemprop="title">Method and apparatus for an improved remotely switchable power supply 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP1081921A2/en">
+              <span itemprop="publicationNumber">EP1081921A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-09-06</td>
+          <td itemprop="publicationDate">2001-03-07</td>
+          <td><span itemprop="assigneeOriginal">PHOENIX CONTACT GmbH &amp;amp; Co. Kg</span></td>
+          <td itemprop="title">Method for allocating IP-addresses in communication networks 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6410994B1/en">
+              <span itemprop="publicationNumber">US6410994B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-05-11</td>
+          <td itemprop="publicationDate">2002-06-25</td>
+          <td><span itemprop="assigneeOriginal">Fellowes Manufacturing Company</span></td>
+          <td itemprop="title">Modular power strip 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6445087B1/en">
+              <span itemprop="publicationNumber">US6445087B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-06-23</td>
+          <td itemprop="publicationDate">2002-09-03</td>
+          <td><span itemprop="assigneeOriginal">Primax Electronics Ltd.</span></td>
+          <td itemprop="title">Networking power plug device with automated power outlet control 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20030122683A1/en">
+              <span itemprop="publicationNumber">US20030122683A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2002-01-02</td>
+          <td itemprop="publicationDate">2003-07-03</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Identification of mounting locations of sub-systems in mounting units 
+     </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6608406B2/en">
+              <span itemprop="publicationNumber">US6608406B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-12-21</td>
+          <td itemprop="publicationDate">2003-08-19</td>
+          <td><span itemprop="assigneeOriginal">S&#43;S Power Engineering</span></td>
+          <td itemprop="title">Rack mountable power distribution apparatus 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6618772B1/en">
+              <span itemprop="publicationNumber">US6618772B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-11-15</td>
+          <td itemprop="publicationDate">2003-09-09</td>
+          <td><span itemprop="assigneeOriginal">Kim Y. Kao</span></td>
+          <td itemprop="title">Method and apparatus for selecting, monitoring, and controlling electrically powered devices 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6711613B1/en">
+              <span itemprop="publicationNumber">US6711613B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2004-03-23</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Remote power control system 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6741442B1/en">
+              <span itemprop="publicationNumber">US6741442B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-10-13</td>
+          <td itemprop="publicationDate">2004-05-25</td>
+          <td><span itemprop="assigneeOriginal">American Power Conversion Corporation</span></td>
+          <td itemprop="title">Intelligent power distribution system 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6744150B2/en">
+              <span itemprop="publicationNumber">US6744150B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2001-12-03</td>
+          <td itemprop="publicationDate">2004-06-01</td>
+          <td><span itemprop="assigneeOriginal">Neven V. Rendic</span></td>
+          <td itemprop="title">Outlet strip controlled by PC using low voltage powertap 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040165358A1/en">
+              <span itemprop="publicationNumber">US20040165358A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2003-02-26</td>
+          <td itemprop="publicationDate">2004-08-26</td>
+          <td><span itemprop="assigneeOriginal">Dell Products L.P.</span></td>
+          <td itemprop="title">System and method for detecting blank modules 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040178270A1/en">
+              <span itemprop="publicationNumber">US20040178270A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2003-03-10</td>
+          <td itemprop="publicationDate">2004-09-16</td>
+          <td><span itemprop="assigneeOriginal">Pradhan Salil V.</span></td>
+          <td itemprop="title">Tracking electronic devices 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6826036B2/en">
+              <span itemprop="publicationNumber">US6826036B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2002-06-28</td>
+          <td itemprop="publicationDate">2004-11-30</td>
+          <td><span itemprop="assigneeOriginal">Hewlett-Packard Development Company, L.P.</span></td>
+          <td itemprop="title">Modular power distribution system for use in computer equipment racks 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050021252A1/en">
+              <span itemprop="publicationNumber">US20050021252A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-07-21</td>
+          <td itemprop="publicationDate">2005-01-27</td>
+          <td><span itemprop="assigneeOriginal">Rocom Electric Company Ltd.</span></td>
+          <td itemprop="title">Power protector controllable via internet 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050018372A1/en">
+              <span itemprop="publicationNumber">US20050018372A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-07-21</td>
+          <td itemprop="publicationDate">2005-01-27</td>
+          <td><span itemprop="assigneeOriginal">Rocom Electric Company Ltd.</span></td>
+          <td itemprop="title">Control system for a power supply protector controllable through an IP address 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6937461B1/en">
+              <span itemprop="publicationNumber">US6937461B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2001-11-28</td>
+          <td itemprop="publicationDate">2005-08-30</td>
+          <td><span itemprop="assigneeOriginal">Donahue, Iv William F.</span></td>
+          <td itemprop="title">Modular power distribution unit, module for the power distribution unit, and method of using the same 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050203987A1/en">
+              <span itemprop="publicationNumber">US20050203987A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2005-09-15</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Network power administration system 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050259383A1/en">
+              <span itemprop="publicationNumber">US20050259383A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-05-21</td>
+          <td itemprop="publicationDate">2005-11-24</td>
+          <td><span itemprop="assigneeOriginal">Carrel Ewing</span></td>
+          <td itemprop="title">Adaptable rack mountable power distribution apparatus 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7043543B2/en">
+              <span itemprop="publicationNumber">US7043543B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2006-05-09</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Vertical-mount electrical power distribution plugstrip 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7099934B1/en">
+              <span itemprop="publicationNumber">US7099934B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2006-08-29</td>
+          <td><span itemprop="assigneeOriginal">Ewing Carrel W</span></td>
+          <td itemprop="title">Network-connecting power manager for remote appliances 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20060200681A1/en">
+              <span itemprop="publicationNumber">US20060200681A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-01-21</td>
+          <td itemprop="publicationDate">2006-09-07</td>
+          <td><span itemprop="assigneeOriginal">Takatoshi Kato</span></td>
+          <td itemprop="title">Remote access system, gateway, client device, program, and storage medium 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20070089163A1/en">
+              <span itemprop="publicationNumber">US20070089163A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2005-10-18</td>
+          <td itemprop="publicationDate">2007-04-19</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">System and method for controlling security of a remote network power device 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7268998B2/en">
+              <span itemprop="publicationNumber">US7268998B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-11-01</td>
+          <td itemprop="publicationDate">2007-09-11</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Ganged outlet power distribution apparatus 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7280931B1/en">
+              <span itemprop="publicationNumber">US7280931B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2006-05-18</td>
+          <td itemprop="publicationDate">2007-10-09</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Method and system for calibrating an electrical device 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+    <ul>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2007</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2007-12-07</span>
+            <span itemprop="countryCode">WO</span>
+            <span itemprop="applicationNumber">PCT/US2007/086809</span>
+            <a href="/patent/WO2008073833A2/en"><span itemprop="documentId">patent/WO2008073833A2/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Application Filing</span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2007-12-07</span>
+            <span itemprop="countryCode">EP</span>
+            <span itemprop="applicationNumber">EP20070869041</span>
+            <a href="/patent/EP2095203B1/en"><span itemprop="documentId">patent/EP2095203B1/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2007-12-07</span>
+            <span itemprop="countryCode">US</span>
+            <span itemprop="applicationNumber">US11/952,756</span>
+            <a href="/patent/US8450874B2/en"><span itemprop="documentId">patent/US8450874B2/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            
+            <span itemprop="thisApp" content="true" bool></span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+    
+
+    </section>
+
+  <section>
+    <h2>Patent Citations (33)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5281859A/en">
+              <span itemprop="publicationNumber">US5281859A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1991-06-13</td>
+          <td itemprop="publicationDate">1994-01-25</td>
+          <td><span itemprop="assigneeOriginal">Molex Incorporated</span></td>
+          <td itemprop="title">Automatically switched power receptacle 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO1993010615A1/en">
+              <span itemprop="publicationNumber">WO1993010615A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1991-11-15</td>
+          <td itemprop="publicationDate">1993-05-27</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Systeme for protecting and restarting computers and peripherals at remote sites which are accessible by telephone communication 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5424903A/en">
+              <span itemprop="publicationNumber">US5424903A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1993-01-12</td>
+          <td itemprop="publicationDate">1995-06-13</td>
+          <td><span itemprop="assigneeOriginal">Tandy Corporation</span></td>
+          <td itemprop="title">Intelligent power switcher 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6711613B1/en">
+              <span itemprop="publicationNumber">US6711613B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2004-03-23</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Remote power control system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050203987A1/en">
+              <span itemprop="publicationNumber">US20050203987A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2005-09-15</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Network power administration system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7099934B1/en">
+              <span itemprop="publicationNumber">US7099934B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2006-08-29</td>
+          <td><span itemprop="assigneeOriginal">Ewing Carrel W</span></td>
+          <td itemprop="title">Network-connecting power manager for remote appliances 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7162521B2/en">
+              <span itemprop="publicationNumber">US7162521B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2007-01-09</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Remote power control system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7171461B2/en">
+              <span itemprop="publicationNumber">US7171461B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2007-01-30</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Network remote power management outlet strip 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7010589B2/en">
+              <span itemprop="publicationNumber">US7010589B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2006-03-07</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Remote power control system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7043543B2/en">
+              <span itemprop="publicationNumber">US7043543B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2006-05-09</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Vertical-mount electrical power distribution plugstrip 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5862393A/en">
+              <span itemprop="publicationNumber">US5862393A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-10-07</td>
+          <td itemprop="publicationDate">1999-01-19</td>
+          <td><span itemprop="assigneeOriginal">Lxe, Inc.</span></td>
+          <td itemprop="title">System for managing power of a computer with removable devices 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6618772B1/en">
+              <span itemprop="publicationNumber">US6618772B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1996-11-15</td>
+          <td itemprop="publicationDate">2003-09-09</td>
+          <td><span itemprop="assigneeOriginal">Kim Y. Kao</span></td>
+          <td itemprop="title">Method and apparatus for selecting, monitoring, and controlling electrically powered devices 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2000069081A1/en">
+              <span itemprop="publicationNumber">WO2000069081A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-05-11</td>
+          <td itemprop="publicationDate">2000-11-16</td>
+          <td><span itemprop="assigneeOriginal">Cyber Switching, Inc.</span></td>
+          <td itemprop="title">Method and apparatus for an improved remotely switchable power supply 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6410994B1/en">
+              <span itemprop="publicationNumber">US6410994B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-05-11</td>
+          <td itemprop="publicationDate">2002-06-25</td>
+          <td><span itemprop="assigneeOriginal">Fellowes Manufacturing Company</span></td>
+          <td itemprop="title">Modular power strip 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP1081921A2/en">
+              <span itemprop="publicationNumber">EP1081921A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-09-06</td>
+          <td itemprop="publicationDate">2001-03-07</td>
+          <td><span itemprop="assigneeOriginal">PHOENIX CONTACT GmbH &amp;amp; Co. Kg</span></td>
+          <td itemprop="title">Method for allocating IP-addresses in communication networks 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6608406B2/en">
+              <span itemprop="publicationNumber">US6608406B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1999-12-21</td>
+          <td itemprop="publicationDate">2003-08-19</td>
+          <td><span itemprop="assigneeOriginal">S&#43;S Power Engineering</span></td>
+          <td itemprop="title">Rack mountable power distribution apparatus 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6445087B1/en">
+              <span itemprop="publicationNumber">US6445087B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-06-23</td>
+          <td itemprop="publicationDate">2002-09-03</td>
+          <td><span itemprop="assigneeOriginal">Primax Electronics Ltd.</span></td>
+          <td itemprop="title">Networking power plug device with automated power outlet control 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7141891B2/en">
+              <span itemprop="publicationNumber">US7141891B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-10-13</td>
+          <td itemprop="publicationDate">2006-11-28</td>
+          <td><span itemprop="assigneeOriginal">American Power Conversion Corporation</span></td>
+          <td itemprop="title">Intelligent power distribution system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6741442B1/en">
+              <span itemprop="publicationNumber">US6741442B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-10-13</td>
+          <td itemprop="publicationDate">2004-05-25</td>
+          <td><span itemprop="assigneeOriginal">American Power Conversion Corporation</span></td>
+          <td itemprop="title">Intelligent power distribution system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6937461B1/en">
+              <span itemprop="publicationNumber">US6937461B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2001-11-28</td>
+          <td itemprop="publicationDate">2005-08-30</td>
+          <td><span itemprop="assigneeOriginal">Donahue, Iv William F.</span></td>
+          <td itemprop="title">Modular power distribution unit, module for the power distribution unit, and method of using the same 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6744150B2/en">
+              <span itemprop="publicationNumber">US6744150B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2001-12-03</td>
+          <td itemprop="publicationDate">2004-06-01</td>
+          <td><span itemprop="assigneeOriginal">Neven V. Rendic</span></td>
+          <td itemprop="title">Outlet strip controlled by PC using low voltage powertap 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20030122683A1/en">
+              <span itemprop="publicationNumber">US20030122683A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2002-01-02</td>
+          <td itemprop="publicationDate">2003-07-03</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Identification of mounting locations of sub-systems in mounting units 
+     </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6826036B2/en">
+              <span itemprop="publicationNumber">US6826036B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2002-06-28</td>
+          <td itemprop="publicationDate">2004-11-30</td>
+          <td><span itemprop="assigneeOriginal">Hewlett-Packard Development Company, L.P.</span></td>
+          <td itemprop="title">Modular power distribution system for use in computer equipment racks 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040165358A1/en">
+              <span itemprop="publicationNumber">US20040165358A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2003-02-26</td>
+          <td itemprop="publicationDate">2004-08-26</td>
+          <td><span itemprop="assigneeOriginal">Dell Products L.P.</span></td>
+          <td itemprop="title">System and method for detecting blank modules 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040178270A1/en">
+              <span itemprop="publicationNumber">US20040178270A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2003-03-10</td>
+          <td itemprop="publicationDate">2004-09-16</td>
+          <td><span itemprop="assigneeOriginal">Pradhan Salil V.</span></td>
+          <td itemprop="title">Tracking electronic devices 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050018372A1/en">
+              <span itemprop="publicationNumber">US20050018372A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-07-21</td>
+          <td itemprop="publicationDate">2005-01-27</td>
+          <td><span itemprop="assigneeOriginal">Rocom Electric Company Ltd.</span></td>
+          <td itemprop="title">Control system for a power supply protector controllable through an IP address 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050021252A1/en">
+              <span itemprop="publicationNumber">US20050021252A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-07-21</td>
+          <td itemprop="publicationDate">2005-01-27</td>
+          <td><span itemprop="assigneeOriginal">Rocom Electric Company Ltd.</span></td>
+          <td itemprop="title">Power protector controllable via internet 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20060200681A1/en">
+              <span itemprop="publicationNumber">US20060200681A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2004-01-21</td>
+          <td itemprop="publicationDate">2006-09-07</td>
+          <td><span itemprop="assigneeOriginal">Takatoshi Kato</span></td>
+          <td itemprop="title">Remote access system, gateway, client device, program, and storage medium 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050259383A1/en">
+              <span itemprop="publicationNumber">US20050259383A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-05-21</td>
+          <td itemprop="publicationDate">2005-11-24</td>
+          <td><span itemprop="assigneeOriginal">Carrel Ewing</span></td>
+          <td itemprop="title">Adaptable rack mountable power distribution apparatus 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7196900B2/en">
+              <span itemprop="publicationNumber">US7196900B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-05-21</td>
+          <td itemprop="publicationDate">2007-03-27</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Adaptable rack mountable power distribution apparatus 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7268998B2/en">
+              <span itemprop="publicationNumber">US7268998B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2004-11-01</td>
+          <td itemprop="publicationDate">2007-09-11</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Ganged outlet power distribution apparatus 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20070089163A1/en">
+              <span itemprop="publicationNumber">US20070089163A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2005-10-18</td>
+          <td itemprop="publicationDate">2007-04-19</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">System and method for controlling security of a remote network power device 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7280931B1/en">
+              <span itemprop="publicationNumber">US7280931B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2006-05-18</td>
+          <td itemprop="publicationDate">2007-10-09</td>
+          <td><span itemprop="assigneeOriginal">International Business Machines Corporation</span></td>
+          <td itemprop="title">Method and system for calibrating an electrical device 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Non-Patent Citations (8)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">Anastassiades, G., European Examination Report for European Patent Application No. 07 869 041.9, European Patent Office, Germany, dated Aug. 2, 2011.</span>
+            
+            
+          </td>
+        </tr><tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">B. Levine and A. Swales. "<a href='http://scholar.google.com/scholar?q="Wanted%3A+IP+addresses+for+factory+network+devices%21+%26amp%3B+Software+solution+for+industrial+IP+addressing+tasks."'>Wanted: IP addresses for factory network devices! &amp; Software solution for industrial IP addressing tasks.</a>" The Industrial Ethernet Book, Jan. 2004, Issue 18.</span>
+            
+            
+          </td>
+        </tr><tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">Ellen Moyse, International Patent Report on Patentability for International Patent Application No. PCT/US2007/086809, dated Jun. 18, 2009, The International Bureau of WIPO, Switzerland.</span>
+            
+            
+          </td>
+        </tr><tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">Ellen Moyse, International Patents Report on Patentability for International Patent Application No. PCT/US2007/086810, dated Jun. 18, 2009, The International Bureau of WIPO, Switzerland.</span>
+            
+            
+          </td>
+        </tr><tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">International Search Report for International Patent Application No. PCT/US2007/086809.</span>
+            
+            
+          </td>
+        </tr><tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">Jorg Riegle R, Written Opinion for International Patent Application No. PCT/US2007/086810, European Patent Office, Germany.</span>
+            
+            
+          </td>
+        </tr><tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">Jorg Riegler, International Search Report for International Patent Application No. PCT/US2007/086810, European Patent Office, Germany.</span>
+            
+            
+          </td>
+        </tr><tr itemprop="detailedNonPatentLiterature" itemscope repeat>
+          <td>
+            <span itemprop="title">Written Opinion for International Patent Application No. PCT/US2007/086809.</span>
+            
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <h2>Cited By (9)</h2>
+  <table>
+    <caption>* Cited by examiner, â€  Cited by third party</caption>
+    <thead>
+      <tr>
+        <th>Publication number</th>
+        <th>Priority date</th>
+        <th>Publication date</th>
+        <th>Assignee</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US20140118892A1/en">
+            <span itemprop="publicationNumber">US20140118892A1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2010-04-07</td>
+        <td itemprop="publicationDate">2014-05-01</td>
+        <td><span itemprop="assigneeOriginal">The Wiremold Company</span></td>
+        <td itemprop="title">Customizable bus systems 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US9627873B2/en">
+            <span itemprop="publicationNumber">US9627873B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2010-04-07</td>
+        <td itemprop="publicationDate">2017-04-18</td>
+        <td><span itemprop="assigneeOriginal">The Wiremold Company</span></td>
+        <td itemprop="title">Customizable bus systems 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US9640960B2/en">
+            <span itemprop="publicationNumber">US9640960B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          
+          
+        </td>
+        <td itemprop="priorityDate">2010-04-07</td>
+        <td itemprop="publicationDate">2017-05-02</td>
+        <td><span itemprop="assigneeOriginal">The Wiremold Company</span></td>
+        <td itemprop="title">Customizable bus systems 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US20120153746A1/en">
+            <span itemprop="publicationNumber">US20120153746A1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2010-12-20</td>
+        <td itemprop="publicationDate">2012-06-21</td>
+        <td><span itemprop="assigneeOriginal">Nai-Chien Chang</span></td>
+        <td itemprop="title">Network connector module with switching function 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US20140144670A1/en">
+            <span itemprop="publicationNumber">US20140144670A1</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2012-07-26</td>
+        <td itemprop="publicationDate">2014-05-29</td>
+        <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+        <td itemprop="title">Multi-position input cord assembly for a power distribution unit 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US9438017B2/en">
+            <span itemprop="publicationNumber">US9438017B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          
+          
+        </td>
+        <td itemprop="priorityDate">2012-07-26</td>
+        <td itemprop="publicationDate">2016-09-06</td>
+        <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+        <td itemprop="title">Multi-position input cord assembly for a power distribution unit 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US9800031B2/en">
+            <span itemprop="publicationNumber">US9800031B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2012-07-26</td>
+        <td itemprop="publicationDate">2017-10-24</td>
+        <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+        <td itemprop="title">Multi-position input cord assembly for a power distribution unit 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US9804210B2/en">
+            <span itemprop="publicationNumber">US9804210B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          
+          
+        </td>
+        <td itemprop="priorityDate">2015-08-31</td>
+        <td itemprop="publicationDate">2017-10-31</td>
+        <td><span itemprop="assigneeOriginal">Comcast Cable Communications, Llc</span></td>
+        <td itemprop="title">Authentication, authorization, and/or accounting of power-consuming devices 
+       </td>
+      </tr><tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          
+          
+          <a href="/patent/US10338113B2/en">
+            <span itemprop="publicationNumber">US10338113B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+          </a>
+          
+          
+        </td>
+        <td itemprop="priorityDate">2015-08-31</td>
+        <td itemprop="publicationDate">2019-07-02</td>
+        <td><span itemprop="assigneeOriginal">Comcast Cable Communications, Llc</span></td>
+        <td itemprop="title">Authentication, authorization, and/or accounting of power-consuming devices 
+       </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section>
+    <h2>Also Published As</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Publication date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2095203B1/en">
+              <span itemprop="publicationNumber">EP2095203B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2013-02-13</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2008073833A2/en">
+              <span itemprop="publicationNumber">WO2008073833A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2008-06-19</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/WO2008073833A3/en">
+              <span itemprop="publicationNumber">WO2008073833A3</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2008-07-31</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20080136607A1/en">
+              <span itemprop="publicationNumber">US20080136607A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2008-06-12</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2095203A2/en">
+              <span itemprop="publicationNumber">EP2095203A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2009-09-02</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US6823462B1/en">
+                <span itemprop="publicationNumber">US6823462B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-11-23">2004-11-23</time>
+            
+            
+          </td>
+          <td itemprop="title">Virtual private network with multiple tunnels associated with one group name 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7487357B2/en">
+                <span itemprop="publicationNumber">US7487357B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-02-03">2009-02-03</time>
+            
+            
+          </td>
+          <td itemprop="title">Virtual smart card system and method 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1494429B1/en">
+                <span itemprop="publicationNumber">EP1494429B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-05-09">2012-05-09</time>
+            
+            
+          </td>
+          <td itemprop="title">Method for implementing secure corporate communication 
+     </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8595794B1/en">
+                <span itemprop="publicationNumber">US8595794B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-11-26">2013-11-26</time>
+            
+            
+          </td>
+          <td itemprop="title">Auditing communications 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US9191365B2/en">
+                <span itemprop="publicationNumber">US9191365B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-11-17">2015-11-17</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for authentication event security policy generation 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8332464B2/en">
+                <span itemprop="publicationNumber">US8332464B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-12-11">2012-12-11</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for remote network access 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7865584B2/en">
+                <span itemprop="publicationNumber">US7865584B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2011-01-04">2011-01-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Network service performance monitoring apparatus and methods 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US5940591A/en">
+                <span itemprop="publicationNumber">US5940591A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="1999-08-17">1999-08-17</time>
+            
+            
+          </td>
+          <td itemprop="title">Apparatus and method for providing network security 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20060236363A1/en">
+                <span itemprop="publicationNumber">US20060236363A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-10-19">2006-10-19</time>
+            
+            
+          </td>
+          <td itemprop="title">Client architecture for portable device with security policies 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7962655B2/en">
+                <span itemprop="publicationNumber">US7962655B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2011-06-14">2011-06-14</time>
+            
+            
+          </td>
+          <td itemprop="title">Using an identity-based communication layer for computing device communication 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20060075506A1/en">
+                <span itemprop="publicationNumber">US20060075506A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-04-06">2006-04-06</time>
+            
+            
+          </td>
+          <td itemprop="title">Systems and methods for enhanced electronic asset protection 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7042988B2/en">
+                <span itemprop="publicationNumber">US7042988B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-05-09">2006-05-09</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for managing data traffic in wireless networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/JP2010527076A/en">
+                <span itemprop="publicationNumber">JP2010527076A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-08-05">2010-08-05</time>
+            
+            
+          </td>
+          <td itemprop="title">Network element management method and apparatus using USB key 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1849254B1/en">
+                <span itemprop="publicationNumber">EP1849254B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-05-22">2013-05-22</time>
+            
+            
+          </td>
+          <td itemprop="title">Systems and methods for automatically configuring and managing network devices and virtual private networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20030217148A1/en">
+                <span itemprop="publicationNumber">US20030217148A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2003-11-20">2003-11-20</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for LAN authentication on switch 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/AU2003236583B2/en">
+                <span itemprop="publicationNumber">AU2003236583B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-12-15">2005-12-15</time>
+            
+            
+          </td>
+          <td itemprop="title">Method, system and apparatus for monitoring and controlling data transfer in communication networks 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7376965B2/en">
+                <span itemprop="publicationNumber">US7376965B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-05-20">2008-05-20</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for implementing a bubble policy to achieve host and network security 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20080235361A1/en">
+                <span itemprop="publicationNumber">US20080235361A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-09-25">2008-09-25</time>
+            
+            
+          </td>
+          <td itemprop="title">Management layer method and apparatus for dynamic assignment of users to computer resources 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20060031476A1/en">
+                <span itemprop="publicationNumber">US20060031476A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-02-09">2006-02-09</time>
+            
+            
+          </td>
+          <td itemprop="title">Apparatus and method for remotely monitoring a computer network 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7406517B2/en">
+                <span itemprop="publicationNumber">US7406517B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-07-29">2008-07-29</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for distributed management of shared computers 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20070162954A1/en">
+                <span itemprop="publicationNumber">US20070162954A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-07-12">2007-07-12</time>
+            
+            
+          </td>
+          <td itemprop="title">Network security system based on physical location 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/DE60130203T2/en">
+                <span itemprop="publicationNumber">DE60130203T2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-05-15">2008-05-15</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for managing virtual addresses for virtual networks 
+     </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7640581B1/en">
+                <span itemprop="publicationNumber">US7640581B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-12-29">2009-12-29</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for providing secure, centralized access to remote elements 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1591868A1/en">
+                <span itemprop="publicationNumber">EP1591868A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2005-11-02">2005-11-02</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for providing network security based on device security status 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1769383B1/en">
+                <span itemprop="publicationNumber">EP1769383B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-10-21">2015-10-21</time>
+            
+            
+          </td>
+          <td itemprop="title">System for consolidating out-of-band access to nodes in a data network 
+     </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2007-12-12">2007-12-12</time></td>
+          <td itemprop="code">AS</td>
+          <td itemprop="title">Assignment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Owner name</strong>:
+              <span itemprop="value">LIEBERT CORPORATION, OHIO</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:RATCLIFF, GREGORY W.;ALDAG, PHILIP R.;REEL/FRAME:020232/0803</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20071207</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2013-05-08">2013-05-08</time></td>
+          <td itemprop="code">STCF</td>
+          <td itemprop="title">Information on status: patent grant</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">PATENTED CASE</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-11-28">2016-11-28</time></td>
+          <td itemprop="code">FPAY</td>
+          <td itemprop="title">Fee payment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Year of fee payment</strong>:
+              <span itemprop="value">4</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-12-01">2016-12-01</time></td>
+          <td itemprop="code">AS</td>
+          <td itemprop="title">Assignment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Owner name</strong>:
+              <span itemprop="value">JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT, NE</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">SECURITY AGREEMENT;ASSIGNORS:ALBER CORP.;ASCO POWER TECHNOLOGIES, L.P.;AVOCENT CORPORATION;AND OTHERS;REEL/FRAME:040783/0148</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20161130</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2016-12-02">2016-12-02</time></td>
+          <td itemprop="code">AS</td>
+          <td itemprop="title">Assignment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Owner name</strong>:
+              <span itemprop="value">JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT, NE</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">SECURITY AGREEMENT;ASSIGNORS:ALBER CORP.;ASCO POWER TECHNOLOGIES, L.P.;AVOCENT CORPORATION;AND OTHERS;REEL/FRAME:040797/0615</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20161130</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2018-09-19">2018-09-19</time></td>
+          <td itemprop="code">AS</td>
+          <td itemprop="title">Assignment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Owner name</strong>:
+              <span itemprop="value">VERTIV CORPORATION, OHIO</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">CHANGE OF NAME;ASSIGNOR:LIEBERT CORPORATION;REEL/FRAME:047110/0573</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20180830</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2019-06-10">2019-06-10</time></td>
+          <td itemprop="code">AS</td>
+          <td itemprop="title">Assignment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Owner name</strong>:
+              <span itemprop="value">THE BANK OF NEW YORK MELLON TRUST COMPANY, N.A., T</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">SECOND LIEN SECURITY AGREEMENT;ASSIGNORS:VERTIV IT SYSTEMS, INC.;VERTIV CORPORATION;VERTIV NORTH AMERICA, INC.;AND OTHERS;REEL/FRAME:049415/0262</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Effective date</strong>:
+              <span itemprop="value">20190513</span>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
+
+    </search-app>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script async="" defer="" src="//www.google.com/insights/consumersurveys/async_survey?site=cxkjf7ipxgbnnjy6k35ezcvbbe"></script>
+  </body>
+</html>

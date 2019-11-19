@@ -1,0 +1,2874 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>US8577035B2 - Electronic circuit for securing data interchanges between a computer station and a network 
+        - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/US8577035B2/en">
+    <meta name="description" content="
+     The present invention relates to an electronic circuit for securing data interchanges between a computer station and a network, said circuit comprising a first network interface connected to said network, said circuit comprising at least a second network interface connected to a network interface of said computer station, a unit for processing data passing between the first network interface and the second network interface, an interface for connection to an internal bus of the computer station suitable for electrically connecting the power supply, said electronic circuit not comprising any means of transferring processed data with the bus of said station. The invention applies in particular to the protection of personal computers handling confidential data. 
+   
+   ">
+    
+    <meta name="DC.type" content="patent">
+    
+    <meta name="DC.title" content="Electronic circuit for securing data interchanges between a computer station and a network 
+       ">
+    
+    <meta name="DC.date" content="2009-11-24" scheme="dateSubmitted">
+    
+    <meta name="DC.description" content="
+     The present invention relates to an electronic circuit for securing data interchanges between a computer station and a network, said circuit comprising a first network interface connected to said network, said circuit comprising at least a second network interface connected to a network interface of said computer station, a unit for processing data passing between the first network interface and the second network interface, an interface for connection to an internal bus of the computer station suitable for electrically connecting the power supply, said electronic circuit not comprising any means of transferring processed data with the bus of said station. The invention applies in particular to the protection of personal computers handling confidential data. 
+   
+   ">
+    
+    <meta name="citation_patent_application_number" content="US:12/624,949">
+    
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/0f/d3/02/67dfba858a5853/US8577035.pdf">
+    
+    <meta name="citation_patent_number" content="US:8577035">
+    
+    <meta name="DC.date" content="2013-11-05" scheme="issue">
+    
+    <meta name="DC.contributor" content="Eric Saliba" scheme="inventor">
+    
+    <meta name="DC.contributor" content="Philippe Leleu" scheme="inventor">
+    
+    <meta name="DC.contributor" content="Thales SA" scheme="assignee">
+    
+    <meta name="DC.relation" content="US:5299314" scheme="references">
+    
+    <meta name="DC.relation" content="NL:9400460:A" scheme="references">
+    
+    <meta name="DC.relation" content="US:20050203987:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:7428605" scheme="references">
+    
+    <meta name="DC.relation" content="US:6651190" scheme="references">
+    
+    <meta name="DC.relation" content="US:20040268138:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:20040268147:A1" scheme="references">
+    
+    <meta name="DC.relation" content="US:7325746" scheme="references">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <style>
+      body { transition: none; }
+    </style>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27188110-4', 'auto');
+
+      version = 'patent-search.search_20191028_RC01';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.profilePicture = "";
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.html">
+    
+  </head>
+  <body unresolved>
+    
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20191028_RC01/scs/compiled_dir/search-app-vulcanized.js"></script>
+    
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">US8577035B2 - Electronic circuit for securing data interchanges between a computer station and a network 
+        - Google Patents</h1>
+  <span itemprop="title">Electronic circuit for securing data interchanges between a computer station and a network 
+       </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/0f/d3/02/67dfba858a5853/US8577035.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">US8577035B2</dd>
+    <meta itemprop="numberWithoutCodes" content="8577035">
+    <meta itemprop="kindCode" content="B2">
+    <meta itemprop="publicationDescription" content="Patent ( having previously published pre-grant publication)">
+    
+    <span>US8577035B2</span>
+    
+    <span>US12/624,949</span>
+    
+    <span>US62494909A</span>
+    
+    <span>US8577035B2</span>
+    
+    <span>US 8577035 B2</span>
+    
+    <span>US8577035 B2</span>
+    
+    <span>US 8577035B2</span>
+    
+    <span>  </span>
+    
+    <span> </span>
+    
+    <span> </span>
+    
+    <span>US 62494909 A</span>
+    
+    <span>US62494909 A</span>
+    
+    <span>US 62494909A</span>
+    
+    <span>US 8577035 B2</span>
+    
+    <span>US8577035 B2</span>
+    
+    <span>US 8577035B2</span>
+    
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">US</dd>
+    <dd itemprop="countryName">United States</dd>
+
+    <dt>Prior art keywords</dt>
+    
+    <dd itemprop="priorArtKeywords" repeat>computer</dd>
+    <dd itemprop="priorArtKeywords" repeat>network</dd>
+    <dd itemprop="priorArtKeywords" repeat>station</dd>
+    <dd itemprop="priorArtKeywords" repeat>circuit</dd>
+    <dd itemprop="priorArtKeywords" repeat>electronic circuit</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2008-11-25">2008-11-25</time></dd>
+
+    <dt>Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)</dt>
+    <dd itemprop="legalStatusIfi" itemscope>
+      <span itemprop="status">Active</span>, expires <time itemprop="expiration" datetime="2032-03-14">2032-03-14</time>
+    </dd>
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">US12/624,949</dd>
+
+  
+
+  <dt>Other versions</dt>
+  <dd itemprop="directAssociations" itemscope repeat>
+    
+    <a href="/patent/US20100132046A1/en">
+      <span itemprop="publicationNumber">US20100132046A1</span>
+      (<span itemprop="primaryLanguage">en</span>
+    </a>
+  </dd>
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>Eric Saliba</dd>
+  <dd itemprop="inventor" repeat>Philippe Leleu</dd>
+  <dt>Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)</dt>
+  <dd itemprop="assigneeCurrent" repeat>
+    Thales SA
+  </dd>
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>Thales SA</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2008-11-25">2008-11-25</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2009-11-24">2009-11-24</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2013-11-05">2013-11-05</time></dd>
+
+  
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2008-11-25">2008-11-25</time>
+    <span itemprop="title">Priority to FR0806611</span>
+    <span itemprop="type">priority</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2008-11-25">2008-11-25</time>
+    <span itemprop="title">Priority to FR08/06611</span>
+    <span itemprop="type">priority</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2008-11-25">2008-11-25</time>
+    <span itemprop="title">Priority to FR0806611A</span>
+    <span itemprop="type">priority</span>
+    
+    
+    
+    <span itemprop="documentId">patent/FR2938949B1/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2009-11-24">2009-11-24</time>
+    <span itemprop="title">Application filed by Thales SA</span>
+    <span itemprop="type">filed</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">Thales SA</span>
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2010-01-11">2010-01-11</time>
+    <span itemprop="title">Assigned to THALES</span>
+    <span itemprop="type">reassignment</span>
+    
+    
+    
+    
+    <span itemprop="assigneeSearch">THALES</span>
+    
+    
+    <span itemprop="description" repeat>ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS).</span>
+    
+    <span itemprop="description" repeat>Assignors: LELEU, PHILIPPE, SALIBA, ERIC</span>
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2010-05-27">2010-05-27</time>
+    <span itemprop="title">Publication of US20100132046A1</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US20100132046A1/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2013-11-05">2013-11-05</time>
+    <span itemprop="title">Publication of US8577035B2</span>
+    <span itemprop="type">publication</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="documentId">patent/US8577035B2/en</span>
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2013-11-05">2013-11-05</time>
+    <span itemprop="title">Application granted</span>
+    <span itemprop="type">granted</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-11-17">2019-11-17</time>
+    <span itemprop="title">Application status is Active</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2032-03-14">2032-03-14</time>
+    <span itemprop="title">Adjusted expiration</span>
+    <span itemprop="type">legal-status</span>
+    
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+    
+  </dd>
+  
+
+  <h2>Links</h2>
+
+  <ul>
+    
+          <li itemprop="links" itemscope repeat>
+            <meta itemprop="id" content="usptoLink">
+            <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&d=PALL&s1=8577035.PN." itemprop="url" target="_blank"><span itemprop="text">USPTO</span></a>
+          </li>
+        <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="usptoAssignmentLink">
+          <a href="https://assignment.uspto.gov/patent/index.html#/patent/search/resultFilter?searchInput=8577035" itemprop="url" target="_blank"><span itemprop="text">USPTO Assignment</span></a>
+        </li>
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=US&amp;NR=8577035B2&amp;KC=B2&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    
+      <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="globalDossierLink">
+          <a href="http://globaldossier.uspto.gov/#/result/patent/US/8577035/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      <li itemprop="links" itemscope repeat>
+          <meta itemprop="id" content="stackexchangeLink">
+          <a href="https://patents.stackexchange.com/questions/tagged/US8577035" itemprop="url"><span itemprop="text">Discuss</span></a>
+        </li>
+      
+  </ul>
+
+  
+  <ul itemprop="concept" itemscope>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000015654</span>
+      <span itemprop="name">memory</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">18</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004224</span>
+      <span itemprop="name">protection</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>abstract</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">8</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000002093</span>
+      <span itemprop="name">peripheral</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">6</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000002085</span>
+      <span itemprop="name">persistent</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">6</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000009434</span>
+      <span itemprop="name">installation</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">5</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000000034</span>
+      <span itemprop="name">methods</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>claims</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">5</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000003993</span>
+      <span itemprop="name">interaction</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">5</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000002633</span>
+      <span itemprop="name">protecting</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">5</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000003213</span>
+      <span itemprop="name">activating</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004458</span>
+      <span itemprop="name">analytical methods</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000003860</span>
+      <span itemprop="name">storage</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">2</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000006399</span>
+      <span itemprop="name">behavior</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000000903</span>
+      <span itemprop="name">blocking</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004590</span>
+      <span itemprop="name">computer program</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001419</span>
+      <span itemprop="name">dependent</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000000694</span>
+      <span itemprop="name">effects</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004301</span>
+      <span itemprop="name">light adaptation</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">239000000047</span>
+      <span itemprop="name">products</span>
+      <span itemprop="domain">Substances</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000010010</span>
+      <span itemprop="name">raising</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001960</span>
+      <span itemprop="name">triggered</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0</span>
+      
+      <span itemprop="sections" repeat>description</span>
+      
+      <span itemprop="count">1</span>
+    </li>
+  
+  </ul>
+  
+
+  <section>
+    <h2>Images</h2>
+    <ul>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/e9/6e/45/21d10d3b3ab633/US08577035-20131105-D00000.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/56/b0/40/37ac038ebfd14b/US08577035-20131105-D00000.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="100">
+            <meta itemprop="label" content="computer">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="292">
+              <meta itemprop="top" content="39">
+              <meta itemprop="right" content="395">
+              <meta itemprop="bottom" content="92">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="102">
+            <meta itemprop="label" content="network interface">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1214">
+              <meta itemprop="top" content="670">
+              <meta itemprop="right" content="1311">
+              <meta itemprop="bottom" content="723">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="103">
+            <meta itemprop="label" content="bus">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="662">
+              <meta itemprop="top" content="447">
+              <meta itemprop="right" content="757">
+              <meta itemprop="bottom" content="500">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="106">
+            <meta itemprop="label" content="circuit">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1025">
+              <meta itemprop="top" content="103">
+              <meta itemprop="right" content="1129">
+              <meta itemprop="bottom" content="156">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="107">
+            <meta itemprop="label" content="electronic card">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="922">
+              <meta itemprop="top" content="561">
+              <meta itemprop="right" content="1018">
+              <meta itemprop="bottom" content="614">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="108">
+            <meta itemprop="label" content="network cable">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1303">
+              <meta itemprop="top" content="511">
+              <meta itemprop="right" content="1401">
+              <meta itemprop="bottom" content="565">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="111">
+            <meta itemprop="label" content="external connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1259">
+              <meta itemprop="top" content="569">
+              <meta itemprop="right" content="1364">
+              <meta itemprop="bottom" content="637">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="second connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1309">
+              <meta itemprop="top" content="444">
+              <meta itemprop="right" content="1411">
+              <meta itemprop="bottom" content="495">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="113">
+            <meta itemprop="label" content="external connectors">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1272">
+              <meta itemprop="top" content="91">
+              <meta itemprop="right" content="1369">
+              <meta itemprop="bottom" content="144">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="120">
+            <meta itemprop="label" content="computer network">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1362">
+              <meta itemprop="top" content="205">
+              <meta itemprop="right" content="1476">
+              <meta itemprop="bottom" content="270">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="201">
+            <meta itemprop="label" content="mother card">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="509">
+              <meta itemprop="top" content="131">
+              <meta itemprop="right" content="604">
+              <meta itemprop="bottom" content="183">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="202">
+            <meta itemprop="label" content="processing unit">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1098">
+              <meta itemprop="top" content="159">
+              <meta itemprop="right" content="1199">
+              <meta itemprop="bottom" content="211">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="206">
+            <meta itemprop="label" content="module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="767">
+              <meta itemprop="top" content="107">
+              <meta itemprop="right" content="863">
+              <meta itemprop="bottom" content="156">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="0">
+            <meta itemprop="id" content="208">
+            <meta itemprop="label" content="reset switch">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="454">
+              <meta itemprop="top" content="431">
+              <meta itemprop="right" content="557">
+              <meta itemprop="bottom" content="486">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/cb/29/38/6df6b50551d6b5/US08577035-20131105-D00001.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/46/8d/de/2a8338a559b75e/US08577035-20131105-D00001.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="100">
+            <meta itemprop="label" content="computer">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1106">
+              <meta itemprop="top" content="123">
+              <meta itemprop="right" content="1211">
+              <meta itemprop="bottom" content="178">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="100">
+            <meta itemprop="label" content="computer">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1276">
+              <meta itemprop="top" content="1537">
+              <meta itemprop="right" content="1378">
+              <meta itemprop="bottom" content="1588">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="102">
+            <meta itemprop="label" content="network interface">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="468">
+              <meta itemprop="top" content="377">
+              <meta itemprop="right" content="570">
+              <meta itemprop="bottom" content="428">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="103">
+            <meta itemprop="label" content="bus">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="775">
+              <meta itemprop="top" content="317">
+              <meta itemprop="right" content="870">
+              <meta itemprop="bottom" content="370">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="104">
+            <meta itemprop="label" content="software">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="608">
+              <meta itemprop="top" content="196">
+              <meta itemprop="right" content="705">
+              <meta itemprop="bottom" content="249">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="106">
+            <meta itemprop="label" content="circuit">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="769">
+              <meta itemprop="top" content="426">
+              <meta itemprop="right" content="866">
+              <meta itemprop="bottom" content="479">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="108">
+            <meta itemprop="label" content="network cable">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="576">
+              <meta itemprop="top" content="728">
+              <meta itemprop="right" content="675">
+              <meta itemprop="bottom" content="782">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="109">
+            <meta itemprop="label" content="other cards">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1035">
+              <meta itemprop="top" content="1446">
+              <meta itemprop="right" content="1131">
+              <meta itemprop="bottom" content="1499">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="111">
+            <meta itemprop="label" content="external connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="391">
+              <meta itemprop="top" content="628">
+              <meta itemprop="right" content="486">
+              <meta itemprop="bottom" content="680">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="111">
+            <meta itemprop="label" content="external connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="435">
+              <meta itemprop="top" content="1797">
+              <meta itemprop="right" content="535">
+              <meta itemprop="bottom" content="1853">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="second connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="802">
+              <meta itemprop="top" content="1734">
+              <meta itemprop="right" content="904">
+              <meta itemprop="bottom" content="1792">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="second connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="751">
+              <meta itemprop="top" content="645">
+              <meta itemprop="right" content="855">
+              <meta itemprop="bottom" content="698">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="113">
+            <meta itemprop="label" content="external connectors">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="956">
+              <meta itemprop="top" content="619">
+              <meta itemprop="right" content="1052">
+              <meta itemprop="bottom" content="672">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="113">
+            <meta itemprop="label" content="external connectors">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="805">
+              <meta itemprop="top" content="1920">
+              <meta itemprop="right" content="902">
+              <meta itemprop="bottom" content="1973">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="120">
+            <meta itemprop="label" content="computer network">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1230">
+              <meta itemprop="top" content="697">
+              <meta itemprop="right" content="1336">
+              <meta itemprop="bottom" content="750">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="120">
+            <meta itemprop="label" content="computer network">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="122">
+              <meta itemprop="top" content="1809">
+              <meta itemprop="right" content="228">
+              <meta itemprop="bottom" content="1863">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/99/02/cf/5138d7e24b2cfd/US08577035-20131105-D00002.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/83/73/ec/8e9ad60f2ff5c5/US08577035-20131105-D00002.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="100">
+            <meta itemprop="label" content="computer">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="290">
+              <meta itemprop="top" content="64">
+              <meta itemprop="right" content="388">
+              <meta itemprop="bottom" content="118">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="102">
+            <meta itemprop="label" content="network interface">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1213">
+              <meta itemprop="top" content="689">
+              <meta itemprop="right" content="1309">
+              <meta itemprop="bottom" content="742">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="103">
+            <meta itemprop="label" content="bus">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="657">
+              <meta itemprop="top" content="472">
+              <meta itemprop="right" content="755">
+              <meta itemprop="bottom" content="522">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="106">
+            <meta itemprop="label" content="circuit">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1020">
+              <meta itemprop="top" content="124">
+              <meta itemprop="right" content="1115">
+              <meta itemprop="bottom" content="176">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="107">
+            <meta itemprop="label" content="electronic card">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="922">
+              <meta itemprop="top" content="583">
+              <meta itemprop="right" content="1015">
+              <meta itemprop="bottom" content="634">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="108">
+            <meta itemprop="label" content="network cable">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1304">
+              <meta itemprop="top" content="528">
+              <meta itemprop="right" content="1402">
+              <meta itemprop="bottom" content="582">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="111">
+            <meta itemprop="label" content="external connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1256">
+              <meta itemprop="top" content="591">
+              <meta itemprop="right" content="1355">
+              <meta itemprop="bottom" content="652">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="second connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="753">
+              <meta itemprop="top" content="2059">
+              <meta itemprop="right" content="846">
+              <meta itemprop="bottom" content="2112">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="112">
+            <meta itemprop="label" content="second connector">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1308">
+              <meta itemprop="top" content="461">
+              <meta itemprop="right" content="1403">
+              <meta itemprop="bottom" content="514">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="113">
+            <meta itemprop="label" content="external connectors">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="874">
+              <meta itemprop="top" content="2060">
+              <meta itemprop="right" content="967">
+              <meta itemprop="bottom" content="2113">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="113">
+            <meta itemprop="label" content="external connectors">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1268">
+              <meta itemprop="top" content="108">
+              <meta itemprop="right" content="1365">
+              <meta itemprop="bottom" content="163">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="120">
+            <meta itemprop="label" content="computer network">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1367">
+              <meta itemprop="top" content="225">
+              <meta itemprop="right" content="1462">
+              <meta itemprop="bottom" content="277">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="201">
+            <meta itemprop="label" content="mother card">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="505">
+              <meta itemprop="top" content="155">
+              <meta itemprop="right" content="596">
+              <meta itemprop="bottom" content="208">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="202">
+            <meta itemprop="label" content="processing unit">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="833">
+              <meta itemprop="top" content="1632">
+              <meta itemprop="right" content="938">
+              <meta itemprop="bottom" content="1686">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="202">
+            <meta itemprop="label" content="processing unit">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1091">
+              <meta itemprop="top" content="177">
+              <meta itemprop="right" content="1192">
+              <meta itemprop="bottom" content="229">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="206">
+            <meta itemprop="label" content="module">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="757">
+              <meta itemprop="top" content="129">
+              <meta itemprop="right" content="860">
+              <meta itemprop="bottom" content="181">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="208">
+            <meta itemprop="label" content="reset switch">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="453">
+              <meta itemprop="top" content="456">
+              <meta itemprop="right" content="556">
+              <meta itemprop="bottom" content="509">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="301">
+            <meta itemprop="label" content="external configuration interface">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="614">
+              <meta itemprop="top" content="2058">
+              <meta itemprop="right" content="716">
+              <meta itemprop="bottom" content="2111">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="302">
+            <meta itemprop="label" content="storage memory">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="727">
+              <meta itemprop="top" content="1405">
+              <meta itemprop="right" content="827">
+              <meta itemprop="bottom" content="1456">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/6d/97/a8/7daef7a4ecebdb/US08577035-20131105-D00003.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/4b/ef/19/8a2080864a0a02/US08577035-20131105-D00003.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="401">
+            <meta itemprop="label" content="management station">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="876">
+              <meta itemprop="top" content="68">
+              <meta itemprop="right" content="976">
+              <meta itemprop="bottom" content="138">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="402">
+            <meta itemprop="label" content="network">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="811">
+              <meta itemprop="top" content="365">
+              <meta itemprop="right" content="906">
+              <meta itemprop="bottom" content="417">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="411">
+            <meta itemprop="label" content="computer stations">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="154">
+              <meta itemprop="top" content="913">
+              <meta itemprop="right" content="251">
+              <meta itemprop="bottom" content="966">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="412">
+            <meta itemprop="label" content="computer stations">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="446">
+              <meta itemprop="top" content="911">
+              <meta itemprop="right" content="548">
+              <meta itemprop="bottom" content="963">
+            </span>
+          </li><li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="3">
+            <meta itemprop="id" content="413">
+            <meta itemprop="label" content="computer stations">
+            
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="1011">
+              <meta itemprop="top" content="912">
+              <meta itemprop="right" content="1111">
+              <meta itemprop="bottom" content="964">
+            </span>
+          </li>
+        </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>Classifications</h2>
+    
+    <ul>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/00</span>&mdash;<span itemprop="Description">Security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/70</span>&mdash;<span itemprop="Description">Protecting specific internal or peripheral components, in which the protection of a component leads to protection of the entire computer</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/82</span>&mdash;<span itemprop="Description">Protecting input, output or interconnection devices</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/85</span>&mdash;<span itemprop="Description">Protecting input, output or interconnection devices interconnection devices, e.g. bus-connected or in-line devices</span>
+            <meta itemprop="Leaf" content="true">
+            
+            <meta itemprop="FirstCode" content="true">
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/00</span>&mdash;<span itemprop="Description">Security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/50</span>&mdash;<span itemprop="Description">Monitoring users, programs or devices to maintain the integrity of platforms, e.g. of processors, firmware or operating systems</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/55</span>&mdash;<span itemprop="Description">Detecting local intrusion or implementing counter-measures</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/554</span>&mdash;<span itemprop="Description">Detecting local intrusion or implementing counter-measures involving event detection and direct action</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/00</span>&mdash;<span itemprop="Description">Security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/70</span>&mdash;<span itemprop="Description">Protecting specific internal or peripheral components, in which the protection of a component leads to protection of the entire computer</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F21/81</span>&mdash;<span itemprop="Description">Protecting specific internal or peripheral components, in which the protection of a component leads to protection of the entire computer by operating on the power supply, e.g. enabling or disabling power-on, sleep or resume operations</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L63/00</span>&mdash;<span itemprop="Description">Network architectures or network communication protocols for network security</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">H04L63/20</span>&mdash;<span itemprop="Description">Network architectures or network communication protocols for network security for managing network security; network security policies in general</span>
+            <meta itemprop="Leaf" content="true">
+            
+            
+          </li>
+          </ul>
+      </li>
+      <li>
+        <ul itemprop="cpcs" itemscope repeat>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING; CALCULATING; COUNTING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F</span>&mdash;<span itemprop="Description">ELECTRIC DIGITAL DATA PROCESSING</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F2221/00</span>&mdash;<span itemprop="Description">Indexing scheme relating to security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F2221/21</span>&mdash;<span itemprop="Description">Indexing scheme relating to G06F21/00 and subgroups addressing additional information or applications relating to security arrangements for protecting computers, components thereof, programs or data against unauthorised activity</span>
+            
+            
+            
+          </li>
+          <li itemprop="cpcs" itemscope repeat>
+            <span itemprop="Code">G06F2221/2143</span>&mdash;<span itemprop="Description">Clearing memory, e.g. to prevent the data from being stolen</span>
+            <meta itemprop="Leaf" content="true">
+            <meta itemprop="Additional" content="true">
+            
+          </li>
+          </ul>
+      </li>
+      </ul>
+  </section>
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA124361910" lang="EN" load-source="patent-office">
+    <div num="p-0001" class="abstract">The present invention relates to an electronic circuit for securing data interchanges between a computer station and a network, said circuit comprising a first network interface connected to said network, said circuit comprising at least a second network interface connected to a network interface of said computer station, a unit for processing data passing between the first network interface and the second network interface, an interface for connection to an internal bus of the computer station suitable for electrically connecting the power supply, said electronic circuit not comprising any means of transferring processed data with the bus of said station. The invention applies in particular to the protection of personal computers handling confidential data.</div>
+  </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    
+    <div itemprop="content" html><div mxw-id="PDES62630261" lang="EN" load-source="patent-office" class="description">
+    
+    <heading>CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+    <p num="p-0002">This application claims priority of French application no. FR 08/06611, filed Nov. 25, 2008, the disclosure of which is hereby incorporated by reference in its entirety.</p>
+    <heading>FIELD OF THE INVENTION</heading>
+    <p num="p-0003">The present invention relates to an electronic circuit for securing data interchanges between a computer station and a network. The invention applies notably to the protection of personal computers handling confidential data.</p>
+    <heading>BACKGROUND OF THE INVENTION</heading>
+    <p num="p-0004">Networking a computer station generally results in the appearance of threats to said station. These threats can be of an accidental nature, when they appear for example as a result of negligence or via virus propagation; they can also be intentional in nature, for example via targeted attacks to obtain information or to destroy data. To counter these threats, two main categories of solutions currently coexist: hardware firewalls and personal software firewalls.</p>
+    <p num="p-0005">A personal software firewall is a computer program installed on the station to be protected and making it possible to define detailed and customized security policies, in other words policies that are suited to each user of the station. However, this type of firewall remains vulnerable to its software environment and to the users who operate the computer station. Another drawback of the software firewall is that it is dependent on the operating system and on the type of platform on which it is installed. Furthermore, the circumvention of the protection conferred by a software firewall via privilege-raising techniques is well known, as is shown for example by L. Duflot, O. Grumelard and D. Etiemble in their article entitled â€œUtiliser les fonctionnalitÃ©s des cartes mÃ¨res ou des processeurs pour contourner les mÃ©canismes de sÃ©curitÃ© des systÃ¨mes d&#39;exploitationâ€ [Using the functionalities of mother cards or processors to circumvent operating system security mechanisms], published in the Symposium on the security of information technologies and communications (SSTIC), and dated May 2006. These techniques can be used to act on the hardware and software elements of the computer station, and even take control of them.</p>
+    <p num="p-0006">Unlike the software firewall, a hardware firewall is conventionally positioned in series on a network so as to protect a number of computer stations against the threats deriving from an external network. However, this type of firewall does not make it possible to protect the computer stations connected to the same local area network and situated behind said firewall. Furthermore, an overall security policy (for each local area network) is generally selected so as to retain flexibility of configuration and therefore facilitate the deployment of new stations; this overall security policy runs counter to the determination to adapt the control to each station by defining detailed and customized security policies. Finally, end-to-end encryption is excluded by this type of firewall, because the analysis of encrypted datastreams is difficult, even impossible to perform. The data must therefore be decrypted at the level of the hardware firewall, and not at the level of the final recipient of the data, which introduces a security failing and additional installation, configuration and maintenance constraints.</p>
+    <p num="p-0007">An alternative is proposed by the company 3COM, which sells a network card referenced by the product number 3CRFW200B and offering firewall functionalities. This card is connected to a PCI port of a computer, PCI being the acronym for â€œPeripheral Component Interconnectâ€, and offers a network interface. The data obtained from the network are received via said interface, processed by the card, then transmitted to the computer via the PCI bus. However, this card poses a number of security problems. On the one hand, it is easy, for a person using the computer station, to intentionally circumvent the protection conferred by said card by disconnecting the network cable from the station to reconnect it to a standard network interface of the computer station. On the other hand, the security policy of the card can be configured via a graphical interface, which renders the card vulnerable to operating errors on the part of the user, to disturbances or malicious intent from the operating system or the surrounding software, even to hardware malfunctions.</p>
+    <heading>SUMMARY OF THE INVENTION</heading>
+    <p num="p-0008">One aim of the invention is to propose means of securing data interchanges between a computer station and a network that provide control functions as close as possible to the users, offer control mechanisms that are independent of the station to be protected and unintrusive to the user data contained on this station, while ensuring a series-positioning of the securing means between the network and the station. To this end, the subject of the invention is an electronic circuit for securing data interchanges between a computer station and a network, said circuit comprising a first network interface connected to said network, said circuit being characterized in that it comprises at least:
+</p> <ul> <li id="ul0001-0001" num="0000"> <ul> <li id="ul0002-0001" num="0008">a second network interface connected to a network interface of said computer station,</li> <li id="ul0002-0002" num="0009">a unit for processing data passing between the first network interface and the second network interface,</li> <li id="ul0002-0003" num="0010">an interface for connection to an internal bus of the computer station suitable for electrically connecting the power supply,</li> <li id="ul0002-0004" num="0011">said electronic circuit not comprising any means of transferring processed data with the bus of said station.</li> </ul> </li> </ul>
+
+    <p num="p-0009">The securing circuit according to the invention makes it possible to achieve a high level of protection. In practice, no software interaction exists between the securing circuit and the computer station, and the hardware interaction with said station is limited to the electrical power supply and to the network connections, so that, unlike the software firewalls or the firewall electronic cards of the prior art, the operation of the securing circuit is totally independent and presents no risk of being disturbed by malfunctions deriving from its environment. Moreover, the securing circuit is placed in series between the network and the computer station; in other words, for a data item to be transferred from the network to the station or from the station to the network, this data item must necessarily pass through the securing circuit.</p>
+    <p num="p-0010">According to one embodiment, the securing circuit according to the invention is mounted in the casing of the computer station, so that only the network interfaces of said circuit are physically accessible from outside the computer station, an external network interface of the computer station being able to be linked to a network interface of said circuit by a network cable connected to the outside of the casing of the computer station. Thus, according to this embodiment, the securing circuit according to the invention is almost transparent from the point of view of the user of the computer station. In practice, from the point of view external to the casing, the circuit is visible only on its side comprising the network interfaces. Preferably, a small network cable is used to connect the two network interfaces of the securing circuit, so as not to hamper the user or affect the aesthetic aspect of the station.</p>
+    <p num="p-0011">According to one embodiment, the securing circuit according to the invention is installed in an office personal computer, the circuit being implanted on an integrated electronic card, the connection interface for the electrical power supply to said circuit being formed by a connector of said card, said connector being suitable for being plugged into a slot of the mother card of said computer. According to this embodiment, the securing circuit according to the invention is connected to the computer station via standard means, which makes it possible to use said circuit on conventional equipment, without requiring any hardware adaptation.</p>
+    <p num="p-0012">Furthermore, when the computer comprises an internal bus of â€œPeripheral Component Interconnectâ€ (PCI) type, the connector of the electronic card can be suitable for being plugged into a slot of â€œPeripheral Component Interconnectâ€ type linked to said internal bus. The securing circuit can therefore benefit from a standard that is widely used in computer stations, such as the PCI and PCI express (PCIe) standard.</p>
+    <p num="p-0013">When the personal computer comprises, inside the casing, a reset control switch and/or a control switch for switching off said computer, the securing circuit according to the invention can comprise a module for detecting an anomaly, said module being linked to the reset control switch or to the control switch for switching off the computer. The securing circuit can thus prevent any attempt to circumvent the protection by triggering a computer blocking signal.</p>
+    <p num="p-0014">According to one embodiment, the securing circuit according to the invention comprises an external interface for configuring security parameters to be applied by the processing unit, a memory for storing said security parameters and a battery suitable for powering said memory in order to maintain the status of said parameters when said circuit is no longer electrically powered. This embodiment makes it possible to refine the security policies to be applied by parameterizing the behaviour of the securing circuit to be adapted, for example, to a particular computer station or to a particular user.</p>
+    <p num="p-0015">The securing circuit according to the invention can comprise a cryptographic module suitable for encrypting and/or decrypting the data incoming to and outgoing from said circuit, which confers a major advantage on said circuit. In practice, a firewall must decrypt the encrypted streams to analyse them. Now, a conventional hardware firewall cannot be implanted at the level of a user computer station. Also, unlike a configuration involving a conventional hardware firewall, in which the data from the network are first decrypted at the level of said firewall before being transmitted uncoded to the recipient computer station, the decryption of the data can be performed at the level of the securing circuit according to the invention. It is therefore possible to perform end-to-end encryption.</p>
+    <p num="p-0016">The securing circuit according to the invention can comprise a persistent data memory, said memory storing the programs needed for startup via the network, according to the â€œPre-boot eXecution Environmentâ€ technique.</p>
+    <p num="p-0017">According to one embodiment, the securing circuit according to the invention comprises an IEEE 802.1x-standardized authentication module and a persistent data memory, said memory storing authentication certificates used by the authentication module.</p>
+    <p num="p-0018">Another subject of the invention is a system for securing a computer installation, each computer station to be secured comprising an electronic securing circuit as described above, each of said stations being connected via the network to a management station suitable for supervising and/or configuring the electronic circuits present in said stations.</p>
+    <p num="p-0019">Another subject of the invention is a method for securing data passing between a computer station and a network, said method implementing a securing circuit electrically powered by said station, said circuit comprising at least one processing unit and two network interfaces, the first network interface being connected to said network, the second network interface being linked to a network interface of said station, said circuit being mounted inside the computer station, the method comprising at least the following steps:</p>
+    <p num="p-0020">receiving data over the first network interface of said circuit;</p>
+    <p num="p-0021">securing the data by the processing unit;</p>
+    <p num="p-0022">transmitting the processed data to the second network interface.</p>
+    
+    
+    <description-of-drawings>
+      <heading>BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p num="p-0023">Other characteristics will emerge from reading the following detailed description given by way of nonlimiting example and in light of the appended drawings that represent:</p>
+      <p num="p-0024"> <figref idrefs="DRAWINGS">FIGS. 1</figref> <i>a </i>and <b>1</b> <i>b</i>, diagrams illustrating the operation of a securing circuit according to the invention,</p>
+      <p num="p-0025"> <figref idrefs="DRAWINGS">FIG. 2</figref>, a diagram detailing the structure of a securing circuit according to the invention,</p>
+      <p num="p-0026"> <figref idrefs="DRAWINGS">FIG. 3</figref>, a diagram illustrating a second embodiment of the securing circuit according to the invention,</p>
+      <p num="p-0027"> <figref idrefs="DRAWINGS">FIG. 4</figref>, a diagram illustrating an architecture comprising a management station associated with a number of computer stations each comprising a securing circuit according to the invention.</p>
+    </description-of-drawings>
+    
+    
+    <heading>DETAILED DESCRIPTION OF THE INVENTION</heading>
+    <p num="p-0028">In the interests of clarity, the same references in different figures designate the same elements.</p>
+    <p num="p-0029"> <figref idrefs="DRAWINGS">FIGS. 1</figref> <i>a </i>and <b>1</b> <i>b </i>illustrate, through diagrams, the operation of a securing circuit according to the invention. <figref idrefs="DRAWINGS">FIG. 1</figref> <i>a </i>is a diagram showing the integration of a securing circuit according to the invention in a computer station. <figref idrefs="DRAWINGS">FIG. 1</figref> <i>b </i>is a rear view of a host computer station, that is to say a computer station on which said securing circuit is installed.</p>
+    <p num="p-0030">A computer station, for example a personal computer <b>100</b>, comprises at least one network interface <b>102</b> provided with an external connector <b>111</b>, an internal bus <b>103</b> and executes software <b>104</b>, notably an operating system. The personal computer <b>100</b> also comprises an electronic securing circuit <b>106</b> according to the invention, which is provided with two network interfaces, for example two external connectors <b>112</b>, <b>113</b>. The securing circuit <b>106</b> is mounted in the personal computer <b>100</b> so that only its external connectors <b>112</b>, <b>113</b> are accessible to the user of the computer <b>100</b>; in the example, the securing circuit <b>106</b> is implemented on an electronic card <b>107</b> mounted inside the casing of the computer <b>100</b>, alongside other cards <b>109</b>.</p>
+    <p num="p-0031">The computer <b>100</b> is connected to a computer network <b>120</b>. If the electronic circuit according to the invention were not used, the computer <b>100</b> would be connected to said network <b>120</b> directly via the external connector <b>111</b> of its network interface <b>102</b>. In the example, since the computer <b>100</b> uses the securing circuit <b>106</b> according to the invention, it is therefore connected to the computer network <b>120</b> via the first connector <b>113</b> of the securing circuit <b>106</b>, the second connector <b>112</b> of said circuit <b>106</b> being connected, via a simple network cable <b>108</b>, to the external connector <b>111</b> of the network interface <b>102</b> of the computer <b>100</b>. Thus, the data obtained from the computer network <b>120</b> are first received by the first connector <b>113</b> of the securing circuit <b>106</b>, these data are processed by said circuit <b>106</b>, then transmitted to the network interface <b>102</b> of the computer <b>100</b> via, respectively, the second network connector <b>112</b> of the securing circuit <b>106</b> and the external connector <b>111</b> of the network interface <b>102</b> of the computer <b>100</b>.</p>
+    <p num="p-0032"> <figref idrefs="DRAWINGS">FIG. 2</figref> details, through a diagram, the structure of a securing circuit according to the invention. In the example, the securing circuit <b>106</b> is implanted on the electronic card <b>107</b> plugged into an available slot of the mother card <b>201</b> of the computer to be electrically powered. For example, the electronic card is plugged into a slot connected to a bus <b>103</b> of â€œPeripheral Component Interconnectâ€ (PCI) or PCI express (PCIe) type, this type of bus being electrically powered <b>204</b>. Unlike devices known from the prior art, the securing circuit <b>106</b> according to the invention exchanges no data with the bus <b>103</b> to which it is connected. Moreover, the securing circuit <b>106</b> includes a processing unit <b>202</b> making it possible to apply a security policy to the data passing through said circuit <b>106</b>. For example, this processing unit <b>202</b> filters certain types of data that are not authorized, performs authentication checks, and performs a syntactical and/or semantic analysis of the data to ensure against attempted network attacks and the appearance of auxiliary channels.</p>
+    <p num="p-0033">In the embodiment of <figref idrefs="DRAWINGS">FIG. 2</figref>, the securing circuit <b>106</b> comprises a module <b>206</b> handling the detection of a security anomaly of the type of disconnection of the network cable <b>108</b> connected to the second network connector <b>112</b> of the securing circuit <b>106</b>. In the proposed embodiment, the module <b>206</b> is linked to a reset switch <b>208</b> present on the mother card <b>201</b> of the computer <b>100</b>, so that, when a security anomaly is detected by the module <b>206</b>, a reset signal for the computer <b>100</b> is triggered. The module <b>206</b> also detects the disconnection of the cable <b>108</b> at the level of the interface <b>111</b>, for example via an Ethernet controller associated with the second connector <b>112</b> which detects the loss of the Ethernet connection on this second connector <b>112</b>. When an anomaly is detected, for example if the network cable <b>108</b> is disconnected from the second connector <b>112</b> of the securing circuit <b>106</b>, then a signal is transmitted to the reset switch <b>208</b> of the mother card <b>201</b> of the computer station <b>100</b> thus forcing the activation of the command to reset the mother card <b>201</b> via signal to block its activity.</p>
+    <p num="p-0034"> <figref idrefs="DRAWINGS">FIG. 3</figref> presents an embodiment in which the securing circuit <b>106</b> comprises an external configuration interface <b>301</b>, for example a serial port, enabling an administrator to parameterize the security policies to be applied. The internal bus connector of the electronic card <b>107</b> on which the securing circuit <b>106</b> is implanted is referenced <b>310</b> in <figref idrefs="DRAWINGS">FIG. 3</figref>. According to this embodiment, the securing circuit <b>106</b> also comprises a storage memory <b>302</b> making it possible to store the parameters, events and security states and an electrical battery <b>303</b> to power said memory when the securing circuit <b>106</b> is no longer powered by the host computer station <b>100</b>.</p>
+    <p num="p-0035">The external configuration interface <b>301</b> is suitable, for example, for connection to a biometric terminal, a keyboard or a mini keyboard to enable an administrator to be authenticated with a password or a biometric datum.</p>
+    <p num="p-0036">The circuit according to the invention can advantageously host services or sensitive data on a persistent data memory, the latter then being protected from malfunctions or security failings inherent in a computer station. In the example, the persistent data memory is the storage memory <b>302</b> used to store the security parameters.</p>
+    <p num="p-0037">As an example, a securing circuit according to the invention can be used to host services that are intrinsically vulnerable, such as the DHCP (Dynamic Host Configuration Protocol) or DNS (Domain Name Service) services. Thus, it can provide a DNS cache service in order to protect said service from attacks from the cache of the operating system. The securing circuit can also provide a reliable time to the host computer station. In practice, a time made available by a protocol such as NTP (Network Time Protocol) is maintained locally by a clock of the securing circuit according to the invention.</p>
+    <p num="p-0038">Regarding the protection of the sensitive data, the securing circuit according to the invention can, for example, be used to store authentication certificates, for example the authentication certificates of the IEEE 802.1x-standardized protocols, whereas, in the prior art, the latter are stored permanently on the hard disk of the host station.</p>
+    <p num="p-0039">Moreover, the starting up of a station hosting a circuit according to the invention can be secured via the use of a startup from the network, a technique more commonly designated by the acronym PXE which stands for â€œPre-boot eXecution Environmentâ€. The securing circuit of the station then comprises the services necessary to the PXE startup and it recovers the startup configuration, from a memory present on the securing circuit or in a secure manner from a server via protected interchanges.</p>
+    <p num="p-0040">According to another embodiment of the circuit according to the invention, the securing circuit comprises a cryptographic module thus making it possible to perform end-to-end encryption/decryption.</p>
+    <p num="p-0041">Unlike the conventional approach involving centralized protection of a computer installation, generally involving the use of one or more hardware firewalls placed at critical points in the network, the approach employed to protect a number of computer stations with the circuit according to the invention is a distributed approach, since each securing circuit can apply its own security policy adapted to the station on which it is installed.</p>
+    <p num="p-0042">Nevertheless, as illustrated by <figref idrefs="DRAWINGS">FIG. 4</figref>, a centralized management of the securing circuits according to the invention, at least in part, may be useful, notably when the number of stations to be protected becomes large.</p>
+    <p num="p-0043">Thus, a management station <b>401</b> is connected, via the network <b>402</b>, to a number of computer stations <b>411</b>, <b>412</b>, <b>413</b> each comprising a securing circuit according to the invention. Depending on the requirements of the administrator responsible for the management station <b>401</b>, this station <b>401</b> may, for example, make it possible to take charge of the rise in security alarms or events deriving from securing circuits, apply overall security policies and/or security policies specific to each computer station <b>411</b>, <b>412</b>, <b>413</b>, distribute certificates and revocation lists, or even facilitate maintenance of the securing circuits by applying patches or by activating new services. Moreover, in the case where the securing circuits included in the computer stations <b>411</b>, <b>412</b>, <b>413</b> include a module <b>206</b> for detecting anomalies (see <figref idrefs="DRAWINGS">FIG. 2</figref>), then the management station <b>401</b> can also be used to launch a command to block a number of computer stations in the case where, for example, serious security alarms are raised.</p>
+    <p num="p-0044">The benefits of the securing circuit according to the invention are many. First of all, the securing circuit according to the invention is almost transparent to the user. In practice, on the one hand, there is no software driver to be installed and from the hardware point of view, only an edge of the securing circuitâ€”the one comprising the network connectorsâ€”is accessible to the user, a network cable, preferably short and therefore not a hindrance, being connected between the circuit and the standard network interface of the computer station.</p>
+    <p num="p-0045">Then, because of the absence of software interaction with the computer station on which it is installed, and the very low hardware interaction with this same stationâ€”electrical power supply and the networkâ€”the securing circuit according to the invention benefits from good integrity, that is to say that its state can be modified only by an intervention on the part of an administrator external to the computer station. Furthermore, this minimal interaction with the computer station makes it possible to considerably reduce the risks of compromising the data stored on said station.</p>
+    <p num="p-0046">Furthermore, given the restricted perimeter formed by the circuit according to the invention, any security certification procedures are facilitated.</p>
+    <p num="p-0047">Another benefit of the circuit according to the invention is that it can integrate other services to be secured such as, for example, an encryption or authentication unit, an intrusion detection system, a trustworthy time reference or a secured startup from the network (PXE).</p>
+    <p num="p-0048">The circuit according to the invention can notably be used to protect a number of computer stations containing sensitive data and linked to a network, for example in the banking, medical or defence domain. In practice, the level of security that can be obtained on the network streams interchanged by the stations protected with the securing circuit is greater than the level of security generally obtained with the solutions of the prior art.</p>
+    
+  </div>
+  </div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">11</span>)</h2>
+    
+    <div itemprop="content" html><div mxw-id="PCLM55635588" lang="EN" load-source="patent-office" class="claims">
+    <claim-statement>What is claimed is:</claim-statement>
+    <div class="claim"> <div id="CLM-00001" num="00001" class="claim">
+      <div class="claim-text">1. An electronic circuit for securing data interchanges between a computer station and a network, said circuit comprising a first network interface connected to said network, said circuit comprising:
+<div class="claim-text">a second network interface connected to a network interface of said computer station,</div>
+<div class="claim-text">a unit for processing data passing between the first network interface and the second network interface,</div>
+<div class="claim-text">an interface for connection to an internal bus of the computer station suitable for electrically connecting an electrical power supply, said electronic circuit not comprising any other means for transferring data to said station, said electronic securing circuit being mounted in a casing of the computer station so that only the network interfaces of said circuit are physically accessible from outside the computer station, an external network interface of the computer station being able to be linked to said second network interface of said circuit by a network cable connected to an outside of the casing of the computer station.</div>
+</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00002" num="00002" class="claim">
+      <div class="claim-text">2. The electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, the computer station being an office personal computer, the circuit being arranged on an integrated electronic card, the connection interface for the electrical power supply to said circuit being formed by a connector of said card, said connector being suitable for being plugged into a slot of a mother card of said computer.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00003" num="00003" class="claim">
+      <div class="claim-text">3. The electronic circuit according to <claim-ref idref="CLM-00002">claim 2</claim-ref>, the computer comprising an internal bus of â€œPeripheral Component Interconnectâ€ type, the connector of the electronic card being suitable for being plugged into a slot of â€œPeripheral Component Interconnectâ€ type linked to said internal bus.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00004" num="00004" class="claim">
+      <div class="claim-text">4. The electronic circuit according to <claim-ref idref="CLM-00002">claim 2</claim-ref>, the personal computer comprising, inside the casing, a reset control switch and/or a control switch for switching off said computer, said circuit comprising a module for detecting an anomaly, said module being linked to the reset control switch or to the control switch for switching off the computer.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00005" num="00005" class="claim">
+      <div class="claim-text">5. The electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising an external interface for configuring security parameters to be applied by a processing unit, a memory for storing said security parameters and a battery suitable for powering said memory in order to maintain a status of said parameters when said circuit is no longer electrically powered.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00006" num="00006" class="claim">
+      <div class="claim-text">6. The electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising a cryptographic module suitable for encrypting and/or decrypting the data incoming to and outgoing from said circuit.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00007" num="00007" class="claim">
+      <div class="claim-text">7. The electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising a persistent data memory, said memory storing the programs needed for startup via the network, according to the â€œPre-boot eXecution Environmentâ€ technique.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00008" num="00008" class="claim">
+      <div class="claim-text">8. The electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising an IEEE 802.1x-standardized authentication module and a persistent data memory, said memory storing authentication certificates used by the authentication module.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00009" num="00009" class="claim">
+      <div class="claim-text">9. A system for securing a computer installation, each computer station to be secured comprising an electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, each of said stations being connected via the network to a management station suitable for supervising and/or configuring the electronic circuits present in said stations.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00010" num="00010" class="claim">
+      <div class="claim-text">10. A system for securing a computer installation, each computer station to be secured comprising an electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, each of said stations being connected via the network to a management station suitable for supervising and/or configuring the electronic circuits present in said stations.</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="CLM-00011" num="00011" class="claim">
+      <div class="claim-text">11. The electronic circuit according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, the computer station being an office personal computer, the circuit being arranged on an integrated electronic card, the connection interface for the electrical power supply to said circuit being formed by a connector of said card, said connector being suitable for being plugged into a slot of the mother card of said computer.</div>
+    </div>
+  </div> </div>
+  </div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+        <span itemprop="applicationNumber">US12/624,949</span>
+        <span itemprop="priorityDate">2008-11-25</span>
+        <span itemprop="filingDate">2009-11-24</span>
+        <span itemprop="title">Electronic circuit for securing data interchanges between a computer station and a network 
+       </span>
+        <span itemprop="ifiStatus">Active</span>
+        <span itemprop="ifiExpiration">2032-03-14</span>
+        <a href="/patent/US8577035B2/en">
+            <span itemprop="representativePublication">US8577035B2</span>
+            (<span itemprop="primaryLanguage">en</span>)
+        </a>
+    </section>
+
+    <h2>Priority Applications (3)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">FR0806611</span>
+                   
+                   
+                <td itemprop="priorityDate"></td>
+                <td itemprop="filingDate">2008-11-25</td>
+                <td itemprop="title"></td>
+              </tr><tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">FR08/06611</span>
+                   
+                   
+                <td itemprop="priorityDate"></td>
+                <td itemprop="filingDate">2008-11-25</td>
+                <td itemprop="title"></td>
+              </tr><tr itemprop="priorityApps" itemscope repeat>
+                <td>
+                   <span itemprop="applicationNumber">FR0806611A</span>
+                   
+                   <a href="/patent/FR2938949B1/en">
+                        <span itemprop="representativePublication">FR2938949B1</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                <td itemprop="priorityDate">2008-11-25</td>
+                <td itemprop="filingDate">2008-11-25</td>
+                <td itemprop="title">Electronic circuit for securing exchanges of data between a computer station and a network. 
+     </td>
+              </tr>
+           </tbody>
+       </table>
+
+    
+
+    
+
+    
+
+    <h2>Publications (2)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Publication Number</th>
+                    <th>Publication Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">US20100132046A1</span>
+                   
+                   <a href="/patent/US20100132046A1/en">US20100132046A1
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2010-05-27</td>
+              </tr><tr itemprop="pubs" itemscope repeat>
+                <td>
+                   <span itemprop="publicationNumber">US8577035B2</span>
+                   
+                   <span itemprop="thisPatent">true</span>
+                   <a href="/patent/US8577035B2/en">US8577035B2
+                       (<span itemprop="primaryLanguage">en</span>)
+                   </a>
+                </td>
+                <td itemprop="publicationDate">2013-11-05</td>
+              </tr>
+           </tbody>
+        </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=40848625</h2>
+
+    <h2>Family Applications (1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Application Number</th>
+                    <th>Title</th>
+                    <th>Priority Date</th>
+                    <th>Filing Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr itemprop="applications" itemscope repeat>
+                <td>
+                    <span itemprop="applicationNumber">US12/624,949</span>
+                    <span itemprop="ifiStatus">Active</span>
+                    <span itemprop="ifiExpiration">2032-03-14</span>
+                    <a href="/patent/US8577035B2/en">
+                        <span itemprop="representativePublication">US8577035B2</span>
+                          (<span itemprop="primaryLanguage">en</span>)
+                      </a>
+                </td>
+                <td itemprop="priorityDate">2008-11-25</td>
+                <td itemprop="filingDate">2009-11-24</td>
+                <td itemprop="title">Electronic circuit for securing data interchanges between a computer station and a network 
+       </td>
+              </tr>
+           </tbody>
+        </table>
+
+    
+
+    
+
+    <h2>Country Status (3)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">US</span>
+                (<span itemprop="num">1</span>)
+              <meta itemprop="thisCountry" content="true">
+            </td>
+            <td>
+              <a href="/patent/US8577035B2/en">
+                <span itemprop="representativePublication">US8577035B2</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">EP</span>
+                (<span itemprop="num">1</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/EP2192515B1/en">
+                <span itemprop="representativePublication">EP2192515B1</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr><tr itemprop="countryStatus" itemscope repeat>
+            <td>
+              <span itemprop="countryCode">FR</span>
+                (<span itemprop="num">1</span>)
+              
+            </td>
+            <td>
+              <a href="/patent/FR2938949B1/en">
+                <span itemprop="representativePublication">FR2938949B1</span>
+                  (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    
+
+    <h2>Families Citing this family (2)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20140130129A1/en">
+              <span itemprop="publicationNumber">US20140130129A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2011-08-09</td>
+          <td itemprop="publicationDate">2014-05-08</td>
+          <td><span itemprop="assigneeOriginal">Hewlett-Packard Development Company, L.P.</span></td>
+          <td itemprop="title">Count values to detect disconnected circuit 
+       </td>
+        </tr><tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/FR3029311B1/en">
+              <span itemprop="publicationNumber">FR3029311B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2014-11-27</td>
+          <td itemprop="publicationDate">2017-01-06</td>
+          <td><span itemprop="assigneeOriginal">Thales Sa</span></td>
+          <td itemprop="title">Method for managing an architecture and associated architecture 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Citations (8)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5299314A/en">
+              <span itemprop="publicationNumber">US5299314A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1990-03-22</td>
+          <td itemprop="publicationDate">1994-03-29</td>
+          <td><span itemprop="assigneeOriginal">Xircom, Inc.</span></td>
+          <td itemprop="title">Network adapter using status inlines and data lines for bi-directionally transferring data between lan and standard p.c. parallel port 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/NL9400460A/en">
+              <span itemprop="publicationNumber">NL9400460A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1994-03-23</td>
+          <td itemprop="publicationDate">1995-11-01</td>
+          <td><span itemprop="assigneeOriginal">Hans Hendriks</span></td>
+          <td itemprop="title">  Electric amplifier.  </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6651190B1/en">
+              <span itemprop="publicationNumber">US6651190B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-03-14</td>
+          <td itemprop="publicationDate">2003-11-18</td>
+          <td><span itemprop="assigneeOriginal">A. Worley</span></td>
+          <td itemprop="title">Independent remote computer maintenance device 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040268147A1/en">
+              <span itemprop="publicationNumber">US20040268147A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2003-06-30</td>
+          <td itemprop="publicationDate">2004-12-30</td>
+          <td><span itemprop="assigneeOriginal">Wiederin Shawn E</span></td>
+          <td itemprop="title">Integrated security system 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040268138A1/en">
+              <span itemprop="publicationNumber">US20040268138A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-06-12</td>
+          <td itemprop="publicationDate">2004-12-30</td>
+          <td><span itemprop="assigneeOriginal">Larson Thane M.</span></td>
+          <td itemprop="title">Inter integrated circuit bus router 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050203987A1/en">
+              <span itemprop="publicationNumber">US20050203987A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2005-09-15</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Network power administration system 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7325746B2/en">
+              <span itemprop="publicationNumber">US7325746B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-11-04</td>
+          <td itemprop="publicationDate">2008-02-05</td>
+          <td><span itemprop="assigneeOriginal">Renesas Technology Corp.</span></td>
+          <td itemprop="title">Memory card and semiconductor device 
+       </td>
+        </tr><tr itemprop="backwardReferencesOrig" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7428605B2/en">
+              <span itemprop="publicationNumber">US7428605B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-01-06</td>
+          <td itemprop="publicationDate">2008-09-23</td>
+          <td><span itemprop="assigneeOriginal">Super Talent Electronics Inc.</span></td>
+          <td itemprop="title">Symmetric USB device with metal-tube plastic-plug shell with USB plug centered and integrated with circuit board substrate 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+    <ul>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2008</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2008-11-25</span>
+            <span itemprop="countryCode">FR</span>
+            <span itemprop="applicationNumber">FR0806611A</span>
+            <a href="/patent/FR2938949B1/en"><span itemprop="documentId">patent/FR2938949B1/en</span></a>
+            <span itemprop="legalStatusCat">not_active</span>
+            <span itemprop="legalStatus">Expired - Fee Related</span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2009</span>
+        <ul>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2009-11-24</span>
+            <span itemprop="countryCode">US</span>
+            <span itemprop="applicationNumber">US12/624,949</span>
+            <a href="/patent/US8577035B2/en"><span itemprop="documentId">patent/US8577035B2/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            
+            <span itemprop="thisApp" content="true" bool></span>
+            
+          </li>
+          
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2009-11-25</span>
+            <span itemprop="countryCode">EP</span>
+            <span itemprop="applicationNumber">EP20090014683</span>
+            <a href="/patent/EP2192515B1/en"><span itemprop="documentId">patent/EP2192515B1/en</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            
+          </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+    
+
+    </section>
+
+  <section>
+    <h2>Patent Citations (8)</h2>
+    <table>
+      <caption>* Cited by examiner, â€  Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US5299314A/en">
+              <span itemprop="publicationNumber">US5299314A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1990-03-22</td>
+          <td itemprop="publicationDate">1994-03-29</td>
+          <td><span itemprop="assigneeOriginal">Xircom, Inc.</span></td>
+          <td itemprop="title">Network adapter using status inlines and data lines for bi-directionally transferring data between lan and standard p.c. parallel port 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/NL9400460A/en">
+              <span itemprop="publicationNumber">NL9400460A</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">1994-03-23</td>
+          <td itemprop="publicationDate">1995-11-01</td>
+          <td><span itemprop="assigneeOriginal">Hans Hendriks</span></td>
+          <td itemprop="title">  Electric amplifier.  </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20050203987A1/en">
+              <span itemprop="publicationNumber">US20050203987A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">1996-07-23</td>
+          <td itemprop="publicationDate">2005-09-15</td>
+          <td><span itemprop="assigneeOriginal">Server Technology, Inc.</span></td>
+          <td itemprop="title">Network power administration system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7428605B2/en">
+              <span itemprop="publicationNumber">US7428605B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2000-01-06</td>
+          <td itemprop="publicationDate">2008-09-23</td>
+          <td><span itemprop="assigneeOriginal">Super Talent Electronics Inc.</span></td>
+          <td itemprop="title">Symmetric USB device with metal-tube plastic-plug shell with USB plug centered and integrated with circuit board substrate 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US6651190B1/en">
+              <span itemprop="publicationNumber">US6651190B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2000-03-14</td>
+          <td itemprop="publicationDate">2003-11-18</td>
+          <td><span itemprop="assigneeOriginal">A. Worley</span></td>
+          <td itemprop="title">Independent remote computer maintenance device 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040268138A1/en">
+              <span itemprop="publicationNumber">US20040268138A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-06-12</td>
+          <td itemprop="publicationDate">2004-12-30</td>
+          <td><span itemprop="assigneeOriginal">Larson Thane M.</span></td>
+          <td itemprop="title">Inter integrated circuit bus router 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20040268147A1/en">
+              <span itemprop="publicationNumber">US20040268147A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            
+            
+          </td>
+          <td itemprop="priorityDate">2003-06-30</td>
+          <td itemprop="publicationDate">2004-12-30</td>
+          <td><span itemprop="assigneeOriginal">Wiederin Shawn E</span></td>
+          <td itemprop="title">Integrated security system 
+       </td>
+        </tr><tr itemprop="backwardReferences" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US7325746B2/en">
+              <span itemprop="publicationNumber">US7325746B2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2003-11-04</td>
+          <td itemprop="publicationDate">2008-02-05</td>
+          <td><span itemprop="assigneeOriginal">Renesas Technology Corp.</span></td>
+          <td itemprop="title">Memory card and semiconductor device 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  
+
+  
+
+  <section>
+    <h2>Also Published As</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Publication date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/FR2938949B1/en">
+              <span itemprop="publicationNumber">FR2938949B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2011-01-21</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2192515B1/en">
+              <span itemprop="publicationNumber">EP2192515B1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2014-11-05</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2192515A2/en">
+              <span itemprop="publicationNumber">EP2192515A2</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2010-06-02</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/EP2192515A3/en">
+              <span itemprop="publicationNumber">EP2192515A3</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2012-08-29</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/FR2938949A1/en">
+              <span itemprop="publicationNumber">FR2938949A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2010-05-28</td>
+        </tr><tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            
+            
+            <a href="/patent/US20100132046A1/en">
+              <span itemprop="publicationNumber">US20100132046A1</span>
+              (<span itemprop="primaryLanguage">en</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2010-05-27</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7644290B2/en">
+                <span itemprop="publicationNumber">US7644290B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-01-05">2010-01-05</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for seal tamper detection for intelligent electronic devices 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/CN1291568C/en">
+                <span itemprop="publicationNumber">CN1291568C</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2006-12-20">2006-12-20</time>
+            
+            
+          </td>
+          <td itemprop="title">Method for preventing server field from invading and server field 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1436937B1/en">
+                <span itemprop="publicationNumber">EP1436937B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-01-09">2008-01-09</time>
+            
+            
+          </td>
+          <td itemprop="title">Arrangement and method for execution of code 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7225467B2/en">
+                <span itemprop="publicationNumber">US7225467B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2007-05-29">2007-05-29</time>
+            
+            
+          </td>
+          <td itemprop="title">Active intrusion resistant environment of layered object and compartment keys (airelock) 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="3307382590170329466">
+              <a href="/scholar/3307382590170329466"><span itemprop="scholarAuthors">Dzung et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2005">2005</time>
+            
+          </td>
+          <td itemprop="title">Security for industrial communication systems</td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20040073806A1/en">
+                <span itemprop="publicationNumber">US20040073806A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2004-04-15">2004-04-15</time>
+            
+            
+          </td>
+          <td itemprop="title">Encapsulation of a TCPA trusted platform module functionality within a server management coprocessor subsystem 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US9049010B2/en">
+                <span itemprop="publicationNumber">US9049010B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-06-02">2015-06-02</time>
+            
+            
+          </td>
+          <td itemprop="title">Portable data encryption device with configurable security functionality and method for file encryption 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="6611944098280906637">
+              <a href="/scholar/6611944098280906637"><span itemprop="scholarAuthors">Andrea et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2015">2015</time>
+            
+          </td>
+          <td itemprop="title">Internet of Things: Security vulnerabilities and challenges</td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20030140238A1/en">
+                <span itemprop="publicationNumber">US20030140238A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2003-07-24">2003-07-24</time>
+            
+            
+          </td>
+          <td itemprop="title">Implementation of a secure computing environment by using a secure bootloader, shadow memory, and protected memory 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7716726B2/en">
+                <span itemprop="publicationNumber">US7716726B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-05-11">2010-05-11</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for protecting a computing device from computer exploits delivered over a networked environment in a secured communication 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20020040439A1/en">
+                <span itemprop="publicationNumber">US20020040439A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-04-04">2002-04-04</time>
+            
+            
+          </td>
+          <td itemprop="title">Processes systems and networks for secure exchange of information and quality of service maintenance using computer hardware 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7650510B2/en">
+                <span itemprop="publicationNumber">US7650510B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2010-01-19">2010-01-19</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and apparatus for in-line serial data encryption 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP2599276B1/en">
+                <span itemprop="publicationNumber">EP2599276B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-12-12">2018-12-12</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for network level protection against malicious software 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US7624434B2/en">
+                <span itemprop="publicationNumber">US7624434B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-11-24">2009-11-24</time>
+            
+            
+          </td>
+          <td itemprop="title">System for providing firewall capabilities to a communication device 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="8212586942148432981">
+              <a href="/scholar/8212586942148432981"><span itemprop="scholarAuthors">Aloul et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2012">2012</time>
+            
+          </td>
+          <td itemprop="title">Smart grid security: Threats, vulnerabilities and solutions</td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP2052344B1/en">
+                <span itemprop="publicationNumber">EP2052344B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2017-09-27">2017-09-27</time>
+            
+            
+          </td>
+          <td itemprop="title">Bi-processor architecture for secure systems 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US9003199B2/en">
+                <span itemprop="publicationNumber">US9003199B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2015-04-07">2015-04-07</time>
+            
+            
+          </td>
+          <td itemprop="title">Modular cryptographic device providing multi-mode wireless LAN operation features and related methods 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/KR100831437B1/en">
+                <span itemprop="publicationNumber">KR100831437B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2008-05-21">2008-05-21</time>
+            
+            
+          </td>
+          <td itemprop="title">Method, apparatuses and computer program product for sharing cryptographic key with an embedded agent on a network endpoint in a network domain 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20120060030A1/en">
+                <span itemprop="publicationNumber">US20120060030A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2012-03-08">2012-03-08</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method of providing trusted, secure, and verifiable operating environment 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20110264922A1/en">
+                <span itemprop="publicationNumber">US20110264922A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2011-10-27">2011-10-27</time>
+            
+            
+          </td>
+          <td itemprop="title">Digital video guard 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US20160173530A1/en">
+                <span itemprop="publicationNumber">US20160173530A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-06-16">2016-06-16</time>
+            
+            
+          </td>
+          <td itemprop="title">Vehicle-Mounted Network System 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/WO2009051623A2/en">
+                <span itemprop="publicationNumber">WO2009051623A2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-04-23">2009-04-23</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for providing a multifunction computer security usb token device 
+     </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/US8863268B2/en">
+                <span itemprop="publicationNumber">US8863268B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2014-10-14">2014-10-14</time>
+            
+            
+          </td>
+          <td itemprop="title">Security module and method within an information handling system 
+       </td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="3502331975642600753">
+              <a href="/scholar/3502331975642600753"><span itemprop="scholarAuthors">Humayed et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2017">2017</time>
+            
+          </td>
+          <td itemprop="title">Cyber-physical systems securityâ€”A survey</td>
+        </tr><tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              
+              
+              <a href="/patent/EP1792433B1/en">
+                <span itemprop="publicationNumber">EP1792433B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-10-05">2016-10-05</time>
+            
+            
+          </td>
+          <td itemprop="title">System and method for creating a security application for programmable cryptography module 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2010-01-11">2010-01-11</time></td>
+          <td itemprop="code">AS</td>
+          <td itemprop="title">Assignment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Owner name</strong>:
+              <span itemprop="value">THALES, FRANCE</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SALIBA, ERIC;LELEU, PHILIPPE;SIGNING DATES FROM 20100105 TO 20100108;REEL/FRAME:023757/0201</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2013-10-16">2013-10-16</time></td>
+          <td itemprop="code">STCF</td>
+          <td itemprop="title">Information on status: patent grant</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Free format text</strong>:
+              <span itemprop="value">PATENTED CASE</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2017-04-26">2017-04-26</time></td>
+          <td itemprop="code">FPAY</td>
+          <td itemprop="title">Fee payment</td>
+          <td>
+            
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Year of fee payment</strong>:
+              <span itemprop="value">4</span>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
+
+    </search-app>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script async="" defer="" src="//www.google.com/insights/consumersurveys/async_survey?site=cxkjf7ipxgbnnjy6k35ezcvbbe"></script>
+  </body>
+</html>
