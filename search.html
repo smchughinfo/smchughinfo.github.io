@@ -58,6 +58,9 @@
             #notes.visible {
                 display: block;
             }
+            .secondary-use {
+                background-color: rgba(255, 180, 180);
+            }
         </style>
     </head>
     <body>
@@ -75,15 +78,19 @@
             <input type="checkbox" id="withNotes" name="withNotes" />
             <label for="withNotes">w/ notes</label>
         </div>
-        <textarea id="notes"></textarea>
+        <textarea id="notes" placeholder="show localStorage.pages, delete localStorage.pages, set localStorage.pages=JSON *note - copy JSON directly from show localStorage.pages"></textarea>
     </body>
     <script>
-        if(localStorage.pages === undefined) {
+        if(localStorage.pages == null) {
             localStorage.pages = JSON.stringify({});
         }
 
+        var allPageIndex = 0;
+        var allPages = ["usptog06f_related_patents\\United States Patent 10027650.html","usptog06f_related_patents\\United States Patent 10061919.html","usptog06f_related_patents\\United States Patent 10068103.html","usptog06f_related_patents\\United States Patent 10073971.html","usptog06f_related_patents\\United States Patent 10073972.html","usptog06f_related_patents\\United States Patent 10084813.html","usptog06f_related_patents\\United States Patent 10122747.html","usptog06f_related_patents\\United States Patent 10142290.html","usptog06f_related_patents\\United States Patent 10142373.html","usptog06f_related_patents\\United States Patent 10148761.html","usptog06f_related_patents\\United States Patent 10152113.html","usptog06f_related_patents\\United States Patent 10153906.html","usptog06f_related_patents\\United States Patent 10154047.html","usptog06f_related_patents\\United States Patent 10158677.html","usptog06f_related_patents\\United States Patent 10169575.html","usptog06f_related_patents\\United States Patent 10185832.html","usptog06f_related_patents\\United States Patent 10186100.html","usptog06f_related_patents\\United States Patent 10225288.html","usptog06f_related_patents\\United States Patent 10229382.html","usptog06f_related_patents\\United States Patent 10305919.html","usptog06f_related_patents\\United States Patent 10367834.html","usptog06f_related_patents\\United States Patent 10389817.html","usptog06f_related_patents\\United States Patent 10404664.html","usptog06f_related_patents\\United States Patent 10417432.html","usptog06f_related_patents\\United States Patent 10445530.html","usptog06f_related_patents\\United States Patent 10454916.html","usptog06f_related_patents\\United States Patent 4916738.html","usptog06f_related_patents\\United States Patent 6182223.html","usptog06f_related_patents\\United States Patent 6408391.html","usptog06f_related_patents\\United States Patent 6681331.html","usptog06f_related_patents\\United States Patent 7140039.html","usptog06f_related_patents\\United States Patent 7197563.html","usptog06f_related_patents\\United States Patent 7308705.html","usptog06f_related_patents\\United States Patent 7346783.html","usptog06f_related_patents\\United States Patent 7356585.html","usptog06f_related_patents\\United States Patent 7389539.html","usptog06f_related_patents\\United States Patent 7536723.html","usptog06f_related_patents\\United States Patent 7603711.html","usptog06f_related_patents\\United States Patent 7624444.html","usptog06f_related_patents\\United States Patent 7644151.html","usptog06f_related_patents\\United States Patent 7657939.html","usptog06f_related_patents\\United States Patent 7673164.html","usptog06f_related_patents\\United States Patent 7756544.html","usptog06f_related_patents\\United States Patent 7797411.html","usptog06f_related_patents\\United States Patent 7804504.html","usptog06f_related_patents\\United States Patent 7814543.html","usptog06f_related_patents\\United States Patent 7818797.html","usptog06f_related_patents\\United States Patent 7823204.html","usptog06f_related_patents\\United States Patent 7934254.html","usptog06f_related_patents\\United States Patent 7954160.html","usptog06f_related_patents\\United States Patent 7971255.html","usptog06f_related_patents\\United States Patent 8195953.html","usptog06f_related_patents\\United States Patent 8245301.html","usptog06f_related_patents\\United States Patent 8245302.html","usptog06f_related_patents\\United States Patent 8266267.html","usptog06f_related_patents\\United States Patent 8266320.html","usptog06f_related_patents\\United States Patent 8321955.html","usptog06f_related_patents\\United States Patent 8327443.html","usptog06f_related_patents\\United States Patent 8335864.html","usptog06f_related_patents\\United States Patent 8369830.html","usptog06f_related_patents\\United States Patent 8386846.html","usptog06f_related_patents\\United States Patent 8572735.html","usptog06f_related_patents\\United States Patent 8577035.html","usptog06f_related_patents\\United States Patent 8578487.html","usptog06f_related_patents\\United States Patent 8595831.html","usptog06f_related_patents\\United States Patent 8627116.html","usptog06f_related_patents\\United States Patent 8667589.html","usptog06f_related_patents\\United States Patent 8671224.html","usptog06f_related_patents\\United States Patent 8677148.html","usptog06f_related_patents\\United States Patent 8726085.html","usptog06f_related_patents\\United States Patent 8763103.html","usptog06f_related_patents\\United States Patent 8787583.html","usptog06f_related_patents\\United States Patent 8789191.html","usptog06f_related_patents\\United States Patent 8806629.html","usptog06f_related_patents\\United States Patent 8896455.html","usptog06f_related_patents\\United States Patent 8914882.html","usptog06f_related_patents\\United States Patent 8925090.html","usptog06f_related_patents\\United States Patent 8938799.html","usptog06f_related_patents\\United States Patent 8959224.html","usptog06f_related_patents\\United States Patent 8963715.html","usptog06f_related_patents\\United States Patent 8973138.html","usptog06f_related_patents\\United States Patent 8990923.html","usptog06f_related_patents\\United States Patent 8996865.html","usptog06f_related_patents\\United States Patent 9003527.html","usptog06f_related_patents\\United States Patent 9009829.html","usptog06f_related_patents\\United States Patent 9015846.html","usptog06f_related_patents\\United States Patent 9020652.html","usptog06f_related_patents\\United States Patent 9064110.html","usptog06f_related_patents\\United States Patent 9124640.html","usptog06f_related_patents\\United States Patent 9125987.html","usptog06f_related_patents\\United States Patent 9137258.html","usptog06f_related_patents\\United States Patent 9167001.html","usptog06f_related_patents\\United States Patent 9182232.html","usptog06f_related_patents\\United States Patent 9247500.html","usptog06f_related_patents\\United States Patent 9280891.html","usptog06f_related_patents\\United States Patent 9338174.html","usptog06f_related_patents\\United States Patent 9342415.html","usptog06f_related_patents\\United States Patent 9369493.html","usptog06f_related_patents\\United States Patent 9380024.html","usptog06f_related_patents\\United States Patent 9405900.html","usptog06f_related_patents\\United States Patent 9436652.html","usptog06f_related_patents\\United States Patent 9443085.html","usptog06f_related_patents\\United States Patent 9443097.html","usptog06f_related_patents\\United States Patent 9467470.html","usptog06f_related_patents\\United States Patent 9497224.html","usptog06f_related_patents\\United States Patent 9501639.html","usptog06f_related_patents\\United States Patent 9514303.html","usptog06f_related_patents\\United States Patent 9514310.html","usptog06f_related_patents\\United States Patent 9536078.html","usptog06f_related_patents\\United States Patent 9571297.html","usptog06f_related_patents\\United States Patent 9571507.html","usptog06f_related_patents\\United States Patent 9589148.html","usptog06f_related_patents\\United States Patent 9591607.html","usptog06f_related_patents\\United States Patent 9686300.html","usptog06f_related_patents\\United States Patent 9690928.html","usptog06f_related_patents\\United States Patent 9691268.html","usptog06f_related_patents\\United States Patent 9697033.html","usptog06f_related_patents\\United States Patent 9699205.html","usptog06f_related_patents\\United States Patent 9699209.html","usptog06f_related_patents\\United States Patent 9705848.html","usptog06f_related_patents\\United States Patent 9729568.html","usptog06f_related_patents\\United States Patent 9736152.html","usptog06f_related_patents\\United States Patent 9749959.html","usptog06f_related_patents\\United States Patent 9769786.html","usptog06f_related_patents\\United States Patent 9774449.html","usptog06f_related_patents\\United States Patent 9825912.html","usptog06f_related_patents\\United States Patent 9838426.html","usptog06f_related_patents\\United States Patent 9853942.html","usptog06f_related_patents\\United States Patent 9866584.html","usptog06f_related_patents\\United States Patent 9886581.html","usptog06f_related_patents\\United States Patent 9904785.html","usptog06f_related_patents\\United States Patent 9913409.html","usptog06f_related_patents\\United States Patent 9916480.html","usptog06f_related_patents\\United States Patent 9923922.html","usptog06f_related_patents\\United States Patent 9965007.html"];
+
         var pageIndex = 0;
-        var pages = ["usptog06f_related_patents\\United States Patent 10027650.html","usptog06f_related_patents\\United States Patent 10061919.html","usptog06f_related_patents\\United States Patent 10068103.html","usptog06f_related_patents\\United States Patent 10073971.html","usptog06f_related_patents\\United States Patent 10073972.html","usptog06f_related_patents\\United States Patent 10084813.html","usptog06f_related_patents\\United States Patent 10122747.html","usptog06f_related_patents\\United States Patent 10142290.html","usptog06f_related_patents\\United States Patent 10142373.html","usptog06f_related_patents\\United States Patent 10148761.html","usptog06f_related_patents\\United States Patent 10152113.html","usptog06f_related_patents\\United States Patent 10153906.html","usptog06f_related_patents\\United States Patent 10154047.html","usptog06f_related_patents\\United States Patent 10158677.html","usptog06f_related_patents\\United States Patent 10169575.html","usptog06f_related_patents\\United States Patent 10185832.html","usptog06f_related_patents\\United States Patent 10186100.html","usptog06f_related_patents\\United States Patent 10225288.html","usptog06f_related_patents\\United States Patent 10229382.html","usptog06f_related_patents\\United States Patent 10305919.html","usptog06f_related_patents\\United States Patent 10367834.html","usptog06f_related_patents\\United States Patent 10389817.html","usptog06f_related_patents\\United States Patent 10404664.html","usptog06f_related_patents\\United States Patent 10417432.html","usptog06f_related_patents\\United States Patent 10445530.html","usptog06f_related_patents\\United States Patent 10454916.html","usptog06f_related_patents\\United States Patent 4916738.html","usptog06f_related_patents\\United States Patent 6182223.html","usptog06f_related_patents\\United States Patent 6408391.html","usptog06f_related_patents\\United States Patent 6681331.html","usptog06f_related_patents\\United States Patent 7140039.html","usptog06f_related_patents\\United States Patent 7197563.html","usptog06f_related_patents\\United States Patent 7308705.html","usptog06f_related_patents\\United States Patent 7346783.html","usptog06f_related_patents\\United States Patent 7356585.html","usptog06f_related_patents\\United States Patent 7389539.html","usptog06f_related_patents\\United States Patent 7536723.html","usptog06f_related_patents\\United States Patent 7603711.html","usptog06f_related_patents\\United States Patent 7624444.html","usptog06f_related_patents\\United States Patent 7644151.html","usptog06f_related_patents\\United States Patent 7657939.html","usptog06f_related_patents\\United States Patent 7673164.html","usptog06f_related_patents\\United States Patent 7756544.html","usptog06f_related_patents\\United States Patent 7797411.html","usptog06f_related_patents\\United States Patent 7804504.html","usptog06f_related_patents\\United States Patent 7814543.html","usptog06f_related_patents\\United States Patent 7818797.html","usptog06f_related_patents\\United States Patent 7823204.html","usptog06f_related_patents\\United States Patent 7934254.html","usptog06f_related_patents\\United States Patent 7954160.html","usptog06f_related_patents\\United States Patent 7971255.html","usptog06f_related_patents\\United States Patent 8195953.html","usptog06f_related_patents\\United States Patent 8245301.html","usptog06f_related_patents\\United States Patent 8245302.html","usptog06f_related_patents\\United States Patent 8266267.html","usptog06f_related_patents\\United States Patent 8266320.html","usptog06f_related_patents\\United States Patent 8321955.html","usptog06f_related_patents\\United States Patent 8327443.html","usptog06f_related_patents\\United States Patent 8335864.html","usptog06f_related_patents\\United States Patent 8369830.html","usptog06f_related_patents\\United States Patent 8386846.html","usptog06f_related_patents\\United States Patent 8572735.html","usptog06f_related_patents\\United States Patent 8577035.html","usptog06f_related_patents\\United States Patent 8578487.html","usptog06f_related_patents\\United States Patent 8595831.html","usptog06f_related_patents\\United States Patent 8627116.html","usptog06f_related_patents\\United States Patent 8667589.html","usptog06f_related_patents\\United States Patent 8671224.html","usptog06f_related_patents\\United States Patent 8677148.html","usptog06f_related_patents\\United States Patent 8726085.html","usptog06f_related_patents\\United States Patent 8763103.html","usptog06f_related_patents\\United States Patent 8787583.html","usptog06f_related_patents\\United States Patent 8789191.html","usptog06f_related_patents\\United States Patent 8806629.html","usptog06f_related_patents\\United States Patent 8896455.html","usptog06f_related_patents\\United States Patent 8914882.html","usptog06f_related_patents\\United States Patent 8925090.html","usptog06f_related_patents\\United States Patent 8938799.html","usptog06f_related_patents\\United States Patent 8959224.html","usptog06f_related_patents\\United States Patent 8963715.html","usptog06f_related_patents\\United States Patent 8973138.html","usptog06f_related_patents\\United States Patent 8990923.html","usptog06f_related_patents\\United States Patent 8996865.html","usptog06f_related_patents\\United States Patent 9003527.html","usptog06f_related_patents\\United States Patent 9009829.html","usptog06f_related_patents\\United States Patent 9015846.html","usptog06f_related_patents\\United States Patent 9020652.html","usptog06f_related_patents\\United States Patent 9064110.html","usptog06f_related_patents\\United States Patent 9124640.html","usptog06f_related_patents\\United States Patent 9125987.html","usptog06f_related_patents\\United States Patent 9137258.html","usptog06f_related_patents\\United States Patent 9167001.html","usptog06f_related_patents\\United States Patent 9182232.html","usptog06f_related_patents\\United States Patent 9247500.html","usptog06f_related_patents\\United States Patent 9280891.html","usptog06f_related_patents\\United States Patent 9338174.html","usptog06f_related_patents\\United States Patent 9342415.html","usptog06f_related_patents\\United States Patent 9369493.html","usptog06f_related_patents\\United States Patent 9380024.html","usptog06f_related_patents\\United States Patent 9405900.html","usptog06f_related_patents\\United States Patent 9436652.html","usptog06f_related_patents\\United States Patent 9443085.html","usptog06f_related_patents\\United States Patent 9443097.html","usptog06f_related_patents\\United States Patent 9467470.html","usptog06f_related_patents\\United States Patent 9497224.html","usptog06f_related_patents\\United States Patent 9501639.html","usptog06f_related_patents\\United States Patent 9514303.html","usptog06f_related_patents\\United States Patent 9514310.html","usptog06f_related_patents\\United States Patent 9536078.html","usptog06f_related_patents\\United States Patent 9571297.html","usptog06f_related_patents\\United States Patent 9571507.html","usptog06f_related_patents\\United States Patent 9589148.html","usptog06f_related_patents\\United States Patent 9591607.html","usptog06f_related_patents\\United States Patent 9686300.html","usptog06f_related_patents\\United States Patent 9690928.html","usptog06f_related_patents\\United States Patent 9691268.html","usptog06f_related_patents\\United States Patent 9697033.html","usptog06f_related_patents\\United States Patent 9699205.html","usptog06f_related_patents\\United States Patent 9699209.html","usptog06f_related_patents\\United States Patent 9705848.html","usptog06f_related_patents\\United States Patent 9729568.html","usptog06f_related_patents\\United States Patent 9736152.html","usptog06f_related_patents\\United States Patent 9749959.html","usptog06f_related_patents\\United States Patent 9769786.html","usptog06f_related_patents\\United States Patent 9774449.html","usptog06f_related_patents\\United States Patent 9825912.html","usptog06f_related_patents\\United States Patent 9838426.html","usptog06f_related_patents\\United States Patent 9853942.html","usptog06f_related_patents\\United States Patent 9866584.html","usptog06f_related_patents\\United States Patent 9886581.html","usptog06f_related_patents\\United States Patent 9904785.html","usptog06f_related_patents\\United States Patent 9913409.html","usptog06f_related_patents\\United States Patent 9916480.html","usptog06f_related_patents\\United States Patent 9923922.html","usptog06f_related_patents\\United States Patent 9965007.html"];
+        var pages = allPages;
+
         function setPageToCurrentPageIndex() {
             document.querySelector("iframe").src = pages[pageIndex];
             document.getElementById("numerator").value = (pageIndex + 1);
@@ -99,6 +106,8 @@
             {
                 pageIndex = 0;
             }
+
+             document.getElementById("notes").classList.remove("secondary-use");
             setPageToCurrentPageIndex();
         });
 
@@ -108,6 +117,8 @@
             {
                 pageIndex = pages.length - 1;
             }
+
+            document.getElementById("notes").classList.remove("secondary-use");
             setPageToCurrentPageIndex();
         });
 
@@ -129,19 +140,65 @@
             }
         });
 
-        document.getElementById("withNotes").addEventListener("change", function(e) {
 
+        document.getElementById("withNotes").addEventListener("change", function(e) {
+            if(this.checked) {
+                pageIndex = 0;
+                pages = getPagesWithNotes();
+            }
+            else {
+                pageIndex = allPageIndex;
+                pages = allPages;
+            }
+
+            setPageToCurrentPageIndex();
         });
 
-        document.getElementById("notes").addEventListener("keypress", function(e) {
-            var pageKey = pages[pageIndex].replace(/ /g, "").replace(".html", "");
+        function handleNoteInput() {
+            var pageKey = pages[pageIndex];
             var pageNote = document.getElementById("notes").value;
             
-            setPageNote(pageKey, pageNote);
-        });
+            // show localStorage.pages, delete localStorage.pages, set localStorage.pages='{}'
+            if(pageNote.indexOf("show localStorage.pages") !== -1) {
+                showLocalStoragePages();
+            }
+            else if(pageNote.indexOf("delete localStorage.pages") !== -1) {
+                if(confirm("Are you sure you want to delete localStorage.pages?")) {
+                    localStorage.pages = JSON.stringify({});
+                    alert("deleted localStorage.pages");
+                }
+            }
+            else if(pageNote.indexOf("set localStorage.pages=") !== -1) {
+                if(confirm("Are you sure you want to overwrite localStorage.pages?")) {
+                    var notesJson = pageNote.split("set localStorage.pages=")[1];
+                    localStorage.pages = notesJson;
+                    alert("overwrote localStorage.pages");
+                }
+            }
+            else {
+                var canWrite = document.getElementById("notes").classList.contains("secondary-use") === false;
+                if(canWrite) {
+                    setPageNote(pageKey, pageNote);   
+                }
+            }
+        }
+        document.getElementById("notes").addEventListener("change", handleNoteInput);
+
+        function showLocalStoragePages() {
+            document.getElementById("notes").value = localStorage.pages;
+            document.getElementById("notes").classList.add("secondary-use");
+        }
+
+        function deleteLocalStoragePages() {
+
+        }
+
+        function setLocalStoragePages() {
+
+        }
 
         function loadNoteForPage() {
-            var pageKey = pages[pageIndex].replace(/ /g, "").replace(".html", "");
+            var pageKey = pages[pageIndex];
             var pageNote = getPageNote(pageKey);
 
             if(pageNote === undefined) {
@@ -161,6 +218,12 @@
         function getPageNote(pageKey) {
             var pageNote = JSON.parse(localStorage.pages)[pageKey];
             return pageNote;
+        }
+
+        function getPagesWithNotes() {
+            var localStoragePages = JSON.parse(localStorage.pages);
+            var keys = Object.keys(localStoragePages);
+            return keys;
         }
     </script>
 </html>
