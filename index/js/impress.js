@@ -4119,7 +4119,7 @@ debugger;            return;
      } );
 
      document.addEventListener( "touchend", function() {
-        window.impress().next();
+        //window.impress().next();
         return;
 
          var totalDiff = lastX - startX;
