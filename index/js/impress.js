@@ -4118,6 +4118,9 @@ debugger;            return;
      } );
 
      document.addEventListener( "touchend", function() {
+        window.impress().next();
+        return;
+
          var totalDiff = lastX - startX;
          if ( Math.abs( totalDiff ) > window.innerWidth / 5 && ( totalDiff * lastDX ) <= 0 ) {
              if ( totalDiff > window.innerWidth / 5 && lastDX <= 0 ) {
