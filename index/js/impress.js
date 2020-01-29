@@ -4107,6 +4107,7 @@ debugger;            return;
     } );
 
     document.addEventListener( "touchmove", function( event ) {
+        return;
          var x = event.touches[ 0 ].clientX;
          var diff = x - startX;
 
@@ -4144,7 +4145,7 @@ debugger;            return;
      document.addEventListener( "touchcancel", function() {
 
              // Move (back) to the current slide
-             window.impress().goto( document.querySelector( "#impress .step.active" ) );
+             //window.impress().goto( document.querySelector( "#impress .step.active" ) );
      } );
 
 } )( document, window );
