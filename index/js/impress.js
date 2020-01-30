@@ -4077,6 +4077,7 @@ debugger;            return;
 
 } )( document, window );
 
+/*
 ( function( document, window ) {
     "use strict";
 
@@ -4131,6 +4132,7 @@ debugger;            return;
      } );
 
 } )( document, window );
+*/
 
 /**
  * Toolbar plugin
