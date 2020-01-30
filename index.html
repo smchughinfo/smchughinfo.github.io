@@ -82,6 +82,7 @@
         }
         .user-helper-top {
             top:20px !important;
+            bottom: auto !important;
         }
         .user-helper:hover {
             animation-name: none;
@@ -137,7 +138,7 @@
 # Hello World
 I'm Sean and I write code.
 
-![I'm Sean and I write code.](https://i.imgur.com/ALFbqtP.png)
+![I'm Sean and I write code.](https://raw.githubusercontent.com/smchughinfo/smchughinfo.github.io/master/index/images/imseanandiwritecode.png)
 
 
 
@@ -161,7 +162,7 @@ Professional developer for about ten years.
 <div id="stuffIKnow" class="step markdown" data-x="2825" data-y="2325" data-z="-3000" data-rotate="230" data-scale="1">
 # This is the kind of stuff I know about.
 
-![This is the kind of stuff I know about.](https://i.imgur.com/KFm0drl.png)
+![This is the kind of stuff I know about.](https://raw.githubusercontent.com/smchughinfo/smchughinfo.github.io/master/index/images/stuffiknow.png)
 
 </div>
 
@@ -239,13 +240,14 @@ Thanks for taking the time to check out my little corner of the World Wide Web. 
         return out;
 
     };
-
-    var userHelper = document.querySelector(".user-helper");
-    if(userHelper) {
-        if(isOutOfViewport(userHelper)) {
-            userHelper.classList.add("user-helper-top")
+    setTimeout(function() {
+        var userHelper = document.querySelector(".user-helper");
+        if(userHelper) {
+            if(isOutOfViewport(userHelper)) {
+                userHelper.classList.add("user-helper-top")
+            }
         }
-    }
+    }, 5000);
 </script>
 </body>
 </html>
