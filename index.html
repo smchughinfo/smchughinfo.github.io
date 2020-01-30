@@ -52,7 +52,7 @@
 
         img[alt="This is the kind of stuff I know about."] {
             float:none;
-            width: 100%;
+            width: 88%;
             margin: 0 0 0 0;
         }
         #stuffIKnow p {
@@ -230,6 +230,10 @@ Thanks for taking the time to check out my little corner of the World Wide Web. 
             return false;
         });
     });
+
+    document.addEventListener("load", function(e) {
+        console.log(e);
+    })
 </script>
 </body>
 </html>
