@@ -61,17 +61,70 @@
         #stuffIKnow h1 {
             font-size: 1.4em;
         }
+        .user-helper {
+            position:fixed;
+            bottom:20px;
+            right:40px;
+            padding: 4px 8px 4px 8px;
+            font-size: 22px;
+            border-width : 2px;
+            border-style: solid;
+            border-radius: 100px;
+            animation-name: user-helper-animation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            transition: color 0.3s ease-in-out;
+            transition: border-color 0.3s ease-in-out;
+            z-index: 999999;
+            background: black;
+        }
+        .user-helper:hover {
+            animation-name: none;
+            color:white !important;
+            border-color: white !important;
+        }
+        @keyframes user-helper-animation {
+            0% {
+                color:rgb(160, 160, 160);
+                border-color: rgb(160, 160, 160);
+            }
+            100%{
+                color:rgb(250, 250, 250);
+                border-color:rgb(250, 250, 250);
+            }
+        }
+        .user-helper-fade-out {
+            transition: opacity .4s;
+            opacity: 0;
+        }
+
+        #helloWorld,
+        #helloWorld h1 {
+            padding-top: 0 !important;
+        }
     </style>
 </head>
 
 <body style="display:none;">
 
 
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-</div>
+<div class="user-helper">Next Slide 🡆</div>
 
+<script>
+    function hideHelper() {
+        document.removeEventListener("impress:stepleave", hideHelper);
+        var userHelper = document.querySelector(".user-helper");
+        if(userHelper) {
+            userHelper.classList.add("user-helper-fade-out");
+            setTimeout(function() {
+                userHelper.parentNode.removeChild(userHelper);
+            }, 1000); // for anyone looking through this code OBVIOUSLY i am not bringing my A game here. you caught me, 10 points!
+        }
+    }
+    document.addEventListener("impress:stepleave", hideHelper);
+</script>
 
 <div id="impress" data-transition-duration="1000">
 
@@ -115,7 +168,7 @@ Professional developer for about ten years.
         <a href="https://github.com/smchughinfo">Github</a>
     </li>
     <li>
-            <a href="https://drive.google.com/file/d/1_DCKHxBJytuXPw-mVDRgrQrSbHfrzadP/view?usp=sharing">Resume</a>
+            <a href="https://docs.google.com/document/d/1pmtVDHm9HHC-paFIvuGLOYYV5oL8TMpAs9lWuZDCrjM/edit?usp=sharing">Resume</a>
     </li>
     <li>
         <a href="mailto:seanmchugh513@gmail.com">Email</a>
@@ -132,8 +185,7 @@ Thanks for taking the time to check out my little corner of the World Wide Web. 
 </div>
 
 <!--<div id="impress-toolbar"></div>-->
-<div id="impress-help"></div>
-
+<!--<div id="impress-help"></div>-->
 
 <!-- Extra modules
      Load highlight.js, mermaid.js and markdown.js from extras.
@@ -146,6 +198,7 @@ Thanks for taking the time to check out my little corner of the World Wide Web. 
     document.body.style.display = "block";
     impress().init();
     document.body.classList.add("devopsy");
+    //document.body.classList.add("effects");
     //disableEffectsCss();
 
     document.querySelectorAll("a").forEach(a => {
