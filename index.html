@@ -80,6 +80,9 @@
             z-index: 999999;
             background: black;
         }
+        .user-helper-top {
+            top:20px !important;
+        }
         .user-helper:hover {
             animation-name: none;
             color:white !important;
@@ -155,7 +158,7 @@ Professional developer for about ten years.
 
 </div>
 
-<div id="stuffIKnow" class="step markdown" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+<div id="stuffIKnow" class="step markdown" data-x="2825" data-y="2325" data-z="-3000" data-rotate="230" data-scale="1">
 # This is the kind of stuff I know about.
 
 ![This is the kind of stuff I know about.](https://i.imgur.com/KFm0drl.png)
@@ -212,12 +215,37 @@ Thanks for taking the time to check out my little corner of the World Wide Web. 
         });
     });
 
-    setTimeout(function() {
-        window.scrollTo(0,document.body.scrollHeight);
-        setTimeout(function() {
-            alert("???");
-        })
-    }, 5000);
+
+    /*!
+    * Check if an element is out of the viewport
+    * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+    * @param  {Node}  elem The element to check
+    * @return {Object}     A set of booleans for each side of the element
+    */
+    var isOutOfViewport = function (elem) {
+
+        // Get element's bounding
+        var bounding = elem.getBoundingClientRect();
+
+        // Check if it's out of the viewport on each side
+        var out = {};
+        out.top = bounding.top < 0;
+        out.left = bounding.left < 0;
+        out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
+        out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
+        out.any = out.top || out.left || out.bottom || out.right;
+        out.all = out.top && out.left && out.bottom && out.right;
+
+        return out;
+
+    };
+
+    var userHelper = document.querySelector(".user-helper");
+    if(userHelper) {
+        if(isOutOfViewport(userHelper)) {
+            userHelper.classList.add("user-helper-top")
+        }
+    }
 </script>
 </body>
 </html>
