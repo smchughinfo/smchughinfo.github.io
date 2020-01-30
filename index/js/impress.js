@@ -3314,7 +3314,6 @@ debugger;            return;
 
         // Delegated handler for clicking on the links to presentation steps
         gc.addEventListener( document, "click", function( event ) {
-
             // Event delegation with "bubbling"
             // check if event target (or any of its parents is a link)
             var target = event.target;
