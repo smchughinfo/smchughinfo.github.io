@@ -331,7 +331,7 @@
             // First we set up the viewport for mobile devices.
             // For some reason iPad goes nuts when it is not done properly.
             var meta = lib.util.$( "meta[name='viewport']" ) || document.createElement( "meta" );
-            meta.content = "width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=yes";
+            meta.content = "width=device-width, user-scalable=yes";
             if ( meta.parentNode !== document.head ) {
                 meta.name = "viewport";
                 document.head.appendChild( meta );
