@@ -51,7 +51,7 @@
 
         img[alt="This is the kind of stuff I know about."] {
             float:none;
-            width: 80%;
+            width: 100%;
             margin: 0 0 0 0;
         }
         #stuffIKnow p {
@@ -78,25 +78,25 @@
             transition: color 0.3s ease-in-out;
             transition: border-color 0.3s ease-in-out;
             z-index: 999999;
-            background: black;
-        }
-        .user-helper:hover {
-            animation-name: none;
-            color:white !important;
-            border-color: white !important;
+            background: #C86666;
+            transition: opacity 1s;
         }
         @keyframes user-helper-animation {
             0% {
-                color:rgb(160, 160, 160);
-                border-color: rgb(160, 160, 160);
+                color:rgb(210, 210, 210);
+                border-color: rgb(210, 210, 210);
             }
             100%{
                 color:rgb(250, 250, 250);
                 border-color:rgb(250, 250, 250);
             }
         }
-        .user-helper-fade-out {
-            transition: opacity .4s;
+        .user-helper-dip {
+            opacity: 0;
+        }
+
+        .user-helper-quick-dip {
+            transition: opacity 0s;
             opacity: 0;
         }
 
@@ -115,17 +115,35 @@
 <div class="user-helper">Next Slide</div>
 
 <script>
-    function hideHelper() {
-        document.removeEventListener("impress:stepleave", hideHelper);
-        var userHelper = document.querySelector(".user-helper");
-        if(userHelper) {
-            userHelper.classList.add("user-helper-fade-out");
-            setTimeout(function() {
-                userHelper.parentNode.removeChild(userHelper);
-            }, 1000); // for anyone looking through this code OBVIOUSLY i am not bringing my A game here. you caught me, 10 points!
+    var userHelper = document.querySelector(".user-helper");
+    if(window.location.hash.indexOf("aboutMe") !== -1) 
+    {
+        userHelper.style.display = "none";
+    }
+
+    var lastNext = null;
+    function removeAnimationClass() {
+        if(lastNext === "aboutMe") {
+            userHelper.style.display = "none";
+        }
+        userHelper.classList.remove("user-helper-dip");
+    }
+
+    function dipHelper(e) {
+        lastNext = e.detail.next.id;
+
+        if(e.detail.next.id !== "aboutMe" && userHelper.style.display === "none") {
+            userHelper.style.display = "block";
+            userHelper.classList.add("user-helper-quick-dip");
+            setTimeout(function() {userHelper.classList.remove("user-helper-quick-dip");}, 1000);
+        }
+        else
+        {
+            userHelper.classList.add("user-helper-dip");
+            userHelper.addEventListener("transitionend", removeAnimationClass, {once: true});
         }
     }
-    document.addEventListener("impress:stepleave", hideHelper);
+    document.addEventListener("impress:stepleave", dipHelper);
 </script>
 
 <div id="impress" data-transition-duration="1000">
@@ -141,7 +159,7 @@ I'm Sean and I write code.
 
 </div>
 
-<div class="step markdown" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+<div id="codingHistory" class="step markdown" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
 # Coding History
 Professional developer for about ten years.
 
