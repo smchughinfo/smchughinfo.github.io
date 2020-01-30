@@ -212,7 +212,12 @@ Thanks for taking the time to check out my little corner of the World Wide Web. 
         });
     });
 
-    window.scrollTo(0,document.body.scrollHeight);
+    setTimeout(function() {
+        window.scrollTo(0,document.body.scrollHeight);
+        setTimeout(function() {
+            alert("???");
+        })
+    }, 5000);
 </script>
 </body>
 </html>
