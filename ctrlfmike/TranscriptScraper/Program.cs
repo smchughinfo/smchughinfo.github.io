@@ -19,25 +19,13 @@ namespace TranscriptScraper
 
         static void Main(string[] args)
         {
-            driver = new FirefoxDriver();
-
-            while (true)
-            {
-                try
-                {
-                    ScrapeTranscripts();
-                }
-                catch
-                {
-
-                }
-            }
-            
-            //ParseTranscripts();
+            //ScrapeTranscripts();
+            ParseTranscripts();
         }
 
         static void ScrapeTranscripts()
         {
+            driver = new FirefoxDriver();
 
             var videoIds = GetVideosIds();
             videoIds = videoIds.Where(id => TranscriptExists(id) == false).ToList();
