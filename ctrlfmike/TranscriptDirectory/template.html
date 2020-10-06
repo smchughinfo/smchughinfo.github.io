@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title></title>
         <script src="headers.js"></script>
         <style>
             body {
@@ -68,8 +69,8 @@
         }
         createVideoLinks();
 
-        function updateVideo(videoId) {
-            document.querySelector("iframe").setAttribute("src", "https://www.youtube.com/embed/" + videoId);
+        function updateVideo(videoId, timestamp) {
+            document.querySelector("iframe").setAttribute("src", "https://www.youtube.com/embed/" + videoId + (timestamp ? "?start=" + timestamp : ""));
 
             getTranscript(videoId);
             document.getElementById("videoTitle").innerHTML = transcript.title;
@@ -100,11 +101,21 @@
             matchingIndices.forEach(function(index) {
                 var matchesTimestamp = transcript.timestamps[index];
                 var matchesTranscript = transcript.transcripts[index];
+                var startAt = timeStampToSeconds(matchesTimestamp);
 
-                lis += "<li><a href='#'>[" + matchesTimestamp + "] " + matchesTranscript + "</a></li>";
+                lis += "<li><a href='javascript:;' onclick='updateVideo(\"" + transcript.videoId + "\", " + startAt + ");'>[" + matchesTimestamp + "] " + matchesTranscript + "</a></li>";
             });
 
             document.getElementById("searchResults").innerHTML = lis
+        }
+
+        function timeStampToSeconds(timestamp)
+        {
+            timestampComponents = timestamp.split(":");
+            var minutes = parseInt(timestampComponents[0], 10);
+            var seconds = parseInt(timestampComponents[1], 10);
+
+            return seconds + (minutes*60);
         }
 
         function isNullOrEmpty(str) {
@@ -116,16 +127,16 @@
             var searchText = document.getElementById("searchText").value;
             var wholeWord = document.getElementById("wholeWord").checked;
 
+            if(isNullOrEmpty(searchText))
+            {
+                return matchingIndices;
+            }
+
             searchText = escapeRegExp(searchText);
             searchText = wholeWord ? "\\b" + searchText + "\\b" : searchText;
             var searchRegex = new RegExp(searchText);
 
             var matchingIndices = [];
-
-            if(isNullOrEmpty(searchText))
-            {
-                return matchingIndices;
-            }
 
             transcript.transcripts.forEach(function(curTranscript, i) {
                 var match = searchRegex.test(curTranscript);
