@@ -134,6 +134,8 @@ namespace TranscriptScraper
                 return dateTime1.CompareTo(dateTime2);
             });
 
+            headers.Reverse();
+
             JArray headersArray = new JArray(); 
             foreach(var header in headers)
             {

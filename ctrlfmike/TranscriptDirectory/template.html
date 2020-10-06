@@ -1,21 +1,56 @@
 <html>
 
 <head>
-    <script src="2zMjTpcXSzc-json.js"></script>
+    <script src="headers.js"></script>
     <script>
-        var xhttp = new XMLHttpRequest();
+        /*var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("demo").innerHTML = this.responseText;
             }
         };
         xhttp.open("GET", "https://www.youtube.com/watch?v=NM-zWTU7X-k", true);
-        xhttp.send();
+        xhttp.send();*/
     </script>
+    <style>
+        body {
+            text-align:center;
+        }
+        input {
+            width: 560px;
+        }
+        ul {
+            width: 520px;
+            height:150px;
+            overflow: auto;
+            border:1px solid black;
+            margin:auto;
+            text-align:left;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div id="content">
+        <h1>ctrl+f DeWine</h1>
+        <p>Search for words in Governer DeWine's videos</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/toGH5BdgRZ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <br>
+        <input type="text" placeholder="try typing covid-19 here">
+        <br>
+        <br>
+        <ul>
+            <li>Results will appear here</li>
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h3>Other Videos</h3>
+    <span id="videoList">
+        <a href="">Sep 10, 2020</a>
+    </span>
 </body>
 
 </html>
