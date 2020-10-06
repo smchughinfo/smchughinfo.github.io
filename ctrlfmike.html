@@ -81,7 +81,7 @@
         function getTranscript(videoId)
         {
             var request = new XMLHttpRequest();
-            request.open("GET", videoId + "-json.js", false); 
+            request.open("GET", "/ctrlfmike/TranscriptDirectory/" + videoId + "-json.js", false); 
             request.send(null);
             eval(request.responseText.replace(/\n/g, ""));
         }
