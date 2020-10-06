@@ -39,14 +39,14 @@
                 allowfullscreen></iframe>
             <p id="videoTitle">&nbsp;</p>
             <div class="control-container">
-                <input id="searchText" type="text" placeholder="try typing covid-19 here">
+                <input id="searchText" type="text" placeholder="type what you are searching for here (e.g. virus)">
                 <span class="whole-word-container">
                     <label for="wholeWord">Whole Word</label><input id="wholeWord" name="wholeWord "type="checkbox">
                 </span>
             </div>
             <br>
             <br>
-            <ul>
+            <ul id="searchResults">
                 <li>Results will appear here</li>
             </ul>
         </div>
@@ -93,6 +93,26 @@
 
         function updateSearchResults()
         {
+            var matchingIndices = search();
+
+            var lis = matchingIndices.length == 0 ? "<li>Results will appear here</li>" : "";
+
+            matchingIndices.forEach(function(index) {
+                var matchesTimestamp = transcript.timestamps[index];
+                var matchesTranscript = transcript.transcripts[index];
+
+                lis += "<li><a href='#'>[" + matchesTimestamp + "] " + matchesTranscript + "</a></li>";
+            });
+
+            document.getElementById("searchResults").innerHTML = lis
+        }
+
+        function isNullOrEmpty(str) {
+            return (!str || /^\s*$/.test(str));
+        }
+
+        function search()
+        {
             var searchText = document.getElementById("searchText").value;
             var wholeWord = document.getElementById("wholeWord").checked;
 
@@ -101,6 +121,12 @@
             var searchRegex = new RegExp(searchText);
 
             var matchingIndices = [];
+
+            if(isNullOrEmpty(searchText))
+            {
+                return matchingIndices;
+            }
+
             transcript.transcripts.forEach(function(curTranscript, i) {
                 var match = searchRegex.test(curTranscript);
                 if(match)
@@ -108,7 +134,8 @@
                     matchingIndices.push(i);
                 }
             });
-            console.log(matchingIndices);
+
+            return matchingIndices;
         }
 
         document.getElementById("searchText").addEventListener("input", updateSearchResults);
