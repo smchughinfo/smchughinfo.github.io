@@ -1,4 +1,7 @@
-{
+var transcript = {
+  "title": "Case No. 2020-0638 Master Commissioner Hearing",
+  "dateString": "•Streamed live on Sep 2, 2020",
+  "date": "2020-09-02T00:00:00",
   "timestamps": [
     "00:00",
     "00:19",

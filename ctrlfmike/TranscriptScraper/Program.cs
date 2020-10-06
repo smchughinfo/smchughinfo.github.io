@@ -39,14 +39,18 @@ namespace TranscriptScraper
         static void ParseTranscripts()
         {
             var videoIds = Directory.GetFiles(transcriptDirectory).Select(p => Path.GetFileName(p)).ToList();
-            videoIds = videoIds.Where(v => v.EndsWith(".txt")).ToList(); // dont get the json files
+            videoIds = videoIds.Where(v => v.EndsWith("-timestamps.txt")).ToList(); // dont get the json files
             videoIds = videoIds.Select(v => v.Replace("-timestamps.txt", "")).ToList();
-            videoIds = videoIds.Select(v => v.Replace("-transcripts.txt", "")).ToList();
 
             foreach(var videoId in videoIds)
             {
                 CreateJsonFile(videoId);
             }
+        }
+
+        static string getMetadataPath(string videoId)
+        {
+            return Path.Combine(transcriptDirectory, $"{videoId}-metadata.txt");
         }
 
         static string getTimestampPath(string videoId)
@@ -61,27 +65,52 @@ namespace TranscriptScraper
 
         static string getJsonPath(string videoId)
         {
-            return Path.Combine(transcriptDirectory, $"{videoId}-json.json");
+            return Path.Combine(transcriptDirectory, $"{videoId}-json.js");
         }
 
         static void CreateJsonFile(string videoId)
         {
             var timestampsPath = getTimestampPath(videoId);
             var transcriptsPath = getTranscriptPath(videoId);
+            var metadataPath = getMetadataPath(videoId);
             var jsonPath = getJsonPath(videoId);
 
             var timestamps = File.ReadAllLines(timestampsPath);
             var transcripts = File.ReadAllLines(transcriptsPath);
+            var metadata = File.ReadAllLines(metadataPath);
+
+            var title = metadata[0];
+            var dateString = metadata[1];
+            var date = GetDate(dateString);
 
             JObject o = JObject.FromObject(new
             {
+                title = title,
+                dateString = dateString,
+                date = date,
                 timestamps = timestamps.ToList(),
                 transcripts = transcripts.ToList()
             });
 
-
-            File.WriteAllText(jsonPath, o.ToString());
+            File.WriteAllText(jsonPath, "var transcript = " + o.ToString());
         } 
+
+        static DateTime GetDate(string dateString)
+        {
+            var date = dateString.Replace("•", "");
+            date = date.Replace("Streamed live on", "");
+            date = date.Replace(",", "");
+
+            var dateComponents = date.Trim().Split(' ').Select(c => c.Trim().ToLower()).ToList();
+            var month = dateComponents[0];
+            var day = dateComponents[1];
+            var year = dateComponents[2];
+
+            var months = new string[] { "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec" };
+            month = (Array.IndexOf(months, month) + 1).ToString();
+
+            return new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day));
+        }
 
         static List<string> GetVideosIds()
         {
@@ -133,6 +162,13 @@ namespace TranscriptScraper
 
             File.WriteAllLines(timestampsPath, timestamps);
             File.WriteAllLines(transcriptsPath, transcripts);
+
+            // now do metadata...
+            var title = driver.FindElementByCssSelector("h1.title.ytd-video-primary-info-renderer").Text;
+            var date = driver.FindElementByCssSelector("#date.ytd-video-primary-info-renderer").Text;
+            var metadata = new List<string> { title, date };
+            var metadataPath = getMetadataPath(videoId);
+            File.WriteAllLines(metadataPath, metadata);
         }
 
     }

@@ -1,4 +1,7 @@
-{
+var transcript = {
+  "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 8, 2020",
+  "dateString": "•Streamed live on Sep 8, 2020",
+  "date": "2020-09-08T00:00:00",
   "timestamps": [
     "00:05",
     "00:14",
