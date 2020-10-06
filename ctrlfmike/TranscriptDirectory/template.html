@@ -5,15 +5,13 @@
             body {
                 text-align: center;
             }
-            
             #videoTitle {
                 font-weight:bold;
             }
-
-            input {
-                width: 560px;
+            #searchText {
+                width: 400px;
+                float:left;
             }
-
             ul {
                 width: 520px;
                 height: 150px;
@@ -21,6 +19,14 @@
                 border: 1px solid black;
                 margin: auto;
                 text-align: left;
+            }
+            .control-container {
+                width:560px;
+                margin:auto;
+                clear: both;
+            }
+            .whole-word-container {
+                float: right;
             }
         </style>
     </head>
@@ -32,7 +38,12 @@
             <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             <p id="videoTitle">&nbsp;</p>
-            <input type="text" placeholder="try typing covid-19 here">
+            <div class="control-container">
+                <input id="searchText" type="text" placeholder="try typing covid-19 here">
+                <span class="whole-word-container">
+                    <label for="wholeWord">Whole Word</label><input id="wholeWord" name="wholeWord "type="checkbox">
+                </span>
+            </div>
             <br>
             <br>
             <ul>
