@@ -1,6 +1,7 @@
-var transcript = {
+window.transcript = {
+  "videoId": "ErM8ME3_HS4",
   "title": "Discussing the President's and First Lady's COVID-19 Diagnoses - October 2, 2020",
-  "dateString": "•Streamed live on Oct 2, 2020",
+  "dateString": "Streamed live on Oct 2, 2020",
   "date": "2020-10-02T00:00:00",
   "timestamps": [
     "00:00",

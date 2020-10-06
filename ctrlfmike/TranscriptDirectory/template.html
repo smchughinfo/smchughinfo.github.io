@@ -1,56 +1,78 @@
 <html>
-
-<head>
-    <script src="headers.js"></script>
-    <script>
-        /*var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("demo").innerHTML = this.responseText;
+    <head>
+        <script src="headers.js"></script>
+        <style>
+            body {
+                text-align: center;
             }
-        };
-        xhttp.open("GET", "https://www.youtube.com/watch?v=NM-zWTU7X-k", true);
-        xhttp.send();*/
+            
+            #videoTitle {
+                font-weight:bold;
+            }
+
+            input {
+                width: 560px;
+            }
+
+            ul {
+                width: 520px;
+                height: 150px;
+                overflow: auto;
+                border: 1px solid black;
+                margin: auto;
+                text-align: left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="content">
+            <h1>ctrl+f DeWine</h1>
+            <p>Search for words in Governer DeWine's videos</p>
+            <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p id="videoTitle">&nbsp;</p>
+            <input type="text" placeholder="try typing covid-19 here">
+            <br>
+            <br>
+            <ul>
+                <li>Results will appear here</li>
+            </ul>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <h3>Other Videos</h3>
+        <span id="videoList">
+            <a href="">Sep 10, 2020</a>
+        </span>
+    </body>
+    <script>
+        function createVideoLinks() {
+            var videoLinks = []
+            headers.forEach(function(header) {
+                videoLinks.push("<a href='#" + header.videoId + "' onclick='updateVideo(\"" + header.videoId + "\");'>" + header.title + "</a>");
+            });
+            document.getElementById("videoList").innerHTML = videoLinks.join("&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;");
+        }
+        createVideoLinks();
+
+        function updateVideo(videoId) {
+            document.querySelector("iframe").setAttribute("src", "https://www.youtube.com/embed/" + videoId);
+
+            getTranscript(videoId);
+            document.getElementById("videoTitle").innerHTML = transcript.title;
+        }
+        var videoId = window.location.hash ? window.location.hash.replace("#", "") : headers[0].videoId;
+        updateVideo(videoId);
+
+        function getTranscript(videoId)
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET", videoId + "-json.js", false); 
+            request.send(null);
+            eval(request.responseText.replace(/\n/g, ""));
+        }
+
     </script>
-    <style>
-        body {
-            text-align:center;
-        }
-        input {
-            width: 560px;
-        }
-        ul {
-            width: 520px;
-            height:150px;
-            overflow: auto;
-            border:1px solid black;
-            margin:auto;
-            text-align:left;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="content">
-        <h1>ctrl+f DeWine</h1>
-        <p>Search for words in Governer DeWine's videos</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/toGH5BdgRZ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
-        <br>
-        <input type="text" placeholder="try typing covid-19 here">
-        <br>
-        <br>
-        <ul>
-            <li>Results will appear here</li>
-        </ul>
-    </div>
-    <br>
-    <hr>
-    <br>
-    <h3>Other Videos</h3>
-    <span id="videoList">
-        <a href="">Sep 10, 2020</a>
-    </span>
-</body>
-
 </html>

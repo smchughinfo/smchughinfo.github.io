@@ -1,6 +1,7 @@
-var transcript = {
+window.transcript = {
+  "videoId": "Mh6oWYcTvRg",
   "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 1, 2020",
-  "dateString": "•Streamed live on Sep 1, 2020",
+  "dateString": "Streamed live on Sep 1, 2020",
   "date": "2020-09-01T00:00:00",
   "timestamps": [
     "01:24",

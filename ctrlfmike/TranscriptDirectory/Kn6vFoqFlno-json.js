@@ -1,6 +1,7 @@
-var transcript = {
+window.transcript = {
+  "videoId": "Kn6vFoqFlno",
   "title": "State of the Judiciary Address 2020",
-  "dateString": "•Streamed live on Sep 10, 2020",
+  "dateString": "Streamed live on Sep 10, 2020",
   "date": "2020-09-10T00:00:00",
   "timestamps": [
     "00:00",

@@ -1,6 +1,7 @@
-var transcript = {
+window.transcript = {
+  "videoId": "g-YayTmThOA",
   "title": "Portrait Dedication Ceremony - Justice Terrence O'Donnell",
-  "dateString": "•Streamed live on Sep 22, 2020",
+  "dateString": "Streamed live on Sep 22, 2020",
   "date": "2020-09-22T00:00:00",
   "timestamps": [
     "00:00",

@@ -20,7 +20,7 @@ namespace TranscriptScraper
         static void Main(string[] args)
         {
             //ScrapeTranscripts();
-            //ParseTranscripts();
+            ParseTranscripts();
             CreateHeaders();
         }
 
@@ -86,7 +86,7 @@ namespace TranscriptScraper
             var jsonPath = getJsonPath(videoId);
             var o = CreateVideoJson(videoId);
 
-            File.WriteAllText(jsonPath, "var transcript = " + o.ToString());
+            File.WriteAllText(jsonPath, "window.transcript = " + o.ToString());
         }
 
         static JObject CreateVideoJson(string videoId, bool headersOnly = false)
@@ -100,11 +100,13 @@ namespace TranscriptScraper
             var metadata = File.ReadAllLines(metadataPath);
 
             var title = metadata[0];
-            var dateString = metadata[1];
+            var dateString = metadata[1].Replace("•", "");
             var date = GetDate(dateString);
+
 
             JObject o = JObject.FromObject(new
             {
+                videoId = videoId,
                 title = title,
                 dateString = dateString,
                 date = date,
@@ -148,8 +150,7 @@ namespace TranscriptScraper
 
         static DateTime GetDate(string dateString)
         {
-            var date = dateString.Replace("•", "");
-            date = date.Replace("Streamed live on", "");
+            var date = dateString.Replace("Streamed live on", "");
             date = date.Replace(",", "");
 
             var dateComponents = date.Trim().Split(' ').Select(c => c.Trim().ToLower()).ToList();
