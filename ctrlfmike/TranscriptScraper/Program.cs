@@ -20,7 +20,8 @@ namespace TranscriptScraper
         static void Main(string[] args)
         {
             //ScrapeTranscripts();
-            ParseTranscripts();
+            //ParseTranscripts();
+            CreateHeaders();
         }
 
         static void ScrapeTranscripts()
@@ -36,11 +37,18 @@ namespace TranscriptScraper
             }
         }
 
-        static void ParseTranscripts()
+        static List<string> GetExistingVideoIds()
         {
             var videoIds = Directory.GetFiles(transcriptDirectory).Select(p => Path.GetFileName(p)).ToList();
             videoIds = videoIds.Where(v => v.EndsWith("-timestamps.txt")).ToList(); // dont get the json files
             videoIds = videoIds.Select(v => v.Replace("-timestamps.txt", "")).ToList();
+
+            return videoIds;
+        }
+
+        static void ParseTranscripts()
+        {
+            var videoIds = GetExistingVideoIds();
 
             foreach(var videoId in videoIds)
             {
@@ -51,6 +59,11 @@ namespace TranscriptScraper
         static string getMetadataPath(string videoId)
         {
             return Path.Combine(transcriptDirectory, $"{videoId}-metadata.txt");
+        }
+
+        static string getHeadersPath()
+        {
+            return Path.Combine(transcriptDirectory, $"headers.js");
         }
 
         static string getTimestampPath(string videoId)
@@ -70,10 +83,17 @@ namespace TranscriptScraper
 
         static void CreateJsonFile(string videoId)
         {
+            var jsonPath = getJsonPath(videoId);
+            var o = CreateVideoJson(videoId);
+
+            File.WriteAllText(jsonPath, "var transcript = " + o.ToString());
+        }
+
+        static JObject CreateVideoJson(string videoId, bool headersOnly = false)
+        {
             var timestampsPath = getTimestampPath(videoId);
             var transcriptsPath = getTranscriptPath(videoId);
             var metadataPath = getMetadataPath(videoId);
-            var jsonPath = getJsonPath(videoId);
 
             var timestamps = File.ReadAllLines(timestampsPath);
             var transcripts = File.ReadAllLines(transcriptsPath);
@@ -88,12 +108,41 @@ namespace TranscriptScraper
                 title = title,
                 dateString = dateString,
                 date = date,
-                timestamps = timestamps.ToList(),
-                transcripts = transcripts.ToList()
+                timestamps = headersOnly ? null : timestamps.ToList(),
+                transcripts = headersOnly ? null : transcripts.ToList()
             });
 
-            File.WriteAllText(jsonPath, "var transcript = " + o.ToString());
-        } 
+            return o;
+        }
+
+        static void CreateHeaders()
+        {
+            var videoIds = GetExistingVideoIds();
+
+            var headers = new List<JObject>();
+            foreach (var videoId in videoIds)
+            {
+                var o = CreateVideoJson(videoId, true);
+                headers.Add(o);
+            }
+
+            headers.Sort((JObject j1, JObject j2) =>
+            {
+                var dateTime1 = (DateTime)j1["date"];
+                var dateTime2 = (DateTime)j2["date"];
+
+                return dateTime1.CompareTo(dateTime2);
+            });
+
+            JArray headersArray = new JArray(); 
+            foreach(var header in headers)
+            {
+                headersArray.Add(header);
+            }
+
+            var headersPath = getHeadersPath();
+            File.WriteAllText(headersPath, $"var headers = {headersArray.ToString()}");
+        }
 
         static DateTime GetDate(string dateString)
         {
