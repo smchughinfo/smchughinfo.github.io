@@ -85,5 +85,33 @@
             eval(request.responseText.replace(/\n/g, ""));
         }
 
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+        function escapeRegExp(string) {
+            // this shouldnt even be necessary because i dont think there is punctuation in the transcripts...
+            return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+        }
+
+        function updateSearchResults()
+        {
+            var searchText = document.getElementById("searchText").value;
+            var wholeWord = document.getElementById("wholeWord").checked;
+
+            searchText = escapeRegExp(searchText);
+            searchText = wholeWord ? "\\b" + searchText + "\\b" : searchText;
+            var searchRegex = new RegExp(searchText);
+
+            var matchingIndices = [];
+            transcript.transcripts.forEach(function(curTranscript, i) {
+                var match = searchRegex.test(curTranscript);
+                if(match)
+                {
+                    matchingIndices.push(i);
+                }
+            });
+            console.log(matchingIndices);
+        }
+
+        document.getElementById("searchText").addEventListener("input", updateSearchResults);
+        document.getElementById("wholeWord").addEventListener("change", updateSearchResults);
     </script>
 </html>
