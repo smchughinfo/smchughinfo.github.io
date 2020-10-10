@@ -1,5 +1,21 @@
 var headers = [
   {
+    "videoId": "jp2VM9YlKyU",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 8, 2020",
+    "dateString": "Streamed live on Oct 8, 2020",
+    "date": "2020-10-08T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "Kz3IxC8-ew4",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 6, 2020",
+    "dateString": "Streamed live on Oct 6, 2020",
+    "date": "2020-10-06T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
     "videoId": "ErM8ME3_HS4",
     "title": "Discussing the President's and First Lady's COVID-19 Diagnoses - October 2, 2020",
     "dateString": "Streamed live on Oct 2, 2020",
@@ -40,17 +56,17 @@ var headers = [
     "transcripts": null
   },
   {
-    "videoId": "g-YayTmThOA",
+    "videoId": "EmIbtYBG5WI",
     "title": "Portrait Dedication Ceremony - Justice Terrence O'Donnell",
-    "dateString": "Streamed live on Sep 22, 2020",
+    "dateString": "Sep 22, 2020",
     "date": "2020-09-22T00:00:00",
     "timestamps": null,
     "transcripts": null
   },
   {
-    "videoId": "EmIbtYBG5WI",
+    "videoId": "g-YayTmThOA",
     "title": "Portrait Dedication Ceremony - Justice Terrence O'Donnell",
-    "dateString": "Sep 22, 2020",
+    "dateString": "Streamed live on Sep 22, 2020",
     "date": "2020-09-22T00:00:00",
     "timestamps": null,
     "transcripts": null
