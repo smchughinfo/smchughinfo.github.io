@@ -161,16 +161,7 @@ namespace TranscriptScraper
             var months = new string[] { "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec" };
             month = (Array.IndexOf(months, month) + 1).ToString();
 
-            try
-            {
-                return new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day));
-
-            }
-            catch
-            {
-                return new DateTime(Convert.ToInt32(2020), Convert.ToInt32(10), Convert.ToInt32(13));
-
-            }
+            return new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day));
         }
 
         static List<string> GetVideosIds()
