@@ -1,5 +1,13 @@
 var headers = [
   {
+    "videoId": "rYUWOc4X1WM",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 13, 2020",
+    "dateString": "Streamed live 10 hours ago",
+    "date": "2020-10-13T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
     "videoId": "jp2VM9YlKyU",
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 8, 2020",
     "dateString": "Streamed live on Oct 8, 2020",
@@ -156,6 +164,14 @@ var headers = [
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 20, 2020",
     "dateString": "Streamed live on Aug 20, 2020",
     "date": "2020-08-20T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "K75KH2bMCJo",
+    "title": "The Supreme Court Of Ohio - August 18, 2020",
+    "dateString": "Streamed live on Aug 18, 2020",
+    "date": "2020-08-18T00:00:00",
     "timestamps": null,
     "transcripts": null
   },
