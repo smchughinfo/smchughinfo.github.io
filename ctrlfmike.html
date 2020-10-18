@@ -151,5 +151,6 @@
 
         document.getElementById("searchText").addEventListener("input", updateSearchResults);
         document.getElementById("wholeWord").addEventListener("change", updateSearchResults);
+        window.history.replaceState(null, null, window.location.pathname); // https://stackoverflow.com/a/41061471
     </script>
 </html>
