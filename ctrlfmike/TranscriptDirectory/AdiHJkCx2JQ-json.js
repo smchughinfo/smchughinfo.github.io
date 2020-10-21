@@ -7343,7 +7343,7 @@ window.transcript = {
     "and that communication that decision",
     "and that argument to the court is what",
     "is",
-    "centrally at issue here uh as mr [ __ ]",
+    "centrally at issue here uh as mr pollack",
     "alluded to",
     "that's what the cause of action is here",
     "so",
