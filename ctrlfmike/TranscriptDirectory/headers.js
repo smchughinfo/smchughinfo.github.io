@@ -1,8 +1,32 @@
 var headers = [
   {
+    "videoId": "1EWAzkeUisQ",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 22, 2020",
+    "dateString": "Streamed live on Oct 22, 2020",
+    "date": "2020-10-22T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "bfHxVwkoI9M",
+    "title": "Ohioana Awards - 2020",
+    "dateString": "Oct 21, 2020",
+    "date": "2020-10-21T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "lgqB5EQ2Rr0",
+    "title": "Ohioana Awards - 2020",
+    "dateString": "Streamed live on Oct 21, 2020",
+    "date": "2020-10-21T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
     "videoId": "sx8aEQqNHNs",
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 20, 2020",
-    "dateString": "Streamed live 11 hours ago",
+    "dateString": "Streamed live on Oct 20, 2020",
     "date": "2020-10-20T00:00:00",
     "timestamps": null,
     "transcripts": null
@@ -72,14 +96,6 @@ var headers = [
     "transcripts": null
   },
   {
-    "videoId": "Zw97SX-Pa6I",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 22, 2020",
-    "dateString": "Streamed live on Sep 22, 2020",
-    "date": "2020-09-22T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
     "videoId": "g-YayTmThOA",
     "title": "Portrait Dedication Ceremony - Justice Terrence O'Donnell",
     "dateString": "Streamed live on Sep 22, 2020",
@@ -91,6 +107,14 @@ var headers = [
     "videoId": "EmIbtYBG5WI",
     "title": "Portrait Dedication Ceremony - Justice Terrence O'Donnell",
     "dateString": "Sep 22, 2020",
+    "date": "2020-09-22T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "Zw97SX-Pa6I",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 22, 2020",
+    "dateString": "Streamed live on Sep 22, 2020",
     "date": "2020-09-22T00:00:00",
     "timestamps": null,
     "transcripts": null
@@ -184,16 +208,16 @@ var headers = [
     "transcripts": null
   },
   {
-    "videoId": "K75KH2bMCJo",
-    "title": "The Supreme Court Of Ohio - August 18, 2020",
+    "videoId": "IOx0jhdu3LQ",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 18, 2020",
     "dateString": "Streamed live on Aug 18, 2020",
     "date": "2020-08-18T00:00:00",
     "timestamps": null,
     "transcripts": null
   },
   {
-    "videoId": "IOx0jhdu3LQ",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 18, 2020",
+    "videoId": "K75KH2bMCJo",
+    "title": "The Supreme Court Of Ohio - August 18, 2020",
     "dateString": "Streamed live on Aug 18, 2020",
     "date": "2020-08-18T00:00:00",
     "timestamps": null,
@@ -212,30 +236,6 @@ var headers = [
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 11, 2020",
     "dateString": "Streamed live on Aug 11, 2020",
     "date": "2020-08-11T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "RnzKCSy2DwE",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 7, 2020",
-    "dateString": "Streamed live on Aug 7, 2020",
-    "date": "2020-08-07T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "x5YtgOL5iB4",
-    "title": "August 6, 2020 - Governor Mike DeWine Announcement",
-    "dateString": "Streamed live on Aug 6, 2020",
-    "date": "2020-08-06T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "AdiHJkCx2JQ",
-    "title": "The Supreme Court Of Ohio - August 5, 2020",
-    "dateString": "Streamed live on Aug 5, 2020",
-    "date": "2020-08-05T00:00:00",
     "timestamps": null,
     "transcripts": null
   }
