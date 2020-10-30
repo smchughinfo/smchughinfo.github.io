@@ -1,5 +1,29 @@
 var headers = [
   {
+    "videoId": "YLF421XY-ls",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 29, 2020",
+    "dateString": "Streamed live 23 hours ago",
+    "date": "2020-10-30T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "jw0jsFmYg5w",
+    "title": "Haunted Tales of the Ohio Statehouse",
+    "dateString": "Oct 27, 2020",
+    "date": "2020-10-27T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "wUvyBvKGZFU",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 27, 2020",
+    "dateString": "Streamed live on Oct 27, 2020",
+    "date": "2020-10-27T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
     "videoId": "1EWAzkeUisQ",
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 22, 2020",
     "dateString": "Streamed live on Oct 22, 2020",
@@ -136,16 +160,16 @@ var headers = [
     "transcripts": null
   },
   {
-    "videoId": "Kn6vFoqFlno",
-    "title": "State of the Judiciary Address 2020",
+    "videoId": "2zMjTpcXSzc",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 10, 2020",
     "dateString": "Streamed live on Sep 10, 2020",
     "date": "2020-09-10T00:00:00",
     "timestamps": null,
     "transcripts": null
   },
   {
-    "videoId": "2zMjTpcXSzc",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 10, 2020",
+    "videoId": "Kn6vFoqFlno",
+    "title": "State of the Judiciary Address 2020",
     "dateString": "Streamed live on Sep 10, 2020",
     "date": "2020-09-10T00:00:00",
     "timestamps": null,
@@ -212,30 +236,6 @@ var headers = [
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 18, 2020",
     "dateString": "Streamed live on Aug 18, 2020",
     "date": "2020-08-18T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "K75KH2bMCJo",
-    "title": "The Supreme Court Of Ohio - August 18, 2020",
-    "dateString": "Streamed live on Aug 18, 2020",
-    "date": "2020-08-18T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "-Yq8l3dUA9k",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 13, 2020",
-    "dateString": "Streamed live on Aug 13, 2020",
-    "date": "2020-08-13T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "DaWqXVB2dRI",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 11, 2020",
-    "dateString": "Streamed live on Aug 11, 2020",
-    "date": "2020-08-11T00:00:00",
     "timestamps": null,
     "transcripts": null
   }

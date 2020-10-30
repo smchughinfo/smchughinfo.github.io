@@ -167,7 +167,7 @@ namespace TranscriptScraper
             }
             catch
             {
-                return new DateTime(Convert.ToInt32(2020), Convert.ToInt32(10), Convert.ToInt32(24));
+                return new DateTime(Convert.ToInt32(2020), Convert.ToInt32(10), Convert.ToInt32(30));
             }
         }
 
