@@ -33,7 +33,14 @@ namespace TranscriptScraper
 
             foreach (var videoId in videoIds)
             {
-                GetVideoTranscript(videoId);
+                try
+                {
+                    GetVideoTranscript(videoId);
+                }
+                catch
+                {
+
+                }
             }
         }
 
@@ -167,7 +174,7 @@ namespace TranscriptScraper
             }
             catch
             {
-                return new DateTime(Convert.ToInt32(2020), Convert.ToInt32(10), Convert.ToInt32(30));
+                return new DateTime(Convert.ToInt32(2020), Convert.ToInt32(11), Convert.ToInt32(18));
             }
         }
 

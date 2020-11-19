@@ -1,9 +1,57 @@
 var headers = [
   {
+    "videoId": "JEkDazi9HPY",
+    "title": "Ohio on Trial: Mapp v. Ohio",
+    "dateString": "Nov 18, 2020",
+    "date": "2020-11-18T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "zxvt-EFvbyM",
+    "title": "November 17, 2020 #COVID19 Update with Governor Mike DeWine",
+    "dateString": "Nov 17, 2020",
+    "date": "2020-11-17T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "i7-s2eXazxY",
+    "title": "November 17, 2020 #COVID19 Update with Governor Mike DeWine",
+    "dateString": "Streamed live on Nov 17, 2020",
+    "date": "2020-11-17T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "dpPDLpBUuWg",
+    "title": "November 12, 2020 #COVID19 Update with Governor Mike DeWine",
+    "dateString": "Streamed live on Nov 12, 2020",
+    "date": "2020-11-12T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "fKwzr2PPrag",
+    "title": "Ohio Governor Mike DeWine - COVID-19 Update | November 5, 2020",
+    "dateString": "Streamed live on Nov 5, 2020",
+    "date": "2020-11-05T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
+    "videoId": "WQ7Yh-lG72c",
+    "title": "Secretary of State Frank LaRose - 2020 General Election Update",
+    "dateString": "Streamed live on Nov 3, 2020",
+    "date": "2020-11-03T00:00:00",
+    "timestamps": null,
+    "transcripts": null
+  },
+  {
     "videoId": "YLF421XY-ls",
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | October 29, 2020",
-    "dateString": "Streamed live 23 hours ago",
-    "date": "2020-10-30T00:00:00",
+    "dateString": "Streamed live on Oct 29, 2020",
+    "date": "2020-10-29T00:00:00",
     "timestamps": null,
     "transcripts": null
   },
@@ -32,17 +80,17 @@ var headers = [
     "transcripts": null
   },
   {
-    "videoId": "bfHxVwkoI9M",
+    "videoId": "lgqB5EQ2Rr0",
     "title": "Ohioana Awards - 2020",
-    "dateString": "Oct 21, 2020",
+    "dateString": "Streamed live on Oct 21, 2020",
     "date": "2020-10-21T00:00:00",
     "timestamps": null,
     "transcripts": null
   },
   {
-    "videoId": "lgqB5EQ2Rr0",
+    "videoId": "bfHxVwkoI9M",
     "title": "Ohioana Awards - 2020",
-    "dateString": "Streamed live on Oct 21, 2020",
+    "dateString": "Oct 21, 2020",
     "date": "2020-10-21T00:00:00",
     "timestamps": null,
     "transcripts": null
@@ -120,17 +168,17 @@ var headers = [
     "transcripts": null
   },
   {
-    "videoId": "g-YayTmThOA",
+    "videoId": "EmIbtYBG5WI",
     "title": "Portrait Dedication Ceremony - Justice Terrence O'Donnell",
-    "dateString": "Streamed live on Sep 22, 2020",
+    "dateString": "Sep 22, 2020",
     "date": "2020-09-22T00:00:00",
     "timestamps": null,
     "transcripts": null
   },
   {
-    "videoId": "EmIbtYBG5WI",
+    "videoId": "g-YayTmThOA",
     "title": "Portrait Dedication Ceremony - Justice Terrence O'Donnell",
-    "dateString": "Sep 22, 2020",
+    "dateString": "Streamed live on Sep 22, 2020",
     "date": "2020-09-22T00:00:00",
     "timestamps": null,
     "transcripts": null
@@ -180,62 +228,6 @@ var headers = [
     "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 8, 2020",
     "dateString": "Streamed live on Sep 8, 2020",
     "date": "2020-09-08T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "M0SZVUXRNqw",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 3, 2020",
-    "dateString": "Streamed live on Sep 3, 2020",
-    "date": "2020-09-03T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "cc4rF5dNJs0",
-    "title": "Case No. 2020-0638 Master Commissioner Hearing",
-    "dateString": "Streamed live on Sep 2, 2020",
-    "date": "2020-09-02T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "Mh6oWYcTvRg",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | September 1, 2020",
-    "dateString": "Streamed live on Sep 1, 2020",
-    "date": "2020-09-01T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "B9dF_qnCGTU",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 27, 2020",
-    "dateString": "Streamed live on Aug 27, 2020",
-    "date": "2020-08-27T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "i1PBbK9JW1w",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 25, 2020",
-    "dateString": "Streamed live on Aug 25, 2020",
-    "date": "2020-08-25T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "zqkS1GId1kQ",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 20, 2020",
-    "dateString": "Streamed live on Aug 20, 2020",
-    "date": "2020-08-20T00:00:00",
-    "timestamps": null,
-    "transcripts": null
-  },
-  {
-    "videoId": "IOx0jhdu3LQ",
-    "title": "Ohio Governor Mike DeWine - COVID-19 Update | August 18, 2020",
-    "dateString": "Streamed live on Aug 18, 2020",
-    "date": "2020-08-18T00:00:00",
     "timestamps": null,
     "transcripts": null
   }
