@@ -32,3 +32,10 @@ Input string was not in a correct format.
    at WheelDealz.Facebook.ScrapeFacebookPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Facebook.cs:line 75
    at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
 
+ERROR GETTING A CAR - https://www.facebook.com/marketplace/item/418820389937814/
+Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at WheelDealz.Facebook.ScrapeFacebookPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Facebook.cs:line 50
+   at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
+
