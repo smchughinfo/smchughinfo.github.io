@@ -39,3 +39,7 @@ Input string was not in a correct format.
    at WheelDealz.Facebook.ScrapeFacebookPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Facebook.cs:line 50
    at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
 
+ERROR GETTING THE URLS - no such element: Unable to locate element: {"method":"css selector","selector":":focus"}
+  (Session info: chrome=96.0.4664.93)
+
+
