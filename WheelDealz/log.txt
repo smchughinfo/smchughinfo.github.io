@@ -43,3 +43,11 @@ ERROR GETTING THE URLS - no such element: Unable to locate element: {"method":"c
   (Session info: chrome=96.0.4664.93)
 
 
+ERROR GETTING THE URLS - unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=96.0.4664.93)
+
+
+ERROR GETTING THE URLS - unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=96.0.4664.93)
+
+
