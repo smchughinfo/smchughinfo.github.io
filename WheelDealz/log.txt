@@ -62,3 +62,7 @@ ERROR GETTING THE URLS - no such element: Unable to locate element: {"method":"x
   (Session info: chrome=96.0.4664.110)
 
 
+ERROR GETTING THE URLS - no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='20 ']"}
+  (Session info: chrome=96.0.4664.110)
+
+
