@@ -70,3 +70,15 @@ ERROR GETTING THE URLS - no such element: Unable to locate element: {"method":"x
   (Session info: chrome=96.0.4664.110)
 
 
+ERROR GETTING A CAR - https://www.facebook.com/marketplace/item/440868324343029/
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[starts-with(.,'$')]"}
+  (Session info: chrome=96.0.4664.110)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at WheelDealz.Facebook.ScrapeFacebookPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Facebook.cs:line 49
+   at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
+
