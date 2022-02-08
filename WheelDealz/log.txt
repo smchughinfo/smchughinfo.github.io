@@ -82,3 +82,50 @@ no such element: Unable to locate element: {"method":"xpath","selector":"//*[sta
    at WheelDealz.Facebook.ScrapeFacebookPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Facebook.cs:line 49
    at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
 
+ERROR GETTING A CAR - https://cincinnati.craigslist.org/cto/d/cincinnati-2009-nissan-murano/7426371863.html
+element not interactable
+  (Session info: chrome=96.0.4664.110)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at WheelDealz.Craigslist.GetImages() in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Craigslist.cs:line 75
+   at WheelDealz.Craigslist.ScrapeCraigslistPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Craigslist.cs:line 48
+   at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
+
+ERROR GETTING A CAR - https://cincinnati.craigslist.org/cto/d/west-harrison-2003-ford-explorer-4x4/7423728819.html
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at System.Collections.ObjectModel.ReadOnlyCollection`1.get_Item(Int32 index)
+   at WheelDealz.Craigslist.ScrapeCraigslistPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Craigslist.cs:line 30
+   at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
+
+ERROR GETTING A CAR - https://www.facebook.com/marketplace/item/524053668857286/
+Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at WheelDealz.Facebook.ScrapeFacebookPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Facebook.cs:line 50
+   at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
+
+ERROR GETTING A CAR - https://www.facebook.com/marketplace/item/609476203678837/
+Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at WheelDealz.Facebook.ScrapeFacebookPage(String url) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Facebook.cs:line 50
+   at WheelDealz.Program.GetCars(Func`1 getCarUrls, Func`2 getCarFromUrl) in C:\Users\sweetrelish\Desktop\WheelDealz\WheelDealz\Program.cs:line 105
+
+ERROR GETTING THE URLS - unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=97.0.4692.99)
+
+
+ERROR GETTING THE URLS - unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=97.0.4692.99)
+
+
+ERROR GETTING THE URLS - unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=97.0.4692.99)
+
+

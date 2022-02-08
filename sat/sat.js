@@ -1,15 +1,30 @@
-function Hello(props) {
-  return ( 
-    <div className="jumbotron">
-      <h1 className="display-4">Hello, world!</h1>
-      <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr className="my-4" />
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <p className="lead">
-        <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
-    </div>
-    );
+function Tag2(props) {
+  console.log(props)
+  return (
+    <li className="nav-item">
+      <a className={"nav-link" + (props.tag.id == 1 ? " active" : "")} href="#">{props.tag.title}</a>
+    </li>
+  );
 }
 
-ReactDOM.render(<Hello />, document.getElementById('root'));
+function ActivityTabs(props) {
+  let tags = [
+    { id: 1, title: "XXX"},
+    { id: 2, title: "YYY"},
+    { id: 3, title: "ZZZ"}
+  ];
+    
+  return ( 
+    <div className="card" id="activityTabs">
+      <ul className="nav nav-tabs">
+        { tags.map((tag) =>  <Tag2 key={tag.id} tag={tag} /> ) }     
+      </ul>
+      <h1>x</h1>
+      <h1>x</h1>
+      <h1>x</h1>
+    </div>
+    
+  );
+}
+
+ReactDOM.render(<ActivityTabs />, document.getElementById('root'));
