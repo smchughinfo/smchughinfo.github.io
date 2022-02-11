@@ -3,7 +3,7 @@ function Tab(props) {
     $(e.target).tab("show");
   }
 
-  var href = "#" + encodeURIComponent(props.tagName); // this is tightly coupled ActivityList
+  var href = "#" + encodeURIComponent(props.tagName); // this is tightly coupled with ActivityList
   return (
     <li className="nav-item">
       <a onClick={showTab} className={"nav-link" + (props.activeActivity == props.tagName ? " active" : "")} href={href}>{props.tagName}</a>
@@ -18,7 +18,7 @@ function Activity(props) {
 }
 
 function ActivityList(props) {
-  var id = encodeURIComponent(props.groupedActivity[0].tag); // this is tightly coupled Tab
+  var id = encodeURIComponent(props.groupedActivity[0].tag); // this is tightly coupled with Tab
   return (
     <div className={"tab-pane fade" + (props.activeActivity == props.groupedActivity[0].tag ? " active show" : "")} id={id} role="tabpanel">
       { props.groupedActivity.map((activity, i) => <Activity key={i} {...activity}/>) }
@@ -114,7 +114,7 @@ var activityStorageManager = (function() {
 
 
 function SAT(props) {
-  let activities = activityStorageManager.getActivities();
+  const [activities, setActivities] = React.useState(activityStorageManager.getActivities());
 
   function showAddActivityDialog() {
     $('#addActivityDialog').modal('show');
@@ -125,6 +125,7 @@ function SAT(props) {
     var isValid = result.name.replaceAll(" ", "") !== "" && result.tag.replaceAll(" ", "") !== "";
     if(isValid) {
       activityStorageManager.addActivity(result);
+      setActivities(activityStorageManager.getActivities());
     }
   }
 
