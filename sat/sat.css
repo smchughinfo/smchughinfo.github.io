@@ -13,3 +13,15 @@
 .activity {
     margin: .5em;
 }
+
+#tMinusHours, #tMinusMinutes {
+    width: 50px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.quick-t {
+    display: flex;
+    justify-content: space-evenly;
+}
