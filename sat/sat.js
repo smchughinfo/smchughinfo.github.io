@@ -136,7 +136,7 @@ function ActivityTabs(props) {
       <ul className="nav nav-tabs">
         { tags.map((tagName, i) =>  <Tab key={i} activeActivity={activeActivity} tagName={tagName} /> ) }     
       </ul>
-      <button id="buttonShowAddActivity" type="button" className="btn btn-primary" onClick={props.showAddActivityDialog}>Primary</button>
+      <button id="buttonShowAddActivity" type="button" className="btn btn-primary" onClick={props.showAddActivityDialog}>New Activity Type</button>
       <div className="tab-content">
         { groupedActivities.map((groupedActivity, i) => <ActivityList key={i} activeActivity={activeActivity} groupedActivity={groupedActivity} showTrackActivityDialog={props.showTrackActivityDialog} />) }    
       </div>
@@ -170,14 +170,94 @@ var activityStorageManager = (function() {
     addActivity: addActivity,
     setActivities: setActivities
   }
-})()
+})();
 
+var trackedActivityStorageManager = (function() {
+  function getTrackedActivities() {
+    return localStorage.trackedActivities ? JSON.parse(localStorage.trackedActivities) : [];
+  }
+  
+  function addTrackedActivity(trackedActivity) {
+    let trackedActivities = getTrackedActivities();
+    trackedActivities.push(trackedActivity);
+
+    trackedActivities.sort(function(a, b) {
+      return a.activityTime - b.activityTime;
+    });
+
+    setTrackedActivities(trackedActivities);
+  }
+  
+  function setTrackedActivities(trackedActivities) {
+    localStorage.trackedActivities = JSON.stringify(trackedActivities);
+  }
+
+  return {
+    getTrackedActivities: getTrackedActivities,
+    addTrackedActivity: addTrackedActivity,
+    setTrackedActivities: setTrackedActivities
+  }
+})();
+
+function TrackedActivityListItem(props) {
+  return (
+    <li>
+      {(new Date(props.trackedActivity.activityTime)).toString()}: {props.trackedActivity.name}
+    </li>
+  );
+}
+
+function TrackedActivityList(props) {
+  return (
+    <div>
+      <ul>
+        { props.trackedActivities.map((trackedActivity, i) => <TrackedActivityListItem key={i}  trackedActivity={trackedActivity} />) }    
+      </ul>
+      <div id="chartContainer"></div>
+    </div>
+  );
+}
+
+function makeChart() {
+  var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+      text: "Earthquakes - per month"
+      },
+       data: [
+      {
+        type: "line",
+
+        dataPoints: [
+        { x: new Date(2012, 0, 1), y: 450 },
+        { x: new Date(2012, 1, 1), y: 414 },
+        { x: new Date(2012, 2, 1), y: 520 },
+        { x: new Date(2012, 3, 1), y: 460 },
+        { x: new Date(2012, 4, 1), y: 450 },
+        { x: new Date(2012, 5, 1), y: 500 },
+        { x: new Date(2012, 6, 1), y: 480 },
+        { x: new Date(2012, 7, 1), y: 480 },
+        { x: new Date(2012, 8, 1), y: 410 },
+        { x: new Date(2012, 9, 1), y: 500 },
+        { x: new Date(2012, 10, 1), y: 480 },
+        { x: new Date(2012, 11, 1), y: 510 }
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+}
+setTimeout(makeChart, 1000);
 
 function SAT(props) {
   const [activities, setActivities] = React.useState(activityStorageManager.getActivities());
   const [curActivity, setCurActivity] = React.useState(null);
+  const [trackedActivities, setTrackedActivities] = React.useState(trackedActivityStorageManager.getTrackedActivities());
 
   function showAddActivityDialog() {
+    $("#newActivityName").val("");
+    $("#newActivityTag").val("");
     $('#addActivityDialog').modal('show');
   }
 
@@ -198,7 +278,12 @@ function SAT(props) {
   }
 
   function trackActivity(tMinusMilliseconds) {
-    console.log(curActivity, tMinusMilliseconds);
+    var trackedActivity = JSON.parse(JSON.stringify(curActivity));
+    trackedActivity.logTime = Date.now();
+    trackedActivity.activityTime = Date.now() - tMinusMilliseconds;
+    trackedActivityStorageManager.addTrackedActivity(trackedActivity);
+    setTrackedActivities(trackedActivityStorageManager.getTrackedActivities());
+    $("#trackActivityDialog").modal('hide');
   }
 
   return (
@@ -206,6 +291,7 @@ function SAT(props) {
       <ActivityTabs activities={activities} showAddActivityDialog={showAddActivityDialog} showTrackActivityDialog={showTrackActivityDialog} />
       <AddActivityDialog onAddActivity={addActivity} />
       <ActivityInfoDialog curActivity={curActivity} onTrackActivity={trackActivity} />
+      <TrackedActivityList trackedActivities={trackedActivities} />
     </div>
   );
 }

@@ -8,7 +8,7 @@
     top: 10px;
 }
 .nav-tabs {
-    padding-right: 75px;
+    padding-right: 180px;
 }
 .activity {
     margin: .5em;
@@ -24,4 +24,19 @@
 .quick-t {
     display: flex;
     justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#chartContainer {
+    height: 300px; width: 100%;
 }
