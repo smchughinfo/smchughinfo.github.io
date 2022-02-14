@@ -132,7 +132,7 @@ function ActivityTabs(props) {
   let activeActivity = tags[0];
 
   return ( 
-    <div className="card" id="activityTabs">
+    <div>
       <ul className="nav nav-tabs">
         { tags.map((tagName, i) =>  <Tab key={i} activeActivity={activeActivity} tagName={tagName} /> ) }     
       </ul>
@@ -165,10 +165,24 @@ var activityStorageManager = (function() {
     localStorage.activities = JSON.stringify(activities);
   }
 
+  function deleteActivity(activity) {
+    var activities = getActivities();
+    var activitiesConcat = activities.map(a => a.name + a.tag);
+    var activityIndex = activitiesConcat.indexOf(activity.name + activity.tag);
+    activities.splice(activityIndex, 1);
+    setActivities(activities);
+  }
+
+  function toString() {
+    return localStorage.activities ? localStorage.activities : "";
+  }
+
   return {
     getActivities: getActivities,
     addActivity: addActivity,
-    setActivities: setActivities
+    setActivities: setActivities,
+    deleteActivity: deleteActivity,
+    toString: toString
   }
 })();
 
@@ -182,7 +196,7 @@ var trackedActivityStorageManager = (function() {
     trackedActivities.push(trackedActivity);
 
     trackedActivities.sort(function(a, b) {
-      return a.activityTime - b.activityTime;
+      return b.activityTime - a.activityTime;
     });
 
     setTrackedActivities(trackedActivities);
@@ -192,63 +206,193 @@ var trackedActivityStorageManager = (function() {
     localStorage.trackedActivities = JSON.stringify(trackedActivities);
   }
 
+  function deleteTrackedActivity(trackedActivity) {
+    var trackedActivities = getTrackedActivities();
+    var trackedActivitiesByLogTime = trackedActivities.map(t => t.logTime);
+    var trackedActivityIndex = trackedActivitiesByLogTime.indexOf(trackedActivity.logTime);
+    trackedActivities.splice(trackedActivityIndex, 1);
+    setTrackedActivities(trackedActivities);
+  }
+
+  function toString() {
+    return localStorage.trackedActivities ? localStorage.trackedActivities : "";
+  }
+
   return {
     getTrackedActivities: getTrackedActivities,
     addTrackedActivity: addTrackedActivity,
-    setTrackedActivities: setTrackedActivities
+    setTrackedActivities: setTrackedActivities,
+    deleteTrackedActivity: deleteTrackedActivity,
+    toString: toString
   }
 })();
 
-function TrackedActivityListItem(props) {
+function ActivityListItem(props) {
+  function deleteTrackedActivity() {
+    var doTheDelete = confirm("Are you sure you want to delete activity type '" + props.activity.name + "' with tag '" + props.activity.tag + "'? This only deletes the type of activity. Activities of this type that have already been logged will not be deleted unless you manually delete them.");
+    if(doTheDelete) {
+      props.onDeleteActivity(props.activity);
+    }
+  }
   return (
     <li>
-      {(new Date(props.trackedActivity.activityTime)).toString()}: {props.trackedActivity.name}
+      <span>{props.activity.name} | {props.activity.tag}</span>
+      <button type="button" className="btn btn-warning delete-activity-button" onClick={deleteTrackedActivity}>Delete 🗑️</button>
+    </li>
+  );
+}
+
+function TrackedActivityListItem(props) {
+  function deleteTrackedActivity() {
+    var doTheDelete = confirm("Are you sure you want to delete activity " + props.trackedActivity.name + " at " + (new Date(props.trackedActivity.activityTime)).toString() + "?");
+    if(doTheDelete) {
+      props.onDeleteTrackedActivity(props.trackedActivity);
+    }
+  }
+  return (
+    <li>
+      <span>{(new Date(props.trackedActivity.activityTime)).toString()}: {props.trackedActivity.name}</span>
+      <button type="button" className="btn btn-danger delete-tracked-activity-button" onClick={deleteTrackedActivity}>Delete 🗑️</button>
     </li>
   );
 }
 
 function TrackedActivityList(props) {
+  React.useEffect(chartManager.createOrUpdateChart);
+
+  function copyActivityLogToClipboard() {
+    var activityLog = activityStorageManager.toString() + "\n\n\n" + trackedActivityStorageManager.toString();
+    navigator.clipboard.writeText(activityLog);
+  }
+
   return (
-    <div>
-      <ul>
-        { props.trackedActivities.map((trackedActivity, i) => <TrackedActivityListItem key={i}  trackedActivity={trackedActivity} />) }    
-      </ul>
-      <div id="chartContainer"></div>
+    <div className="accordion" id="accordionExample">
+      <div className="card">
+        <div className="card-header" id="headingOne">
+          <h2 className="mb-0">
+            <button id="showChartButton" className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Chart
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div className="card-body">
+            <div id="chartContainer"></div>
+          </div>
+        </div>
+      </div>
+      <div className="card">
+        <div className="card-header" id="headingTwo">
+          <h2 className="mb-0">
+            <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Log and Delete
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div className="card-body text-log">
+            <ul>
+              { props.trackedActivities.map((trackedActivity, i) => <TrackedActivityListItem key={i} onDeleteTrackedActivity={props.onDeleteTrackedActivity} trackedActivity={trackedActivity} />) }    
+            </ul> 
+            <hr></hr>
+            <ul>
+              { props.activities.map((activity, i) => <ActivityListItem key={i} onDeleteActivity={props.onDeleteActivity} activity={activity} />) }    
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="card">
+        <div className="card-header" id="headingThree">
+          <h2 className="mb-0">
+            <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Miscellaneous
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div className="card-body">
+            <button type="button" className="btn btn-info delete-tracked-activity-button" onClick={copyActivityLogToClipboard}>Copy Activity Log To Clipboard</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-function makeChart() {
-  var chart = new CanvasJS.Chart("chartContainer",
-    {
-      title:{
-      text: "Earthquakes - per month"
-      },
-       data: [
-      {
-        type: "line",
+var chartManager = (function() {
+  var tagColors = [ // https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226
+    "#001219",
+    "#9B2226",
+    "#0A9396",
+    "#BB3E03",
+    "#E9D8A6",
+    "#EE9B00",
+    "#94D2BD",
+    "#CA6702",
+    "#005F73",
+    "#AE2012" // after this many colors it's whatever random color canvasjs uses
+  ];
 
-        dataPoints: [
-        { x: new Date(2012, 0, 1), y: 450 },
-        { x: new Date(2012, 1, 1), y: 414 },
-        { x: new Date(2012, 2, 1), y: 520 },
-        { x: new Date(2012, 3, 1), y: 460 },
-        { x: new Date(2012, 4, 1), y: 450 },
-        { x: new Date(2012, 5, 1), y: 500 },
-        { x: new Date(2012, 6, 1), y: 480 },
-        { x: new Date(2012, 7, 1), y: 480 },
-        { x: new Date(2012, 8, 1), y: 410 },
-        { x: new Date(2012, 9, 1), y: 500 },
-        { x: new Date(2012, 10, 1), y: 480 },
-        { x: new Date(2012, 11, 1), y: 510 }
-        ]
-      }
-      ]
+  var trackedActivities = trackedActivityStorageManager.getTrackedActivities();
+  var activities = activityStorageManager.getActivities();
+  
+
+  trackedActivities = trackedActivities.map(t => {
+    var tagIndex = activities.map(a => a.tag).indexOf(t.tag);
+    return {
+      x:new Date(t.activityTime), 
+      y: tagIndex + 1,
+      label: t.name,
+      color: tagIndex < tagColors.length ? tagColors[tagIndex] : undefined
+    }
+  });
+
+  function createChart() {
+    window.chart = new CanvasJS.Chart("chartContainer", {
+       animationEnabled: true,
+       zoomEnabled: true,
+       title:{
+         text: "Activity Log"
+       },
+       data: [{
+         type: "scatter",
+         toolTipContent: "{label}<br>{x}",
+         dataPoints: trackedActivities
+       }]
+     });
+     chart.render();
+   }
+
+   function updateChart() {
+
+   }
+
+   function autoRerenderChart() {
+     // when you delete (and idk what else) and go back to look at the chart it's not as wide so you have to rerender it.
+    $(window).on("#showChartButton", "click", function() { // cant figure out why events wont fire https://getbootstrap.com/docs/4.0/components/collapse/
+      setTimeout(function() {
+        window.chart.render();
+      });  
     });
+   }
+   
+   function createOrUpdateChart() {
+     if(window.chart == undefined) {
+       createChart();
+       autoRerenderChart();
+     }
+     else {
+       updateChart();
+     }
+   }
 
-    chart.render();
-}
-setTimeout(makeChart, 1000);
+   return {
+     createOrUpdateChart: createOrUpdateChart
+   }
+})();
+
+
 
 function SAT(props) {
   const [activities, setActivities] = React.useState(activityStorageManager.getActivities());
@@ -286,12 +430,22 @@ function SAT(props) {
     $("#trackActivityDialog").modal('hide');
   }
 
+  function deleteTrackedActivity(trackedActivity) {
+    trackedActivityStorageManager.deleteTrackedActivity(trackedActivity);
+    setTrackedActivities(trackedActivityStorageManager.getTrackedActivities());
+  }
+
+  function deleteActivity(activity) {
+    activityStorageManager.deleteActivity(activity);
+    setActivities(activityStorageManager.getActivities());
+  }
+  
   return (
-    <div>
+    <div className="card" id="activityTabs">
       <ActivityTabs activities={activities} showAddActivityDialog={showAddActivityDialog} showTrackActivityDialog={showTrackActivityDialog} />
       <AddActivityDialog onAddActivity={addActivity} />
       <ActivityInfoDialog curActivity={curActivity} onTrackActivity={trackActivity} />
-      <TrackedActivityList trackedActivities={trackedActivities} />
+      <TrackedActivityList activities={activities} trackedActivities={trackedActivities} onDeleteActivity={deleteActivity} onDeleteTrackedActivity={deleteTrackedActivity} />
     </div>
   );
 }

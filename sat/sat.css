@@ -26,7 +26,17 @@
     justify-content: space-evenly;
 }
 
+.delete-activity-button,
+.delete-tracked-activity-button {
+    margin-left: 1em;
+    transform: scale(.75);
+}
 
+.text-log {
+    max-height: 1000px;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
 
 
 
