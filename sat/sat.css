@@ -42,7 +42,9 @@
     display: none;
 }
 
-
+.nav-tabs {
+    min-height: 41px;
+}
 
 
 
