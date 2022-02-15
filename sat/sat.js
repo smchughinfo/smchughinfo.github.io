@@ -126,8 +126,12 @@ function AddActivityDialog(props) {
   );
 }
 
+function getUniqueTags() {
+  return [...new Set(activityStorageManager.getActivities().map(activity => activity.tag))]; // https://stackoverflow.com/a/35092559
+}
+
 function ActivityTabs(props) {
-  let tags = [...new Set(props.activities.map(activity => activity.tag))]; // https://stackoverflow.com/a/35092559
+  let tags = getUniqueTags()
   let groupedActivities = tags.map(tag => props.activities.filter(activity => activity.tag == tag));
   let activeActivity = tags[0];
 
@@ -229,7 +233,7 @@ var trackedActivityStorageManager = (function() {
 
 function ActivityListItem(props) {
   function deleteTrackedActivity() {
-    var doTheDelete = confirm("Are you sure you want to delete activity type '" + props.activity.name + "' with tag '" + props.activity.tag + "'? This only deletes the type of activity. Activities of this type that have already been logged will not be deleted unless you manually delete them.");
+    var doTheDelete = confirm("Are you sure you want to delete activity type '" + props.activity.name + "' with tag '" + props.activity.tag + "'? This only deletes the type of activity. Activities of this type that have already been logged will not be deleted unless you manually delete them. *However, although they are not deleted they will not show up in the graph.");
     if(doTheDelete) {
       props.onDeleteActivity(props.activity);
     }
@@ -278,7 +282,7 @@ function TrackedActivityList(props) {
 
         <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div className="card-body">
-            <div id="chartContainer"></div>
+           <div id="myChart"></div>
           </div>
         </div>
       </div>
@@ -332,55 +336,125 @@ var chartManager = (function() {
     "#CA6702",
     "#005F73",
     "#AE2012" // after this many colors it's whatever random color canvasjs uses
-  ];
+  ]; //color: tagIndex < tagColors.length ? tagColors[tagIndex] : undefined
 
-  var trackedActivities = trackedActivityStorageManager.getTrackedActivities();
-  var activities = activityStorageManager.getActivities();
+  function getTimezoneOffsetInMilliseconds() {
+    return (new Date().getTimezoneOffset()) * 1000 * 60;
+  }
+
+  function getSeries() {
+    var trackedActivities = trackedActivityStorageManager.getTrackedActivities();
+    var oneDayMilliseconds = 1000 * 60 * 60 * 24;
+    var yesterday = Date.now() - oneDayMilliseconds;
+    trackedActivities = trackedActivities.filter(a => a.activityTime > yesterday);
+    var gmt = getTimezoneOffsetInMilliseconds();
+    var uniqueTags = getUniqueTags();
+    var series = [];
   
-
-  trackedActivities = trackedActivities.map(t => {
-    var tagIndex = activities.map(a => a.tag).indexOf(t.tag);
-    return {
-      x:new Date(t.activityTime), 
-      y: tagIndex + 1,
-      label: t.name,
-      color: tagIndex < tagColors.length ? tagColors[tagIndex] : undefined
+    for(var i = 0; i < uniqueTags.length; i++) {
+      var seriesTag = uniqueTags[i];
+      var seriesItem = {
+        name: seriesTag,
+        data: []
+      }
+      series.push(seriesItem);
+      for(var i2 = 0; i2 < trackedActivities.length; i2++) {
+        var trackedActivity = trackedActivities[i2];
+        if(trackedActivity.tag == seriesTag) {
+          seriesItem.data.push([
+            new Date(trackedActivity.activityTime - gmt),
+            i + 1,
+            trackedActivity.name
+          ]);
+        }
+      }
     }
-  });
+    return series;
+  }
+
+
+  var lastSeries = null;
+  function getChartOptions() {
+    lastSeries = getSeries();
+    var options = {
+      series: lastSeries,
+      chart: {
+      height: 350,
+      type: 'scatter',
+      zoom: {
+        type: 'xy'
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    grid: {
+      xaxis: {
+        lines: {
+          show: true
+        }
+      },
+      yaxis: {
+        lines: {
+          show: true
+        }
+      },
+    },
+    xaxis: {
+      type: 'datetime',
+    },
+    yaxis: {
+      max: getUniqueTags().length
+    },
+    tooltip: {
+      x: {
+        formatter: function(value) {
+          var gmt = getTimezoneOffsetInMilliseconds();
+          var minutesSinceTrackedActivity = parseMillisecondsIntoReadableTime(Date.now() - value - gmt);
+          return (new Date(value + gmt)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) + " | " + minutesSinceTrackedActivity + " ago";
+        }
+      },
+      y: {
+        formatter: function(value, { series, seriesIndex, dataPointIndex, w }) {
+          return lastSeries[seriesIndex].data[dataPointIndex][2];
+        }
+      }
+    }
+    };
+    return options;
+  }
+
+  function parseMillisecondsIntoReadableTime(milliseconds){ // https://stackoverflow.com/a/33909506
+    //Get hours from milliseconds
+    var hours = milliseconds / (1000*60*60);
+    var absoluteHours = Math.floor(hours);
+    var h = absoluteHours > 9 ? absoluteHours : '0' + absoluteHours;
+  
+    //Get remainder from hours and convert to minutes
+    var minutes = (hours - absoluteHours) * 60;
+    var absoluteMinutes = Math.floor(minutes);
+    var m = absoluteMinutes > 9 ? absoluteMinutes : '0' +  absoluteMinutes;
+  
+    var zeroHour = h == 0 || h == "0" || h == "00"; // idk what it is and i dont care
+    var result = zeroHour ? "" : h + ' hours ';
+    result += m + " minutes";
+    return result;
+  }
 
   function createChart() {
-    window.chart = new CanvasJS.Chart("chartContainer", {
-       animationEnabled: true,
-       zoomEnabled: true,
-       title:{
-         text: "Activity Log"
-       },
-       data: [{
-         type: "scatter",
-         toolTipContent: "{label}<br>{x}",
-         dataPoints: trackedActivities
-       }]
-     });
-     chart.render();
-   }
+    var options = getChartOptions();
+    window.chart = new ApexCharts(document.querySelector("#myChart"), options);
+    chart.render();
+  }
 
    function updateChart() {
-
+     var options = getChartOptions();
+     chart.updateOptions(options, true);
    }
 
-   function autoRerenderChart() {
-     // when you delete (and idk what else) and go back to look at the chart it's not as wide so you have to rerender it.
-    $(window).on("#showChartButton", "click", function() { // cant figure out why events wont fire https://getbootstrap.com/docs/4.0/components/collapse/
-      setTimeout(function() {
-        window.chart.render();
-      });  
-    });
-   }
-   
    function createOrUpdateChart() {
      if(window.chart == undefined) {
        createChart();
-       autoRerenderChart();
      }
      else {
        updateChart();

@@ -38,7 +38,9 @@
     overflow-y: scroll;
 }
 
-
+.apexcharts-tooltip-z-group {
+    display: none;
+}
 
 
 
